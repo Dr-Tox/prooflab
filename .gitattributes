@@ -1,0 +1,3 @@
+# Preserve upstream license text verbatim, including its original whitespace.
+LICENSES/** -whitespace
+public/licenses/** -whitespace
