@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open the local Vite URL. The strict production CSP may prevent Vite's development WebSocket or injected styles; use `npm run build && npm run preview` to inspect the production application. Do not weaken the production CSP for development. The offline service worker is enabled only in production builds. Development tooling communicates with the local development server, so use the production preview or deployed build for privacy checks.
+Open the local Vite URL. Development mode includes a local engine diagnostics panel and logs raw lint excerpts to the browser/worker console. Use synthetic text when debugging. Diagnostics are session-only and are neither remotely logged nor persisted. The dev server permits Vite’s inline preamble/styles and loopback HMR; the production build and preview retain the restrictive production CSP and have no diagnostics panel or raw-lint logging. Harper is excluded from Vite dependency prebundling so its relative WASM URL remains valid in development. The offline service worker is enabled only in production builds. Use `npm run build && npm run preview` for production/privacy checks.
 
 ```sh
 npm run build
@@ -59,3 +59,9 @@ The shipped declarations confirm `LocalLinter`, `harper.js/binary`, `setup`, `or
 English proofreading is heuristic and incomplete. Harper supports selected agreement constructions; ProofLab makes no claim of comprehensive subject–verb agreement or scientific understanding. Scientific rules cover explicit patterns, not an ontology. Gene/formula protection is conservative and cannot recognize every identifier. Every correction requires an explicit click; review the context yourself. There is no “accept all”. Offline availability depends on a complete cache, browser support, and storage retention.
 
 Read [PRIVACY.md](PRIVACY.md), [RULES.md](RULES.md), and [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Detection limits and diagnostics
+
+Harper 3.0.0 produces **zero raw lints** for `I wanted to visit mi uncles last nigh`. Its dictionary accepts `mi` and `nigh`; it does not infer the intended pronoun, time expression, or possessive. This is not a promise of complete contextual grammar correction. ProofLab adds a narrow **manual-review-only** warning for `last nigh`, without replacing `mi`, changing `uncles`, or choosing an apostrophe. Individual rules can still be disabled in Settings.
+
+In `npm run dev`, the Editor’s **Engine diagnostics** panel shows initialization, the actual active Harper rules, raw/accepted/custom/final counts, discarded lint reasons, and raw lint snapshots before filtering. For the reported sentence, expect raw **0**, accepted Harper **0**, custom **1**. For `recieve`, `usefull`, and `teh`, expect real Harper spelling findings. A zero raw count indicates an engine coverage gap; a nonzero raw count with discarded findings points to dictionary/protection/deduplication or span validation. Rule overrides, category filters, and dismissed occurrences can also affect the visible count. See [RULES.md](RULES.md).

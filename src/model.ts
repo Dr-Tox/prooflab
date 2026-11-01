@@ -48,6 +48,10 @@ export const seedWords = [
   "perfluoroalkyl",
   "MYB-NFIB",
 ];
+export const contextualRules: Record<string, string> = {
+  "Time expression review":
+    "Review the narrow phrase ‘last nigh’ for a possible ‘last night’; no automatic replacement.",
+};
 export const scientificRules: Record<string, string> = {
   "Repeated words": "Adjacent repeated words (review intentional repetitions).",
   "SI spacing": "Review a missing space between a value and selected SI units.",
@@ -64,6 +68,7 @@ export const scientificRules: Record<string, string> = {
 export function enabled(rule: string, s: Settings, harperDefault = true) {
   if (s.ignoredRules.includes(rule)) return false;
   if (rule in s.overrides) return s.overrides[rule];
+  if (rule in contextualRules) return true;
   if (rule in scientificRules) {
     if (rule === "Repeated words" || rule === "Preferred terminology")
       return true;

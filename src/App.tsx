@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { analyze, initialize } from "./engine";
+import { EngineDiagnosticsPanel } from "./EngineDiagnosticsPanel";
+import type { EngineDiagnostics, InitializationStatus } from "./diagnostics";
 import {
   applyCorrection,
   defaults,
@@ -7,6 +9,7 @@ import {
   exportDictionary,
   parseDictionary,
   scientificRules,
+  contextualRules,
   seedWords,
   type Category,
   type Issue,
@@ -41,6 +44,11 @@ export default function App() {
     [rules, setRules] = useState<Record<string, string>>({}),
     [config, setConfig] = useState<Record<string, boolean | null>>({}),
     [issues, setIssues] = useState<Issue[]>([]),
+    [diagnostics, setDiagnostics] = useState<EngineDiagnostics>(),
+    [enginePhase, setEnginePhase] =
+      useState<InitializationStatus>("initializing"),
+    [analysisError, setAnalysisError] = useState(""),
+    [mappingFailureCount, setMappingFailureCount] = useState(0),
     [ignored, setIgnored] = useState<string[]>([]),
     [selected, setSelected] = useState<string | null>(null),
     [filter, setFilter] = useState("All"),
@@ -114,8 +122,13 @@ export default function App() {
       .then((r) => {
         setRules(r.metadata!.rules);
         setConfig(r.metadata!.config);
+        setEnginePhase("ready");
+        if (import.meta.env.DEV) setDiagnostics(r.diagnostics);
       })
-      .catch(() => setStatus("Harper could not load. Reload to retry."));
+      .catch(() => {
+        setEnginePhase("failed");
+        setStatus("Harper could not load. Reload to retry.");
+      });
   }, []);
   const documentToSave = settings.saveDocument ? text : null;
   useEffect(() => {
@@ -127,17 +140,23 @@ export default function App() {
     const r = ++revision.current;
     setBusy(true);
     setIssues([]);
+    setAnalysisError("");
+    setMappingFailureCount(0);
+    if (import.meta.env.DEV) setDiagnostics(undefined);
     const timer = setTimeout(() => {
       analyze(text, settings, words)
         .then((result) => {
           if (r !== revision.current) return;
           setIssues(result.issues!);
+          setMappingFailureCount(result.mappingFailureCount ?? 0);
+          if (import.meta.env.DEV) setDiagnostics(result.diagnostics);
           setBusy(false);
           setStatus("Harper · running on your device");
         })
         .catch(() => {
           if (r === revision.current) {
             setBusy(false);
+            setAnalysisError("Proofreading failed. Reload to retry.");
             setStatus("Proofreading failed. Reload to retry.");
           }
         });
@@ -519,8 +538,28 @@ export default function App() {
                   </button>
                 ))}
               </div>
+              {!enabled(
+                "SpellCheck",
+                settings,
+                config.SpellCheck !== false,
+              ) && (
+                <p className="engine-warning">
+                  Spelling checking is disabled in Settings.
+                </p>
+              )}
+              {mappingFailureCount > 0 && (
+                <p className="engine-warning" role="alert">
+                  Some engine findings could not be mapped safely. Review the
+                  text manually.
+                </p>
+              )}
               <div className="issue-list">
-                {!text ? (
+                {analysisError ? (
+                  <div className="empty" role="alert">
+                    <h3>Proofreading unavailable</h3>
+                    <p>{analysisError}</p>
+                  </div>
+                ) : !text ? (
                   <div className="empty">
                     <div className="empty-symbol">✓</div>
                     <h3>Your next draft starts here</h3>
@@ -539,10 +578,14 @@ export default function App() {
                   <p className="empty">Analyzing on your device…</p>
                 ) : !visible.length ? (
                   <div className="empty">
-                    <div className="empty-symbol">✓</div>
                     <h3>
-                      No {filter === "All" ? "visible" : filter.toLowerCase()}{" "}
-                      suggestions
+                      {mappingFailureCount > 0
+                        ? "Some suggestions could not be displayed safely"
+                        : active.length > 0
+                          ? `No ${filter.toLowerCase()} issues in this filter`
+                          : issues.length > 0
+                            ? "All detected issues are dismissed for this document revision"
+                            : "No issues detected by the enabled rules"}
                     </h3>
                     <p>
                       ProofLab cannot guarantee error-free or scientifically
@@ -639,6 +682,15 @@ export default function App() {
               </div>
             </aside>
           </div>
+          {import.meta.env.DEV && (
+            <EngineDiagnosticsPanel
+              report={diagnostics}
+              initializationStatus={enginePhase}
+              busy={busy}
+              error={analysisError}
+              visibleCount={visible.length}
+            />
+          )}
           <div className="footnote">
             <span>◈ Your research never leaves this browser.</span>
             <span>
@@ -918,7 +970,11 @@ export default function App() {
                   onChange={(e) => setRuleQuery(e.target.value)}
                 />
                 <div className="rules-list">
-                  {Object.entries({ ...scientificRules, ...rules })
+                  {Object.entries({
+                    ...contextualRules,
+                    ...scientificRules,
+                    ...rules,
+                  })
                     .filter(([r]) =>
                       r.toLowerCase().includes(ruleQuery.toLowerCase()),
                     )

@@ -4,7 +4,7 @@ Test fixtures contain synthetic writing only. No real documents or external gram
 
 ## Automated coverage
 
-`npm test` runs 14 tests across model, real Harper adapter, and IndexedDB modules:
+`npm test` runs 28 tests across the model, real Harper adapter, diagnostics/span validation, worker transport failures, and IndexedDB modules:
 
 - Real Harper spelling and selected agreement; emoji/UTF-16 offsets; stale corrections.
 - Actual Harper rule enable/disable and US/UK dialect behavior.
@@ -14,7 +14,7 @@ Test fixtures contain synthetic writing only. No real documents or external gram
 - Simultaneous nonoverlapping corrections and rejection of overlaps.
 - Separate persistent settings/dictionary/document records and atomic consent revocation.
 
-`npm run test:e2e` runs eight Chromium scenarios against a production build:
+`npm run test:e2e` runs eleven Chromium scenarios against a production build and one real Vite development diagnostics scenario:
 
 1. Real engine suggestions with emoji, accept and undo.
 2. Scientific dictionary persistence, add/remove, import and export.
@@ -24,6 +24,13 @@ Test fixtures contain synthetic writing only. No real documents or external gram
 6. Rich formatting across inline-node corrections, newline editing, confirmation before clearing, and undo.
 7. Sequential corrections with changing offsets and clipboard copy.
 8. Global rule ignoring/restoration and review-only terminology preferences.
+9. The reported contextual sentence produces a manual review; unsupported contextual errors retain an honest empty state, with no production diagnostics/logging or weakened CSP.
+10. Misspellings, agreement, repetition, and editor updates in every profile; category filters do not imply a clean document.
+11. Fatal worker load failure and subsequent edits show an error, never a clean document.
+
+The separate development scenario checks initialization, raw **0** / Harper-accepted **0** / custom **1** for `I wanted to visit mi uncles last nigh`, local raw console snapshots for actual Harper findings, applied rule changes, dictionary discard reasons, and lack of network/persistence leakage of a unique synthetic input marker. It uses the real WASM module rather than mocked grammar results.
+
+The original new regression was run against the prior implementation and failed because no `Time expression review` finding existed. Direct Harper characterization independently produced zero lints. The fix retains the exact span guard: none of the tested valid native findings are discarded for a source mismatch. Pure validation tests reject deliberately invalid/mismatched ranges without relocating an ambiguous repeated word. A transport-only Worker test simulates a fatal worker error; real-engine grammar tests are not mocked.
 
 The suite supports both `/` and GitHub Pages `/prooflab/` hosting paths:
 
