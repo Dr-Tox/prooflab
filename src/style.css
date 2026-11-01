@@ -818,3 +818,46 @@ footer > span:first-child {
     font-size: 11px;
   }
 }
+
+/* Development diagnostics are intentionally separate from the writing interface. */
+.diagnostics-panel {
+  margin-top: 20px;
+  padding: 18px 22px;
+  font-size: 12px;
+}
+.diagnostics-panel summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.diagnostics-panel p {
+  color: #60728d;
+  line-height: 1.7;
+}
+.diagnostics-panel dl {
+  display: grid;
+  grid-template-columns: minmax(140px, 2fr) 1fr;
+  gap: 7px 14px;
+  margin: 15px 0;
+}
+.diagnostics-panel dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.diagnostics-panel details {
+  margin-top: 12px;
+}
+.diagnostics-panel pre {
+  max-height: 260px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f5f7fb;
+  padding: 12px;
+}
+.engine-warning {
+  padding: 10px 20px;
+  color: #72551e;
+  background: #fff8e9;
+  font-size: 12px;
+  line-height: 1.6;
+}
