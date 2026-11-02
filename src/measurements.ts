@@ -1,12 +1,14 @@
 import { enabled, issue, type Settings } from "./model";
 const units =
-  "(?:°[CK]|K|kg|mg|[µμu]g|ng|g|mL|ml|L|mmol|mol|ms|min|sec|s|h|nm|mm|cm|m|mS|Pa|kPa|Hz|N|J|W|V|A)";
+  "(?:°[CK]|K|kg|mg|[µμu]g|ng|g|mL|ml|L|mmol|mol|day|ms|min|sec|s|h|nm|mm|cm|m|mS|Pa|kPa|Hz|N|J|W|V|A)";
+const numberExpression =
+  "[−-]?\\d+(?:\\.\\d+)?(?:[eE][−+-]?\\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+)?(?:[ \\u00a0]*[×·][ \\u00a0]*10(?:\\^[−+-]?\\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+))?";
 export function measurementSpans(text: string) {
   const exponent = "(?:\\^[−-]?\\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+)?";
   return [
     ...text.matchAll(
       new RegExp(
-        `[−-]?\\d+(?:\\.\\d+)?[ \\u00a0]*${units}${exponent}(?:[/*·]${units}${exponent})*(?![\\p{L}\\p{N}_])`,
+        `${numberExpression}[ \\u00a0]*${units}${exponent}(?:(?:[/*·]|[ \\u00a0]+)${units}${exponent})*(?![\\p{L}\\p{N}_])`,
         "gu",
       ),
     ),
@@ -15,7 +17,10 @@ export function measurementSpans(text: string) {
 export function measurementIssues(text: string, s: Settings) {
   const out = [];
   for (const m of measurementSpans(text)) {
-    const value = /^([−-]?\d+(?:\.\d+)?)([ \u00a0]*)(.*)$/u.exec(m.text)!;
+    const value = new RegExp(
+      `^(${numberExpression})([ \\u00a0]*)(.*)$`,
+      "u",
+    ).exec(m.text)!;
     const [, , space, unit] = value;
     const separator = s.siSpaceCharacter === "nbsp" ? "\u00a0" : " ";
     if (unit.startsWith("°K") && enabled("SI notation", s)) {

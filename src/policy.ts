@@ -129,16 +129,25 @@ export function createScientificPolicy(
       // A correction to surrounding grammar is allowed when every protected token remains intact.
       const result = text.slice(0, i.start) + replacement + text.slice(i.end);
       return applicable.every((r) => {
-        const before = (
-          text.match(
-            new RegExp(r.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gu"),
-          ) ?? []
-        ).length;
-        const after = (
-          result.match(
-            new RegExp(r.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gu"),
-          ) ?? []
-        ).length;
+        const count = (source: string) => {
+          const pattern = new RegExp(
+            r.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+            "gu",
+          );
+          let count = 0;
+          for (const match of source.matchAll(pattern)) {
+            const start = match.index!,
+              end = start + match[0].length;
+            if (
+              !/[\p{L}\p{N}_]/u.test(source[start - 1] ?? "") &&
+              !/[\p{L}\p{N}_]/u.test(source[end] ?? "")
+            )
+              ++count;
+          }
+          return count;
+        };
+        const before = count(text),
+          after = count(result);
         return after >= before;
       });
     });
