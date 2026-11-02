@@ -1,0 +1,369 @@
+{
+  "version": 2,
+  "split": "held-out-round2",
+  "cases": [
+    {
+      "id": "V01",
+      "text": "The reports shows a change.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "shows",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["show"]
+        }
+      ],
+      "acceptedCorrections": ["The reports show a change."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V02",
+      "text": "Each of the patients were monitored.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "were",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["was"]
+        }
+      ],
+      "acceptedCorrections": ["Each of the patients was monitored."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V03",
+      "text": "The response of the cells are variable.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["is"]
+        }
+      ],
+      "acceptedCorrections": ["The response of the cells is variable."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V04",
+      "text": "There was many limitations.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "was",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["were"]
+        }
+      ],
+      "acceptedCorrections": ["There were many limitations."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V05",
+      "text": "The signals depends of time.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "depends of",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["depend on"]
+        }
+      ],
+      "acceptedCorrections": ["The signals depend on time."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V06",
+      "text": "The solution was cooled to −10°C.",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "−10°C",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["−10 °C"]
+        }
+      ],
+      "acceptedCorrections": ["The solution was cooled to −10 °C."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V07",
+      "text": "We added 6ng.",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "6ng",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["6 ng"]
+        }
+      ],
+      "acceptedCorrections": ["We added 6 ng."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V08",
+      "text": "The cultures was stained.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "was",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["were"]
+        }
+      ],
+      "acceptedCorrections": ["The cultures were stained."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V09",
+      "text": "The reagents shows instability.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "shows",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["show"]
+        }
+      ],
+      "acceptedCorrections": ["The reagents show instability."],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V10",
+      "text": "The patient and the physician are present.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V11",
+      "text": "The response of the cells is variable.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V12",
+      "text": "Its interpretation is uncertain.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V13",
+      "text": "The reports show a change.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V14",
+      "text": "We stored the aliquots for 20 min.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V15",
+      "text": "The concentration was 1.5 × 10⁻⁴ mol/L.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V16",
+      "text": "The sample was held at 18 °C. The cells might respond.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V17",
+      "text": "We found that that hypothesis was consistent with the data.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V18",
+      "text": "After staining the cells, the pellet was collected.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V19",
+      "text": "The estimate may be consistent with an association (p = 0.12).",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    },
+    {
+      "id": "V20",
+      "text": "The value was −3.2 mV.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "current": "../reports/round2.json"
+      }
+    }
+  ]
+}
