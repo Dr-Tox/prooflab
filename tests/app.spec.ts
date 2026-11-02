@@ -386,3 +386,60 @@ test("a worker load failure is an error, never a clean bill of health", async ({
     page.getByText("No issues detected by the enabled rules", { exact: true }),
   ).toHaveCount(0);
 });
+
+test("coordinated mass-noun correction is atomic, preserves inline formatting, and Undo restores text and caret", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await write(page, "These informations are useful.");
+  await editor.evaluate((el) => {
+    const r = document.createRange();
+    r.setStart(el.firstChild!, 23);
+    r.setEnd(el.firstChild!, 30);
+    getSelection()!.removeAllRanges();
+    getSelection()!.addRange(r);
+  });
+  await page.getByRole("button", { name: "Bold", exact: true }).click();
+  await expect(page.locator(".document b")).toHaveText("useful.");
+  await page
+    .locator(".mark")
+    .filter({ hasText: "These informations are" })
+    .click();
+  await page
+    .getByRole("button", { name: "This information is ↵", exact: true })
+    .click();
+  await expect(editor).toHaveText("This information is useful.");
+  await expect(page.locator(".document b")).toHaveText("useful.");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor).toHaveText("These informations are useful.");
+  await expect(page.locator(".document b")).toHaveText("useful.");
+  expect(
+    await editor.evaluate((el) => {
+      const s = getSelection()!;
+      return el.contains(s.anchorNode) && el.contains(s.focusNode);
+    }),
+  ).toBe(true);
+});
+
+test("legitimate scientific repetition and notation remain untouched; SI changes preserve values", async ({
+  page,
+}) => {
+  await ready(page);
+  await write(
+    page,
+    "After centrifugation, the supernatant was collected after 30 min. We found that that interpretation was incorrect. TNF-α and IL-1β may be associated with toxicity (p = 0.08).",
+  );
+  await expect(page.locator(".issue-title")).toHaveCount(0);
+  await write(page, "The sample was heated to 37°C and then to 300 °K.");
+  await page.locator(".mark").filter({ hasText: "37°C" }).click();
+  await page.getByRole("button", { name: "37 °C ↵", exact: true }).click();
+  await expect(
+    page.getByRole("textbox", { name: "Document text" }),
+  ).toContainText("37 °C");
+  await page.locator(".mark").filter({ hasText: "°K" }).click();
+  await page.getByRole("button", { name: "K ↵", exact: true }).click();
+  await expect(page.getByRole("textbox", { name: "Document text" })).toHaveText(
+    "The sample was heated to 37 °C and then to 300 K.",
+  );
+});

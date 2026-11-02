@@ -1,4 +1,6 @@
 import { enabled, issue, type Issue, type Settings } from "./model";
+import { repeatedWords } from "./repetition";
+import { measurementIssues } from "./measurements";
 export function scientific(
   text: string,
   s: Settings,
@@ -25,24 +27,7 @@ export function scientific(
         ),
       );
   };
-  for (const m of text.matchAll(/\b([a-z]+)([ \t]+)\1\b/gi))
-    add(
-      "Repeated words",
-      m,
-      [m[1]],
-      "An adjacent word is repeated. Check whether the repetition is intentional.",
-      "Grammar",
-    );
-  if (s.siSpace)
-    for (const m of text.matchAll(
-      /\b\d+(?:\.\d+)?(?:mg|kg|µg|μg|ng|mL|mm|cm|nm|mmol|mol)\b/g,
-    ))
-      add(
-        "SI spacing",
-        m,
-        [],
-        "Consider a space between the value and unit. Review manually; numerical expressions are never replaced.",
-      );
+  out.push(...repeatedWords(text, s), ...measurementIssues(text, s));
   for (const pair of [
     ["mL", "ml"],
     ["µg", "μg"],
@@ -78,9 +63,7 @@ export function scientific(
         "A shorter expression may convey the same meaning. Review in context.",
         "Style",
       );
-  for (const m of text.matchAll(
-    /\b(?:statistically significant|proved that|proves that)\b/gi,
-  ))
+  for (const m of text.matchAll(/\b(?:proved that|proves that)\b/gi))
     add(
       "Terminology convention",
       m,

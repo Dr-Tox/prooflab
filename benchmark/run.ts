@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 
 import os from "node:os";
@@ -22,7 +22,8 @@ await engine.initialize();
 const setupMs = performance.now() - started;
 const cases: any[] = [];
 const hashes: Record<string, string> = {};
-for (const split of ["development", "regression", "held-out"]) {
+const splits = option("--splits", "development,regression,held-out").split(",");
+for (const split of splits) {
   const path = `benchmark/corpus/${split}.json`,
     bytes = readFileSync(path);
   hashes[split] = sha(bytes);
@@ -30,7 +31,7 @@ for (const split of ["development", "regression", "held-out"]) {
     cases.push({ ...c, split });
 }
 function actionOutput(text: string, i: Issue, r: string) {
-  return applyCorrection(text, i, r);
+  return applyCorrection(text, i, r, i.revision);
 }
 function metrics(c: any, issues: Issue[]) {
   const expected = c.expected;
@@ -150,7 +151,7 @@ for (const c of cases) {
   c.metrics = metrics(c, issues);
 }
 const summaries = Object.fromEntries(
-  ["development", "regression", "held-out"].map((split) => {
+  splits.map((split) => {
     const rows = cases.filter((c) => c.split === split),
       sum = (key: string) =>
         rows.reduce((a, c) => a + Number(c.metrics[key]), 0),
@@ -181,7 +182,36 @@ const summaries = Object.fromEntries(
     ];
   }),
 );
+const stress = [];
+if (label !== "baseline")
+  for (const repeats of [10, 100]) {
+    const text =
+      "The samples were analyzed after centrifugation at 37 °C. ".repeat(
+        repeats,
+      );
+    const samples = [];
+    for (let n = 0; n < 3; n++) {
+      const start = performance.now();
+      await engine.analyze(text, defaults(), seedWords);
+      samples.push(performance.now() - start);
+    }
+    stress.push({
+      characters: text.length,
+      runs: 3,
+      medianMs: samples.sort((a, b) => a - b)[1],
+    });
+  }
+const implementationSha256 = sha(
+  readdirSync("src")
+    .filter((n) => /\.tsx?$/.test(n))
+    .sort()
+    .map((n) => n + "\n" + readFileSync("src/" + n, "utf8"))
+    .join("\n"),
+);
 const report = {
+  scoringVersion: 1,
+  implementationSha256,
+  stress,
   corpusVersion: 1,
   label,
   environment: {

@@ -12,6 +12,7 @@ export interface Reply {
   diagnostics?: EngineDiagnostics;
   mappingFailureCount?: number;
   issues?: Issue[];
+  revision?: number;
   metadata?: {
     rules: Record<string, string>;
     config: Record<string, boolean | null>;
@@ -45,5 +46,13 @@ function request(data: object): Promise<Reply> {
   });
 }
 export const initialize = () => request({ init: true });
-export const analyze = (text: string, settings: Settings, words: string[]) =>
-  request({ text, settings, words });
+export const analyze = async (
+  text: string,
+  settings: Settings,
+  words: string[],
+  revision = 0,
+) => {
+  const result = await request({ text, settings, words, revision });
+  if (result.revision !== revision) throw Error("Analysis revision mismatch.");
+  return result;
+};

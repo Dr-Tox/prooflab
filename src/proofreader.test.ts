@@ -20,9 +20,9 @@ describe("real Harper integration (no mocked findings)", () => {
     expect(
       issues.some((i) => i.category === "Grammar" && i.original === "are"),
     ).toBe(true);
-    expect(applyCorrection(text, spelling!, "useful")).toContain(
-      "🧪 This is a useful observation.",
-    );
+    expect(
+      applyCorrection(text, spelling!, "useful", spelling!.revision),
+    ).toContain("🧪 This is a useful observation.");
   });
   it("disables actual Harper rules and honors accepted terms", async () => {
     const s = defaults();
@@ -143,7 +143,11 @@ describe("detection diagnostics and native rule configuration", () => {
       const nativeDefaults = await linter.getDefaultLintConfig();
       expect([...report.activeRules].sort()).toEqual(
         Object.entries(nativeDefaults)
-          .filter(([, on]) => on === true)
+          .filter(
+            ([rule, on]) =>
+              on === true &&
+              (profile !== "Scientific Writing" || !rule.startsWith("Expand")),
+          )
           .map(([rule]) => rule)
           .sort(),
       );

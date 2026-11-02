@@ -2,34 +2,19 @@ import { type Linter, Dialect, SuggestionKind } from "harper.js";
 import {
   enabled,
   issue,
-  protectedRanges,
-  overlaps,
   type Category,
   type Settings,
   type Issue,
 } from "./model";
 import { scientific } from "./scientific";
+import { grammar } from "./grammar";
+import { createScientificPolicy, aggregateIssues } from "./policy";
 import { contextual } from "./contextual";
 import {
   validateSourceSpan,
   type EngineDiagnostics,
   type DiscardReason,
 } from "./diagnostics";
-function acceptedTerm(
-  text: string,
-  start: number,
-  end: number,
-  terms: string[],
-) {
-  return terms.some((term) => {
-    const from = text.lastIndexOf(term, start);
-    if (from < 0 || from + term.length < end) return false;
-    return (
-      !/[\p{L}\p{N}_]/u.test(text[from - 1] ?? "") &&
-      !/[\p{L}\p{N}_]/u.test(text[from + term.length] ?? "")
-    );
-  });
-}
 export class Proofreader {
   private initial: Record<string, boolean | null> = {};
   private report?: EngineDiagnostics;
@@ -73,7 +58,12 @@ export class Proofreader {
       throw error;
     }
   }
-  async analyze(text: string, settings: Settings, words: string[]) {
+  async analyze(
+    text: string,
+    settings: Settings,
+    words: string[],
+    revision = 0,
+  ) {
     if (!this.initialized) throw Error("Proofreader is not initialized.");
     this.mappingFailureCount = 0;
     const config = Object.fromEntries(
@@ -108,7 +98,7 @@ export class Proofreader {
       dedup: false,
     });
     const out: Issue[] = [];
-    const protectedSpans = protectedRanges(text);
+    const policy = createScientificPolicy(text, words, settings.ignoredWords);
     const discard = (
       rule: string,
       start: number,
@@ -166,30 +156,11 @@ export class Proofreader {
                     ].includes(kind)
                   ? "Style"
                   : "Grammar";
-          if (category === "Spelling") {
-            if (acceptedTerm(text, start, end, words)) {
-              discard(rule, start, end, "dictionary-term");
-              continue;
-            }
-            if (acceptedTerm(text, start, end, settings.ignoredWords)) {
-              discard(rule, start, end, "ignored-word");
-              continue;
-            }
-          }
-          const protectedText = protectedSpans.some(([a, b]) =>
-            overlaps(start, end, a, b),
+          const replacements = rawSuggestions.map((v) =>
+            v.kind === SuggestionKind.InsertAfter
+              ? original + v.replacement
+              : v.replacement,
           );
-          if (category === "Spelling" && protectedText) {
-            discard(rule, start, end, "protected-identifier");
-            continue;
-          }
-          const replacements = protectedText
-            ? []
-            : rawSuggestions.map((v) =>
-                v.kind === SuggestionKind.InsertAfter
-                  ? original + v.replacement
-                  : v.replacement,
-              );
           out.push(
             issue(
               rule,
@@ -206,25 +177,43 @@ export class Proofreader {
         }
       }
     const custom = [
+      ...grammar(text, settings),
       ...contextual(text, settings),
       ...scientific(text, settings, words),
     ];
-    const accepted = out.filter((i) => {
-      if (
-        custom.some(
-          (c) =>
-            c.start === i.start && c.end === i.end && c.category === i.category,
-        )
-      ) {
-        discard(i.rule, i.start, i.end, "custom-rule-overlap");
-        return false;
-      }
-      return true;
-    });
-    const combined = [...custom, ...accepted].sort((a, b) => a.start - b.start);
+    const filtered: Issue[] = [];
+    for (const candidate of [...custom, ...out]) {
+      const decision = policy(candidate);
+      if (decision.issue) filtered.push(decision.issue);
+      else if (out.includes(candidate))
+        discard(
+          candidate.rule,
+          candidate.start,
+          candidate.end,
+          decision.reason as DiscardReason,
+        );
+    }
+    const combined = aggregateIssues(filtered).map((i) => ({ ...i, revision }));
     if (report) {
-      report.acceptedLintCount = accepted.length;
-      report.customIssueCount = custom.length;
+      const already = new Set(
+        report.discardedLints.map((i) => `${i.rule}:${i.start}:${i.end}`),
+      );
+      for (const i of out) {
+        if (
+          !already.has(`${i.rule}:${i.start}:${i.end}`) &&
+          !combined.some(
+            (c) => c.rule === i.rule && c.start === i.start && c.end === i.end,
+          )
+        )
+          discard(i.rule, i.start, i.end, "custom-rule-overlap");
+      }
+    }
+    if (report) {
+      report.acceptedLintCount =
+        report.rawLintCount - report.discardedLints.length;
+      report.customIssueCount = combined.filter((i) =>
+        custom.some((c) => c.rule === i.rule),
+      ).length;
       report.finalIssueCount = combined.length;
     }
     return combined;

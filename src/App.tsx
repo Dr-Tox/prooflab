@@ -1,9 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { analyze, initialize } from "./engine";
+import {
+  captureCaret,
+  restoreCaret,
+  applyDomTransaction,
+  type Caret,
+} from "./editorTransactions";
+import { grammarRules } from "./grammar";
 import { EngineDiagnosticsPanel } from "./EngineDiagnosticsPanel";
 import type { EngineDiagnostics, InitializationStatus } from "./diagnostics";
 import {
   applyCorrection,
+  correctionEdits,
   defaults,
   enabled,
   exportDictionary,
@@ -37,13 +45,14 @@ function download(name: string, content: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 export default function App() {
-  const [text, setText] = useState(""),
+  const [text, setTextState] = useState(""),
     [settings, setSettingsState] = useState<Settings>(defaults),
     [words, setWordsState] = useState<string[]>(seedWords),
     [loaded, setLoaded] = useState(false),
     [rules, setRules] = useState<Record<string, string>>({}),
     [config, setConfig] = useState<Record<string, boolean | null>>({}),
     [issues, setIssues] = useState<Issue[]>([]),
+    [analysisRevision, setAnalysisRevision] = useState(0),
     [diagnostics, setDiagnostics] = useState<EngineDiagnostics>(),
     [enginePhase, setEnginePhase] =
       useState<InitializationStatus>("initializing"),
@@ -64,20 +73,33 @@ export default function App() {
     [offlineReady, setOfflineReady] = useState(false),
     [storageStatus, setStorageStatus] = useState("Loading local preferences…");
   const editor = useRef<HTMLDivElement>(null),
-    history = useRef<{ text: string; html: string }[]>([]),
+    history = useRef<{ text: string; html: string; caret?: Caret }[]>([]),
     revision = useRef(0),
     storageQueue = useRef(Promise.resolve()),
     storageRevision = useRef(0);
+  function invalidate() {
+    ++revision.current;
+    setAnalysisRevision(revision.current);
+    setIssues([]);
+    setIgnored([]);
+    setSelected(null);
+  }
+  function setText(value: string) {
+    invalidate();
+    setTextState(value);
+  }
   function markStoragePending() {
     // Invalidate an old completion before scheduling the state/effect update.
     ++storageRevision.current;
     setStorageStatus("Saving locally…");
   }
   function setSettings(action: Settings | ((s: Settings) => Settings)) {
+    invalidate();
     markStoragePending();
     setSettingsState(action);
   }
   function setWords(action: string[] | ((words: string[]) => string[])) {
+    invalidate();
     markStoragePending();
     setWordsState(action);
   }
@@ -137,14 +159,14 @@ export default function App() {
   }, [settings, words, documentToSave, loaded]);
   useEffect(() => {
     if (!loaded) return;
-    const r = ++revision.current;
+    const r = revision.current;
     setBusy(true);
     setIssues([]);
     setAnalysisError("");
     setMappingFailureCount(0);
     if (import.meta.env.DEV) setDiagnostics(undefined);
     const timer = setTimeout(() => {
-      analyze(text, settings, words)
+      analyze(text, settings, words, r)
         .then((result) => {
           if (r !== revision.current) return;
           setIssues(result.issues!);
@@ -162,9 +184,13 @@ export default function App() {
         });
     }, 350);
     return () => clearTimeout(timer);
-  }, [text, settings, words, loaded]);
+  }, [text, settings, words, loaded, analysisRevision]);
   function snapshot() {
-    history.current.push({ text, html: editor.current?.innerHTML ?? text });
+    history.current.push({
+      text,
+      html: editor.current?.innerHTML ?? text,
+      caret: editor.current ? captureCaret(editor.current) : undefined,
+    });
     if (history.current.length > 100) history.current.shift();
   }
   function changeText(value: string) {
@@ -212,41 +238,26 @@ export default function App() {
     if (!old) return;
     if (editor.current) editor.current.innerHTML = old.html;
     setText(old.text);
+    if (editor.current) restoreCaret(editor.current, old.caret);
     setIgnored([]);
     setNotice("Change undone.");
   }
   function accept(i: Issue, replacement: string) {
     try {
-      const value = applyCorrection(text, i, replacement);
-      snapshot();
       const el = editor.current!;
-      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-      let n: Node | null;
-      let pos = 0;
-      let start: Node | null = null,
-        end: Node | null = null,
-        so = 0,
-        eo = 0;
-      while ((n = walker.nextNode())) {
-        const length = n.textContent?.length ?? 0;
-        if (start === null && i.start <= pos + length) {
-          start = n;
-          so = i.start - pos;
-        }
-        if (i.end <= pos + length) {
-          end = n;
-          eo = i.end - pos;
-          break;
-        }
-        pos += length;
+      if (el.textContent !== text)
+        throw Error("Editor changed. Recheck before applying a correction.");
+      const edits = correctionEdits(text, i, replacement, revision.current);
+      const value = applyCorrection(text, i, replacement, revision.current);
+      const oldHtml = el.innerHTML;
+      snapshot();
+      try {
+        applyDomTransaction(el, edits);
+      } catch (error) {
+        el.innerHTML = oldHtml;
+        history.current.pop();
+        throw error;
       }
-      if (start && end) {
-        const range = document.createRange();
-        range.setStart(start, so);
-        range.setEnd(end, eo);
-        range.deleteContents();
-        range.insertNode(document.createTextNode(replacement));
-      } else el.textContent = value;
       setText(value);
       setIgnored([]);
       setSelected(null);
@@ -616,6 +627,16 @@ export default function App() {
                         <div className="issue-detail">
                           <p>{i.explanation}</p>
                           <small>{i.rule}</small>
+                          {i.sources && i.sources.length > 1 && (
+                            <small> · {i.sources.join(", ")}</small>
+                          )}
+                          {i.alternativesConflict && (
+                            <p className="manual">
+                              Overlapping rules proposed different alternatives.
+                              The higher-priority suggestion is shown; review in
+                              context.
+                            </p>
+                          )}
                           <div className="replacements">
                             {i.replacements.map((r, j) => (
                               <button
@@ -876,6 +897,42 @@ export default function App() {
                 <p role="status" aria-live="polite">
                   {storageStatus}
                 </p>
+                <label className="setting">
+                  SI separator
+                  <select
+                    aria-label="SI separator"
+                    value={settings.siSpaceCharacter}
+                    onChange={(e) =>
+                      update({
+                        siSpaceCharacter: e.target.value as "space" | "nbsp",
+                      })
+                    }
+                  >
+                    <option value="space">Ordinary space</option>
+                    <option value="nbsp">Nonbreaking space</option>
+                  </select>
+                </label>
+                <label className="setting">
+                  Volume notation
+                  <select
+                    aria-label="Volume notation"
+                    value={settings.unitNotation}
+                    onChange={(e) =>
+                      update({
+                        unitNotation: e.target.value as "preserve" | "mL",
+                        overrides: {
+                          ...settings.overrides,
+                          "Unit consistency": e.target.value === "mL",
+                        },
+                      })
+                    }
+                  >
+                    <option value="preserve">
+                      Preserve journal convention
+                    </option>
+                    <option value="mL">Prefer mL</option>
+                  </select>
+                </label>
                 <h3>Preferred terminology</h3>
                 <p className="muted">
                   Literal, case-sensitive matches; suggestions require manual
@@ -971,6 +1028,7 @@ export default function App() {
                 />
                 <div className="rules-list">
                   {Object.entries({
+                    ...grammarRules,
                     ...contextualRules,
                     ...scientificRules,
                     ...rules,

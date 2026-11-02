@@ -9,6 +9,7 @@ const ready = engine.initialize();
 void ready.catch(() => {});
 interface Request {
   id: number;
+  revision?: number;
   text: string;
   settings: Settings;
   words: string[];
@@ -28,10 +29,16 @@ async function process(data: Request) {
       self.postMessage({ id: data.id, metadata, ...diagnostics(data.id) });
       return;
     }
-    const issues = await engine.analyze(data.text, data.settings, data.words);
+    const issues = await engine.analyze(
+      data.text,
+      data.settings,
+      data.words,
+      data.revision ?? 0,
+    );
     self.postMessage({
       id: data.id,
       issues,
+      revision: data.revision ?? 0,
       mappingFailureCount: engine.mappingFailureCount,
       ...diagnostics(data.id),
     });

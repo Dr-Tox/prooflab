@@ -2,6 +2,10 @@
 export type InitializationStatus =
   "not-started" | "initializing" | "ready" | "failed";
 export type DiscardReason =
+  | "legitimate-repetition"
+  | "scientific-vocabulary"
+  | "measurement-token"
+  | "protected-expression"
   | "invalid-span"
   | "source-mismatch"
   | "dictionary-term"
