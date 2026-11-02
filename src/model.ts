@@ -133,13 +133,6 @@ export function issue(
     explanation,
   };
 }
-export function protectedRanges(text: string): [number, number][] {
-  return [
-    ...text.matchAll(
-      /\b(?:[A-Z][A-Za-z]*[A-Z][A-Za-z0-9]*(?:-[A-Z0-9]+)*|[A-Za-z]+\d+[A-Za-z\d]*|\d+(?:[.,]\d+)?(?:\s*(?:±|[<=>]|%|mg|kg|µg|μg|ng|mL|ml|L|mm|cm|nm|mmol|mol|°C)\s*\d*(?:\.\d+)?)?)\b/g,
-    ),
-  ].map((m) => [m.index!, m.index! + m[0].length]);
-}
 export function overlaps(a: number, b: number, c: number, d: number) {
   return a < d && b > c;
 }

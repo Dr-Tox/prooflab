@@ -7,12 +7,12 @@ Rich editor DOM → canonical plain text → module worker
                                         ├─ Harper WASM (English)
                                         └─ deterministic scientific rules
 Worker → serializable issues → highlighted review / suggestion cards
-Accept → stale-offset validation → DOM Range replacement → reanalysis
+Accept → revision + transaction validation → atomic DOM edits → reanalysis
 Settings / dictionary → IndexedDB
 Document → memory (or IndexedDB only with explicit consent)
 ```
 
-`src/model.ts` defines issues, settings, profiles, protected ranges, import/export, and correction validation. An issue has a stable per-analysis ID, rule ID, category, UTF-16 start/end offsets, original text, replacements, and explanation.
+`src/model.ts` defines issues, settings, profiles, import/export, revision checks, and atomic correction validation. An issue has a stable per-analysis ID, rule ID, category, UTF-16 start/end offsets, original text, replacements, and explanation.
 
 `src/engine.worker.ts` owns Harper and delegates normalization to the testable `src/proofreader.ts` adapter. Requests are serialized to avoid configuration/dialect races. The UI debounces input and discards results from old revisions. Harper 3.0.0 already returns JavaScript UTF-16 spans (verified with emoji in real-engine tests); every span must reproduce Harper's original problem text before it can be displayed. Unexpected spans are rejected with a mapping-failure warning rather than used for a correction; development diagnostics record the rejection reason. `src/diagnostics.ts` validates integer bounds and exact source slices without normalization or guessed relocation. Resources for spans, suggestions, and lints are released after serialization.
 
@@ -47,3 +47,11 @@ The CI first builds and tests at `/` using the production CSP, then builds the d
 The worker gates raw diagnostic capture, console logging, and reply data behind `import.meta.env.DEV`; the UI uses the same guard for `EngineDiagnosticsPanel`. No URL flag or persisted setting can enable diagnostics in production. Snapshots contain initialization status, applied active rules, raw/accepted/custom/final counts, raw serialized lints, and discard reasons. They stay in browser memory/console only and can expose excerpts to someone with DevTools access. Do not use sensitive documents while debugging. The panel separates visible issues (after UI filters/dismissals) from accepted engine findings. New input clears the previous diagnostic snapshot, and only the current request revision updates it.
 
 The normal empty state is “No issues detected by the enabled rules”, with distinct messages for filters, dismissed findings, mapping failures, and engine failures. It does not certify that the writing is correct. Spelling-disabled settings also get an explicit notice.
+
+## Scientific quality pipeline
+
+Analysis now passes native and local findings through `src/policy.ts`, with curated vocabulary (`vocabulary.ts`), selected measurement recognition (`measurements.ts`), conservative repetition handling, and bounded token-based grammar (`grammar.ts`). There is no downloaded lexicon or NLP service. The policy filters unsafe lexical replacements while allowing changes to surrounding grammar that preserve scientific tokens, numbers and caution markers. Aggregation retains source IDs, merges a shared defect and flags incompatible alternatives, while independent overlaps remain reviewable.
+
+Each issue and worker response carries a revision. The bridge rejects a mismatched response, and the UI invalidates findings immediately on text/settings/dictionary edits; formatting-only input also schedules analysis. `correctionEdits` validates source ranges, revision, nonoverlap, and that a coordinated edit transaction actually produces its displayed replacement. `editorTransactions.ts` applies validated edits in descending UTF-16 order, rolls back on errors, and maps/restores caret offsets. Undo snapshots include plain text, generated HTML and selection context. No snapshots are persisted.
+
+The bounded grammar recognizes selected lexical heads and constructions rather than claiming full syntactic parsing. The versioned benchmark commits references before implementation, captures actual baseline outputs, and separates frozen first-pass held-out outcomes from later safety audits and a second held-out round. Known coverage gaps and remaining false positives are retained in BENCHMARK_RESULTS.md.

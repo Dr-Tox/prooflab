@@ -23,3 +23,23 @@ it("does not regard a unit substring as preserving that unit when letters are ap
   const i = issue("SpellCheck", "Spelling", start, start + 2, t, ["Co"], "");
   expect(createScientificPolicy(t, [], [])(i).issue).toBeUndefined();
 });
+
+it("keeps the second-round held-out references frozen", async () => {
+  const { readFileSync } = await import("node:fs");
+  const { createHash } = await import("node:crypto");
+  const frozen = JSON.parse(
+    readFileSync(
+      new URL("../benchmark/FROZEN-ROUND2.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  expect(
+    createHash("sha256")
+      .update(
+        readFileSync(
+          new URL("../benchmark/corpus/held-out-round2.json", import.meta.url),
+        ),
+      )
+      .digest("hex"),
+  ).toBe(frozen.sha256);
+});

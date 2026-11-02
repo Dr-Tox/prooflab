@@ -58,10 +58,16 @@ The shipped declarations confirm `LocalLinter`, `harper.js/binary`, `setup`, `or
 
 English proofreading is heuristic and incomplete. Harper supports selected agreement constructions; ProofLab makes no claim of comprehensive subject–verb agreement or scientific understanding. Scientific rules cover explicit patterns, not an ontology. Gene/formula protection is conservative and cannot recognize every identifier. Every correction requires an explicit click; review the context yourself. There is no “accept all”. Offline availability depends on a complete cache, browser support, and storage retention.
 
-Read [PRIVACY.md](PRIVACY.md), [RULES.md](RULES.md), and [CONTRIBUTING.md](CONTRIBUTING.md).
+Read [PRIVACY.md](PRIVACY.md), [RULES.md](RULES.md), [SCIENTIFIC_VOCABULARY.md](SCIENTIFIC_VOCABULARY.md), [BENCHMARK_RESULTS.md](BENCHMARK_RESULTS.md), and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Detection limits and diagnostics
 
 Harper 3.0.0 produces **zero raw lints** for `I wanted to visit mi uncles last nigh`. Its dictionary accepts `mi` and `nigh`; it does not infer the intended pronoun, time expression, or possessive. This is not a promise of complete contextual grammar correction. ProofLab adds a narrow **manual-review-only** warning for `last nigh`, without replacing `mi`, changing `uncles`, or choosing an apostrophe. Individual rules can still be disabled in Settings.
 
 In `npm run dev`, the Editor’s **Engine diagnostics** panel shows initialization, the actual active Harper rules, raw/accepted/custom/final counts, discarded lint reasons, and raw lint snapshots before filtering. For the reported sentence, expect raw **0**, accepted Harper **0**, custom **1**. For `recieve`, `usefull`, and `teh`, expect real Harper spelling findings. A zero raw count indicates an engine coverage gap; a nonzero raw count with discarded findings points to dictionary/protection/deduplication or span validation. Rule overrides, category filters, and dismissed occurrences can also affect the visible count. See [RULES.md](RULES.md).
+
+## Scientific quality and reproducible evaluation
+
+ProofLab adds conservative term-aware conflict resolution, bounded noun-phrase agreement, coordinated mass-noun edits, SI formatting, and contextual sentence-structure warnings. Valid scientific terminology is distinct from the personal dictionary and unknown terms. Numerical values and epistemic caution are protected; there is no automatic accept-all. Corrections carry a document revision, and coordinated edits/Undo preserve text, unrelated inline formatting and selection context.
+
+`npm run benchmark` evaluates the versioned corpus with real Harper. The baseline, frozen references, full actual results, scoring definitions, performance details and limitations are committed under `benchmark/`. Held-out first-pass results are preserved separately from post-evaluation audits. The fresh second round retains misses and a false-positive mV warning rather than hiding them. See **BENCHMARK_RESULTS.md**; this small engineering benchmark does not establish superiority over Microsoft Word or complete scientific/grammatical correctness.

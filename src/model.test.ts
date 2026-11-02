@@ -7,7 +7,6 @@ import {
   exportDictionary,
   issue,
   parseDictionary,
-  protectedRanges,
   seedWords,
 } from "./model";
 import { scientific } from "./scientific";
@@ -106,16 +105,5 @@ describe("profiles and conservative science checks", () => {
         seedWords,
       ),
     ).toEqual([]);
-  });
-  it("protects gene names, formulae and values", () => {
-    const t = "MYB-NFIB H2O PFHxA 0.05";
-    const ranges = protectedRanges(t);
-    for (const term of ["MYB-NFIB", "H2O", "PFHxA", "0.05"])
-      expect(
-        ranges.some(
-          ([a, b]) =>
-            a <= t.indexOf(term) && b >= t.indexOf(term) + term.length,
-        ),
-      ).toBe(true);
   });
 });

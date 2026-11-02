@@ -202,3 +202,49 @@ it("keeps the held-out reference labels byte-for-byte frozen", async () => {
     frozen.heldOutSha256,
   );
 });
+
+it("retains independent overlapping defects and can finish them through fresh analyses", async () => {
+  let text = "The controls depends of dose.";
+  const first = await engine.analyze(text, defaults(), [], 51);
+  expect(first.some((i) => i.rule === "Bounded agreement")).toBe(true);
+  expect(first.some((i) => i.rule === "Dependent preposition")).toBe(true);
+  const agreement = first.find((i) => i.rule === "Bounded agreement")!;
+  text = applyCorrection(text, agreement, agreement.replacements[0], 51);
+  expect(() =>
+    applyCorrection(
+      text,
+      first.find((i) => i.rule === "Dependent preposition")!,
+      "depends on",
+      52,
+    ),
+  ).toThrow("revision");
+  const fresh = await engine.analyze(text, defaults(), [], 52);
+  const prep = fresh.find((i) => i.rule === "Dependent preposition")!;
+  expect(applyCorrection(text, prep, prep.replacements[0], 52)).toBe(
+    "The controls depend on dose.",
+  );
+});
+
+it("warns about incomplete mass-noun substitutions when coordinated correction is disabled", async () => {
+  const s = defaults();
+  s.overrides["Mass noun agreement"] = false;
+  const issues = await engine.analyze(
+    "These informations are useful.",
+    s,
+    [],
+    1,
+  );
+  expect(issues.some((i) => i.original === "informations")).toBe(true);
+  expect(
+    issues
+      .filter((i) => i.original === "informations")
+      .every((i) => i.replacements.length === 0),
+  ).toBe(true);
+});
+it("groups optional ml/mL consistency warnings with the same notation correction", async () => {
+  const s = defaults();
+  s.unitNotation = "mL";
+  s.overrides["Unit consistency"] = true;
+  const issues = await engine.analyze("We used 5 ml and 2 mL.", s, [], 1);
+  expect(issues.filter((i) => i.rule === "Unit consistency")).toHaveLength(1);
+});

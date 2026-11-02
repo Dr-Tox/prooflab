@@ -5,6 +5,7 @@ import {
   scientificVocabulary,
   scientificCaseVariants,
 } from "./vocabulary";
+import { mass } from "./grammar";
 import { measurementSpans } from "./measurements";
 import { legitimateRepetitions } from "./repetition";
 const repetitionRules = new Set([
@@ -66,6 +67,16 @@ export function createScientificPolicy(
     i.start >= r.start && i.end <= r.end;
   return (input: Issue): { issue?: Issue; reason?: string } => {
     const i = { ...input };
+    if (
+      lexicalRules.has(i.rule) &&
+      mass[i.original.toLowerCase()] &&
+      /\b(?:these|those)\s+$/i.test(text.slice(0, i.start))
+    ) {
+      i.replacements = [];
+      i.explanation =
+        "A mass-noun correction here also requires reviewing the demonstrative and verb. A noun-only substitution would be incomplete; review manually or enable the coordinated Mass noun agreement rule.";
+    }
+
     if (
       repetitionRules.has(i.rule) &&
       validRepeats.some(([a, b]) => overlaps(i.start, i.end, a, b))
@@ -172,7 +183,9 @@ function priority(i: Issue) {
   return i.edits
     ? 1000
     : i.notationOnly
-      ? 900
+      ? i.rule === "Unit consistency"
+        ? 910
+        : 900
       : i.rule === "Bounded agreement" || i.rule === "Mass noun agreement"
         ? 850
         : i.rule === "Repeated words"
@@ -192,7 +205,9 @@ export function aggregateIssues(issues: Issue[]): Issue[] {
   for (const candidate of ordered) {
     const conventionOwner = out.find(
       (i) =>
-        ((i.notationOnly && candidate.rule === "DegreesKelvinSymbol") ||
+        ((i.notationOnly &&
+          (candidate.rule === "DegreesKelvinSymbol" ||
+            candidate.rule === i.rule)) ||
           (i.rule === "Repeated words" &&
             [
               "RepeatedWords",
@@ -233,6 +248,7 @@ export function aggregateIssues(issues: Issue[]): Issue[] {
         i.start === candidate.start &&
         i.end === candidate.end &&
         (i.category === candidate.category ||
+          (lexicalRules.has(i.rule) && lexicalRules.has(candidate.rule)) ||
           i.replacements.some((r) => candidate.replacements.includes(r)) ||
           (lexicalRules.has(candidate.rule) && i.category === "Grammar")),
     );

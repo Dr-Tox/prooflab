@@ -176,8 +176,11 @@ const summaries = Object.fromEntries(
         unmatchedDiagnostics: sum("unmatchedDiagnostics"),
         duplicateDiagnostics: sum("duplicateCount"),
         harmfulSuggestionsProxy: sum("harmfulSuggestionCount"),
-        medianMs: times[Math.floor(times.length / 2)],
-        p95Ms: times[Math.floor(times.length * 0.95)],
+        medianMs:
+          times.length % 2
+            ? times[Math.floor(times.length / 2)]
+            : (times[times.length / 2 - 1] + times[times.length / 2]) / 2,
+        p95Ms: times[Math.max(0, Math.ceil(times.length * 0.95) - 1)],
       },
     ];
   }),
@@ -213,6 +216,13 @@ const report = {
   implementationSha256,
   stress,
   corpusVersion: 1,
+  corpusVersions: Object.fromEntries(
+    splits.map((split) => [
+      split,
+      JSON.parse(readFileSync(`benchmark/corpus/${split}.json`, "utf8"))
+        .version,
+    ]),
+  ),
   label,
   environment: {
     commit:

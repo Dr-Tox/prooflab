@@ -74,7 +74,7 @@ const pairs = [
   ["reduces", "reduce"],
 ];
 const finite = new Set(pairs.flat());
-const mass: Record<string, string> = {
+export const mass: Record<string, string> = {
   informations: "information",
   equipments: "equipment",
   advices: "advice",

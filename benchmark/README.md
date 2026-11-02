@@ -25,3 +25,11 @@ npm run benchmark -- --label development-current --splits development,regression
 - **Performance:** report initialization, per-case median/p95 latency, environment/lockfile, source hash, and small synthetic stress samples. These are in-process Node/WASM timings, not browser end-to-end latency, randomized performance trials, or a Word comparison. Cases are evaluated in a fixed order; warm-up/order/cache effects apply.
 
 The development and regression cases are implementation tests. The held-out split is a small, predeclared, engineer-authored evaluation; its author also implemented the rules, so it is not an independently blinded linguistic study. No superiority over Microsoft Word or comprehensive proofreading is claimed. A larger independently annotated, domain-diverse corpus and a controlled Word comparison are future work.
+
+## Evaluation rounds and leakage accounting
+
+Round one was evaluated only after implementation commit `c7890d2`. The immutable `reports/held-out-round1-first-pass.json` retains that result: all 16 positive groups detected, 13/13 complete corrections offered, 12/13 first-suggestion complete corrections, and 1/15 negative controls falsely flagged. Manual inspection also found the unsafe `C. → Co` alternative in a positive paragraph, which the narrow automated meaning proxy did not catch.
+
+Those findings were then promoted to **development safety regressions**. Token boundaries and scientific exponent handling were hardened in `a629ed8`. The original labels/hashes were never changed, but results for those same 31 cases in `current.json` are now **post-evaluation audits, not an untouched held-out score**.
+
+Before hardening, commit `f9fbe1a` froze 20 new second-round cases and `FROZEN-ROUND2.json`. Run `npm run benchmark -- --label round2 --splits held-out-round2` to reproduce their evaluation. No subsequent linguistic tuning uses their outcomes. The misses and false positive are retained and documented in `BENCHMARK_RESULTS.md`. Neither round is independently authored/blinded; both remain small engineering benchmarks.

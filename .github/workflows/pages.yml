@@ -21,6 +21,8 @@ jobs:
       - run: npm ci
       - run: npm run format:check
       - run: npm test
+      - name: Measure development and regression corpus
+        run: npm run benchmark -- --label ci --splits development,regression
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
