@@ -1,0 +1,420 @@
+{
+  "version": 1,
+  "split": "regression",
+  "cases": [
+    {
+      "id": "R01",
+      "text": "She do not agree.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "do",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["does"]
+        }
+      ],
+      "acceptedCorrections": ["She does not agree."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R01",
+        "current": "../reports/current.json#R01"
+      }
+    },
+    {
+      "id": "R02",
+      "text": "We did not observed toxicity.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "observed",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["observe"]
+        }
+      ],
+      "acceptedCorrections": ["We did not observe toxicity."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R02",
+        "current": "../reports/current.json#R02"
+      }
+    },
+    {
+      "id": "R03",
+      "text": "The samples have underwent analysis.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "underwent",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["undergone"]
+        }
+      ],
+      "acceptedCorrections": ["The samples have undergone analysis."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R03",
+        "current": "../reports/current.json#R03"
+      }
+    },
+    {
+      "id": "R04",
+      "text": "We used a appropriate method.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "a",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["an"]
+        }
+      ],
+      "acceptedCorrections": ["We used an appropriate method."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R04",
+        "current": "../reports/current.json#R04"
+      }
+    },
+    {
+      "id": "R05",
+      "text": "The treatment was more better than the control.",
+      "category": "Style",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "more better",
+          "category": "Style",
+          "behavior": "correction",
+          "acceptedReplacements": ["better"]
+        }
+      ],
+      "acceptedCorrections": ["The treatment was better than the control."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Style",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R05",
+        "current": "../reports/current.json#R05"
+      }
+    },
+    {
+      "id": "R06",
+      "text": "We discussed about the results.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "discussed about",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["discussed"]
+        }
+      ],
+      "acceptedCorrections": ["We discussed the results."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R06",
+        "current": "../reports/current.json#R06"
+      }
+    },
+    {
+      "id": "R07",
+      "text": "A usefull sample.",
+      "category": "Spelling",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "usefull",
+          "category": "Spelling",
+          "behavior": "correction",
+          "acceptedReplacements": ["useful"]
+        }
+      ],
+      "acceptedCorrections": ["A useful sample."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Spelling",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R07",
+        "current": "../reports/current.json#R07"
+      }
+    },
+    {
+      "id": "R08",
+      "text": "I recieve the sample.",
+      "category": "Spelling",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "recieve",
+          "category": "Spelling",
+          "behavior": "correction",
+          "acceptedReplacements": ["receive"]
+        }
+      ],
+      "acceptedCorrections": ["I receive the sample."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Spelling",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R08",
+        "current": "../reports/current.json#R08"
+      }
+    },
+    {
+      "id": "R09",
+      "text": "We used teh sample.",
+      "category": "Spelling",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "teh",
+          "category": "Spelling",
+          "behavior": "correction",
+          "acceptedReplacements": ["the"]
+        }
+      ],
+      "acceptedCorrections": ["We used the sample."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Spelling",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R09",
+        "current": "../reports/current.json#R09"
+      }
+    },
+    {
+      "id": "R10",
+      "text": "She are happy.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["is"]
+        }
+      ],
+      "acceptedCorrections": ["She is happy."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R10",
+        "current": "../reports/current.json#R10"
+      }
+    },
+    {
+      "id": "R11",
+      "text": "We used a a sample.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "a a",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["a"]
+        }
+      ],
+      "acceptedCorrections": ["We used a sample."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R11",
+        "current": "../reports/current.json#R11"
+      }
+    },
+    {
+      "id": "R12",
+      "text": "We measured hepatotoxicity and PFHxA.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R12",
+        "current": "../reports/current.json#R12"
+      }
+    },
+    {
+      "id": "R13",
+      "text": "H2O and MYB-NFIB were evaluated at p = 0.05.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R13",
+        "current": "../reports/current.json#R13"
+      }
+    },
+    {
+      "id": "R14",
+      "text": "The sample contained 3.14 mg of PFHxA.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R14",
+        "current": "../reports/current.json#R14"
+      }
+    },
+    {
+      "id": "R15",
+      "text": "The colour of the sample was measured.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R15",
+        "current": "../reports/current.json#R15"
+      },
+      "dialect": "UK"
+    },
+    {
+      "id": "R16",
+      "text": "🧪 Café samples were measured.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R16",
+        "current": "../reports/current.json#R16"
+      }
+    },
+    {
+      "id": "R17",
+      "text": "The sample may be consistent with the proposed mechanism.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R17",
+        "current": "../reports/current.json#R17"
+      }
+    },
+    {
+      "id": "R18",
+      "text": "We discussed the results.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R18",
+        "current": "../reports/current.json#R18"
+      }
+    },
+    {
+      "id": "R19",
+      "text": "She does not agree.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R19",
+        "current": "../reports/current.json#R19"
+      }
+    },
+    {
+      "id": "R20",
+      "text": "The samples have undergone analysis.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R20",
+        "current": "../reports/current.json#R20"
+      }
+    },
+    {
+      "id": "R21",
+      "text": "We used an appropriate method.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#R21",
+        "current": "../reports/current.json#R21"
+      }
+    }
+  ]
+}

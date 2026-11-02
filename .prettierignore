@@ -7,3 +7,5 @@ test-results
 *.tsbuildinfo
 
 public/licenses
+
+benchmark/reports
