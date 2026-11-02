@@ -37,7 +37,7 @@ The numerical/hedge/forbidden-string safety proxy reports no violations for the 
 
 ## Performance and reproducibility
 
-Recorded environment: Node **v24.19.0**, Linux x64, AMD EPYC 9V45; exact lockfile hash is stored in every report. These are single-process Node/real-WASM measurements, not browser rendering/network timings or a randomized speed comparison. Across these short cases, typical per-case medians are around **4–5 ms**. A synthetic 5,700-character stress sample took about **25 ms** median over three runs. Initialization is reported separately. Cache/JIT/order/host effects apply; do not infer a speed improvement from small timing differences.
+Recorded environment: Node **v24.19.0**, Linux x64, AMD EPYC 9V45; exact lockfile hash is stored in every report. These are single-process Node/real-WASM measurements, not browser rendering/network timings or a randomized speed comparison. Across these short cases, typical per-case medians are around **4–6 ms**. A synthetic 5,700-character stress sample took about **35 ms** median over three runs. Initialization is reported separately. Cache/JIT/order/host effects apply; do not infer a speed improvement from small timing differences.
 
 Run `npm test`, `npm run build`, `npm run test:e2e`, and `npm run benchmark`. Production browser tests also run at `/prooflab/`, with privacy/network/offline coverage, coordinated-edit formatting/Undo, and real development diagnostics. References include sentences, paragraphs, positive/negative variants, Greek, emoji, combining marks, Unicode minus and superscripts. Frozen held-out labels are hash-checked.
 
