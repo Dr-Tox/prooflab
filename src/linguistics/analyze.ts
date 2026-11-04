@@ -90,7 +90,7 @@ export function analyzeClauses(text: string, settings: Settings): Issue[] {
         add(
           rule,
           { start: v.start, end: v.end, original: v.word, replacement: want },
-          `The head of the subject is “${s.head.word}”, which is ${s.number}. ${s.reason} Use “${want}” instead of “${v.word}”.`,
+          `The subject headed by “${s.head.word}” takes ${s.number} agreement here. ${s.reason} Use “${want}” instead of “${v.word}”.`,
         );
     }
     for (const finding of verbFindings(t, s))

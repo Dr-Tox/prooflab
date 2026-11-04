@@ -191,9 +191,11 @@ export function subject(t: Token[]): Subject | undefined {
           initial === "i" ? "first" : initial === "you" ? "second" : undefined,
         reason: coordinated
           ? "Subjects joined by “and” take plural agreement."
-          : quantified
-            ? "“Each/every” controls singular agreement."
-            : "Nouns in intervening phrases do not control this verb.",
+          : head.lower === "number" && initial === "a"
+            ? "‘A number of’ refers to multiple items and takes plural agreement."
+            : quantified
+              ? "“Each/every” controls singular agreement."
+              : "Nouns in intervening phrases do not control this verb.",
       };
     }
     if (w === "and") {
