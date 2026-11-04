@@ -58,12 +58,10 @@ function request(data: object, analysis = false): Promise<Reply> {
     pending.set(id, { resolve, reject });
     if (analysis && activeAnalysis !== undefined) {
       if (queuedAnalysis) {
-        pending
-          .get(queuedAnalysis.id)
-          ?.resolve({
-            revision: queuedAnalysis.data.revision,
-            superseded: true,
-          });
+        pending.get(queuedAnalysis.id)?.resolve({
+          revision: queuedAnalysis.data.revision,
+          superseded: true,
+        });
         pending.delete(queuedAnalysis.id);
       }
       queuedAnalysis = { id, data };
