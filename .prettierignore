@@ -9,3 +9,5 @@ test-results
 public/licenses
 
 benchmark/reports
+
+benchmark/v2/reports

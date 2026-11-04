@@ -1,0 +1,4654 @@
+[
+  {
+    "id": "agreement-01-1",
+    "text": "The reagents shows instability.",
+    "category": "agreement",
+    "family": "agreement-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The reagents show instability."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-01-2",
+    "text": "The enzymes shows instability.",
+    "category": "agreement",
+    "family": "agreement-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The enzymes show instability."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-01-3",
+    "text": "The electrodes shows instability.",
+    "category": "agreement",
+    "family": "agreement-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The electrodes show instability."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-01-4",
+    "text": "The vesicles shows instability.",
+    "category": "agreement",
+    "family": "agreement-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The vesicles show instability."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-01-5",
+    "text": "The substrates shows instability.",
+    "category": "agreement",
+    "family": "agreement-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The substrates show instability."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-02-1",
+    "text": "The results indicates toxicity.",
+    "category": "agreement",
+    "family": "agreement-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The results indicate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-02-2",
+    "text": "The measurements indicates toxicity.",
+    "category": "agreement",
+    "family": "agreement-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The measurements indicate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-02-3",
+    "text": "The observations indicates toxicity.",
+    "category": "agreement",
+    "family": "agreement-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The observations indicate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-02-4",
+    "text": "The findings indicates toxicity.",
+    "category": "agreement",
+    "family": "agreement-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The findings indicate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-02-5",
+    "text": "The responses indicates toxicity.",
+    "category": "agreement",
+    "family": "agreement-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The responses indicate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-03-1",
+    "text": "The effect of these compounds are unknown.",
+    "category": "agreement",
+    "family": "agreement-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The effect of these compounds is unknown."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-03-2",
+    "text": "The concentration of these compounds are unknown.",
+    "category": "agreement",
+    "family": "agreement-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The concentration of these compounds is unknown."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-03-3",
+    "text": "The activity of these compounds are unknown.",
+    "category": "agreement",
+    "family": "agreement-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The activity of these compounds is unknown."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-03-4",
+    "text": "The composition of these compounds are unknown.",
+    "category": "agreement",
+    "family": "agreement-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The composition of these compounds is unknown."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-03-5",
+    "text": "The expression of these compounds are unknown.",
+    "category": "agreement",
+    "family": "agreement-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The expression of these compounds is unknown."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-04-1",
+    "text": "The concentrations of PFAS was measured.",
+    "category": "agreement",
+    "family": "agreement-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The concentrations of PFAS were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-04-2",
+    "text": "The levels of PFAS was measured.",
+    "category": "agreement",
+    "family": "agreement-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The levels of PFAS were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-04-3",
+    "text": "The amounts of PFAS was measured.",
+    "category": "agreement",
+    "family": "agreement-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The amounts of PFAS were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-04-4",
+    "text": "The distributions of PFAS was measured.",
+    "category": "agreement",
+    "family": "agreement-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The distributions of PFAS were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-04-5",
+    "text": "The fractions of PFAS was measured.",
+    "category": "agreement",
+    "family": "agreement-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The fractions of PFAS were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-05-1",
+    "text": "Each of the samples were analyzed.",
+    "category": "agreement",
+    "family": "agreement-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Each of the samples was analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-05-2",
+    "text": "Each of the cultures were analyzed.",
+    "category": "agreement",
+    "family": "agreement-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Each of the cultures was analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-05-3",
+    "text": "Each of the specimens were analyzed.",
+    "category": "agreement",
+    "family": "agreement-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Each of the specimens was analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-05-4",
+    "text": "Each of the aliquots were analyzed.",
+    "category": "agreement",
+    "family": "agreement-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Each of the aliquots was analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-05-5",
+    "text": "Each of the extracts were analyzed.",
+    "category": "agreement",
+    "family": "agreement-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Each of the extracts was analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-06-1",
+    "text": "There is several explanations.",
+    "category": "agreement",
+    "family": "agreement-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "There are several explanations."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-06-2",
+    "text": "There is several reasons.",
+    "category": "agreement",
+    "family": "agreement-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "There are several reasons."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-06-3",
+    "text": "There is several limitations.",
+    "category": "agreement",
+    "family": "agreement-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "There are several limitations."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-06-4",
+    "text": "There is several hypotheses.",
+    "category": "agreement",
+    "family": "agreement-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "There are several hypotheses."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-06-5",
+    "text": "There is several possibilities.",
+    "category": "agreement",
+    "family": "agreement-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "There are several possibilities."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-07-1",
+    "text": "The samples that were collected was analyzed.",
+    "category": "agreement",
+    "family": "agreement-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples that were collected were analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-07-2",
+    "text": "The specimens that were collected was analyzed.",
+    "category": "agreement",
+    "family": "agreement-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The specimens that were collected were analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-07-3",
+    "text": "The tissues that were collected was analyzed.",
+    "category": "agreement",
+    "family": "agreement-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The tissues that were collected were analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-07-4",
+    "text": "The extracts that were collected was analyzed.",
+    "category": "agreement",
+    "family": "agreement-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The extracts that were collected were analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-07-5",
+    "text": "The fractions that were collected was analyzed.",
+    "category": "agreement",
+    "family": "agreement-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The fractions that were collected were analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-08-1",
+    "text": "The researchers has identified three metabolites.",
+    "category": "agreement",
+    "family": "agreement-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers have identified three metabolites."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-08-2",
+    "text": "The investigators has identified three metabolites.",
+    "category": "agreement",
+    "family": "agreement-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The investigators have identified three metabolites."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-08-3",
+    "text": "The scientists has identified three metabolites.",
+    "category": "agreement",
+    "family": "agreement-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The scientists have identified three metabolites."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-08-4",
+    "text": "The analysts has identified three metabolites.",
+    "category": "agreement",
+    "family": "agreement-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The analysts have identified three metabolites."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-08-5",
+    "text": "The technicians has identified three metabolites.",
+    "category": "agreement",
+    "family": "agreement-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The technicians have identified three metabolites."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-09-1",
+    "text": "The cells was treated before analysis.",
+    "category": "agreement",
+    "family": "agreement-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The cells were treated before analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-09-2",
+    "text": "The cultures was treated before analysis.",
+    "category": "agreement",
+    "family": "agreement-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The cultures were treated before analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-09-3",
+    "text": "The tissues was treated before analysis.",
+    "category": "agreement",
+    "family": "agreement-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The tissues were treated before analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-09-4",
+    "text": "The animals was treated before analysis.",
+    "category": "agreement",
+    "family": "agreement-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The animals were treated before analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-09-5",
+    "text": "The mice was treated before analysis.",
+    "category": "agreement",
+    "family": "agreement-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The mice were treated before analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-10-1",
+    "text": "A series of experiments were conducted.",
+    "category": "agreement",
+    "family": "agreement-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A series of experiments was conducted."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-10-2",
+    "text": "A series of assays were conducted.",
+    "category": "agreement",
+    "family": "agreement-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A series of assays was conducted."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-10-3",
+    "text": "A series of tests were conducted.",
+    "category": "agreement",
+    "family": "agreement-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A series of tests was conducted."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-10-4",
+    "text": "A series of measurements were conducted.",
+    "category": "agreement",
+    "family": "agreement-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A series of measurements was conducted."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-10-5",
+    "text": "A series of trials were conducted.",
+    "category": "agreement",
+    "family": "agreement-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A series of trials was conducted."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-11-1",
+    "text": "A number of samples was excluded.",
+    "category": "agreement",
+    "family": "agreement-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A number of samples were excluded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-11-2",
+    "text": "A number of patients was excluded.",
+    "category": "agreement",
+    "family": "agreement-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A number of patients were excluded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-11-3",
+    "text": "A number of participants was excluded.",
+    "category": "agreement",
+    "family": "agreement-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A number of participants were excluded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-11-4",
+    "text": "A number of records was excluded.",
+    "category": "agreement",
+    "family": "agreement-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A number of records were excluded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-11-5",
+    "text": "A number of observations was excluded.",
+    "category": "agreement",
+    "family": "agreement-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "A number of observations were excluded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-12-1",
+    "text": "The number of cells were recorded.",
+    "category": "agreement",
+    "family": "agreement-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The number of cells was recorded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-12-2",
+    "text": "The number of subjects were recorded.",
+    "category": "agreement",
+    "family": "agreement-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The number of subjects was recorded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-12-3",
+    "text": "The number of colonies were recorded.",
+    "category": "agreement",
+    "family": "agreement-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The number of colonies was recorded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-12-4",
+    "text": "The number of events were recorded.",
+    "category": "agreement",
+    "family": "agreement-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The number of events was recorded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-12-5",
+    "text": "The number of particles were recorded.",
+    "category": "agreement",
+    "family": "agreement-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The number of particles was recorded."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-13-1",
+    "text": "The evidence are consistent with the hypothesis.",
+    "category": "agreement",
+    "family": "agreement-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The evidence is consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-13-2",
+    "text": "The information are consistent with the hypothesis.",
+    "category": "agreement",
+    "family": "agreement-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The information is consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-13-3",
+    "text": "The equipment are consistent with the hypothesis.",
+    "category": "agreement",
+    "family": "agreement-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The equipment is consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-13-4",
+    "text": "The apparatus are consistent with the hypothesis.",
+    "category": "agreement",
+    "family": "agreement-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The apparatus is consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-13-5",
+    "text": "The analysis are consistent with the hypothesis.",
+    "category": "agreement",
+    "family": "agreement-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The analysis is consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-14-1",
+    "text": "Both the sample and the control was measured.",
+    "category": "agreement",
+    "family": "agreement-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Both the sample and the control were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-14-2",
+    "text": "Both the extract and the control was measured.",
+    "category": "agreement",
+    "family": "agreement-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Both the extract and the control were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-14-3",
+    "text": "Both the solution and the control was measured.",
+    "category": "agreement",
+    "family": "agreement-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Both the solution and the control were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-14-4",
+    "text": "Both the buffer and the control was measured.",
+    "category": "agreement",
+    "family": "agreement-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Both the buffer and the control were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-14-5",
+    "text": "Both the standard and the control was measured.",
+    "category": "agreement",
+    "family": "agreement-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Both the standard and the control were measured."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-15-1",
+    "text": "The investigator do not agree.",
+    "category": "agreement",
+    "family": "agreement-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The investigator does not agree."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-15-2",
+    "text": "The analyst do not agree.",
+    "category": "agreement",
+    "family": "agreement-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The analyst does not agree."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-15-3",
+    "text": "The reviewer do not agree.",
+    "category": "agreement",
+    "family": "agreement-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The reviewer does not agree."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-15-4",
+    "text": "The technician do not agree.",
+    "category": "agreement",
+    "family": "agreement-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The technician does not agree."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-15-5",
+    "text": "The scientist do not agree.",
+    "category": "agreement",
+    "family": "agreement-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The scientist does not agree."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-16-1",
+    "text": "Everyone in the laboratory have agreed.",
+    "category": "agreement",
+    "family": "agreement-16",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Everyone in the laboratory has agreed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-16-2",
+    "text": "Everyone in the department have agreed.",
+    "category": "agreement",
+    "family": "agreement-16",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Everyone in the department has agreed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-16-3",
+    "text": "Everyone in the team have agreed.",
+    "category": "agreement",
+    "family": "agreement-16",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Everyone in the team has agreed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-16-4",
+    "text": "Everyone in the group have agreed.",
+    "category": "agreement",
+    "family": "agreement-16",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Everyone in the group has agreed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-16-5",
+    "text": "Everyone in the institute have agreed.",
+    "category": "agreement",
+    "family": "agreement-16",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "Everyone in the institute has agreed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-17-1",
+    "text": "The electrodes with a fluorescent label requires calibration.",
+    "category": "agreement",
+    "family": "agreement-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The electrodes with a fluorescent label require calibration."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-17-2",
+    "text": "The probes with a fluorescent label requires calibration.",
+    "category": "agreement",
+    "family": "agreement-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The probes with a fluorescent label require calibration."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-17-3",
+    "text": "The sensors with a fluorescent label requires calibration.",
+    "category": "agreement",
+    "family": "agreement-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The sensors with a fluorescent label require calibration."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-17-4",
+    "text": "The detectors with a fluorescent label requires calibration.",
+    "category": "agreement",
+    "family": "agreement-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The detectors with a fluorescent label require calibration."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-17-5",
+    "text": "The instruments with a fluorescent label requires calibration.",
+    "category": "agreement",
+    "family": "agreement-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The instruments with a fluorescent label require calibration."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-18-1",
+    "text": "The tissues from the exposed animals shows damage.",
+    "category": "agreement",
+    "family": "agreement-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The tissues from the exposed animals show damage."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-18-2",
+    "text": "The organs from the exposed animals shows damage.",
+    "category": "agreement",
+    "family": "agreement-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The organs from the exposed animals show damage."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-18-3",
+    "text": "The sections from the exposed animals shows damage.",
+    "category": "agreement",
+    "family": "agreement-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The sections from the exposed animals show damage."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-18-4",
+    "text": "The biopsies from the exposed animals shows damage.",
+    "category": "agreement",
+    "family": "agreement-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The biopsies from the exposed animals show damage."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-18-5",
+    "text": "The cells from the exposed animals shows damage.",
+    "category": "agreement",
+    "family": "agreement-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The cells from the exposed animals show damage."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-19-1",
+    "text": "The temperature of the samples in the freezer were stable.",
+    "category": "agreement",
+    "family": "agreement-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The temperature of the samples in the freezer was stable."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-19-2",
+    "text": "The quality of the samples in the freezer were stable.",
+    "category": "agreement",
+    "family": "agreement-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The quality of the samples in the freezer was stable."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-19-3",
+    "text": "The integrity of the samples in the freezer were stable.",
+    "category": "agreement",
+    "family": "agreement-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The integrity of the samples in the freezer was stable."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-19-4",
+    "text": "The composition of the samples in the freezer were stable.",
+    "category": "agreement",
+    "family": "agreement-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The composition of the samples in the freezer was stable."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-19-5",
+    "text": "The appearance of the samples in the freezer were stable.",
+    "category": "agreement",
+    "family": "agreement-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The appearance of the samples in the freezer was stable."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-20-1",
+    "text": "The phenomenon are reproducible.",
+    "category": "agreement",
+    "family": "agreement-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The phenomenon is reproducible."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-20-2",
+    "text": "The criterion are reproducible.",
+    "category": "agreement",
+    "family": "agreement-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The criterion is reproducible."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-20-3",
+    "text": "The index are reproducible.",
+    "category": "agreement",
+    "family": "agreement-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The index is reproducible."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-20-4",
+    "text": "The matrix are reproducible.",
+    "category": "agreement",
+    "family": "agreement-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The matrix is reproducible."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-20-5",
+    "text": "The hypothesis are reproducible.",
+    "category": "agreement",
+    "family": "agreement-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The hypothesis is reproducible."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-21-1",
+    "text": "The bacteria was measured independently.",
+    "category": "agreement",
+    "family": "agreement-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The bacteria were measured independently."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-21-2",
+    "text": "The nuclei was measured independently.",
+    "category": "agreement",
+    "family": "agreement-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The nuclei were measured independently."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-21-3",
+    "text": "The criteria was measured independently.",
+    "category": "agreement",
+    "family": "agreement-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The criteria were measured independently."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-21-4",
+    "text": "The phenomena was measured independently.",
+    "category": "agreement",
+    "family": "agreement-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The phenomena were measured independently."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "agreement-21-5",
+    "text": "The matrices was measured independently.",
+    "category": "agreement",
+    "family": "agreement-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The matrices were measured independently."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct subject-controlled agreement without changing scientific meaning."
+  },
+  {
+    "id": "verb-01-1",
+    "text": "We did not observed toxicity.",
+    "category": "verb",
+    "family": "verb-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We did not observe toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-01-2",
+    "text": "We did not detected toxicity.",
+    "category": "verb",
+    "family": "verb-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We did not detect toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-01-3",
+    "text": "We did not measured toxicity.",
+    "category": "verb",
+    "family": "verb-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We did not measure toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-01-4",
+    "text": "We did not assessed toxicity.",
+    "category": "verb",
+    "family": "verb-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We did not assess toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-01-5",
+    "text": "We did not reported toxicity.",
+    "category": "verb",
+    "family": "verb-01",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We did not report toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-02-1",
+    "text": "The samples have underwent analysis.",
+    "category": "verb",
+    "family": "verb-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples have undergone analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-02-2",
+    "text": "The samples have undergo analysis.",
+    "category": "verb",
+    "family": "verb-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples have undergone analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-02-3",
+    "text": "The samples have undergoing analysis.",
+    "category": "verb",
+    "family": "verb-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples have undergone analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-02-4",
+    "text": "The samples have undergoes analysis.",
+    "category": "verb",
+    "family": "verb-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples have undergone analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-02-5",
+    "text": "The samples have underwent analysis.",
+    "category": "verb",
+    "family": "verb-02",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples have undergone analysis."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-03-1",
+    "text": "The experiment was conduct yesterday.",
+    "category": "verb",
+    "family": "verb-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment was conducted yesterday."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-03-2",
+    "text": "The experiment was repeat yesterday.",
+    "category": "verb",
+    "family": "verb-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment was repeated yesterday."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-03-3",
+    "text": "The experiment was perform yesterday.",
+    "category": "verb",
+    "family": "verb-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment was performed yesterday."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-03-4",
+    "text": "The experiment was complete yesterday.",
+    "category": "verb",
+    "family": "verb-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment was completed yesterday."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-03-5",
+    "text": "The experiment was replicate yesterday.",
+    "category": "verb",
+    "family": "verb-03",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment was replicated yesterday."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-04-1",
+    "text": "The samples were analyze by ELISA.",
+    "category": "verb",
+    "family": "verb-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples were analyzed by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-04-2",
+    "text": "The samples were measure by ELISA.",
+    "category": "verb",
+    "family": "verb-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples were measured by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-04-3",
+    "text": "The samples were assess by ELISA.",
+    "category": "verb",
+    "family": "verb-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples were assessed by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-04-4",
+    "text": "The samples were evaluate by ELISA.",
+    "category": "verb",
+    "family": "verb-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples were evaluated by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-04-5",
+    "text": "The samples were test by ELISA.",
+    "category": "verb",
+    "family": "verb-04",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples were tested by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-05-1",
+    "text": "The treatment may reduces inflammation.",
+    "category": "verb",
+    "family": "verb-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The treatment may reduce inflammation."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-05-2",
+    "text": "The treatment may affects inflammation.",
+    "category": "verb",
+    "family": "verb-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The treatment may affect inflammation."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-05-3",
+    "text": "The treatment may increases inflammation.",
+    "category": "verb",
+    "family": "verb-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The treatment may increase inflammation."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-05-4",
+    "text": "The treatment may modulates inflammation.",
+    "category": "verb",
+    "family": "verb-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The treatment may modulate inflammation."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-05-5",
+    "text": "The treatment may promotes inflammation.",
+    "category": "verb",
+    "family": "verb-05",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The treatment may promote inflammation."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-06-1",
+    "text": "The experiment has been conduct twice.",
+    "category": "verb",
+    "family": "verb-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment has been conducted twice."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-06-2",
+    "text": "The experiment has been repeat twice.",
+    "category": "verb",
+    "family": "verb-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment has been repeated twice."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-06-3",
+    "text": "The experiment has been perform twice.",
+    "category": "verb",
+    "family": "verb-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment has been performed twice."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-06-4",
+    "text": "The experiment has been complete twice.",
+    "category": "verb",
+    "family": "verb-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment has been completed twice."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-06-5",
+    "text": "The experiment has been replicate twice.",
+    "category": "verb",
+    "family": "verb-06",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The experiment has been replicated twice."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-07-1",
+    "text": "The samples had been store at −80 °C.",
+    "category": "verb",
+    "family": "verb-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples had been stored at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-07-2",
+    "text": "The samples had been freeze at −80 °C.",
+    "category": "verb",
+    "family": "verb-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples had been frozen at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-07-3",
+    "text": "The samples had been keep at −80 °C.",
+    "category": "verb",
+    "family": "verb-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples had been kept at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-07-4",
+    "text": "The samples had been preserve at −80 °C.",
+    "category": "verb",
+    "family": "verb-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples had been preserved at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-07-5",
+    "text": "The samples had been incubate at −80 °C.",
+    "category": "verb",
+    "family": "verb-07",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The samples had been incubated at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-08-1",
+    "text": "The reagents has been analyze.",
+    "category": "verb",
+    "family": "verb-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The reagents have been analyzed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-08-2",
+    "text": "The reagents has been test.",
+    "category": "verb",
+    "family": "verb-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The reagents have been tested."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-08-3",
+    "text": "The reagents has been prepare.",
+    "category": "verb",
+    "family": "verb-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The reagents have been prepared."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-08-4",
+    "text": "The reagents has been store.",
+    "category": "verb",
+    "family": "verb-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The reagents have been stored."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-08-5",
+    "text": "The reagents has been evaluate.",
+    "category": "verb",
+    "family": "verb-08",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The reagents have been evaluated."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-09-1",
+    "text": "The signals depends of time.",
+    "category": "verb",
+    "family": "verb-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The signals depend on time."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-09-2",
+    "text": "The signals depends of temperature.",
+    "category": "verb",
+    "family": "verb-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The signals depend on temperature."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-09-3",
+    "text": "The signals depends of dose.",
+    "category": "verb",
+    "family": "verb-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The signals depend on dose."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-09-4",
+    "text": "The signals depends of concentration.",
+    "category": "verb",
+    "family": "verb-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The signals depend on concentration."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-09-5",
+    "text": "The signals depends of pressure.",
+    "category": "verb",
+    "family": "verb-09",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The signals depend on pressure."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-10-1",
+    "text": "She does not accepts the result.",
+    "category": "verb",
+    "family": "verb-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "She does not accept the result."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-10-2",
+    "text": "She does not agrees the result.",
+    "category": "verb",
+    "family": "verb-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "She does not agree the result."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-10-3",
+    "text": "She does not disputes the result.",
+    "category": "verb",
+    "family": "verb-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "She does not dispute the result."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-10-4",
+    "text": "She does not confirms the result.",
+    "category": "verb",
+    "family": "verb-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "She does not confirm the result."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-10-5",
+    "text": "She does not reports the result.",
+    "category": "verb",
+    "family": "verb-10",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "She does not report the result."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-11-1",
+    "text": "The cells are being treat.",
+    "category": "verb",
+    "family": "verb-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The cells are being treated."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-11-2",
+    "text": "The cells are being wash.",
+    "category": "verb",
+    "family": "verb-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The cells are being washed."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-11-3",
+    "text": "The cells are being stain.",
+    "category": "verb",
+    "family": "verb-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The cells are being stained."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-11-4",
+    "text": "The cells are being image.",
+    "category": "verb",
+    "family": "verb-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The cells are being imaged."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-11-5",
+    "text": "The cells are being count.",
+    "category": "verb",
+    "family": "verb-11",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The cells are being counted."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-12-1",
+    "text": "The team has wrote the data.",
+    "category": "verb",
+    "family": "verb-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The team has written the data."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-12-2",
+    "text": "The team has took the data.",
+    "category": "verb",
+    "family": "verb-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The team has taken the data."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-12-3",
+    "text": "The team has saw the data.",
+    "category": "verb",
+    "family": "verb-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The team has seen the data."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-12-4",
+    "text": "The team has chose the data.",
+    "category": "verb",
+    "family": "verb-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The team has chosen the data."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-12-5",
+    "text": "The team has gave the data.",
+    "category": "verb",
+    "family": "verb-12",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The team has given the data."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-13-1",
+    "text": "The researchers will analyzed the samples.",
+    "category": "verb",
+    "family": "verb-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers will analyze the samples."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-13-2",
+    "text": "The researchers will stored the samples.",
+    "category": "verb",
+    "family": "verb-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers will store the samples."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-13-3",
+    "text": "The researchers will measured the samples.",
+    "category": "verb",
+    "family": "verb-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers will measure the samples."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-13-4",
+    "text": "The researchers will treated the samples.",
+    "category": "verb",
+    "family": "verb-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers will treat the samples."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-13-5",
+    "text": "The researchers will collected the samples.",
+    "category": "verb",
+    "family": "verb-13",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers will collect the samples."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-14-1",
+    "text": "We have been measure the response.",
+    "category": "verb",
+    "family": "verb-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We have been measuring the response."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-14-2",
+    "text": "We have been assess the response.",
+    "category": "verb",
+    "family": "verb-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We have been assessing the response."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-14-3",
+    "text": "We have been observe the response.",
+    "category": "verb",
+    "family": "verb-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We have been observing the response."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-14-4",
+    "text": "We have been monitor the response.",
+    "category": "verb",
+    "family": "verb-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We have been monitoring the response."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-14-5",
+    "text": "We have been record the response.",
+    "category": "verb",
+    "family": "verb-14",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "We have been recording the response."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-15-1",
+    "text": "The researchers were examine the cultures.",
+    "category": "verb",
+    "family": "verb-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers were examining the cultures."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-15-2",
+    "text": "The researchers were monitor the cultures.",
+    "category": "verb",
+    "family": "verb-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers were monitoring the cultures."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-15-3",
+    "text": "The researchers were study the cultures.",
+    "category": "verb",
+    "family": "verb-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers were studying the cultures."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-15-4",
+    "text": "The researchers were observe the cultures.",
+    "category": "verb",
+    "family": "verb-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers were observing the cultures."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-15-5",
+    "text": "The researchers were image the cultures.",
+    "category": "verb",
+    "family": "verb-15",
+    "split": "development",
+    "behavior": "correction",
+    "accepted": [
+      "The researchers were imaging the cultures."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-16-1",
+    "text": "We have measured the response yesterday.",
+    "category": "verb",
+    "family": "verb-16",
+    "split": "development",
+    "behavior": "warning",
+    "accepted": [],
+    "forbidden": [],
+    "severity": "review",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-16-2",
+    "text": "We have measured the response last Monday.",
+    "category": "verb",
+    "family": "verb-16",
+    "split": "development",
+    "behavior": "warning",
+    "accepted": [],
+    "forbidden": [],
+    "severity": "review",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-16-3",
+    "text": "We have measured the response in 2019.",
+    "category": "verb",
+    "family": "verb-16",
+    "split": "development",
+    "behavior": "warning",
+    "accepted": [],
+    "forbidden": [],
+    "severity": "review",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-16-4",
+    "text": "We have measured the response two days ago.",
+    "category": "verb",
+    "family": "verb-16",
+    "split": "development",
+    "behavior": "warning",
+    "accepted": [],
+    "forbidden": [],
+    "severity": "review",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-16-5",
+    "text": "We have measured the response last week.",
+    "category": "verb",
+    "family": "verb-16",
+    "split": "development",
+    "behavior": "warning",
+    "accepted": [],
+    "forbidden": [],
+    "severity": "review",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-17-1",
+    "text": "The assay might reveals toxicity.",
+    "category": "verb",
+    "family": "verb-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The assay might reveal toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-17-2",
+    "text": "The assay might detects toxicity.",
+    "category": "verb",
+    "family": "verb-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The assay might detect toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-17-3",
+    "text": "The assay might predicts toxicity.",
+    "category": "verb",
+    "family": "verb-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The assay might predict toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-17-4",
+    "text": "The assay might indicates toxicity.",
+    "category": "verb",
+    "family": "verb-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The assay might indicate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-17-5",
+    "text": "The assay might underestimates toxicity.",
+    "category": "verb",
+    "family": "verb-17",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The assay might underestimate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-18-1",
+    "text": "They did not saw the endpoint.",
+    "category": "verb",
+    "family": "verb-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "They did not see the endpoint."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-18-2",
+    "text": "They did not chose the endpoint.",
+    "category": "verb",
+    "family": "verb-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "They did not choose the endpoint."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-18-3",
+    "text": "They did not found the endpoint.",
+    "category": "verb",
+    "family": "verb-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "They did not find the endpoint."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-18-4",
+    "text": "They did not took the endpoint.",
+    "category": "verb",
+    "family": "verb-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "They did not take the endpoint."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-18-5",
+    "text": "They did not wrote the endpoint.",
+    "category": "verb",
+    "family": "verb-18",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "They did not write the endpoint."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-19-1",
+    "text": "The proteins have remain in solution.",
+    "category": "verb",
+    "family": "verb-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The proteins have remained in solution."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-19-2",
+    "text": "The proteins have persist in solution.",
+    "category": "verb",
+    "family": "verb-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The proteins have persisted in solution."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-19-3",
+    "text": "The proteins have aggregate in solution.",
+    "category": "verb",
+    "family": "verb-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The proteins have aggregated in solution."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-19-4",
+    "text": "The proteins have accumulate in solution.",
+    "category": "verb",
+    "family": "verb-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The proteins have accumulated in solution."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-19-5",
+    "text": "The proteins have degrade in solution.",
+    "category": "verb",
+    "family": "verb-19",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The proteins have degraded in solution."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-20-1",
+    "text": "The specimens should have been freeze.",
+    "category": "verb",
+    "family": "verb-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The specimens should have been frozen."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-20-2",
+    "text": "The specimens should have been store.",
+    "category": "verb",
+    "family": "verb-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The specimens should have been stored."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-20-3",
+    "text": "The specimens should have been take.",
+    "category": "verb",
+    "family": "verb-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The specimens should have been taken."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-20-4",
+    "text": "The specimens should have been keep.",
+    "category": "verb",
+    "family": "verb-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The specimens should have been kept."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-20-5",
+    "text": "The specimens should have been send.",
+    "category": "verb",
+    "family": "verb-20",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The specimens should have been sent."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-21-1",
+    "text": "The authors could explains the mechanism.",
+    "category": "verb",
+    "family": "verb-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The authors could explain the mechanism."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-21-2",
+    "text": "The authors could identified the mechanism.",
+    "category": "verb",
+    "family": "verb-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The authors could identify the mechanism."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-21-3",
+    "text": "The authors could describes the mechanism.",
+    "category": "verb",
+    "family": "verb-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The authors could describe the mechanism."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-21-4",
+    "text": "The authors could elucidated the mechanism.",
+    "category": "verb",
+    "family": "verb-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The authors could elucidate the mechanism."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "verb-21-5",
+    "text": "The authors could investigates the mechanism.",
+    "category": "verb",
+    "family": "verb-21",
+    "split": "held-out",
+    "behavior": "correction",
+    "accepted": [
+      "The authors could investigate the mechanism."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct auxiliary-selected verb form; explicit dated perfect is review only."
+  },
+  {
+    "id": "control-001",
+    "text": "The reagents show instability.",
+    "category": "control",
+    "family": "control-00",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The reagents show instability."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-002",
+    "text": "The electrodes show instability.",
+    "category": "control",
+    "family": "control-00",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The electrodes show instability."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-003",
+    "text": "The substrates show instability.",
+    "category": "control",
+    "family": "control-00",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The substrates show instability."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-004",
+    "text": "The measurements indicate toxicity.",
+    "category": "control",
+    "family": "control-00",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The measurements indicate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-005",
+    "text": "The findings indicate toxicity.",
+    "category": "control",
+    "family": "control-00",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The findings indicate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-006",
+    "text": "The effect of these compounds is unknown.",
+    "category": "control",
+    "family": "control-01",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The effect of these compounds is unknown."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-007",
+    "text": "The activity of these compounds is unknown.",
+    "category": "control",
+    "family": "control-01",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The activity of these compounds is unknown."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-008",
+    "text": "The expression of these compounds is unknown.",
+    "category": "control",
+    "family": "control-01",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The expression of these compounds is unknown."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-009",
+    "text": "The levels of PFAS were measured.",
+    "category": "control",
+    "family": "control-01",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The levels of PFAS were measured."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-010",
+    "text": "The distributions of PFAS were measured.",
+    "category": "control",
+    "family": "control-01",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The distributions of PFAS were measured."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-011",
+    "text": "Each of the samples was analyzed.",
+    "category": "control",
+    "family": "control-02",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "Each of the samples was analyzed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-012",
+    "text": "Each of the specimens was analyzed.",
+    "category": "control",
+    "family": "control-02",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "Each of the specimens was analyzed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-013",
+    "text": "Each of the extracts was analyzed.",
+    "category": "control",
+    "family": "control-02",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "Each of the extracts was analyzed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-014",
+    "text": "There are several reasons.",
+    "category": "control",
+    "family": "control-02",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "There are several reasons."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-015",
+    "text": "There are several hypotheses.",
+    "category": "control",
+    "family": "control-02",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "There are several hypotheses."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-016",
+    "text": "The samples that were collected were analyzed.",
+    "category": "control",
+    "family": "control-03",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples that were collected were analyzed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-017",
+    "text": "The tissues that were collected were analyzed.",
+    "category": "control",
+    "family": "control-03",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The tissues that were collected were analyzed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-018",
+    "text": "The fractions that were collected were analyzed.",
+    "category": "control",
+    "family": "control-03",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The fractions that were collected were analyzed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-019",
+    "text": "The investigators have identified three metabolites.",
+    "category": "control",
+    "family": "control-03",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The investigators have identified three metabolites."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-020",
+    "text": "The analysts have identified three metabolites.",
+    "category": "control",
+    "family": "control-03",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The analysts have identified three metabolites."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-021",
+    "text": "The cells were treated before analysis.",
+    "category": "control",
+    "family": "control-04",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The cells were treated before analysis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-022",
+    "text": "The tissues were treated before analysis.",
+    "category": "control",
+    "family": "control-04",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The tissues were treated before analysis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-023",
+    "text": "The mice were treated before analysis.",
+    "category": "control",
+    "family": "control-04",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The mice were treated before analysis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-024",
+    "text": "A series of assays was conducted.",
+    "category": "control",
+    "family": "control-04",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "A series of assays was conducted."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-025",
+    "text": "A series of measurements was conducted.",
+    "category": "control",
+    "family": "control-04",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "A series of measurements was conducted."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-026",
+    "text": "A number of samples were excluded.",
+    "category": "control",
+    "family": "control-05",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "A number of samples were excluded."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-027",
+    "text": "A number of participants were excluded.",
+    "category": "control",
+    "family": "control-05",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "A number of participants were excluded."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-028",
+    "text": "A number of observations were excluded.",
+    "category": "control",
+    "family": "control-05",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "A number of observations were excluded."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-029",
+    "text": "The number of subjects was recorded.",
+    "category": "control",
+    "family": "control-05",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The number of subjects was recorded."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-030",
+    "text": "The number of events was recorded.",
+    "category": "control",
+    "family": "control-05",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The number of events was recorded."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-031",
+    "text": "The evidence is consistent with the hypothesis.",
+    "category": "control",
+    "family": "control-06",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The evidence is consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-032",
+    "text": "The equipment is consistent with the hypothesis.",
+    "category": "control",
+    "family": "control-06",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The equipment is consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-033",
+    "text": "The analysis is consistent with the hypothesis.",
+    "category": "control",
+    "family": "control-06",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The analysis is consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-034",
+    "text": "Both the extract and the control were measured.",
+    "category": "control",
+    "family": "control-06",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "Both the extract and the control were measured."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-035",
+    "text": "Both the buffer and the control were measured.",
+    "category": "control",
+    "family": "control-06",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "Both the buffer and the control were measured."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-036",
+    "text": "The investigator does not agree.",
+    "category": "control",
+    "family": "control-07",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The investigator does not agree."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-037",
+    "text": "The reviewer does not agree.",
+    "category": "control",
+    "family": "control-07",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The reviewer does not agree."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-038",
+    "text": "The scientist does not agree.",
+    "category": "control",
+    "family": "control-07",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The scientist does not agree."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-039",
+    "text": "Everyone in the department has agreed.",
+    "category": "control",
+    "family": "control-07",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "Everyone in the department has agreed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-040",
+    "text": "Everyone in the group has agreed.",
+    "category": "control",
+    "family": "control-07",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "Everyone in the group has agreed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-041",
+    "text": "The electrodes with a fluorescent label require calibration.",
+    "category": "control",
+    "family": "control-08",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The electrodes with a fluorescent label require calibration."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-042",
+    "text": "The sensors with a fluorescent label require calibration.",
+    "category": "control",
+    "family": "control-08",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The sensors with a fluorescent label require calibration."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-043",
+    "text": "The instruments with a fluorescent label require calibration.",
+    "category": "control",
+    "family": "control-08",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The instruments with a fluorescent label require calibration."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-044",
+    "text": "The organs from the exposed animals show damage.",
+    "category": "control",
+    "family": "control-08",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The organs from the exposed animals show damage."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-045",
+    "text": "The biopsies from the exposed animals show damage.",
+    "category": "control",
+    "family": "control-08",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The biopsies from the exposed animals show damage."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-046",
+    "text": "The temperature of the samples in the freezer was stable.",
+    "category": "control",
+    "family": "control-09",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The temperature of the samples in the freezer was stable."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-047",
+    "text": "The integrity of the samples in the freezer was stable.",
+    "category": "control",
+    "family": "control-09",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The integrity of the samples in the freezer was stable."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-048",
+    "text": "The appearance of the samples in the freezer was stable.",
+    "category": "control",
+    "family": "control-09",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The appearance of the samples in the freezer was stable."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-049",
+    "text": "The criterion is reproducible.",
+    "category": "control",
+    "family": "control-09",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The criterion is reproducible."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-050",
+    "text": "The matrix is reproducible.",
+    "category": "control",
+    "family": "control-09",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The matrix is reproducible."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-051",
+    "text": "The bacteria were measured independently.",
+    "category": "control",
+    "family": "control-10",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The bacteria were measured independently."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-052",
+    "text": "The criteria were measured independently.",
+    "category": "control",
+    "family": "control-10",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The criteria were measured independently."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-053",
+    "text": "The matrices were measured independently.",
+    "category": "control",
+    "family": "control-10",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The matrices were measured independently."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-054",
+    "text": "We did not detect toxicity.",
+    "category": "control",
+    "family": "control-10",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "We did not detect toxicity."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-055",
+    "text": "We did not assess toxicity.",
+    "category": "control",
+    "family": "control-10",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "We did not assess toxicity."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-056",
+    "text": "The samples have undergone analysis.",
+    "category": "control",
+    "family": "control-11",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples have undergone analysis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-057",
+    "text": "The experiment was repeated yesterday.",
+    "category": "control",
+    "family": "control-11",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The experiment was repeated yesterday."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-058",
+    "text": "The experiment was completed yesterday.",
+    "category": "control",
+    "family": "control-11",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The experiment was completed yesterday."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-059",
+    "text": "The samples were analyzed by ELISA.",
+    "category": "control",
+    "family": "control-11",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples were analyzed by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-060",
+    "text": "The samples were assessed by ELISA.",
+    "category": "control",
+    "family": "control-11",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples were assessed by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-061",
+    "text": "The samples were tested by ELISA.",
+    "category": "control",
+    "family": "control-12",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples were tested by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-062",
+    "text": "The treatment may affect inflammation.",
+    "category": "control",
+    "family": "control-12",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The treatment may affect inflammation."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-063",
+    "text": "The treatment may modulate inflammation.",
+    "category": "control",
+    "family": "control-12",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The treatment may modulate inflammation."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-064",
+    "text": "The experiment has been conducted twice.",
+    "category": "control",
+    "family": "control-12",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The experiment has been conducted twice."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-065",
+    "text": "The experiment has been performed twice.",
+    "category": "control",
+    "family": "control-12",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The experiment has been performed twice."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-066",
+    "text": "The experiment has been replicated twice.",
+    "category": "control",
+    "family": "control-13",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The experiment has been replicated twice."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-067",
+    "text": "The samples had been frozen at −80 °C.",
+    "category": "control",
+    "family": "control-13",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples had been frozen at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-068",
+    "text": "The samples had been preserved at −80 °C.",
+    "category": "control",
+    "family": "control-13",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples had been preserved at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-069",
+    "text": "The reagents have been analyzed.",
+    "category": "control",
+    "family": "control-13",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The reagents have been analyzed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-070",
+    "text": "The reagents have been prepared.",
+    "category": "control",
+    "family": "control-13",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The reagents have been prepared."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-071",
+    "text": "The reagents have been evaluated.",
+    "category": "control",
+    "family": "control-14",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The reagents have been evaluated."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-072",
+    "text": "The signals depend on temperature.",
+    "category": "control",
+    "family": "control-14",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The signals depend on temperature."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-073",
+    "text": "The signals depend on concentration.",
+    "category": "control",
+    "family": "control-14",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The signals depend on concentration."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-074",
+    "text": "She does not accept the result.",
+    "category": "control",
+    "family": "control-14",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "She does not accept the result."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-075",
+    "text": "She does not dispute the result.",
+    "category": "control",
+    "family": "control-14",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "She does not dispute the result."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-076",
+    "text": "She does not report the result.",
+    "category": "control",
+    "family": "control-15",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "She does not report the result."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-077",
+    "text": "The cells are being washed.",
+    "category": "control",
+    "family": "control-15",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The cells are being washed."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-078",
+    "text": "The cells are being imaged.",
+    "category": "control",
+    "family": "control-15",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The cells are being imaged."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-079",
+    "text": "The team has written the data.",
+    "category": "control",
+    "family": "control-15",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The team has written the data."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-080",
+    "text": "The team has seen the data.",
+    "category": "control",
+    "family": "control-15",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The team has seen the data."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-081",
+    "text": "The team has given the data.",
+    "category": "control",
+    "family": "control-16",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The team has given the data."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-082",
+    "text": "The researchers will store the samples.",
+    "category": "control",
+    "family": "control-16",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The researchers will store the samples."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-083",
+    "text": "The researchers will treat the samples.",
+    "category": "control",
+    "family": "control-16",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The researchers will treat the samples."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-084",
+    "text": "We have been measuring the response.",
+    "category": "control",
+    "family": "control-16",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "We have been measuring the response."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-085",
+    "text": "We have been observing the response.",
+    "category": "control",
+    "family": "control-16",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "We have been observing the response."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-086",
+    "text": "We have been recording the response.",
+    "category": "control",
+    "family": "control-17",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "We have been recording the response."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-087",
+    "text": "The researchers were monitoring the cultures.",
+    "category": "control",
+    "family": "control-17",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The researchers were monitoring the cultures."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-088",
+    "text": "The researchers were observing the cultures.",
+    "category": "control",
+    "family": "control-17",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The researchers were observing the cultures."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-089",
+    "text": "The assay might reveal toxicity.",
+    "category": "control",
+    "family": "control-17",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The assay might reveal toxicity."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-090",
+    "text": "The assay might predict toxicity.",
+    "category": "control",
+    "family": "control-17",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The assay might predict toxicity."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-091",
+    "text": "The assay might underestimate toxicity.",
+    "category": "control",
+    "family": "control-18",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The assay might underestimate toxicity."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-092",
+    "text": "They did not choose the endpoint.",
+    "category": "control",
+    "family": "control-18",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "They did not choose the endpoint."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-093",
+    "text": "They did not take the endpoint.",
+    "category": "control",
+    "family": "control-18",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "They did not take the endpoint."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-094",
+    "text": "The proteins have remained in solution.",
+    "category": "control",
+    "family": "control-18",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The proteins have remained in solution."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-095",
+    "text": "The proteins have aggregated in solution.",
+    "category": "control",
+    "family": "control-18",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The proteins have aggregated in solution."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-096",
+    "text": "The proteins have degraded in solution.",
+    "category": "control",
+    "family": "control-19",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The proteins have degraded in solution."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-097",
+    "text": "The specimens should have been stored.",
+    "category": "control",
+    "family": "control-19",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The specimens should have been stored."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-098",
+    "text": "The specimens should have been kept.",
+    "category": "control",
+    "family": "control-19",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The specimens should have been kept."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-099",
+    "text": "The authors could explain the mechanism.",
+    "category": "control",
+    "family": "control-19",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The authors could explain the mechanism."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-100",
+    "text": "The authors could describe the mechanism.",
+    "category": "control",
+    "family": "control-19",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The authors could describe the mechanism."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-101",
+    "text": "The authors could investigate the mechanism.",
+    "category": "control",
+    "family": "control-20",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The authors could investigate the mechanism."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-102",
+    "text": "The data are consistent with the hypothesis.",
+    "category": "control",
+    "family": "control-20",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The data are consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-103",
+    "text": "Previous studies have reported similar findings.",
+    "category": "control",
+    "family": "control-20",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "Previous studies have reported similar findings."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-104",
+    "text": "The samples were centrifuged at 3,000 × g.",
+    "category": "control",
+    "family": "control-20",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples were centrifuged at 3,000 × g."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-105",
+    "text": "Treatment increased IL-6 expression.",
+    "category": "control",
+    "family": "control-20",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "Treatment increased IL-6 expression."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-106",
+    "text": "PFAS are persistent environmental contaminants.",
+    "category": "control",
+    "family": "control-21",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "PFAS are persistent environmental contaminants."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-107",
+    "text": "These findings suggest that exposure may affect metabolism.",
+    "category": "control",
+    "family": "control-21",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "These findings suggest that exposure may affect metabolism."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-108",
+    "text": "TNF-α and IL-1β were measured by ELISA.",
+    "category": "control",
+    "family": "control-21",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "TNF-α and IL-1β were measured by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-109",
+    "text": "The cells had been treated before the assay began.",
+    "category": "control",
+    "family": "control-21",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The cells had been treated before the assay began."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-110",
+    "text": "The supernatant was collected after centrifugation.",
+    "category": "control",
+    "family": "control-21",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The supernatant was collected after centrifugation."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-111",
+    "text": "The incubation lasted 30 min at 37 °C.",
+    "category": "control",
+    "family": "control-22",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The incubation lasted 30 min at 37 °C."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-112",
+    "text": "The temperature was 300 K and the potential was −3.2 mV.",
+    "category": "control",
+    "family": "control-22",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The temperature was 300 K and the potential was −3.2 mV."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-113",
+    "text": "The dose was 5 mg/kg/day.",
+    "category": "control",
+    "family": "control-22",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The dose was 5 mg/kg/day."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-114",
+    "text": "RNA-seq and CYP3A4 were evaluated.",
+    "category": "control",
+    "family": "control-22",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "RNA-seq and CYP3A4 were evaluated."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-115",
+    "text": "We found that that interpretation was incorrect.",
+    "category": "control",
+    "family": "control-22",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "We found that that interpretation was incorrect."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-116",
+    "text": "What is is not necessarily what should be.",
+    "category": "control",
+    "family": "control-23",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "What is is not necessarily what should be."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-117",
+    "text": "We have measured the response since yesterday.",
+    "category": "control",
+    "family": "control-23",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "We have measured the response since yesterday."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-118",
+    "text": "The mice were observed. The investigator reports that the animals may recover.",
+    "category": "control",
+    "family": "control-23",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "The mice were observed. The investigator reports that the animals may recover."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-119",
+    "text": "The criteria were defined before analysis. The hypothesis remains uncertain.",
+    "category": "control",
+    "family": "control-23",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The criteria were defined before analysis. The hypothesis remains uncertain."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-120",
+    "text": "The cells have been dividing. The cultures were stored at −80 °C.",
+    "category": "control",
+    "family": "control-23",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The cells have been dividing. The cultures were stored at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-121",
+    "text": "😀 The expression of inflammatory genes was increased.",
+    "category": "control",
+    "family": "control-24",
+    "split": "held-out",
+    "behavior": "no issue",
+    "accepted": [
+      "😀 The expression of inflammatory genes was increased."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-122",
+    "text": "The naïve observer measured a 10 µM solution at −3.2 mV.",
+    "category": "control",
+    "family": "control-24",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The naïve observer measured a 10 µM solution at −3.2 mV."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  },
+  {
+    "id": "control-123",
+    "text": "The samples were analyzed, and the results suggest an association.",
+    "category": "control",
+    "family": "control-24",
+    "split": "regression",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples were analyzed, and the results suggest an association."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately."
+  }
+]
