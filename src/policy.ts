@@ -229,9 +229,14 @@ export function aggregateIssues(issues: Issue[]): Issue[] {
     const owner = out.find(
       (i) =>
         i.edits &&
-        lexicalRules.has(candidate.rule) &&
+        (lexicalRules.has(candidate.rule) ||
+          candidate.category === "Grammar") &&
         i.edits.some(
-          (e) => candidate.start === e.start && candidate.end === e.end,
+          (e) =>
+            candidate.start === e.start &&
+            candidate.end === e.end &&
+            (lexicalRules.has(candidate.rule) ||
+              candidate.replacements.includes(e.replacement)),
         ),
     );
     if (owner) {

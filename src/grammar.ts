@@ -1,3 +1,4 @@
+import { analyzeClauses } from "./linguistics/analyze";
 import {
   enabled,
   issue,
@@ -6,8 +7,12 @@ import {
   type TextEdit,
 } from "./model";
 export const grammarRules: Record<string, string> = {
+  "Verb forms":
+    "Auxiliary-selected base, participle, and continuous forms, including coordinated agreement repairs.",
+  "Tense context review":
+    "Review present-perfect constructions with an explicit completed past-time reference; never normalize an entire document’s tense.",
   "Bounded agreement":
-    "Agreement for a lexically recognized subject head, including a bounded intervening prepositional phrase.",
+    "Subject-head agreement across bounded prepositional phrases and passive subject relatives.",
   "Existential agreement":
     "There is/was before an explicitly plural quantified noun.",
   "Dependent preposition": "Forms of depend govern on, not of.",
@@ -34,25 +39,6 @@ export function tokens(text: string): Token[] {
     end: m.index! + m[0].length,
   }));
 }
-const singular =
-  "result sample compound effect assay concentration outcome measurement treatment control solution particle finding response signal culture size temperature dose instrument value observation method experiment cell group patient protein report cat dog reason limitation explanation";
-const number = new Map<string, "singular" | "plural">();
-for (const n of singular.split(" ")) {
-  number.set(n, "singular");
-  number.set(n + "s", "plural");
-}
-number.set("analysis", "singular");
-number.set("analyses", "plural");
-const adjectives = new Set(
-  "clear small large observed clinical initial preliminary different current unexpected main primary secondary treated untreated measured final strong weak new old".split(
-    " ",
-  ),
-);
-const determiners = new Set(
-  "the a an this that these those each every many several few all both".split(
-    " ",
-  ),
-);
 const pairs = [
   ["is", "are"],
   ["was", "were"],
@@ -104,7 +90,7 @@ function sentenceTokens(text: string) {
     }));
 }
 export function grammar(text: string, s: Settings): Issue[] {
-  const out: Issue[] = [];
+  const out: Issue[] = analyzeClauses(text, s);
   const add = (
     rule: string,
     start: number,
@@ -112,7 +98,12 @@ export function grammar(text: string, s: Settings): Issue[] {
     replacements: string[],
     message: string,
   ) => {
-    if (enabled(rule, s))
+    if (
+      enabled(rule, s) &&
+      !out.some(
+        (i) => i.sources?.includes(rule) && i.start <= start && i.end >= end,
+      )
+    )
       out.push({
         ...issue(rule, "Grammar", start, end, text, replacements, message),
         confidence: replacements.length ? "high" : "low",
@@ -121,52 +112,6 @@ export function grammar(text: string, s: Settings): Issue[] {
   for (const { text: line, t } of sentenceTokens(text)) {
     while (t[0] && /^\p{Extended_Pictographic}$/u.test(t[0].word)) t.shift();
     if (!t.length) continue;
-    // A deliberately bounded noun-phrase grammar. Unknown heads/coordination/clause crossings are not guessed.
-    let h = 0;
-    let subject: "singular" | "plural" | undefined;
-    if (t[0].lower === "each" || t[0].lower === "every") {
-      subject = "singular";
-      h = 1;
-      if (t[h]?.lower === "of") h++;
-      if (determiners.has(t[h]?.lower)) h++;
-    } else if (determiners.has(t[0].lower)) h++;
-    for (let n = 0; n < 2 && adjectives.has(t[h]?.lower); n++) h++;
-    if (number.has(t[h]?.lower)) {
-      subject ??= number.get(t[h].lower);
-      let v = h + 1;
-      if (["of", "in", "with", "from"].includes(t[v]?.lower)) {
-        v++;
-        if (determiners.has(t[v]?.lower)) v++;
-        for (let n = 0; n < 2 && adjectives.has(t[v]?.lower); n++) v++;
-        if (number.has(t[v]?.lower)) v++;
-        else v = -1;
-      }
-      if (v >= 0 && finite.has(t[v]?.lower)) {
-        const pair = pairs.find((p) => p.includes(t[v].lower))!;
-        const want = subject === "singular" ? pair[0] : pair[1];
-        if (t[v].lower !== want)
-          add(
-            "Bounded agreement",
-            t[v].start,
-            t[v].end,
-            [want],
-            `The subject head “${t[h].word}” takes ${subject} agreement here. Intervening nouns do not determine this verb's number.`,
-          );
-      }
-    }
-    if (
-      t[0].lower === "there" &&
-      ["is", "was"].includes(t[1]?.lower) &&
-      ["many", "several", "few", "both"].includes(t[2]?.lower) &&
-      number.get(t[3]?.lower) === "plural"
-    )
-      add(
-        "Existential agreement",
-        t[1].start,
-        t[1].end,
-        [t[1].lower === "is" ? "are" : "were"],
-        "This existential construction introduces an explicitly plural noun phrase.",
-      );
     for (let i = 0; i < t.length - 2; i++) {
       if (
         ["depend", "depends", "depended", "depending"].includes(t[i].lower) &&

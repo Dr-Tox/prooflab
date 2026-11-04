@@ -443,3 +443,46 @@ test("legitimate scientific repetition and notation remain untouched; SI changes
     "The sample was heated to 37 °C and then to 300 K.",
   );
 });
+
+test("v2 atomic verb corrections preserve Unicode, rich formatting, dismissal and rapid revisions", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await write(page, "😀 The reagents has been analyze at −80 °C.");
+  await expect(
+    page.getByRole("button", { name: "have been analyzed ↵", exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "have been analyzed ↵", exact: true })
+    .click();
+  await expect(editor).toHaveText(
+    "😀 The reagents have been analyzed at −80 °C.",
+  );
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor).toHaveText(
+    "😀 The reagents has been analyze at −80 °C.",
+  );
+  await page
+    .locator(".issue")
+    .filter({ hasText: "have been analyzed" })
+    .getByRole("button", { name: "Dismiss once", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "have been analyzed ↵", exact: true }),
+  ).toHaveCount(0);
+  await editor.fill("The reagents shows instability.");
+  await editor.fill("The expression of these genes were increased.");
+  await editor.fill("The samples that were collected were analyzed.");
+  await expect(
+    page.getByText("No issues detected by the enabled rules"),
+  ).toBeVisible();
+  await expect(page.locator(".issue")).toHaveCount(0);
+  const paragraph =
+    "The samples were centrifuged at 3,000 × g. The supernatant was collected after centrifugation. Previous studies have reported similar findings. These findings suggest that exposure may affect metabolism. ";
+  await write(page, paragraph.repeat(30) + "The signals depends of time.");
+  await page.getByRole("button", { name: "depend on ↵", exact: true }).click();
+  await expect(editor).toHaveText(
+    paragraph.repeat(30) + "The signals depend on time.",
+  );
+});

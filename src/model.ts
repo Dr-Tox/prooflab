@@ -92,6 +92,8 @@ export function enabled(rule: string, s: Settings, harperDefault = true) {
     rule in contextualRules ||
     [
       "Bounded agreement",
+      "Verb forms",
+      "Tense context review",
       "Existential agreement",
       "Dependent preposition",
       "It contraction",

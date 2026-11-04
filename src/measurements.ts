@@ -1,6 +1,6 @@
 import { enabled, issue, type Settings } from "./model";
 const units =
-  "(?:°[CK]|K|kg|mg|[µμu]g|ng|g|mL|ml|L|mmol|mol|day|ms|min|sec|s|h|nm|mm|cm|m|mS|Pa|kPa|Hz|N|J|W|V|A)";
+  "(?:°[CK]|K|kg|mg|[µμu]g|ng|g|mL|ml|L|mmol|mol|day|ms|min|sec|s|h|nm|mm|cm|m|mS|Pa|kPa|Hz|N|J|W|[kMµμumnp]?(?:V|A|S|Hz|Pa|W|J)|V|A)";
 const numberExpression =
   "[−-]?\\d+(?:\\.\\d+)?(?:[eE][−+-]?\\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+)?(?:[ \\u00a0]*[×·][ \\u00a0]*10(?:\\^[−+-]?\\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+))?";
 export function measurementSpans(text: string) {

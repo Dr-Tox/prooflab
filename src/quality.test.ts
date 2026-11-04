@@ -203,26 +203,23 @@ it("keeps the held-out reference labels byte-for-byte frozen", async () => {
   );
 });
 
-it("retains independent overlapping defects and can finish them through fresh analyses", async () => {
-  let text = "The controls depends of dose.";
+it("coordinates agreement and a governed preposition, and rejects the old revision", async () => {
+  const text = "The controls depends of dose.";
   const first = await engine.analyze(text, defaults(), [], 51);
-  expect(first.some((i) => i.rule === "Bounded agreement")).toBe(true);
-  expect(first.some((i) => i.rule === "Dependent preposition")).toBe(true);
-  const agreement = first.find((i) => i.rule === "Bounded agreement")!;
-  text = applyCorrection(text, agreement, agreement.replacements[0], 51);
-  expect(() =>
-    applyCorrection(
-      text,
-      first.find((i) => i.rule === "Dependent preposition")!,
-      "depends on",
-      52,
-    ),
-  ).toThrow("revision");
-  const fresh = await engine.analyze(text, defaults(), [], 52);
-  const prep = fresh.find((i) => i.rule === "Dependent preposition")!;
-  expect(applyCorrection(text, prep, prep.replacements[0], 52)).toBe(
-    "The controls depend on dose.",
+  const transaction = first.find((i) => i.rule === "Bounded agreement")!;
+  expect(transaction.sources).toContain("Dependent preposition");
+  expect(transaction.edits).toHaveLength(2);
+  const corrected = applyCorrection(
+    text,
+    transaction,
+    transaction.replacements[0],
+    51,
   );
+  expect(corrected).toBe("The controls depend on dose.");
+  expect(() =>
+    applyCorrection(text, transaction, transaction.replacements[0], 52),
+  ).toThrow("revision");
+  expect(await engine.analyze(corrected, defaults(), [], 52)).toEqual([]);
 });
 
 it("warns about incomplete mass-noun substitutions when coordinated correction is disabled", async () => {
