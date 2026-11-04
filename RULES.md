@@ -10,8 +10,11 @@ Category labels are coarse: Grammar, Spelling, Punctuation, Scientific, Style. S
 
 ## Grammar additions and scope
 
-A token-based, deliberately bounded noun-phrase grammar (`src/grammar.ts`) checks a finite verb against a recognized subject head, optionally with a recognized adjective/determiner and one intervening prepositional phrase. Each/every remains singular; a noun in an `of` phrase does not change the head's number. A finite verb-pair lexicon covers selected forms of be/have/do and common reporting verbs. This is not a general syntactic parser: unknown noun heads, nested relative clauses, coordination and unrecognized structures are not guessed. **The reagents shows instability** is a documented missed agreement case in the second-round evaluation.
+`src/linguistics/` adds a deterministic shallow clause analyzer. Productive noun-number morphology, irregular plurals, determiners and pronouns identify subject number without the old head-noun whitelist. Bounded noun phrases preserve the head across prepositional phrases and complete passive subject-relative clauses. Coordinated subjects, each/every, existential clauses, and a/the number versus a series receive distinct treatment. The existing **Bounded agreement** setting ID is retained for compatibility.
 
+**Verb forms** checks modal/do + base, have + participle, passive chains, and selected ongoing constructions. It uses an explicit verb paradigm lexicon rather than guessing unknown verb spellings. Agreement and verb-form/preposition edits in the same recognized clause form one transaction. Explanations identify the subject head and the required form. **Tense context review** gives a warning, without a replacement, for a perfect construction tied to an explicit completed past time. It does not impose a manuscript-wide tense or change scientific hedging. These rules are enabled in all profiles and remain independently configurable.
+
+This is a partial analyzer, not a general POS/dependency parser. Unknown lexical verbs, object relatives, disjunction, appositives, complex coordination and many subordinate clauses deliberately abstain. Passive-versus-continuous ambiguity requires explicit evidence or selected laboratory patient/action semantics; it is not resolved by guessing an author's intended agency. Valid adjective predicates such as “was complete” are preserved.
 Other narrow additions check plural existential constructions, forms of `depend of → depend on`, and sentence-initial `Its + selected adjective + to/that → It’s`. Possessive `Its importance` is preserved. Selected pluralized mass nouns after `these/those` coordinate the demonstrative, noun and copula as one transaction: **These informations are useful → This information is useful**. A noun-only replacement is not counted as a full correction.
 
 Potential run-ons/comma splices, a standalone subordinating clause ending in a full stop, and selected introductory laboratory modifiers with equipment subjects receive **review warnings**, never agency-changing rewrites. Headings/lists and recognized subordinate-main-clause structures are conservatively excluded. **After centrifuging the samples, the supernatant was collected** is not a dangling-modifier warning. The structure checks are limited templates with lexical guards, not comprehensive sentence parsing.
@@ -20,7 +23,7 @@ Potential run-ons/comma splices, a standalone subordinating clause ending in a f
 
 The curated vocabulary is separate from the user's persistent accepted terms and ignored words. See [SCIENTIFIC_VOCABULARY.md](SCIENTIFIC_VOCABULARY.md) for original authorship, no imported lexicon, maintenance, case policy, and narrow technical-misspelling suggestions. `centrifugation` and `supernatant` are valid, while tested misspellings remain detectable. Unknown words are not all accepted simply because they look technical.
 
-Selected SI cases offer value-preserving notation corrections: `10mg → 10 mg`, `37°C → 37 °C`, `300 °K → 300 K`. Ordinary/NBSP separators, Unicode minus/micro symbols, superscript/exponent quantities, selected compound units and multiplication notation are supported. `30 min`, `5 mg/kg/day`, `TNF-α`, `IL-1β`, `p = 0.08`, and `95% confidence interval` are preserved. Symbol coverage remains finite: **mV currently produces a false spelling warning in the second-round evaluation**. Do not interpret this checker as a complete SI parser or accept all proposals blindly.
+Selected SI cases offer value-preserving notation corrections: `10mg → 10 mg`, `37°C → 37 °C`, `300 °K → 300 K`. Ordinary/NBSP separators, Unicode minus/micro symbols, superscript/exponent quantities, selected compound units and multiplication notation are supported. `30 min`, `5 mg/kg/day`, `TNF-α`, `IL-1β`, `p = 0.08`, and `95% confidence interval` are preserved. Symbol coverage remains finite. V2 adds common SI prefixes for electrical symbols (including `mV`), narrow sentence-final spelling protection, and relative centrifugal force such as `3,000 × g`. The earlier second-round `mV` failure remains preserved in its historical report. Do not interpret this checker as a complete SI parser or accept all proposals blindly.
 
 `ml/mL` is an explicit optional preference. Statistical significance alone is not a reporting problem. Reporting reminders for selected proof/causal phrasing are opt-in and clearly review-only. Replacements that change numerical tokens, negation, or listed epistemic markers are removed; this is a conservative safety guard, not a proof of semantic equivalence.
 
@@ -30,16 +33,16 @@ Repetition policy suppresses ambiguous `that that`, grammatical `had had`, empha
 
 ## Profiles and overrides
 
-| Rule family                                                 | General English | Academic English | Scientific Writing |
-| ----------------------------------------------------------- | --------------- | ---------------- | ------------------ |
-| Native Harper grammar/spelling defaults                     | Native defaults | Native defaults  | Native defaults    |
-| Native `Expand*` editorial expansions                       | Native defaults | Native defaults  | Off by default     |
-| Bounded grammar / structure review / time-expression review | On              | On               | On                 |
-| Conservative repeated words                                 | On              | On               | On                 |
-| Academic redundancy                                         | Off             | On               | On                 |
-| SI spacing / SI notation / abbreviation case review         | Off             | Off              | On                 |
-| Unit consistency preference / reporting reminders           | Off             | Off              | Off                |
-| User terminology preferences                                | On              | On               | On                 |
+| Rule family                                            | General English | Academic English | Scientific Writing |
+| ------------------------------------------------------ | --------------- | ---------------- | ------------------ |
+| Native Harper grammar/spelling defaults                | Native defaults | Native defaults  | Native defaults    |
+| Native `Expand*` editorial expansions                  | Native defaults | Native defaults  | Off by default     |
+| Subject/verb analysis / structure / contextual reviews | On              | On               | On                 |
+| Conservative repeated words                            | On              | On               | On                 |
+| Academic redundancy                                    | Off             | On               | On                 |
+| SI spacing / SI notation / abbreviation case review    | Off             | Off              | On                 |
+| Unit consistency preference / reporting reminders      | Off             | Off              | Off                |
+| User terminology preferences                           | On              | On               | On                 |
 
 An ignored rule is disabled; otherwise an individual override takes precedence over the profile. Scientific safety still filters harmful proposals even when a native rule is explicitly enabled. Choosing “Prefer mL” enables the optional notation rule; its switch/ignore controls remain available. Existing saved settings are loaded with defaults for new fields. General visual design, individual accept/ignore/Undo, local dictionaries and opt-in saving remain intact.
 

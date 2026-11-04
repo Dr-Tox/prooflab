@@ -42,3 +42,61 @@ Recorded environment: Node **v24.19.0**, Linux x64, AMD EPYC 9V45; exact lockfil
 Run `npm test`, `npm run build`, `npm run test:e2e`, and `npm run benchmark`. Production browser tests also run at `/prooflab/`, with privacy/network/offline coverage, coordinated-edit formatting/Undo, and real development diagnostics. References include sentences, paragraphs, positive/negative variants, Greek, emoji, combining marks, Unicode minus and superscripts. Frozen held-out labels are hash-checked.
 
 This is substantial measured improvement on a small engineer-authored corpus, **not evidence of superiority over Microsoft Word**. No controlled Word comparison was performed. A larger independently annotated corpus, broader SI prefix coverage, deeper parsing, browser diversity, and human semantic review remain necessary before such a claim.
+
+## V2: agreement and auxiliary analysis (2026-11-04)
+
+The v2 baseline is the prior benchmark branch **0c3b269**, not the older deployed main. Final engine **06de675** replaces the subject-head noun whitelist with productive noun morphology and shallow clause analysis; Harper 3.0.0 remains unchanged. See [v2 methodology and raw results](benchmark/v2/README.md), including frozen hashes, reference errata and restrictions on generalization. All historical results above remain preserved.
+
+| Main challenge metric                                                  | Baseline | Final audit |
+| ---------------------------------------------------------------------- | -------: | ----------: |
+| Agreement detection recall (105 cases)                                 |    14.3% |      100.0% |
+| Agreement precision (105 cases)                                        |   100.0% |      100.0% |
+| Agreement F1 (105 cases)                                               |    25.0% |      100.0% |
+| Agreement complete/first-choice sentence correction (105 cases)        |    14.3% |      100.0% |
+| Verb detection recall                                                  |    26.2% |      100.0% |
+| Verb precision                                                         |    77.1% |       99.0% |
+| Verb F1                                                                |    39.1% |       99.5% |
+| Verb complete correction                                               |    17.3% |       99.0% |
+| Verb first-choice complete correction                                  |    17.3% |       99.0% |
+| Verb replacement quality (aligned alternatives only)                   |    64.7% |      100.0% |
+| Verb first-suggestion correctness (aligned cards)                      |    64.7% |      100.0% |
+| All-category false-positive controls (125 including 2 errata controls) |     3.2% |        0.8% |
+| Exact duplicate cards                                                  |        0 |           0 |
+
+The final challenge audit detects/classifies **208/208** positive groups. Complete outcomes are **202/203** correction cases (105/105 agreement; 97/98 verb); five dated-perfect cases are warning-only. One of 125 valid controls still receives a Harper Grammar warning on “The experiment was complete yesterday.” The dedicated 123-control set has zero false positives. Final reserved-family audits detect 25/25 agreement and 25/25 verb cases, but these are **post-evaluation audits**, not a new untouched held-out claim. The preserved first evaluation had verb first-choice completeness 91/98 under its original reference labels; consult the reports and errata for exact denominators.
+
+### Fresh paragraph audit: stronger remaining limits
+
+| Metric (12 error paragraphs, 18 controls)  | Baseline | V2 first evaluation |
+| ------------------------------------------ | -------: | ------------------: |
+| Detection precision                        |    50.0% |              100.0% |
+| Detection recall                           |     8.3% |               75.0% |
+| F1                                         |    14.3% |               85.7% |
+| Complete paragraph correction offered      |     8.3% |               75.0% |
+| First-choice complete paragraph correction |     8.3% |               66.7% |
+| Aligned replacement quality                |     6.7% |               69.2% |
+| Aligned first-suggestion correctness       |    14.3% |               81.8% |
+| All-category control false positives       |    16.7% |                5.6% |
+
+This set was frozen after engine 19b93c7 and **not tuned to its failures**. Its first output is preserved; the later code-review safeguards for ambiguous scientific noun number and inline formatting do not change these scores. Detection rises from **1/12 to 9/12**; exact offered paragraph corrections from **1/12 to 9/12**; first-choice completion is only **8/12**. The higher score on lexical templates must not obscure this result. Failures remain:
+
+- Object relatives: “The samples that the technician collected was analyzed” is missed.
+- Unknown verb paradigms: “droplets oscillates” and “nuclei were isolate” are missed.
+- Coordinated correction outside supported grammar: “does not agrees the result” leaves the missing “with”; the corrected reference now counts it incomplete.
+- Scientific false positive: **microbeads → microbe’s / microbes** remains harmful and can corrupt a correct scientific term. It appears in both a positive paragraph and its correct control. There is no automatic replacement or accept-all, but users must reject these alternatives or add the term locally. The numeric/hedge harm proxy misses this semantic problem; its zero value is not a safety certification.
+
+### Scientific safety and regression
+
+The supplied safeguards retain centrifugation, supernatant, min, °C, K, micro symbols, exponents, Unicode minus, compound doses, PFAS, TNF-α/IL-1β, RNA-seq and CYP3A4. V2 fixes the previously recorded mV warning using finite SI-prefix recognition and protects relative centrifugal-force notation. Protected tokens do not suppress surrounding agreement corrections. Hedging and numerical values remain unchanged in the evaluated transactions. Unknown technical vocabulary still requires curation; scientific safety is improved but incomplete.
+
+The original development and regression audit remains 20/20 and 11/11 complete corrections, with no negative-control false positives. The original 31 held-out cases also pass as a clearly labeled historical post-evaluation audit. Their initial outputs and old second-round failures have not been rewritten.
+
+### Environment and checks
+
+Node v24.19.0, Linux, AMD EPYC 9V45 96-Core Processor; Harper 3.0.0, Vite 7.3.7, TypeScript 5.9.3, Vitest 3.2.7, Playwright 1.64.1. Dependencies were not upgraded. Main-challenge latency median: **3.92 → 3.90 ms**; p95 **19.65 → 5.76 ms**. Setup **812 → 583 ms**. End-of-run harness RSS **559.3 → 523.0 MiB**, heap used **25.2 → 25.7 MiB**. These noisy whole-harness samples include WASM/report retention, not browser peaks or evidence of a memory optimization.
+
+`npm test`: **177 passed**. Production build, original benchmark, v2 benchmark and formatting checks pass. **15/15 browser scenarios passed locally at `/` and `/prooflab/`**, including live edits, individual accept/dismiss, coordinated edits/Undo, rapid revisions, long paragraphs, formatting, Unicode, mobile, offline and network checks; existing appearance, local-only processing, optional persistence and static hosting remain intact.
+
+### Modified implementation
+
+`src/linguistics/{morphology,subjects,verbs,analyze}.ts` implements the new layers; `grammar.ts` retains other existing rules and settings IDs. `model.ts` enables the two new configurable rule families. `editorTransactions.ts` gives edit starts forward affinity at inline-node boundaries so a whole bold/italic word retains its wrapper. `policy.ts` merges verb duplicates and conflicting modal constructions; `measurements.ts` and `vocabulary.ts` add narrow scientific protections. Unit/browser tests, frozen v2 corpora/scorers/reports, CI measurement, and architecture/rule/vocabulary documentation accompany the changes. No model, runtime dependency, analytics or remote processing was added.

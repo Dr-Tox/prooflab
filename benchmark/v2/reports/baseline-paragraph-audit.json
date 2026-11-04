@@ -1,0 +1,2485 @@
+{
+  "version": 2,
+  "label": "baseline-paragraph-audit",
+  "sourceCommit": "0c3b269",
+  "dirty": true,
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "harper": "3.0.0"
+  },
+  "corpusSha": "5f0fed3a20bc67083d209c82b649f0117dcfd05c989994aab8de57fe1486bcc4",
+  "setupMs": 575.9770090000001,
+  "memory": {
+    "rss": 504856576,
+    "heapTotal": 62341120,
+    "heapUsed": 41473032,
+    "external": 299122965,
+    "arrayBuffers": 529757
+  },
+  "metrics": {
+    "all": {
+      "cases": 30,
+      "positives": 12,
+      "negatives": 18,
+      "truePositiveCases": 1,
+      "falseNegativeCases": 11,
+      "extraneousGrammarCards": 1,
+      "precision": 0.5,
+      "recall": 0.08333333333333333,
+      "f1": 0.14285714285714285,
+      "classifiedCases": 1,
+      "replacementQualityComparable": 15,
+      "correctReplacementRate": 0.06666666666666667,
+      "firstSuggestionCorrectness": 0.14285714285714285,
+      "correctReplacementAndCompleteRate": 0.08333333333333333,
+      "firstSuggestionCompleteRate": 0.08333333333333333,
+      "grammarFalsePositiveRate": 0,
+      "allCategoryFalsePositiveRate": 0.16666666666666666,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 30,
+      "familyMacroRecall": 0.08333333333333333,
+      "latencyMedianMs": 6.102356999999756,
+      "latencyP95Ms": 12.626890000000003
+    },
+    "development": {
+      "cases": 0,
+      "positives": 0,
+      "negatives": 0,
+      "truePositiveCases": 0,
+      "falseNegativeCases": 0,
+      "extraneousGrammarCards": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "classifiedCases": 0,
+      "replacementQualityComparable": 0,
+      "correctReplacementRate": null,
+      "firstSuggestionCorrectness": null,
+      "correctReplacementAndCompleteRate": null,
+      "firstSuggestionCompleteRate": null,
+      "grammarFalsePositiveRate": null,
+      "allCategoryFalsePositiveRate": null,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 0,
+      "familyMacroRecall": null
+    },
+    "held-out": {
+      "cases": 0,
+      "positives": 0,
+      "negatives": 0,
+      "truePositiveCases": 0,
+      "falseNegativeCases": 0,
+      "extraneousGrammarCards": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "classifiedCases": 0,
+      "replacementQualityComparable": 0,
+      "correctReplacementRate": null,
+      "firstSuggestionCorrectness": null,
+      "correctReplacementAndCompleteRate": null,
+      "firstSuggestionCompleteRate": null,
+      "grammarFalsePositiveRate": null,
+      "allCategoryFalsePositiveRate": null,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 0,
+      "familyMacroRecall": null
+    },
+    "regression": {
+      "cases": 0,
+      "positives": 0,
+      "negatives": 0,
+      "truePositiveCases": 0,
+      "falseNegativeCases": 0,
+      "extraneousGrammarCards": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "classifiedCases": 0,
+      "replacementQualityComparable": 0,
+      "correctReplacementRate": null,
+      "firstSuggestionCorrectness": null,
+      "correctReplacementAndCompleteRate": null,
+      "firstSuggestionCompleteRate": null,
+      "grammarFalsePositiveRate": null,
+      "allCategoryFalsePositiveRate": null,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 0,
+      "familyMacroRecall": null
+    },
+    "agreement": {
+      "cases": 6,
+      "positives": 6,
+      "negatives": 0,
+      "truePositiveCases": 0,
+      "falseNegativeCases": 6,
+      "extraneousGrammarCards": 0,
+      "precision": 1,
+      "recall": 0,
+      "f1": 0,
+      "classifiedCases": 0,
+      "replacementQualityComparable": 2,
+      "correctReplacementRate": 0,
+      "firstSuggestionCorrectness": 0,
+      "correctReplacementAndCompleteRate": 0,
+      "firstSuggestionCompleteRate": 0,
+      "grammarFalsePositiveRate": null,
+      "allCategoryFalsePositiveRate": null,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 6,
+      "familyMacroRecall": 0,
+      "latencyMedianMs": 7.35909300000003,
+      "latencyP95Ms": 1242.7537289999998
+    },
+    "verb": {
+      "cases": 6,
+      "positives": 6,
+      "negatives": 0,
+      "truePositiveCases": 1,
+      "falseNegativeCases": 5,
+      "extraneousGrammarCards": 1,
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "f1": 0.25,
+      "classifiedCases": 1,
+      "replacementQualityComparable": 5,
+      "correctReplacementRate": 0.2,
+      "firstSuggestionCorrectness": 0.3333333333333333,
+      "correctReplacementAndCompleteRate": 0.16666666666666666,
+      "firstSuggestionCompleteRate": 0.16666666666666666,
+      "grammarFalsePositiveRate": null,
+      "allCategoryFalsePositiveRate": null,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 6,
+      "familyMacroRecall": 0.16666666666666666,
+      "latencyMedianMs": 9.070844999999736,
+      "latencyP95Ms": 10.132061999999678
+    },
+    "control": {
+      "cases": 18,
+      "positives": 0,
+      "negatives": 18,
+      "truePositiveCases": 0,
+      "falseNegativeCases": 0,
+      "extraneousGrammarCards": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "classifiedCases": 0,
+      "replacementQualityComparable": 8,
+      "correctReplacementRate": 0,
+      "firstSuggestionCorrectness": 0,
+      "correctReplacementAndCompleteRate": null,
+      "firstSuggestionCompleteRate": null,
+      "grammarFalsePositiveRate": 0,
+      "allCategoryFalsePositiveRate": 0.16666666666666666,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 18,
+      "familyMacroRecall": null,
+      "latencyMedianMs": 5.568973000000369,
+      "latencyP95Ms": 9.728101000000152
+    },
+    "held-out-agreement": {
+      "cases": 0,
+      "positives": 0,
+      "negatives": 0,
+      "truePositiveCases": 0,
+      "falseNegativeCases": 0,
+      "extraneousGrammarCards": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "classifiedCases": 0,
+      "replacementQualityComparable": 0,
+      "correctReplacementRate": null,
+      "firstSuggestionCorrectness": null,
+      "correctReplacementAndCompleteRate": null,
+      "firstSuggestionCompleteRate": null,
+      "grammarFalsePositiveRate": null,
+      "allCategoryFalsePositiveRate": null,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 0,
+      "familyMacroRecall": null
+    },
+    "held-out-verb": {
+      "cases": 0,
+      "positives": 0,
+      "negatives": 0,
+      "truePositiveCases": 0,
+      "falseNegativeCases": 0,
+      "extraneousGrammarCards": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "classifiedCases": 0,
+      "replacementQualityComparable": 0,
+      "correctReplacementRate": null,
+      "firstSuggestionCorrectness": null,
+      "correctReplacementAndCompleteRate": null,
+      "firstSuggestionCompleteRate": null,
+      "grammarFalsePositiveRate": null,
+      "allCategoryFalsePositiveRate": null,
+      "harmfulProxyCount": 0,
+      "duplicates": 0,
+      "familyCount": 0,
+      "familyMacroRecall": null
+    }
+  },
+  "rows": [
+    {
+      "id": "paragraph-positive-01",
+      "text": "The erythrocytes in the diluted suspension was counted. The supernatant was retained.",
+      "category": "agreement",
+      "family": "paragraph-01",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The erythrocytes in the diluted suspension were counted. The supernatant was retained."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 60,
+          "end": 71,
+          "problemText": "supernatant",
+          "sourceSlice": "supernatant",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "supernova's"
+            },
+            {
+              "kind": 0,
+              "replacement": "superhuman"
+            },
+            {
+              "kind": 0,
+              "replacement": "superlative"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 60,
+                "end": 71
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "n",
+                    "o",
+                    "v",
+                    "a",
+                    "'",
+                    "s"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "h",
+                    "u",
+                    "m",
+                    "a",
+                    "n"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "l",
+                    "a",
+                    "t",
+                    "i",
+                    "v",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `supernatant` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 60,
+              "end": 71
+            },
+            "problem_text": "supernatant",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 1242.7537289999998,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The erythrocytes in the diluted suspension was counted. The supernatant was retained.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-02",
+      "text": "The distribution of fluorescent microbeads across the wells are uneven. The result may reflect settling.",
+      "category": "agreement",
+      "family": "paragraph-02",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The distribution of fluorescent microbeads across the wells is uneven. The result may reflect settling."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [
+        {
+          "id": "SpellCheck:32:42:microbeads",
+          "rule": "SpellCheck",
+          "category": "Spelling",
+          "start": 32,
+          "end": 42,
+          "original": "microbeads",
+          "replacements": [
+            "microbe's",
+            "microbes"
+          ],
+          "explanation": "Did you mean to spell `microbeads` this way?",
+          "terminologyStatus": "unknown",
+          "sources": [
+            "SpellCheck",
+            "SplitWords"
+          ],
+          "alternativesConflict": true,
+          "revision": 1
+        }
+      ],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 32,
+          "end": 42,
+          "problemText": "microbeads",
+          "sourceSlice": "microbeads",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "microbe's"
+            },
+            {
+              "kind": 0,
+              "replacement": "microbes"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 32,
+                "end": 42
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i",
+                    "c",
+                    "r",
+                    "o",
+                    "b",
+                    "e",
+                    "'",
+                    "s"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i",
+                    "c",
+                    "r",
+                    "o",
+                    "b",
+                    "e",
+                    "s"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `microbeads` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 32,
+              "end": 42
+            },
+            "problem_text": "microbeads",
+            "language": "Plain"
+          }
+        },
+        {
+          "rule": "SplitWords",
+          "kind": "Typo",
+          "start": 32,
+          "end": 42,
+          "problemText": "microbeads",
+          "sourceSlice": "microbeads",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "micro beads"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 32,
+                "end": 42
+              },
+              "lint_kind": "Typo",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i",
+                    "c",
+                    "r",
+                    "o",
+                    " ",
+                    "b",
+                    "e",
+                    "a",
+                    "d",
+                    "s"
+                  ]
+                }
+              ],
+              "message": "`microbeads` should probably be written as `micro beads`.",
+              "priority": 31
+            },
+            "span": {
+              "start": 32,
+              "end": 42
+            },
+            "problem_text": "microbeads",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 12.626890000000003,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The distribution of fluorescent microbe's across the wells are uneven. The result may reflect settling.",
+      "proposalQuality": [
+        {
+          "first": true,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": false,
+          "correct": false,
+          "comparable": true
+        }
+      ],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-03",
+      "text": "The samples that the technician collected was analyzed. No causal conclusion was drawn.",
+      "category": "agreement",
+      "family": "paragraph-03",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The samples that the technician collected were analyzed. No causal conclusion was drawn."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 7.35909300000003,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The samples that the technician collected was analyzed. No causal conclusion was drawn.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-04",
+      "text": "The irregularities in the membranes suggests damage. Previous studies have reported similar findings.",
+      "category": "agreement",
+      "family": "paragraph-04",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The irregularities in the membranes suggest damage. Previous studies have reported similar findings."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 6.1866180000001805,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The irregularities in the membranes suggests damage. Previous studies have reported similar findings.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-05",
+      "text": "Three investigators has reviewed the records. The criteria were defined in advance.",
+      "category": "agreement",
+      "family": "paragraph-05",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "Three investigators have reviewed the records. The criteria were defined in advance."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 6.508534999999938,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "Three investigators has reviewed the records. The criteria were defined in advance.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-06",
+      "text": "The droplets oscillates near the electrode. This response may depend on temperature.",
+      "category": "agreement",
+      "family": "paragraph-06",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The droplets oscillate near the electrode. This response may depend on temperature."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.728665000000092,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The droplets oscillates near the electrode. This response may depend on temperature.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-07",
+      "text": "The investigators could measured the response. The potential was −3.2 mV.",
+      "category": "verb",
+      "family": "paragraph-07",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The investigators could measure the response. The potential was −3.2 mV."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [
+        {
+          "id": "ModalBeAdjective:18:23:could",
+          "rule": "ModalBeAdjective",
+          "category": "Grammar",
+          "start": 18,
+          "end": 23,
+          "original": "could",
+          "replacements": [
+            "could be"
+          ],
+          "explanation": "You may be missing the word `be` between this modal verb and adjective.",
+          "sources": [
+            "ModalBeAdjective"
+          ],
+          "revision": 1
+        },
+        {
+          "id": "SpellCheck:70:72:mV",
+          "rule": "SpellCheck",
+          "category": "Spelling",
+          "start": 70,
+          "end": 72,
+          "original": "mV",
+          "replacements": [
+            "ma",
+            "me",
+            "mi"
+          ],
+          "explanation": "Did you mean to spell `mV` this way?",
+          "terminologyStatus": "unknown",
+          "sources": [
+            "SpellCheck"
+          ],
+          "revision": 1
+        }
+      ],
+      "raw": [
+        {
+          "rule": "ModalBeAdjective",
+          "kind": "Miscellaneous",
+          "start": 18,
+          "end": 23,
+          "problemText": "could",
+          "sourceSlice": "could",
+          "suggestions": [
+            {
+              "kind": 2,
+              "replacement": " be"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 18,
+                "end": 23
+              },
+              "lint_kind": "Miscellaneous",
+              "suggestions": [
+                {
+                  "InsertAfter": [
+                    " ",
+                    "b",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "You may be missing the word `be` between this modal verb and adjective.",
+              "priority": 127
+            },
+            "span": {
+              "start": 18,
+              "end": 23
+            },
+            "problem_text": "could",
+            "language": "Plain"
+          }
+        },
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 70,
+          "end": 72,
+          "problemText": "mV",
+          "sourceSlice": "mV",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ma"
+            },
+            {
+              "kind": 0,
+              "replacement": "me"
+            },
+            {
+              "kind": 0,
+              "replacement": "mi"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 70,
+                "end": 72
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "e"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `mV` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 70,
+              "end": 72
+            },
+            "problem_text": "mV",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 10.132061999999678,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The investigators could be measured the response. The potential was −3.2 ma.",
+      "proposalQuality": [
+        {
+          "first": true,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": true,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": false,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": false,
+          "correct": false,
+          "comparable": true
+        }
+      ],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 1,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-08",
+      "text": "The cells had been wash before imaging. TNF-α and IL-1β were measured by ELISA.",
+      "category": "verb",
+      "family": "paragraph-08",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The cells had been washed before imaging. TNF-α and IL-1β were measured by ELISA."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 40,
+          "end": 43,
+          "problemText": "TNF",
+          "sourceSlice": "TNF",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "Thu"
+            },
+            {
+              "kind": 0,
+              "replacement": "Inf"
+            },
+            {
+              "kind": 0,
+              "replacement": "Tn"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 40,
+                "end": 43
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "T",
+                    "h",
+                    "u"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "I",
+                    "n",
+                    "f"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "T",
+                    "n"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `TNF` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 40,
+              "end": 43
+            },
+            "problem_text": "TNF",
+            "language": "Plain"
+          }
+        },
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 73,
+          "end": 78,
+          "problemText": "ELISA",
+          "sourceSlice": "ELISA",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ELIZA"
+            },
+            {
+              "kind": 0,
+              "replacement": "Elisa"
+            },
+            {
+              "kind": 0,
+              "replacement": "Elite"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 73,
+                "end": 78
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "L",
+                    "I",
+                    "Z",
+                    "A"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "l",
+                    "i",
+                    "s",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "l",
+                    "i",
+                    "t",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `ELISA` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 73,
+              "end": 78
+            },
+            "problem_text": "ELISA",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 9.466703999999936,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The cells had been wash before imaging. TNF-α and IL-1β were measured by ELISA.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-09",
+      "text": "The nuclei were isolate by centrifugation. The incubation lasted 30 min.",
+      "category": "verb",
+      "family": "paragraph-09",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The nuclei were isolated by centrifugation. The incubation lasted 30 min."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 27,
+          "end": 41,
+          "problemText": "centrifugation",
+          "sourceSlice": "centrifugation",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "gentrification"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 27,
+                "end": 41
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "g",
+                    "e",
+                    "n",
+                    "t",
+                    "r",
+                    "i",
+                    "f",
+                    "i",
+                    "c",
+                    "a",
+                    "t",
+                    "i",
+                    "o",
+                    "n"
+                  ]
+                }
+              ],
+              "message": "Did you mean `gentrification`?",
+              "priority": 63
+            },
+            "span": {
+              "start": 27,
+              "end": 41
+            },
+            "problem_text": "centrifugation",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 9.070844999999736,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The nuclei were isolate by centrifugation. The incubation lasted 30 min.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-10",
+      "text": "The team has wrote the protocol. The samples were stored at −80 °C.",
+      "category": "verb",
+      "family": "paragraph-10",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The team has written the protocol. The samples were stored at −80 °C."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [
+        {
+          "id": "SimplePastToPastParticiple:13:18:wrote",
+          "rule": "SimplePastToPastParticiple",
+          "category": "Grammar",
+          "start": 13,
+          "end": 18,
+          "original": "wrote",
+          "replacements": [
+            "written"
+          ],
+          "explanation": "Use the past participle `written` instead of `wrote` when using compound tenses or passive voice.",
+          "sources": [
+            "SimplePastToPastParticiple"
+          ],
+          "revision": 1
+        }
+      ],
+      "raw": [
+        {
+          "rule": "SimplePastToPastParticiple",
+          "kind": "Grammar",
+          "start": 13,
+          "end": 18,
+          "problemText": "wrote",
+          "sourceSlice": "wrote",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "written"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 13,
+                "end": 18
+              },
+              "lint_kind": "Grammar",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "w",
+                    "r",
+                    "i",
+                    "t",
+                    "t",
+                    "e",
+                    "n"
+                  ]
+                }
+              ],
+              "message": "Use the past participle `written` instead of `wrote` when using compound tenses or passive voice.",
+              "priority": 127
+            },
+            "span": {
+              "start": 13,
+              "end": 18
+            },
+            "problem_text": "wrote",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 6.8305029999996805,
+      "detected": true,
+      "classified": true,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The team has written the protocol. The samples were stored at −80 °C.",
+      "proposalQuality": [
+        {
+          "first": true,
+          "correct": true,
+          "comparable": true
+        }
+      ],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-11",
+      "text": "The vesicles has been prepare. The findings are consistent with aggregation.",
+      "category": "verb",
+      "family": "paragraph-11",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The vesicles have been prepared. The findings are consistent with aggregation."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.570404000000053,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The vesicles has been prepare. The findings are consistent with aggregation.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-positive-12",
+      "text": "The cultures should have been freeze. The effect remains uncertain.",
+      "category": "verb",
+      "family": "paragraph-12",
+      "split": "fresh-paragraph-audit",
+      "behavior": "correction",
+      "accepted": [
+        "The cultures should have been frozen. The effect remains uncertain."
+      ],
+      "forbidden": [],
+      "severity": "error",
+      "explanation": "Correct the grammatical defect without changing any scientific finding.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 7.739598999999998,
+      "detected": false,
+      "classified": false,
+      "complete": false,
+      "firstComplete": false,
+      "firstOutput": "The cultures should have been freeze. The effect remains uncertain.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-01",
+      "text": "The erythrocytes in the diluted suspension were counted. The supernatant was retained.",
+      "category": "control",
+      "family": "paragraph-control-01",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The erythrocytes in the diluted suspension were counted. The supernatant was retained."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 61,
+          "end": 72,
+          "problemText": "supernatant",
+          "sourceSlice": "supernatant",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "supernova's"
+            },
+            {
+              "kind": 0,
+              "replacement": "superhuman"
+            },
+            {
+              "kind": 0,
+              "replacement": "superlative"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 61,
+                "end": 72
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "n",
+                    "o",
+                    "v",
+                    "a",
+                    "'",
+                    "s"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "h",
+                    "u",
+                    "m",
+                    "a",
+                    "n"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "l",
+                    "a",
+                    "t",
+                    "i",
+                    "v",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `supernatant` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 61,
+              "end": 72
+            },
+            "problem_text": "supernatant",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 6.102356999999756,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The erythrocytes in the diluted suspension were counted. The supernatant was retained.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-02",
+      "text": "The distribution of fluorescent microbeads across the wells is uneven. The result may reflect settling.",
+      "category": "control",
+      "family": "paragraph-control-02",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The distribution of fluorescent microbeads across the wells is uneven. The result may reflect settling."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [
+        {
+          "id": "SpellCheck:32:42:microbeads",
+          "rule": "SpellCheck",
+          "category": "Spelling",
+          "start": 32,
+          "end": 42,
+          "original": "microbeads",
+          "replacements": [
+            "microbe's",
+            "microbes"
+          ],
+          "explanation": "Did you mean to spell `microbeads` this way?",
+          "terminologyStatus": "unknown",
+          "sources": [
+            "SpellCheck",
+            "SplitWords"
+          ],
+          "alternativesConflict": true,
+          "revision": 1
+        }
+      ],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 32,
+          "end": 42,
+          "problemText": "microbeads",
+          "sourceSlice": "microbeads",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "microbe's"
+            },
+            {
+              "kind": 0,
+              "replacement": "microbes"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 32,
+                "end": 42
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i",
+                    "c",
+                    "r",
+                    "o",
+                    "b",
+                    "e",
+                    "'",
+                    "s"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i",
+                    "c",
+                    "r",
+                    "o",
+                    "b",
+                    "e",
+                    "s"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `microbeads` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 32,
+              "end": 42
+            },
+            "problem_text": "microbeads",
+            "language": "Plain"
+          }
+        },
+        {
+          "rule": "SplitWords",
+          "kind": "Typo",
+          "start": 32,
+          "end": 42,
+          "problemText": "microbeads",
+          "sourceSlice": "microbeads",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "micro beads"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 32,
+                "end": 42
+              },
+              "lint_kind": "Typo",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i",
+                    "c",
+                    "r",
+                    "o",
+                    " ",
+                    "b",
+                    "e",
+                    "a",
+                    "d",
+                    "s"
+                  ]
+                }
+              ],
+              "message": "`microbeads` should probably be written as `micro beads`.",
+              "priority": 31
+            },
+            "span": {
+              "start": 32,
+              "end": 42
+            },
+            "problem_text": "microbeads",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 5.583584999999857,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": false,
+      "firstOutput": "The distribution of fluorescent microbe's across the wells is uneven. The result may reflect settling.",
+      "proposalQuality": [
+        {
+          "first": true,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": false,
+          "correct": false,
+          "comparable": true
+        }
+      ],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": true,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-03",
+      "text": "The samples that the technician collected were analyzed. No causal conclusion was drawn.",
+      "category": "control",
+      "family": "paragraph-control-03",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The samples that the technician collected were analyzed. No causal conclusion was drawn."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.760158000000047,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The samples that the technician collected were analyzed. No causal conclusion was drawn.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-04",
+      "text": "The irregularities in the membranes suggest damage. Previous studies have reported similar findings.",
+      "category": "control",
+      "family": "paragraph-control-04",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The irregularities in the membranes suggest damage. Previous studies have reported similar findings."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.840740000000096,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The irregularities in the membranes suggest damage. Previous studies have reported similar findings.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-05",
+      "text": "Three investigators have reviewed the records. The criteria were defined in advance.",
+      "category": "control",
+      "family": "paragraph-control-05",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "Three investigators have reviewed the records. The criteria were defined in advance."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.1688679999997476,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "Three investigators have reviewed the records. The criteria were defined in advance.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-06",
+      "text": "The droplets oscillate near the electrode. This response may depend on temperature.",
+      "category": "control",
+      "family": "paragraph-control-06",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The droplets oscillate near the electrode. This response may depend on temperature."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.366235000000415,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The droplets oscillate near the electrode. This response may depend on temperature.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-07",
+      "text": "The investigators could measure the response. The potential was −3.2 mV.",
+      "category": "control",
+      "family": "paragraph-control-07",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The investigators could measure the response. The potential was −3.2 mV."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [
+        {
+          "id": "SpellCheck:69:71:mV",
+          "rule": "SpellCheck",
+          "category": "Spelling",
+          "start": 69,
+          "end": 71,
+          "original": "mV",
+          "replacements": [
+            "ma",
+            "me",
+            "mi"
+          ],
+          "explanation": "Did you mean to spell `mV` this way?",
+          "terminologyStatus": "unknown",
+          "sources": [
+            "SpellCheck"
+          ],
+          "revision": 1
+        }
+      ],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 69,
+          "end": 71,
+          "problemText": "mV",
+          "sourceSlice": "mV",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ma"
+            },
+            {
+              "kind": 0,
+              "replacement": "me"
+            },
+            {
+              "kind": 0,
+              "replacement": "mi"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 69,
+                "end": 71
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "e"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `mV` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 69,
+              "end": 71
+            },
+            "problem_text": "mV",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 4.569319000000178,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": false,
+      "firstOutput": "The investigators could measure the response. The potential was −3.2 ma.",
+      "proposalQuality": [
+        {
+          "first": true,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": false,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": false,
+          "correct": false,
+          "comparable": true
+        }
+      ],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": true,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-08",
+      "text": "The cells had been washed before imaging. TNF-α and IL-1β were measured by ELISA.",
+      "category": "control",
+      "family": "paragraph-control-08",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The cells had been washed before imaging. TNF-α and IL-1β were measured by ELISA."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 42,
+          "end": 45,
+          "problemText": "TNF",
+          "sourceSlice": "TNF",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "Thu"
+            },
+            {
+              "kind": 0,
+              "replacement": "Inf"
+            },
+            {
+              "kind": 0,
+              "replacement": "Tn"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 42,
+                "end": 45
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "T",
+                    "h",
+                    "u"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "I",
+                    "n",
+                    "f"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "T",
+                    "n"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `TNF` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 42,
+              "end": 45
+            },
+            "problem_text": "TNF",
+            "language": "Plain"
+          }
+        },
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 75,
+          "end": 80,
+          "problemText": "ELISA",
+          "sourceSlice": "ELISA",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ELIZA"
+            },
+            {
+              "kind": 0,
+              "replacement": "Elisa"
+            },
+            {
+              "kind": 0,
+              "replacement": "Elite"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 75,
+                "end": 80
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "L",
+                    "I",
+                    "Z",
+                    "A"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "l",
+                    "i",
+                    "s",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "l",
+                    "i",
+                    "t",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `ELISA` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 75,
+              "end": 80
+            },
+            "problem_text": "ELISA",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 5.138761000000159,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The cells had been washed before imaging. TNF-α and IL-1β were measured by ELISA.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-09",
+      "text": "The nuclei were isolated by centrifugation. The incubation lasted 30 min.",
+      "category": "control",
+      "family": "paragraph-control-09",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The nuclei were isolated by centrifugation. The incubation lasted 30 min."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 28,
+          "end": 42,
+          "problemText": "centrifugation",
+          "sourceSlice": "centrifugation",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "gentrification"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 28,
+                "end": 42
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "g",
+                    "e",
+                    "n",
+                    "t",
+                    "r",
+                    "i",
+                    "f",
+                    "i",
+                    "c",
+                    "a",
+                    "t",
+                    "i",
+                    "o",
+                    "n"
+                  ]
+                }
+              ],
+              "message": "Did you mean `gentrification`?",
+              "priority": 63
+            },
+            "span": {
+              "start": 28,
+              "end": 42
+            },
+            "problem_text": "centrifugation",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 5.568973000000369,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The nuclei were isolated by centrifugation. The incubation lasted 30 min.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-10",
+      "text": "The team has written the protocol. The samples were stored at −80 °C.",
+      "category": "control",
+      "family": "paragraph-control-10",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The team has written the protocol. The samples were stored at −80 °C."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.714359000000059,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The team has written the protocol. The samples were stored at −80 °C.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-11",
+      "text": "The vesicles have been prepared. The findings are consistent with aggregation.",
+      "category": "control",
+      "family": "paragraph-control-11",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The vesicles have been prepared. The findings are consistent with aggregation."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 7.54032799999959,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The vesicles have been prepared. The findings are consistent with aggregation.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-12",
+      "text": "The cultures should have been frozen. The effect remains uncertain.",
+      "category": "control",
+      "family": "paragraph-control-12",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The cultures should have been frozen. The effect remains uncertain."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.87724500000013,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The cultures should have been frozen. The effect remains uncertain.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-13",
+      "text": "The treatment may reflect an adaptive response. Previous studies have reported similar findings.",
+      "category": "control",
+      "family": "paragraph-control-13",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The treatment may reflect an adaptive response. Previous studies have reported similar findings."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.246920999999929,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The treatment may reflect an adaptive response. Previous studies have reported similar findings.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-14",
+      "text": "After centrifuging the samples, the supernatant was collected. The material was stored at −80 °C.",
+      "category": "control",
+      "family": "paragraph-control-14",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "After centrifuging the samples, the supernatant was collected. The material was stored at −80 °C."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 36,
+          "end": 47,
+          "problemText": "supernatant",
+          "sourceSlice": "supernatant",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "supernova's"
+            },
+            {
+              "kind": 0,
+              "replacement": "superhuman"
+            },
+            {
+              "kind": 0,
+              "replacement": "superlative"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 36,
+                "end": 47
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "n",
+                    "o",
+                    "v",
+                    "a",
+                    "'",
+                    "s"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "h",
+                    "u",
+                    "m",
+                    "a",
+                    "n"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "l",
+                    "a",
+                    "t",
+                    "i",
+                    "v",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `supernatant` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 36,
+              "end": 47
+            },
+            "problem_text": "supernatant",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 9.728101000000152,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "After centrifuging the samples, the supernatant was collected. The material was stored at −80 °C.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-15",
+      "text": "The results as well as the effect are uncertain. The data are consistent with the hypothesis.",
+      "category": "control",
+      "family": "paragraph-control-15",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The results as well as the effect are uncertain. The data are consistent with the hypothesis."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.978182999999717,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The results as well as the effect are uncertain. The data are consistent with the hypothesis.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-16",
+      "text": "The potential was −3.2 mV. CYP3A4 expression was associated with exposure.",
+      "category": "control",
+      "family": "paragraph-control-16",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The potential was −3.2 mV. CYP3A4 expression was associated with exposure."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [
+        {
+          "id": "SpellCheck:23:25:mV",
+          "rule": "SpellCheck",
+          "category": "Spelling",
+          "start": 23,
+          "end": 25,
+          "original": "mV",
+          "replacements": [
+            "ma",
+            "me",
+            "mi"
+          ],
+          "explanation": "Did you mean to spell `mV` this way?",
+          "terminologyStatus": "unknown",
+          "sources": [
+            "SpellCheck"
+          ],
+          "revision": 1
+        },
+        {
+          "id": "SpellCheck:27:33:CYP3A4",
+          "rule": "SpellCheck",
+          "category": "Spelling",
+          "start": 27,
+          "end": 33,
+          "original": "CYP3A4",
+          "replacements": [],
+          "explanation": "Unrecognized identifier-like token. Verify the identifier manually; ProofLab cannot establish its scientific validity.",
+          "terminologyStatus": "unknown",
+          "sources": [
+            "SpellCheck"
+          ],
+          "revision": 1
+        }
+      ],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 23,
+          "end": 25,
+          "problemText": "mV",
+          "sourceSlice": "mV",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ma"
+            },
+            {
+              "kind": 0,
+              "replacement": "me"
+            },
+            {
+              "kind": 0,
+              "replacement": "mi"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 23,
+                "end": 25
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "e"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `mV` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 23,
+              "end": 25
+            },
+            "problem_text": "mV",
+            "language": "Plain"
+          }
+        },
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 27,
+          "end": 33,
+          "problemText": "CYP3A4",
+          "sourceSlice": "CYP3A4",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "Cuppa"
+            },
+            {
+              "kind": 0,
+              "replacement": "Cyan"
+            },
+            {
+              "kind": 0,
+              "replacement": "CPA"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 27,
+                "end": 33
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "u",
+                    "p",
+                    "p",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "y",
+                    "a",
+                    "n"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "P",
+                    "A"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `CYP3A4` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 27,
+              "end": 33
+            },
+            "problem_text": "CYP3A4",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 8.464426999999887,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": false,
+      "firstOutput": "The potential was −3.2 ma. CYP3A4 expression was associated with exposure.",
+      "proposalQuality": [
+        {
+          "first": true,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": false,
+          "correct": false,
+          "comparable": true
+        },
+        {
+          "first": false,
+          "correct": false,
+          "comparable": true
+        }
+      ],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": true,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-17",
+      "text": "The ratio of treated cells to controls was unchanged. A number of samples were excluded.",
+      "category": "control",
+      "family": "paragraph-control-17",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The ratio of treated cells to controls was unchanged. A number of samples were excluded."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 6.7187840000001415,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The ratio of treated cells to controls was unchanged. A number of samples were excluded.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "paragraph-control-18",
+      "text": "The criteria that were selected were appropriate. The results suggest that exposure may affect metabolism.",
+      "category": "control",
+      "family": "paragraph-control-18",
+      "split": "fresh-paragraph-audit",
+      "behavior": "no issue",
+      "accepted": [
+        "The criteria that were selected were appropriate. The results suggest that exposure may affect metabolism."
+      ],
+      "forbidden": [],
+      "severity": "none",
+      "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 6.029469999999947,
+      "detected": false,
+      "classified": false,
+      "complete": true,
+      "firstComplete": true,
+      "firstOutput": "The criteria that were selected were appropriate. The results suggest that exposure may affect metabolism.",
+      "proposalQuality": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneousGrammar": 0,
+      "harmfulProxy": 0,
+      "duplicateCards": 0
+    }
+  ]
+}

@@ -4,6 +4,9 @@ import { binary } from "harper.js/binary";
 import { Proofreader } from "../../src/proofreader";
 import { defaults, seedWords } from "../../src/model";
 const inputs = [
+  "The droplets oscillates rapidly.",
+  "The samples that the team collected was analyzed.",
+  "She does not agrees the result.",
   "The reagents shows instability.",
   "The results indicates toxicity.",
   "The effect of these compounds are unknown.",
@@ -53,7 +56,7 @@ writeFileSync(
   "benchmark/v2/reports/reproduction-current.json",
   JSON.stringify(
     {
-      commit: "0c3b2690e7d29a4f040a87d2c08144baf8dab388",
+      commit: process.env.SOURCE_COMMIT ?? "working-tree",
       harper: "3.0.0",
       rows,
     },
