@@ -450,6 +450,17 @@ test("v2 atomic verb corrections preserve Unicode, rich formatting, dismissal an
   await ready(page);
   const editor = page.getByRole("textbox", { name: "Document text" });
   await write(page, "😀 The reagents has been analyze at −80 °C.");
+  await editor.evaluate((el) => {
+    const node = el.firstChild!;
+    const at = node.textContent!.indexOf("analyze");
+    const range = document.createRange();
+    range.setStart(node, at);
+    range.setEnd(node, at + 7);
+    getSelection()!.removeAllRanges();
+    getSelection()!.addRange(range);
+  });
+  await page.getByRole("button", { name: "Bold", exact: true }).click();
+  await expect(page.locator(".document b")).toHaveText("analyze");
   await expect(
     page.getByRole("button", { name: "have been analyzed ↵", exact: true }),
   ).toBeVisible();
@@ -459,10 +470,12 @@ test("v2 atomic verb corrections preserve Unicode, rich formatting, dismissal an
   await expect(editor).toHaveText(
     "😀 The reagents have been analyzed at −80 °C.",
   );
+  await expect(page.locator(".document b")).toHaveText("analyzed");
   await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
   await expect(editor).toHaveText(
     "😀 The reagents has been analyze at −80 °C.",
   );
+  await expect(page.locator(".document b")).toHaveText("analyze");
   await page
     .locator(".issue")
     .filter({ hasText: "have been analyzed" })

@@ -34,6 +34,10 @@ const invariant = new Set("species series sheep fish means".split(" "));
 export function nounNumber(word: string): NumberValue | undefined {
   const w = word.toLowerCase();
   if (invariant.has(w)) return undefined;
+  // Discipline names can look plural; technical mixed-case identifiers do not
+  // have a reliable grammatical number from their spelling alone.
+  if (/(?:omics|kinetics|dynamics)$/.test(w) || /[a-z][A-Z]/.test(word))
+    return undefined;
   if (plurals.has(w)) return "plural";
   if (singulars.has(w)) return "singular";
   if (word === "PFAS") return "plural";

@@ -21,12 +21,18 @@ export function captureCaret(root: HTMLElement): Caret | undefined {
     focus = position(root, s.focusNode, s.focusOffset);
   if (anchor !== undefined && focus !== undefined) return { anchor, focus };
 }
-function point(root: HTMLElement, offset: number): [Node, number] {
+function point(
+  root: HTMLElement,
+  offset: number,
+  forward = false,
+): [Node, number] {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   let n: Node | null;
   while ((n = walker.nextNode())) {
     const length = n.textContent?.length ?? 0;
-    if (offset <= length) return [n, offset];
+    // At a boundary, an edit start belongs to the following text node.
+    // Otherwise replacing a whole bold/italic word starts outside its wrapper.
+    if (offset < length || (!forward && offset === length)) return [n, offset];
     offset -= length;
   }
   return [root, root.childNodes.length];
@@ -52,7 +58,7 @@ export function applyDomTransaction(root: HTMLElement, edits: TextEdit[]) {
   }
   try {
     for (const e of sorted) {
-      const [a, ao] = point(root, e.start),
+      const [a, ao] = point(root, e.start, true),
         [b, bo] = point(root, e.end);
       const r = document.createRange();
       r.setStart(a, ao);

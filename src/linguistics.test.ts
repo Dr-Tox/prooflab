@@ -135,7 +135,9 @@ it("preserves UTF-16 offsets, combining marks, Greek identifiers and numbers", a
   expect(
     engine
       .getDiagnostics()
-      ?.discardedLints.filter((i) => i.reason.includes("span")),
+      ?.discardedLints.filter((i) =>
+        ["invalid-span", "source-mismatch"].includes(i.reason),
+      ),
   ).toEqual([]);
   expect(applyCorrection(text, i, i.replacements[0], 90)).toBe(
     text.replace("store", "stored"),
@@ -198,4 +200,14 @@ it("uses doubled-consonant forms from explicit irregular orthography", () => {
   expect(applyCorrection(text, i, i.replacements[0])).toBe(
     "The samples have controlled the response.",
   );
+});
+
+it.each([
+  "Transcriptomics is informative.",
+  "Proteomics is useful.",
+  "The pharmacokinetics are nonlinear.",
+  "NaCl is soluble.",
+  "mRNA are present.",
+])("abstains on ambiguous scientific grammatical number: %s", (text) => {
+  expect(analyzeClauses(text, defaults())).toEqual([]);
 });
