@@ -1,0 +1,5 @@
+{
+  "sha256": "5f0fed3a20bc67083d209c82b649f0117dcfd05c989994aab8de57fe1486bcc4",
+  "engineCommit": "19b93c7",
+  "methodology": "Supplementary 30-paragraph audit constructed after engine freeze, before first run, without subsequent rule tuning. Engineer-authored; not an external blinded evaluation. Original 333-case corpus unchanged."
+}

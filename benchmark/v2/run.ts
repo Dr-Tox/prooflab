@@ -11,8 +11,18 @@ import {
   applyCorrection,
   type Issue,
 } from "../../src/model";
-const bytes = readFileSync("benchmark/v2/corpus.json");
-const frozen = JSON.parse(readFileSync("benchmark/v2/FROZEN.json", "utf8"));
+const paragraphs = process.argv.includes("--paragraphs");
+const bytes = readFileSync(
+  paragraphs ? "benchmark/v2/paragraph-audit.json" : "benchmark/v2/corpus.json",
+);
+const frozen = JSON.parse(
+  readFileSync(
+    paragraphs
+      ? "benchmark/v2/FROZEN-PARAGRAPHS.json"
+      : "benchmark/v2/FROZEN.json",
+    "utf8",
+  ),
+);
 if (createHash("sha256").update(bytes).digest("hex") !== frozen.sha256)
   throw Error("Frozen corpus changed");
 const cases = JSON.parse(bytes.toString()).map((c: any) =>
@@ -23,9 +33,17 @@ const cases = JSON.parse(bytes.toString()).map((c: any) =>
         accepted: [c.text],
         referenceAmendment: "REFERENCE_ERRATA.md: valid adjectival complete",
       }
-    : c,
+    : c.id === "verb-10-2"
+      ? {
+          ...c,
+          accepted: ["She does not agree with the result."],
+          referenceAmendment: "REFERENCE_ERRATA.md: agree requires with",
+        }
+      : c,
 );
-const label = process.argv.includes("--baseline") ? "baseline" : "improved";
+const label =
+  (process.argv.includes("--baseline") ? "baseline" : "improved") +
+  (paragraphs ? "-paragraph-audit" : "");
 const linter = new LocalLinter({ binary });
 const engine = new Proofreader(linter, { diagnostics: true });
 const setupStart = performance.now();
@@ -53,7 +71,7 @@ for (const c of cases) {
     while (a > 0 && /[\p{L}\p{M}]/u.test(c.text[a - 1])) a--;
     while (b < c.text.length && /[\p{L}\p{M}]/u.test(c.text[b])) b++;
   }
-  const relevant = grammar.filter(
+  const relevant = issues.filter(
     (i) =>
       i.start < b &&
       i.end > a &&
@@ -127,7 +145,7 @@ for (const c of cases) {
     raw: engine.getDiagnostics()?.rawLints,
     latencyMs: ms,
     detected: c.behavior === "no issue" ? false : relevant.length > 0,
-    classified: relevant.length > 0,
+    classified: relevant.some((i) => i.category === "Grammar"),
     complete: target ? outputs.has(target) : null,
     firstComplete: target ? first === target : null,
     firstOutput: first,

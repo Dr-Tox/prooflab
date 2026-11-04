@@ -11,3 +11,7 @@ public/licenses
 benchmark/reports
 
 benchmark/v2/reports
+
+# Frozen reference bytes are hash-verified; do not reformat.
+benchmark/v2/corpus.json
+benchmark/v2/paragraph-audit.json
