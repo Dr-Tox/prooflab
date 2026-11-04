@@ -69,3 +69,11 @@ Harper's shipped 3.0.0 declarations expose lint/configuration and Weirpack APIs 
 The existing revision-checked worker/editor pipeline and atomic DOM transactions are reused. A transaction validates every UTF-16 source span and the document revision before editing; Undo restores the exact prior HTML/text snapshot. New browser tests exercise coordinated verb edits, rapid revisions and long scientific paragraphs alongside the existing formatting, offline, mobile and network tests. See `benchmark/v2/README.md` for the evidence and limits.
 
 Edit-start DOM positions use forward affinity at text-node boundaries; edit ends retain backward affinity. This keeps a fully styled replacement inside its existing inline element. Cross-node replacements inherit their start context; arbitrary character-by-character formatting redistribution is not inferred. The v2 browser scenario verifies bold text through atomic verb corrections and Undo.
+
+## Independent temporal-context layer
+
+`verbChain.ts` represents observed tense/aspect/voice and flags ambiguous auxiliary or lexical-have interpretations. `temporalFrames.ts` creates clause frames with explicit temporal links, quotation ranges and section boundaries. `temporal.ts` associates local anchors, starting points/durations and explicit adjacent-sentence backward references. It supplies review-only diagnostics; it does not infer a scientific event ordering or impose one tense across the document. Clear finite-form selection remains in `verbs.ts`, separately configurable.
+
+Native block-based editor input is canonicalized by `normalizeEditorLines` before the text reaches the worker: structural DIV/P/BR boundaries become LF text nodes, inline wrappers survive, and temporary selection bookmarks are removed synchronously. Plain-text offsets, rich correction ranges and benchmark paragraph strings therefore use the same representation. No document or temporal graph is persisted by this layer.
+
+`benchmark/tense/` is the first-class temporal evaluation and CI regression contract. Auxiliary-form scores, temporal warnings, complete corrections, valid mixed-tense controls and surface meaning invariants have independent denominators. Historical first-pass results and the old v2 safety tradeoff remain visible.

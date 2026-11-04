@@ -100,3 +100,54 @@ Node v24.19.0, Linux, AMD EPYC 9V45 96-Core Processor; Harper 3.0.0, Vite 7.3.7,
 ### Modified implementation
 
 `src/linguistics/{morphology,subjects,verbs,analyze}.ts` implements the new layers; `grammar.ts` retains other existing rules and settings IDs. `model.ts` enables the two new configurable rule families. `editorTransactions.ts` gives edit starts forward affinity at inline-node boundaries so a whole bold/italic word retains its wrapper. `policy.ts` merges verb duplicates and conflicting modal constructions; `measurements.ts` and `vocabulary.ts` add narrow scientific protections. Unit/browser tests, frozen v2 corpora/scorers/reports, CI measurement, and architecture/rule/vocabulary documentation accompany the changes. No model, runtime dependency, analytics or remote processing was added.
+
+## Dedicated temporal-context and tense/aspect objective (PR #5 continuation)
+
+Agreement and tense/aspect now have separate analysis layers, benchmarks and CI checks. Baseline: **d304819**. First temporal implementation: **e9217db**; final linguistic/editor safety audit: **3f1d87f**. Frozen references, raw Harper/ProofLab results, source/environment details and limitations are in [benchmark/tense/](benchmark/tense/README.md). No dependency/model/service was added.
+
+### Before/after: independent temporal evidence
+
+| Metric                                                         |              Baseline | Temporal implementation |
+| -------------------------------------------------------------- | --------------------: | ----------------------: |
+| Explicit temporal-usage findings                               |                 35/90 |                   90/90 |
+| Aspect-review findings                                         |                  0/10 |                   10/10 |
+| Cross-sentence temporal-reference findings                     |                  0/10 |                    9/10 |
+| Form-only complete / first-choice corrections                  |                 25/25 |                   25/25 |
+| Contextual temporal/aspect findings, excluding form-only cases |                35/110 |                 109/110 |
+| All positive groups detected                                   |                60/135 |                 134/135 |
+| Overall precision / recall / F1                                | 89.6% / 44.4% / 59.4% |    100% / 99.3% / 99.6% |
+| Valid controls falsely flagged                                 |                 7/180 |                   0/180 |
+| Reserved cases: detection / control false positives            |           10/30; 3/45 |             30/30; 0/45 |
+| Unrequested automatic temporal-target repairs                  |                    10 |                       0 |
+| Numerical/epistemic/temporal-marker invariant changes          |                     5 |                       0 |
+| Exact duplicate cards                                          |                     0 |                       0 |
+
+**The 109 contextual findings are manual-review warnings, not 109 complete corrections.** No chronology-dependent rewrite is offered. The unchanged 25/25 auxiliary-form result is deliberately not used as evidence that temporal usage is solved. Five lexical variants per construction are correlated; overall family-macro positive recall is 34/35 (97.1%). Perfect reserved-family scores are bounded engineering evidence, not broad coverage or external validation. The first evaluation is preserved; later safety changes do not alter these outcomes.
+
+### Real behavior and safety
+
+The baseline misses fronted dates and suppresses relevant checks merely because “by” occurs in `by microscopy`. It also misattaches `yesterday` in a relative clause or possessive noun phrase, and flags rolling `over the last week`. The new scoped analysis addresses these observed defects. Explicit past references in `by the time` clauses and backward-linked adjacent sentences receive contextual warnings. No uniform tense is imposed across Methods, Results, Discussion, established knowledge or literature reporting.
+
+Native Harper `SinceDuration` offers competing interval repairs and falsely flags the valid point `since two hours before the assay`; targeted policy handling defers the former and preserves the latter. Ambiguous `have …ing` repairs, lexical `have monitoring data`, and malformed stative chains cannot silently select a completion/continuation or possession/action reading. Clear form corrections remain available and revision checked. Surface-invariant tests are separate from detection scores and do not prove complete scientific meaning preservation.
+
+One new discourse miss remains **D09**, with the unknown predicate `lasted`: “The incubation lasted 30 min yesterday. At that point, we have collected the supernatant.” No sentence-specific rule or label change hides this miss. Implicit chronology, unknown predicates, optional reporting backshift, counterfactuals and arbitrary event-order contradictions remain unsupported.
+
+### Historical regression and deliberate tradeoff
+
+The original development/regression complete scores remain **20/20 and 11/11**, with no negative-control false positives. Historical held-out auditing remains **13/13** complete; all earlier first-pass reports are preserved. In the old v2 corpus, agreement detection stays **105/105**. Complete offered corrections change **202/203 → 201/203** because `have undergoing` is now a review-only ambiguity: both `have undergone` and `have been undergoing` are possible and express different aspects. Its original reference is unchanged and still counts the automatic correction as incomplete. The unrelated missing `with` after `agree` remains unresolved. See `benchmark/v2/reports/temporal-safety-audit.json`. The earlier harmful native `microbeads` alternatives are still a known scientific spelling risk, not hidden by a zero temporal-marker score.
+
+### Actual browser integration
+
+A real browser test exposed native DIV/P contenteditable boundaries collapsing into `MethodsThe…` when read with `textContent`. `normalizeEditorLines` now converts structural boundaries into explicit LF text nodes before analysis, preserving inline formatting and directional selection. This aligns editor input with benchmark paragraph strings and maintains UTF-16 correction offsets. Browser tests cover legitimate mixed scientific tenses, contextual warnings without replacements, accept/dismiss/Undo, native paragraph input, headings, blank lines, emoji, Greek/unit symbols, rich formatting and caret positions. The existing privacy, offline, rapid typing and mobile scenarios remain intact.
+
+Final unit/integration suite: **242 passed**. Browser suite: **17 scenarios**, including the new temporal and paragraph-boundary checks. Both root and GitHub Pages paths are tested; CI repeats all checks. `npm run benchmark`, `npm run benchmark:v2`, `npm run benchmark:tense -- --check`, builds and formatting checks are run.
+
+### Performance and scope
+
+Baseline: median **4.07 ms**, p95 **7.04 ms**, maximum **1272 ms**; setup **571 ms**; retained-report process RSS **516.7 MiB**, heap used **21.6 MiB**.
+
+Temporal audit: median **3.96 ms**, p95 **7.27 ms**, maximum **1200 ms**; setup **604 ms**; retained-report process RSS **473.4 MiB**, heap used **22.3 MiB**.
+
+These are Node/WASM/harness observations, including cold outliers and retained diagnostics, not isolated browser memory, a speedup guarantee or a Word comparison. The section/temporal graph is a bounded deterministic analyzer, not a general dependency parser or scientific chronology validator.
+
+Modified implementation: `linguistics/verbChain.ts`, `temporalFrames.ts`, `temporal.ts`; form/grammar orchestration and native conflict policy; editor normalization; dedicated unit/browser tests; frozen temporal corpora, raw reports, scorer/CI gate and documentation. All document processing remains local and optional persistence remains opt-in.
