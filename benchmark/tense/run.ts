@@ -174,6 +174,13 @@ function metrics(rs: any[]) {
     proposals: proposals.length,
     duplicates: rs.reduce((n, c) => n + c.duplicateCards, 0),
     families: new Set(rs.map((c) => c.family)).size,
+    positiveFamilies: new Set(positives.map((c) => c.family)).size,
+    familyMacroRecall: positives.length
+      ? [...new Set(positives.map((c) => c.family))].reduce((sum, f) => {
+          const cs = positives.filter((c) => c.family === f);
+          return sum + cs.filter((c) => c.detected).length / cs.length;
+        }, 0) / new Set(positives.map((c) => c.family)).size
+      : null,
     latencyMedianMs: latency[Math.floor(latency.length / 2)],
     latencyP95Ms: latency[Math.floor(latency.length * 0.95)],
   };
@@ -229,3 +236,20 @@ writeFileSync(
 );
 console.log(JSON.stringify({ label, metrics: summaries }, null, 2));
 await linter.dispose();
+
+if (process.argv.includes("--check")) {
+  const missed = rows.filter(
+    (c) => c.behavior !== "no issue" && !c.detected && c.id !== "D09",
+  );
+  const badControls = rows.filter((c) => c.anyFalsePositive);
+  const incomplete = rows.filter(
+    (c) => c.behavior === "correction" && (!c.complete || !c.firstComplete),
+  );
+  const unsafe = rows
+    .flatMap((c) => c.proposals)
+    .filter((p) => p.meaningInvariantViolation || p.unwantedTemporalRewrite);
+  if (missed.length || badControls.length || incomplete.length || unsafe.length)
+    throw Error(
+      `Temporal regression: missing ${missed.map((c) => c.id)}, controls ${badControls.map((c) => c.id)}, incomplete ${incomplete.map((c) => c.id)}, unsafe ${unsafe.length}. D09 remains a reported miss, not a relabeled success.`,
+    );
+}

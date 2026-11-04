@@ -1,4 +1,13 @@
-import { adverbs, modals, verb, type Token } from "./morphology";
+import {
+  adverbs,
+  modals,
+  verb,
+  nounNumber,
+  determiners,
+  prepositions,
+  type Token,
+} from "./morphology";
+export const stativeVerbs = new Set(["know", "belong", "consist", "resemble"]);
 export interface VerbChain {
   start: number;
   end: number;
@@ -11,6 +20,7 @@ export interface VerbChain {
   modal?: string;
   lexical?: string;
   ambiguousAuxiliary: boolean;
+  lexicalHave: boolean;
 }
 /** Describe observed forms; never choose a new time or voice for the author. */
 export function verbChain(t: Token[], index: number): VerbChain | undefined {
@@ -31,6 +41,7 @@ export function verbChain(t: Token[], index: number): VerbChain | undefined {
     progressive = false,
     passive = false,
     ambiguousAuxiliary = false,
+    lexicalHave = false,
     last = index,
     previous = first.lower,
     lexical = initial?.base;
@@ -45,8 +56,30 @@ export function verbChain(t: Token[], index: number): VerbChain | undefined {
     while (adverbs.has(t[j]?.lower)) j++;
     const next = verb(t[j]?.lower ?? "");
     if (!next) break;
+    if (prior?.base === "have" && t[j].lower === next.ing) {
+      ambiguousAuxiliary = true;
+      const head = t[j + 1];
+      // “have monitoring data / measuring equipment” can be possession of an
+      // NP, not an incomplete auxiliary. Undergo has no such attributive use.
+      if (
+        head &&
+        !["undergo", "be"].includes(next.base) &&
+        !determiners.has(head.lower) &&
+        !prepositions.has(head.lower) &&
+        !adverbs.has(head.lower) &&
+        nounNumber(head.word)
+      ) {
+        lexicalHave = true;
+        break;
+      }
+    }
     if (prior?.base === "have") perfect = true;
     if (prior?.base === "be") {
+      if (
+        stativeVerbs.has(next.base) &&
+        ![next.participle, next.ing].includes(t[j].lower)
+      )
+        ambiguousAuxiliary = true;
       if (t[j].lower === next.ing) progressive = true;
       else if (t[j].lower === next.participle && next.base !== "be")
         passive = true;
@@ -70,5 +103,6 @@ export function verbChain(t: Token[], index: number): VerbChain | undefined {
     modal: modal ? first.lower : undefined,
     lexical,
     ambiguousAuxiliary,
+    lexicalHave,
   };
 }

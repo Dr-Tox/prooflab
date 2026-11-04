@@ -86,3 +86,97 @@ export function applyDomTransaction(root: HTMLElement, edits: TextEdit[]) {
       focus: mapped(caret.focus),
     });
 }
+
+/** Native contenteditable input can create DIV/P/BR boundaries whose textContent
+ * silently joins words. Canonicalize those boundaries to actual LF text nodes
+ * before calculating offsets. Inline wrappers remain intact. */
+export function normalizeEditorLines(root: HTMLElement) {
+  const blockSelector = "div,p,li,ul,ol,pre,h1,h2,h3,h4,h5,h6,blockquote";
+  const breaks = [...root.querySelectorAll("br")];
+  if (
+    !root.querySelector(blockSelector) &&
+    breaks.every((n) => n === root.lastChild)
+  )
+    return;
+  const selection = getSelection();
+  const markers: Comment[] = [];
+  if (
+    selection?.anchorNode &&
+    selection.focusNode &&
+    root.contains(selection.anchorNode) &&
+    root.contains(selection.focusNode)
+  ) {
+    const anchor = document.createRange(),
+      focus = document.createRange();
+    anchor.setStart(selection.anchorNode, selection.anchorOffset);
+    anchor.collapse(true);
+    focus.setStart(selection.focusNode, selection.focusOffset);
+    focus.collapse(true);
+    for (const range of [anchor, focus]) {
+      const marker = document.createComment("prooflab-caret");
+      range.insertNode(marker);
+      markers.push(marker);
+    }
+  }
+  const flatten = (parent: Element) => {
+    const nodes = [...parent.childNodes];
+    const visible = nodes.filter(
+      (n) =>
+        n.nodeType !== Node.COMMENT_NODE &&
+        (n.nodeType !== Node.TEXT_NODE || n.textContent),
+    );
+    const last = visible.at(-1);
+    const output: Node[] = [];
+    let seen = false,
+      previousBlock = false;
+    const newline = () => output.push(document.createTextNode("\n"));
+    for (const node of nodes) {
+      if (node instanceof Element && node.matches(blockSelector)) {
+        if (seen) newline();
+        flatten(node);
+        output.push(...node.childNodes);
+        seen = true;
+        previousBlock = true;
+      } else if (node instanceof HTMLBRElement) {
+        if (node !== last) {
+          newline();
+          seen = true;
+          previousBlock = false;
+        }
+      } else {
+        if (node instanceof Element) flatten(node);
+        const content =
+          node.nodeType !== Node.COMMENT_NODE && !!node.textContent;
+        if (content && previousBlock) newline();
+        output.push(node);
+        if (content) {
+          seen = true;
+          previousBlock = false;
+        }
+      }
+    }
+    parent.replaceChildren(...output);
+  };
+  try {
+    flatten(root);
+    if (root.textContent?.endsWith("\n"))
+      root.appendChild(document.createElement("br"));
+    if (
+      selection &&
+      markers.length === 2 &&
+      markers.every((m) => root.contains(m))
+    ) {
+      const [anchor, focus] = markers;
+      const index = (n: Node) =>
+        Array.prototype.indexOf.call(n.parentNode!.childNodes, n);
+      selection.setBaseAndExtent(
+        anchor.parentNode!,
+        index(anchor),
+        focus.parentNode!,
+        index(focus),
+      );
+    }
+  } finally {
+    markers.forEach((m) => m.remove());
+  }
+}

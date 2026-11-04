@@ -1,3 +1,4 @@
+import { stativeVerbs } from "./verbChain";
 import { enabled, issue, type Issue, type Settings } from "../model";
 import {
   temporalFrames,
@@ -87,7 +88,7 @@ function attachedToEvent(f: TemporalFrame, a: TimeAnchor) {
     return false;
   return !subsequentVerb(f.tokens, e, a.start); // e.g. samples collected yesterday.
 }
-const stative = new Set(["know", "belong", "consist", "resemble"]);
+
 const anaphors = [
   ["at", "that", "time"],
   ["on", "that", "day"],
@@ -144,13 +145,13 @@ export function temporalAnalysis(text: string, settings: Settings) {
         f,
         "This future construction is linked to an explicit past-time expression. Check the reference time: quotation, prediction or narrative perspective may explain the wording. No chronological correction is inferred.",
       );
-    if (e.ambiguousAuxiliary)
+    if (e.ambiguousAuxiliary && !e.lexicalHave)
       add(
         "Temporal auxiliary review",
         f,
         "This auxiliary chain mixes incompatible aspect forms. Choosing a perfect or progressive repair could change whether the action was completed or ongoing. Review the intended aspect; no automatic replacement is offered.",
       );
-    if (e.progressive && e.lexical && stative.has(e.lexical))
+    if (e.progressive && e.lexical && stativeVerbs.has(e.lexical))
       add(
         "Aspect context review",
         f,

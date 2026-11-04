@@ -543,3 +543,51 @@ test("temporal analysis accepts mixed scientific tenses and never rewrites chron
   await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
   await expect(editor).toHaveText("We did not observed toxicity.");
 });
+
+test("native paragraph normalization preserves UTF-16 offsets, inline formatting and caret", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await editor.evaluate((el) => {
+    el.innerHTML =
+      "<div>Methods</div><div>😀 The samples had been <b>store</b> at −80 °C.</div><div><br></div><div>Discussion</div><div>The findings may reflect adaptation.</div>";
+    const word = el.querySelector("b")!.firstChild!;
+    const range = document.createRange();
+    range.setStart(word, 5);
+    range.collapse(true);
+    getSelection()!.removeAllRanges();
+    getSelection()!.addRange(range);
+    el.dispatchEvent(
+      new InputEvent("input", { bubbles: true, inputType: "insertText" }),
+    );
+  });
+  const original =
+    "Methods\n😀 The samples had been store at −80 °C.\n\nDiscussion\nThe findings may reflect adaptation.";
+  expect(await editor.textContent()).toBe(original);
+  expect(
+    await editor.evaluate((el) => el.querySelectorAll("div,p").length),
+  ).toBe(0);
+  await expect(page.locator(".document b")).toHaveText("store");
+  expect(
+    await editor.evaluate((el) => el.contains(getSelection()!.anchorNode)),
+  ).toBe(true);
+  await page.getByRole("button", { name: "stored ↵", exact: true }).click();
+  expect(await editor.textContent()).toBe(original.replace("store", "stored"));
+  await expect(page.locator(".document b")).toHaveText("stored");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  expect(await editor.textContent()).toBe(original);
+  await expect(page.locator(".document b")).toHaveText("store");
+  await editor.evaluate((el) => {
+    el.innerHTML = "<p>Methods</p><p>We measured the response.</p>";
+    const r = document.createRange();
+    r.selectNodeContents(el);
+    r.collapse(false);
+    getSelection()!.removeAllRanges();
+    getSelection()!.addRange(r);
+    el.dispatchEvent(
+      new InputEvent("input", { bubbles: true, inputType: "insertText" }),
+    );
+  });
+  expect(await editor.textContent()).toBe("Methods\nWe measured the response.");
+});

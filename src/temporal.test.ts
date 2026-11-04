@@ -185,3 +185,40 @@ it("does not choose completed versus ongoing activity for a missing perfect-prog
     expect(issues.filter((i) => i.replacements.length)).toEqual([]);
   }
 });
+
+it.each([
+  "We have monitoring data.",
+  "The laboratory has measuring equipment.",
+  "We have binding assays.",
+])(
+  "distinguishes lexical possession from perfect/progressive aspect: %s",
+  async (text) => {
+    expect(temporalAnalysis(text, defaults()).issues).toEqual([]);
+    expect(
+      (await engine.analyze(text, defaults(), seedWords, 1)).filter(
+        (i) => i.category === "Grammar",
+      ),
+    ).toEqual([]);
+  },
+);
+
+it("does not repair a malformed stative chain by inventing an ongoing action", async () => {
+  const issues = await engine.analyze(
+    "We are know the mechanism.",
+    defaults(),
+    seedWords,
+    1,
+  );
+  expect(issues.some((i) => i.rule === "Temporal auxiliary review")).toBe(true);
+  expect(issues.filter((i) => i.replacements.length)).toEqual([]);
+});
+
+it.each([
+  "We have repeated the word 'yesterday' in the protocol.",
+  "We have repeated the word ‘yesterday’ in the protocol.",
+])(
+  "recognizes quotation without treating possessive apostrophes as time anchors: %s",
+  (text) => {
+    expect(temporalAnalysis(text, defaults()).issues).toEqual([]);
+  },
+);

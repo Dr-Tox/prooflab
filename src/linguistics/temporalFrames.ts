@@ -46,7 +46,11 @@ const sectionNames = new Set([
 /** A shallow temporal discourse representation. Only explicit links are recorded;
  * adjacent sentences are never assumed to describe the same event/time. */
 export function temporalFrames(text: string): TemporalDocument {
-  const quoted = [...text.matchAll(/“[^”]*”|"[^"]*"/gu)].map((m) => ({
+  const quoted = [
+    ...text.matchAll(
+      /“[^”]*”|"[^"]*"|(?<![\p{L}\p{N}])‘[^’\n]*’|(?<![\p{L}\p{N}])'[^'\n]*'(?![\p{L}\p{N}])/gu,
+    ),
+  ].map((m) => ({
     start: m.index!,
     end: m.index! + m[0].length,
   }));

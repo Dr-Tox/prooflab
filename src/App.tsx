@@ -4,6 +4,7 @@ import {
   captureCaret,
   restoreCaret,
   applyDomTransaction,
+  normalizeEditorLines,
   type Caret,
 } from "./editorTransactions";
 import { grammarRules } from "./grammar";
@@ -473,6 +474,7 @@ export default function App() {
                   }
                 }}
                 onInput={(e) => {
+                  normalizeEditorLines(e.currentTarget);
                   setText(e.currentTarget.textContent ?? "");
                   setIgnored([]);
                 }}

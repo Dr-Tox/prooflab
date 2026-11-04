@@ -1,3 +1,4 @@
+import { verbChain } from "./linguistics/verbChain";
 import { tokenize } from "./linguistics/morphology";
 import { overlaps, type Issue } from "./model";
 import {
@@ -68,6 +69,17 @@ export function createScientificPolicy(
     i.start >= r.start && i.end <= r.end;
   return (input: Issue): { issue?: Issue; reason?: string } => {
     const i = { ...input };
+    if (i.rule === "ProgressiveNeedsBe") {
+      const t = tokenize(text);
+      const at = t.findIndex(
+        (t) =>
+          ["have", "has", "had"].includes(t.lower) &&
+          t.start >= i.start &&
+          t.start < i.end,
+      );
+      if (at >= 0 && verbChain(t, at)?.lexicalHave)
+        return { reason: "lexical-have" };
+    }
     if (i.rule === "SinceDuration") {
       const tail = tokenize(text.slice(i.end));
       if (

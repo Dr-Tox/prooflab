@@ -26,7 +26,7 @@ jobs:
       - name: Measure frozen v2 agreement and tense corpus
         run: npm run benchmark:v2
       - name: Measure dedicated temporal-context and tense-aspect corpus
-        run: npm run benchmark:tense
+        run: npm run benchmark:tense -- --check
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
