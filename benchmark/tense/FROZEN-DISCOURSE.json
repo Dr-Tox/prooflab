@@ -1,0 +1,5 @@
+{
+  "sha256": "cf69194dc6d8410cec8a37de19de6d14ddae4a0f81cf0ea61c8ad4fd989d03ff",
+  "baseline": "d304819",
+  "methodology": "Supplementary references frozen before production temporal integration and before engine evaluation. Architecture design already considered explicit backward reference; engineer-authored, not blinded."
+}

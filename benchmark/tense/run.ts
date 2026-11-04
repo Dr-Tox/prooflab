@@ -37,7 +37,19 @@ const invariant = (s: string) =>
       ) ?? []
     ).map((x) => x.toLowerCase()),
   });
-for (const c of JSON.parse(bytes.toString())) {
+const discourseBytes = readFileSync("benchmark/tense/discourse.json");
+const discourseFrozen = JSON.parse(
+  readFileSync("benchmark/tense/FROZEN-DISCOURSE.json", "utf8"),
+);
+if (
+  createHash("sha256").update(discourseBytes).digest("hex") !==
+  discourseFrozen.sha256
+)
+  throw Error("Frozen discourse references changed");
+for (const c of [
+  ...JSON.parse(bytes.toString()),
+  ...JSON.parse(discourseBytes.toString()),
+]) {
   const start = performance.now();
   const issues = await engine.analyze(c.text, defaults(), seedWords, 1);
   const latencyMs = performance.now() - start;
@@ -169,6 +181,7 @@ const summaries = Object.fromEntries(
   [
     "all",
     "temporal",
+    "discourse",
     "aspect",
     "form",
     "control",
@@ -197,6 +210,7 @@ writeFileSync(
       label,
       sourceCommit: process.env.SOURCE_COMMIT ?? "working-tree",
       corpusSha: frozen.sha256,
+      discourseSha: discourseFrozen.sha256,
       environment: {
         node: process.version,
         platform: process.platform,

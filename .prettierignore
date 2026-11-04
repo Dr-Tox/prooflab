@@ -18,3 +18,4 @@ benchmark/v2/paragraph-audit.json
 
 benchmark/tense/corpus.json
 benchmark/tense/reports
+benchmark/tense/discourse.json

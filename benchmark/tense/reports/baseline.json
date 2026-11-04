@@ -2,30 +2,31 @@
   "label": "baseline",
   "sourceCommit": "d304819",
   "corpusSha": "64e06776b3d997f02746fdf45fb3f73e077e17bd40582cdf413d2f9a8b10ccdb",
+  "discourseSha": "cf69194dc6d8410cec8a37de19de6d14ddae4a0f81cf0ea61c8ad4fd989d03ff",
   "environment": {
     "node": "v24.19.0",
     "platform": "linux",
     "cpu": "AMD EPYC 9V45 96-Core Processor",
     "harper": "3.0.0"
   },
-  "setupMs": 737.880244,
+  "setupMs": 570.563662,
   "memory": {
-    "rss": 378093568,
-    "heapTotal": 72302592,
-    "heapUsed": 29241560,
-    "external": 183331938,
-    "arrayBuffers": 671914
+    "rss": 541814784,
+    "heapTotal": 29835264,
+    "heapUsed": 22619888,
+    "external": 316236011,
+    "arrayBuffers": 674248
   },
   "metrics": {
     "all": {
-      "cases": 295,
-      "positives": 125,
-      "controls": 170,
+      "cases": 315,
+      "positives": 135,
+      "controls": 180,
       "detected": 60,
       "extraneousGrammarCards": 7,
       "precision": 0.8955223880597015,
-      "recall": 0.48,
-      "f1": 0.625,
+      "recall": 0.4444444444444444,
+      "f1": 0.5940594059405939,
       "correctionCases": 25,
       "completeCorrections": 25,
       "firstCompleteCorrections": 25,
@@ -39,9 +40,9 @@
       "unwantedTemporalRewrites": 10,
       "proposals": 35,
       "duplicates": 0,
-      "families": 95,
-      "latencyMedianMs": 4.095007000000123,
-      "latencyP95Ms": 6.9072929999999815
+      "families": 115,
+      "latencyMedianMs": 4.065285000000131,
+      "latencyP95Ms": 7.036593000000039
     },
     "temporal": {
       "cases": 90,
@@ -66,8 +67,34 @@
       "proposals": 10,
       "duplicates": 0,
       "families": 18,
-      "latencyMedianMs": 4.2022289999999884,
-      "latencyP95Ms": 6.9072929999999815
+      "latencyMedianMs": 4.286710000000085,
+      "latencyP95Ms": 6.722557000000052
+    },
+    "discourse": {
+      "cases": 10,
+      "positives": 10,
+      "controls": 0,
+      "detected": 0,
+      "extraneousGrammarCards": 0,
+      "precision": null,
+      "recall": 0,
+      "f1": null,
+      "correctionCases": 0,
+      "completeCorrections": 0,
+      "firstCompleteCorrections": 0,
+      "referenceCorrectProposals": 0,
+      "scoredProposals": 0,
+      "firstCorrectProposals": 0,
+      "scoredFirstProposals": 0,
+      "grammarFalsePositives": 0,
+      "allFalsePositives": 0,
+      "meaningInvariantViolations": 0,
+      "unwantedTemporalRewrites": 0,
+      "proposals": 0,
+      "duplicates": 0,
+      "families": 10,
+      "latencyMedianMs": 5.692348000000038,
+      "latencyP95Ms": 1271.6080410000004
     },
     "aspect": {
       "cases": 10,
@@ -92,8 +119,8 @@
       "proposals": 0,
       "duplicates": 0,
       "families": 2,
-      "latencyMedianMs": 3.738558000000012,
-      "latencyP95Ms": 4.271414999999934
+      "latencyMedianMs": 3.5419829999998456,
+      "latencyP95Ms": 3.888357000000042
     },
     "form": {
       "cases": 25,
@@ -118,13 +145,13 @@
       "proposals": 25,
       "duplicates": 0,
       "families": 5,
-      "latencyMedianMs": 3.9899179999999888,
-      "latencyP95Ms": 4.554362000000083
+      "latencyMedianMs": 3.71937099999991,
+      "latencyP95Ms": 4.145686999999953
     },
     "control": {
-      "cases": 170,
+      "cases": 180,
       "positives": 0,
-      "controls": 170,
+      "controls": 180,
       "detected": 0,
       "extraneousGrammarCards": 7,
       "precision": 0,
@@ -143,19 +170,19 @@
       "unwantedTemporalRewrites": 0,
       "proposals": 0,
       "duplicates": 0,
-      "families": 70,
-      "latencyMedianMs": 4.08189799999991,
-      "latencyP95Ms": 7.6580189999999675
+      "families": 80,
+      "latencyMedianMs": 4.040527000000111,
+      "latencyP95Ms": 7.036593000000039
     },
     "development": {
-      "cases": 200,
-      "positives": 100,
-      "controls": 100,
+      "cases": 210,
+      "positives": 105,
+      "controls": 105,
       "detected": 50,
       "extraneousGrammarCards": 0,
       "precision": 1,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
+      "recall": 0.47619047619047616,
+      "f1": 0.6451612903225806,
       "correctionCases": 25,
       "completeCorrections": 25,
       "firstCompleteCorrections": 25,
@@ -169,9 +196,9 @@
       "unwantedTemporalRewrites": 10,
       "proposals": 35,
       "duplicates": 0,
-      "families": 40,
-      "latencyMedianMs": 4.051782000000003,
-      "latencyP95Ms": 6.714050999999927
+      "families": 50,
+      "latencyMedianMs": 4.017642999999907,
+      "latencyP95Ms": 6.796844000000078
     },
     "regression": {
       "cases": 30,
@@ -196,18 +223,18 @@
       "proposals": 0,
       "duplicates": 0,
       "families": 30,
-      "latencyMedianMs": 4.628744999999981,
-      "latencyP95Ms": 7.701584999999795
+      "latencyMedianMs": 4.4992919999999685,
+      "latencyP95Ms": 7.7650360000002365
     },
     "held-out": {
-      "cases": 65,
-      "positives": 25,
-      "controls": 40,
+      "cases": 75,
+      "positives": 30,
+      "controls": 45,
       "detected": 10,
       "extraneousGrammarCards": 3,
       "precision": 0.7692307692307693,
-      "recall": 0.4,
-      "f1": 0.5263157894736842,
+      "recall": 0.3333333333333333,
+      "f1": 0.4651162790697674,
       "correctionCases": 0,
       "completeCorrections": 0,
       "firstCompleteCorrections": 0,
@@ -221,9 +248,9 @@
       "unwantedTemporalRewrites": 0,
       "proposals": 0,
       "duplicates": 0,
-      "families": 25,
-      "latencyMedianMs": 4.321459999999888,
-      "latencyP95Ms": 7.694313999999849
+      "families": 35,
+      "latencyMedianMs": 4.19661300000007,
+      "latencyP95Ms": 7.036593000000039
     },
     "held-out-temporal": {
       "cases": 25,
@@ -248,13 +275,13 @@
       "proposals": 0,
       "duplicates": 0,
       "families": 5,
-      "latencyMedianMs": 4.25998699999991,
-      "latencyP95Ms": 5.595076999999947
+      "latencyMedianMs": 4.27785700000004,
+      "latencyP95Ms": 5.748632999999927
     },
     "held-out-control": {
-      "cases": 40,
+      "cases": 45,
       "positives": 0,
-      "controls": 40,
+      "controls": 45,
       "detected": 0,
       "extraneousGrammarCards": 3,
       "precision": 0,
@@ -273,9 +300,9 @@
       "unwantedTemporalRewrites": 0,
       "proposals": 0,
       "duplicates": 0,
-      "families": 20,
-      "latencyMedianMs": 4.331715000000258,
-      "latencyP95Ms": 8.4791009999999
+      "families": 25,
+      "latencyMedianMs": 4.140028000000257,
+      "latencyP95Ms": 6.382673999999952
     }
   },
   "rows": [
@@ -309,7 +336,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 33.983656999999994,
+      "latencyMs": 32.93261599999994,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -336,7 +363,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 11.362985000000208,
+      "latencyMs": 10.51865399999997,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -377,7 +404,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 6.714050999999927,
+      "latencyMs": 6.522224000000051,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -404,7 +431,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 7.598117999999886,
+      "latencyMs": 6.024891000000025,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -445,7 +472,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 7.990702000000056,
+      "latencyMs": 6.066032999999948,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -472,7 +499,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.4123839999999745,
+      "latencyMs": 6.3154610000000275,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -513,7 +540,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.310825999999906,
+      "latencyMs": 5.188294000000042,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -540,7 +567,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 15.042484000000059,
+      "latencyMs": 5.210087000000044,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -581,7 +608,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 6.9072929999999815,
+      "latencyMs": 5.225420999999983,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -608,7 +635,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.783655000000181,
+      "latencyMs": 6.796844000000078,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -633,7 +660,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.507084000000077,
+      "latencyMs": 14.556997999999908,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -660,7 +687,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.063581999999997,
+      "latencyMs": 7.502978000000098,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -685,7 +712,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.545939999999973,
+      "latencyMs": 6.722557000000052,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -712,7 +739,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.961307999999917,
+      "latencyMs": 9.384017000000085,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -737,7 +764,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.4005990000000565,
+      "latencyMs": 6.536845999999969,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -764,7 +791,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.245474999999942,
+      "latencyMs": 5.806721000000039,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -789,7 +816,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.73795999999993,
+      "latencyMs": 5.76618899999994,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -816,7 +843,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.771952000000056,
+      "latencyMs": 5.370149999999967,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -841,7 +868,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.536976000000095,
+      "latencyMs": 5.30977299999995,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -868,7 +895,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.149799999999914,
+      "latencyMs": 4.632242000000019,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -893,7 +920,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.9591649999999845,
+      "latencyMs": 5.302236999999991,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -920,7 +947,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.742858000000069,
+      "latencyMs": 5.166602000000012,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -945,7 +972,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.165037000000211,
+      "latencyMs": 34.05611799999997,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -972,7 +999,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.2055239999999685,
+      "latencyMs": 5.474748999999974,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -997,7 +1024,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.980534000000034,
+      "latencyMs": 5.026789999999892,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1024,7 +1051,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 16.03117999999995,
+      "latencyMs": 4.7647830000000795,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1049,7 +1076,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.477635999999848,
+      "latencyMs": 5.076915999999983,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1076,7 +1103,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.926443000000063,
+      "latencyMs": 4.328592999999955,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1101,7 +1128,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.29041200000006,
+      "latencyMs": 4.511400000000094,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1128,7 +1155,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9050099999999475,
+      "latencyMs": 4.082038999999895,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1169,7 +1196,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.425647000000026,
+      "latencyMs": 4.637450000000172,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1196,7 +1223,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.099793999999974,
+      "latencyMs": 4.315131999999949,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1237,7 +1264,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.036499000000049,
+      "latencyMs": 4.9834139999998115,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1264,7 +1291,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.009307000000035,
+      "latencyMs": 4.1662169999999605,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1305,7 +1332,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.055497000000059,
+      "latencyMs": 4.122229999999945,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1332,7 +1359,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.194277000000056,
+      "latencyMs": 4.404117999999926,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1373,7 +1400,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.0656830000000355,
+      "latencyMs": 4.346259999999802,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1400,7 +1427,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.111761999999999,
+      "latencyMs": 4.017642999999907,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1441,7 +1468,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.955806000000166,
+      "latencyMs": 4.18387400000006,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1468,7 +1495,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.207788000000164,
+      "latencyMs": 4.381463000000167,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1509,7 +1536,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.22233899999992,
+      "latencyMs": 4.064793000000009,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1536,7 +1563,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9758469999999306,
+      "latencyMs": 3.705699999999979,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1577,7 +1604,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.156530999999859,
+      "latencyMs": 4.1198470000001635,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1604,7 +1631,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6726779999999053,
+      "latencyMs": 3.826812999999902,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1645,7 +1672,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.095007000000123,
+      "latencyMs": 4.251657000000023,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1672,7 +1699,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.623593000000028,
+      "latencyMs": 3.7048180000001594,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1713,7 +1740,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7860799999998562,
+      "latencyMs": 4.377246000000014,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1740,7 +1767,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6051860000000033,
+      "latencyMs": 3.7446390000000065,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1781,7 +1808,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.042337000000089,
+      "latencyMs": 4.201381000000083,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1808,7 +1835,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.628480999999965,
+      "latencyMs": 3.96229900000003,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1849,7 +1876,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.008024999999861,
+      "latencyMs": 3.9528740000000653,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1876,7 +1903,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6559330000000045,
+      "latencyMs": 3.6154539999999997,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1917,7 +1944,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.063389000000143,
+      "latencyMs": 3.892423000000008,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -1944,7 +1971,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6646059999998215,
+      "latencyMs": 3.4447459999998955,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -1985,7 +2012,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.734070999999858,
+      "latencyMs": 3.8094370000001163,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -2012,7 +2039,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.520276999999851,
+      "latencyMs": 3.624027000000069,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2053,7 +2080,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7985779999999068,
+      "latencyMs": 3.865632000000005,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -2080,7 +2107,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.995296999999937,
+      "latencyMs": 4.621206000000029,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2121,7 +2148,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7676810000000387,
+      "latencyMs": 3.7439580000000205,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -2148,7 +2175,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6923980000001393,
+      "latencyMs": 3.501059999999825,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2173,7 +2200,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.471977000000152,
+      "latencyMs": 4.959468999999899,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2200,7 +2227,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.2492479999998523,
+      "latencyMs": 3.5819329999999354,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2225,7 +2252,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.728012000000035,
+      "latencyMs": 3.7131409999999505,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2252,7 +2279,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 2.9414509999999154,
+      "latencyMs": 2.809733999999935,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2277,7 +2304,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.7427840000000288,
+      "latencyMs": 3.7385300000000825,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2304,7 +2331,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 2.7645229999998264,
+      "latencyMs": 2.931047000000035,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2329,7 +2356,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.188458000000082,
+      "latencyMs": 3.992014000000154,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2356,7 +2383,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 2.9308659999999236,
+      "latencyMs": 3.300546999999824,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2381,7 +2408,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8474220000000514,
+      "latencyMs": 3.6872419999999693,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2408,7 +2435,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 2.820307999999841,
+      "latencyMs": 2.7953319999999167,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2433,7 +2460,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.104784999999993,
+      "latencyMs": 4.86520500000006,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2460,7 +2487,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9159250000000156,
+      "latencyMs": 4.081499000000122,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2485,7 +2512,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.178683999999976,
+      "latencyMs": 4.224525000000085,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2512,7 +2539,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.117370999999821,
+      "latencyMs": 3.757317999999941,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2537,7 +2564,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.326266999999916,
+      "latencyMs": 3.9174000000000433,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2564,7 +2591,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.332567000000154,
+      "latencyMs": 4.387012000000141,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2589,7 +2616,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.943506999999954,
+      "latencyMs": 3.9601259999999456,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2616,7 +2643,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.80949499999997,
+      "latencyMs": 3.726110999999946,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2641,7 +2668,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.033003000000008,
+      "latencyMs": 3.8460029999998824,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2668,7 +2695,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.067935999999918,
+      "latencyMs": 3.9597440000000006,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2693,7 +2720,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.227067000000034,
+      "latencyMs": 4.197495000000117,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2720,7 +2747,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8466909999999643,
+      "latencyMs": 3.797269000000142,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2745,7 +2772,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.968956000000162,
+      "latencyMs": 4.3007910000001175,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2772,7 +2799,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.132904000000053,
+      "latencyMs": 4.970495000000028,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2797,7 +2824,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.511917999999923,
+      "latencyMs": 4.849141000000145,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2824,7 +2851,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9250589999999193,
+      "latencyMs": 3.9645019999998112,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2849,7 +2876,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.059342999999899,
+      "latencyMs": 4.05327699999998,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2876,7 +2903,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.117510999999922,
+      "latencyMs": 3.826703999999836,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2901,7 +2928,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.186095000000023,
+      "latencyMs": 4.552421999999979,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2928,7 +2955,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8933219999998983,
+      "latencyMs": 3.7938540000000103,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2953,7 +2980,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.081014999999979,
+      "latencyMs": 3.9227489999998397,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -2980,7 +3007,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.112925000000132,
+      "latencyMs": 3.7216439999999693,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3005,7 +3032,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.194917999999916,
+      "latencyMs": 5.1302670000000035,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3032,7 +3059,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.001395000000002,
+      "latencyMs": 3.842917999999827,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3057,7 +3084,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.926371999999901,
+      "latencyMs": 4.288673000000017,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3084,7 +3111,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.768271999999797,
+      "latencyMs": 3.8810249999999087,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3109,7 +3136,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.177952999999889,
+      "latencyMs": 4.206939999999804,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3136,7 +3163,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.069679000000178,
+      "latencyMs": 4.579973000000109,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3161,7 +3188,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.013053000000127,
+      "latencyMs": 3.848036000000093,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3188,7 +3215,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.773529999999937,
+      "latencyMs": 3.632199000000128,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3213,7 +3240,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.3600179999998545,
+      "latencyMs": 4.234380999999985,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3240,7 +3267,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.254948999999897,
+      "latencyMs": 7.848671999999851,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3265,7 +3292,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9180089999999836,
+      "latencyMs": 4.181601000000001,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3292,7 +3319,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.148138000000017,
+      "latencyMs": 3.7323409999999058,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3317,7 +3344,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.2022289999999884,
+      "latencyMs": 6.2391059999999925,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3344,7 +3371,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.035227000000077,
+      "latencyMs": 4.492640999999821,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3369,7 +3396,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.329852999999957,
+      "latencyMs": 5.0859609999999975,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3396,7 +3423,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.264848000000029,
+      "latencyMs": 4.681498000000147,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3421,7 +3448,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.765255000000025,
+      "latencyMs": 4.267951000000039,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3448,7 +3475,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.358575999999857,
+      "latencyMs": 4.092486000000008,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3473,7 +3500,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.152098000000024,
+      "latencyMs": 4.731442999999899,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3500,7 +3527,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.320688000000018,
+      "latencyMs": 4.034257999999909,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3525,7 +3552,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.763608000000204,
+      "latencyMs": 3.9021979999999985,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3552,7 +3579,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.078221999999869,
+      "latencyMs": 4.102300000000014,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3577,7 +3604,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.029789000000164,
+      "latencyMs": 3.8872460000000046,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3604,7 +3631,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.437087999999903,
+      "latencyMs": 4.8850649999999405,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3629,7 +3656,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.0336439999998674,
+      "latencyMs": 3.7836580000000595,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3656,7 +3683,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9822569999998905,
+      "latencyMs": 4.065285000000131,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3681,7 +3708,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8190190000000257,
+      "latencyMs": 4.039796000000024,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3708,7 +3735,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.306367000000137,
+      "latencyMs": 4.57488699999999,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -3829,7 +3856,7 @@
           }
         }
       ],
-      "latencyMs": 5.4642180000000735,
+      "latencyMs": 5.495840000000044,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -3881,7 +3908,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.086924000000181,
+      "latencyMs": 4.117884000000004,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4006,7 +4033,7 @@
           }
         }
       ],
-      "latencyMs": 4.416983999999957,
+      "latencyMs": 4.509736999999859,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -4058,7 +4085,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.2705530000000635,
+      "latencyMs": 6.312171000000035,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4181,7 +4208,7 @@
           }
         }
       ],
-      "latencyMs": 4.399948999999879,
+      "latencyMs": 4.623428999999987,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -4233,7 +4260,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.321439000000055,
+      "latencyMs": 6.03363400000012,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4356,7 +4383,7 @@
           }
         }
       ],
-      "latencyMs": 4.055317000000059,
+      "latencyMs": 4.053205999999818,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -4408,7 +4435,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.222359999999981,
+      "latencyMs": 3.8681669999998576,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4529,7 +4556,7 @@
           }
         }
       ],
-      "latencyMs": 4.5915379999999,
+      "latencyMs": 4.570699000000104,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -4581,7 +4608,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.916937000000189,
+      "latencyMs": 3.777127999999948,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4606,7 +4633,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5997869999998784,
+      "latencyMs": 3.46914199999992,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4633,7 +4660,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.4860949999999775,
+      "latencyMs": 3.2768619999999373,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4658,7 +4685,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.271414999999934,
+      "latencyMs": 3.888357000000042,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4685,7 +4712,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.503050999999914,
+      "latencyMs": 3.4857970000000478,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4710,7 +4737,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9965279999998984,
+      "latencyMs": 3.7978299999999763,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4737,7 +4764,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.012461999999914,
+      "latencyMs": 3.7072220000000016,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4762,7 +4789,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.67918799999984,
+      "latencyMs": 3.5928089999999884,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4789,7 +4816,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9064119999998184,
+      "latencyMs": 3.7395309999999427,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4814,7 +4841,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.738558000000012,
+      "latencyMs": 3.5638960000001134,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4841,7 +4868,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.566046000000142,
+      "latencyMs": 3.460319000000027,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -4940,7 +4967,7 @@
           }
         }
       ],
-      "latencyMs": 4.479467999999997,
+      "latencyMs": 4.5073329999997895,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -4980,7 +5007,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9978499999999713,
+      "latencyMs": 3.742966999999908,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5077,7 +5104,7 @@
           }
         }
       ],
-      "latencyMs": 4.125614000000041,
+      "latencyMs": 3.7150550000001203,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5117,7 +5144,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6228320000000167,
+      "latencyMs": 3.912121999999954,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5213,7 +5240,7 @@
           }
         }
       ],
-      "latencyMs": 4.916699999999992,
+      "latencyMs": 3.665399999999863,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5253,7 +5280,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.7077610000001187,
+      "latencyMs": 3.509653999999955,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5351,7 +5378,7 @@
           }
         }
       ],
-      "latencyMs": 3.9899179999999888,
+      "latencyMs": 4.145686999999953,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5391,7 +5418,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.513437000000067,
+      "latencyMs": 4.08494399999995,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5488,7 +5515,7 @@
           }
         }
       ],
-      "latencyMs": 4.132554000000027,
+      "latencyMs": 3.8083859999999277,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5528,7 +5555,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8688240000001315,
+      "latencyMs": 3.5258989999999812,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5581,7 +5608,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.072181999999884,
+      "latencyMs": 3.9042510000001585,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5621,7 +5648,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.698447999999871,
+      "latencyMs": 3.6865009999999074,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5674,7 +5701,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.652977999999848,
+      "latencyMs": 3.7157760000000053,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5714,7 +5741,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.632376999999906,
+      "latencyMs": 3.679480999999896,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5767,7 +5794,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7047660000000633,
+      "latencyMs": 3.655144000000064,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5807,7 +5834,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9255809999999656,
+      "latencyMs": 4.042689999999993,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5860,7 +5887,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6940810000000965,
+      "latencyMs": 3.664748000000145,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5900,7 +5927,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6526479999999992,
+      "latencyMs": 3.6603110000000925,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -5953,7 +5980,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6889629999998306,
+      "latencyMs": 3.774475000000166,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -5993,7 +6020,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9643089999999575,
+      "latencyMs": 4.327991999999995,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -6092,7 +6119,7 @@
           }
         }
       ],
-      "latencyMs": 4.102647999999817,
+      "latencyMs": 4.091976000000159,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -6132,7 +6159,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8916289999999663,
+      "latencyMs": 4.081349000000046,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -6229,7 +6256,7 @@
           }
         }
       ],
-      "latencyMs": 3.7333399999999983,
+      "latencyMs": 3.8107790000001387,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -6269,7 +6296,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.953121999999894,
+      "latencyMs": 4.097964000000047,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -6365,7 +6392,7 @@
           }
         }
       ],
-      "latencyMs": 4.140084999999999,
+      "latencyMs": 3.7397920000000795,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -6405,7 +6432,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6860180000001037,
+      "latencyMs": 3.6444380000000365,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -6503,7 +6530,7 @@
           }
         }
       ],
-      "latencyMs": 4.554362000000083,
+      "latencyMs": 3.71937099999991,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -6543,7 +6570,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.814002000000073,
+      "latencyMs": 3.6441469999999754,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -6640,7 +6667,7 @@
           }
         }
       ],
-      "latencyMs": 4.179063999999926,
+      "latencyMs": 3.960786999999982,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -6680,7 +6707,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.091912000000093,
+      "latencyMs": 3.6165759999998954,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -6779,7 +6806,7 @@
           }
         }
       ],
-      "latencyMs": 4.1882080000000315,
+      "latencyMs": 3.8188219999999546,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -6819,7 +6846,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.1685580000000755,
+      "latencyMs": 3.5216720000000805,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -6918,7 +6945,7 @@
           }
         }
       ],
-      "latencyMs": 3.918859999999995,
+      "latencyMs": 3.7964280000001054,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -6958,7 +6985,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6223019999999906,
+      "latencyMs": 3.438967000000048,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7056,7 +7083,7 @@
           }
         }
       ],
-      "latencyMs": 3.9411240000001726,
+      "latencyMs": 3.513488999999936,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -7096,7 +7123,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6134779999999864,
+      "latencyMs": 3.45923700000003,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7196,7 +7223,7 @@
           }
         }
       ],
-      "latencyMs": 3.7350229999999556,
+      "latencyMs": 3.524454999999989,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -7236,7 +7263,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9761969999999565,
+      "latencyMs": 4.49613700000009,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7334,7 +7361,7 @@
           }
         }
       ],
-      "latencyMs": 3.915094000000181,
+      "latencyMs": 3.542404000000033,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -7374,7 +7401,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.051782000000003,
+      "latencyMs": 3.511015000000043,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7399,7 +7426,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.161226999999826,
+      "latencyMs": 3.504304999999931,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7426,7 +7453,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.67483100000004,
+      "latencyMs": 3.618889000000081,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7451,7 +7478,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.3983519999999316,
+      "latencyMs": 3.305364000000054,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7478,7 +7505,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.7776159999998526,
+      "latencyMs": 3.8597939999999653,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7503,7 +7530,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.4722750000000815,
+      "latencyMs": 3.3966219999999794,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7530,7 +7557,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5201070000000527,
+      "latencyMs": 3.3028200000001107,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7555,7 +7582,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.767421000000013,
+      "latencyMs": 3.5419829999998456,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7582,7 +7609,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.504073000000062,
+      "latencyMs": 3.331032999999934,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7607,7 +7634,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.72466600000007,
+      "latencyMs": 3.295530000000099,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7634,7 +7661,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.744376999999986,
+      "latencyMs": 3.374238000000105,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7687,7 +7714,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.053163999999924,
+      "latencyMs": 3.7833669999999984,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -7727,7 +7754,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8030559999999696,
+      "latencyMs": 3.5641760000000886,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7780,7 +7807,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6057160000000295,
+      "latencyMs": 3.4646549999999934,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -7820,7 +7847,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5793559999999616,
+      "latencyMs": 3.481761000000006,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7873,7 +7900,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.5632819999998446,
+      "latencyMs": 3.5202899999999318,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -7913,7 +7940,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.137981999999965,
+      "latencyMs": 5.036235000000033,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -7966,7 +7993,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.339717999999948,
+      "latencyMs": 3.5336899999999787,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -8006,7 +8033,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8958259999999427,
+      "latencyMs": 3.5389580000000933,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8059,7 +8086,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.8635269999999764,
+      "latencyMs": 3.571867999999995,
       "detected": true,
       "complete": true,
       "firstComplete": true,
@@ -8099,7 +8126,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.926044999999931,
+      "latencyMs": 4.746642000000065,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8140,7 +8167,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.40664199999992,
+      "latencyMs": 5.04674,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8167,7 +8194,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.321459999999888,
+      "latencyMs": 4.343305999999984,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8208,7 +8235,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.778091000000131,
+      "latencyMs": 4.528987000000143,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8235,7 +8262,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.720413000000008,
+      "latencyMs": 4.156463000000031,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8276,7 +8303,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.585168999999951,
+      "latencyMs": 5.748632999999927,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8303,7 +8330,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.2008639999999104,
+      "latencyMs": 7.036593000000039,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8344,7 +8371,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 7.708475000000135,
+      "latencyMs": 8.891251000000011,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8371,7 +8398,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 8.4791009999999,
+      "latencyMs": 4.883364000000029,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8412,7 +8439,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.939525999999887,
+      "latencyMs": 4.6933950000000095,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8439,7 +8466,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.6302270000001045,
+      "latencyMs": 4.405520000000024,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8464,7 +8491,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.044884000000138,
+      "latencyMs": 4.9212500000001,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8491,7 +8518,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.588825000000043,
+      "latencyMs": 4.508145000000013,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8516,7 +8543,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9959460000000036,
+      "latencyMs": 3.997661999999991,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8543,7 +8570,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9617349999998623,
+      "latencyMs": 3.916099000000031,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8568,7 +8595,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.917197999999871,
+      "latencyMs": 4.484739999999874,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8595,7 +8622,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.459922000000006,
+      "latencyMs": 4.348293000000012,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8620,7 +8647,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.595013999999992,
+      "latencyMs": 4.592893000000004,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8647,7 +8674,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.463234000000057,
+      "latencyMs": 3.891211000000112,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8672,7 +8699,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.45001400000001,
+      "latencyMs": 3.942738999999847,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8699,7 +8726,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.908554999999751,
+      "latencyMs": 4.208300999999892,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8740,7 +8767,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.453723999999966,
+      "latencyMs": 4.947761000000128,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8767,7 +8794,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.012782999999672,
+      "latencyMs": 3.966856000000007,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8808,7 +8835,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.084691000000021,
+      "latencyMs": 3.947055999999975,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8835,7 +8862,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.259426000000076,
+      "latencyMs": 4.412340000000086,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8876,7 +8903,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.25998699999991,
+      "latencyMs": 4.286710000000085,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8903,7 +8930,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.3798179999998865,
+      "latencyMs": 3.9240809999998874,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -8944,7 +8971,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.1979419999997845,
+      "latencyMs": 4.27785700000004,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -8971,7 +8998,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.331715000000258,
+      "latencyMs": 3.996599999999944,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9012,7 +9039,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.055667999999969,
+      "latencyMs": 4.2972460000000865,
       "detected": true,
       "complete": null,
       "firstComplete": null,
@@ -9039,7 +9066,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.46953399999984,
+      "latencyMs": 4.000606999999945,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9064,7 +9091,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.595076999999947,
+      "latencyMs": 5.259763000000021,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9091,7 +9118,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.1842689999998584,
+      "latencyMs": 3.1258430000000317,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9116,7 +9143,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.1470429999999396,
+      "latencyMs": 3.1442500000000564,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9143,7 +9170,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.0776270000001205,
+      "latencyMs": 3.3534769999998844,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9168,7 +9195,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.138472999999976,
+      "latencyMs": 3.7122600000000148,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9195,7 +9222,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.5550929999999425,
+      "latencyMs": 3.7783099999999195,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9220,7 +9247,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5741089999996802,
+      "latencyMs": 3.0850809999999456,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9247,7 +9274,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.2061619999999493,
+      "latencyMs": 3.329300000000103,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9272,7 +9299,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.588709999999992,
+      "latencyMs": 3.2214269999999487,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9299,7 +9326,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.121704000000136,
+      "latencyMs": 3.0863620000000083,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9324,7 +9351,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.539850999999999,
+      "latencyMs": 3.8210750000000644,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9351,7 +9378,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.2337329999995745,
+      "latencyMs": 2.992390000000114,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9376,7 +9403,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.153542000000016,
+      "latencyMs": 3.1994939999999588,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9403,7 +9430,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.647860000000037,
+      "latencyMs": 2.9408619999999246,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9428,7 +9455,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.04172299999982,
+      "latencyMs": 3.430193000000145,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9455,7 +9482,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 2.963275000000067,
+      "latencyMs": 2.9891849999999067,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9480,7 +9507,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.710859000000255,
+      "latencyMs": 3.191571000000067,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9507,7 +9534,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6638939999998,
+      "latencyMs": 2.8906959999999344,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9532,7 +9559,7 @@
       "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.0672119999999268,
+      "latencyMs": 3.1504899999999907,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9559,7 +9586,7 @@
       "explanation": "Valid negative control; preserve chronology, voice and epistemic force.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.0706270000000586,
+      "latencyMs": 3.0120200000001205,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9586,7 +9613,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.677377999999862,
+      "latencyMs": 4.365818999999874,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9613,7 +9640,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.585609999999633,
+      "latencyMs": 4.548836999999821,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9640,7 +9667,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.775750000000244,
+      "latencyMs": 4.786055000000033,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9667,7 +9694,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.138051999999789,
+      "latencyMs": 3.795215999999982,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9694,7 +9721,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.47204499999998,
+      "latencyMs": 4.4992919999999685,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9737,7 +9764,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.529373999999734,
+      "latencyMs": 4.4745640000001,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9764,7 +9791,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.703377999999702,
+      "latencyMs": 4.530389000000014,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9791,7 +9818,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.999866000000111,
+      "latencyMs": 4.950314000000162,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9818,7 +9845,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.692888999999923,
+      "latencyMs": 3.645177999999987,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9861,7 +9888,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.992080999999871,
+      "latencyMs": 3.762186000000156,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9904,7 +9931,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7246259999997164,
+      "latencyMs": 3.6342719999997826,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9947,7 +9974,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.2419289999998,
+      "latencyMs": 3.8385710000000017,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -9974,7 +10001,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.101767000000109,
+      "latencyMs": 4.478791000000001,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10001,7 +10028,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.048656999999821,
+      "latencyMs": 3.8287259999999605,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10028,7 +10055,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.7096839999999247,
+      "latencyMs": 3.702094999999872,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10055,7 +10082,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.572059000000081,
+      "latencyMs": 4.520673999999872,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10082,7 +10109,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.201308000000154,
+      "latencyMs": 3.490073000000393,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10109,7 +10136,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5604580000003807,
+      "latencyMs": 3.429993000000195,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10136,7 +10163,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.08189799999991,
+      "latencyMs": 4.171786000000338,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10163,7 +10190,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.839941000000181,
+      "latencyMs": 3.883440000000064,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10190,7 +10217,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.053884999999809,
+      "latencyMs": 3.6828160000000025,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10217,7 +10244,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.294459000000188,
+      "latencyMs": 4.079346999999871,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10244,7 +10271,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8157649999998284,
+      "latencyMs": 3.951983000000382,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10271,7 +10298,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 7.6580189999999675,
+      "latencyMs": 7.7650360000002365,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10298,7 +10325,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.652621000000181,
+      "latencyMs": 4.298997999999756,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10325,7 +10352,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.023925999999847,
+      "latencyMs": 4.933570000000145,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10352,7 +10379,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 2.6334560000000238,
+      "latencyMs": 2.550771000000168,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10379,7 +10406,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.26920999999993,
+      "latencyMs": 4.198105999999825,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10406,7 +10433,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.658159999999953,
+      "latencyMs": 4.73759199999995,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10433,7 +10460,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.055069999999887,
+      "latencyMs": 4.768708999999944,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10525,7 +10552,7 @@
           }
         }
       ],
-      "latencyMs": 39.65801499999998,
+      "latencyMs": 43.94220700000005,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10671,7 +10698,7 @@
           }
         }
       ],
-      "latencyMs": 12.028663999999935,
+      "latencyMs": 11.108937999999853,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10698,7 +10725,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 7.701584999999795,
+      "latencyMs": 6.760995999999977,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10725,7 +10752,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.308046999999988,
+      "latencyMs": 6.382673999999952,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10752,7 +10779,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.60355299999992,
+      "latencyMs": 5.891159000000243,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10779,7 +10806,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.109625000000051,
+      "latencyMs": 5.685316999999941,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10822,7 +10849,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.482122999999774,
+      "latencyMs": 3.969329000000016,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10849,7 +10876,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.269751000000269,
+      "latencyMs": 3.9192339999999604,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10892,7 +10919,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.472928999999567,
+      "latencyMs": 3.989730000000236,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10935,7 +10962,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.953946999999971,
+      "latencyMs": 4.341723000000002,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10962,7 +10989,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.173878999999943,
+      "latencyMs": 4.789930999999797,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -10989,7 +11016,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.628744999999981,
+      "latencyMs": 4.262322999999924,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -11016,7 +11043,7 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 7.694313999999849,
+      "latencyMs": 4.130653000000166,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -11103,7 +11130,7 @@
           }
         }
       ],
-      "latencyMs": 5.739806000000044,
+      "latencyMs": 5.3412969999999405,
       "detected": false,
       "complete": null,
       "firstComplete": null,
@@ -11130,11 +11157,1215 @@
       "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.796027999999751,
+      "latencyMs": 4.642217999999957,
       "detected": false,
       "complete": null,
       "firstComplete": null,
       "firstOutput": "The instrument was calibrated yesterday, and it is operating normally today.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D01",
+      "family": "discourse-01",
+      "split": "development",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The assay was completed yesterday. At that time, we have measured the response.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "The assay was completed yesterday. At that time, we had measured the response.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.675388999999996,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The assay was completed yesterday. At that time, we have measured the response.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN01",
+      "family": "discourse-control-01",
+      "split": "development",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The assay was completed yesterday. At that time, we had measured the response.",
+      "target": "",
+      "accepted": [
+        "The assay was completed yesterday. At that time, we had measured the response."
+      ],
+      "referenceRewrite": "The assay was completed yesterday. At that time, we had measured the response.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.080156999999872,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The assay was completed yesterday. At that time, we had measured the response.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D02",
+      "family": "discourse-02",
+      "split": "held-out",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The samples were collected last week. On that day, we have recorded the temperature.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "The samples were collected last week. On that day, we had recorded the temperature.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.443552000000182,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The samples were collected last week. On that day, we have recorded the temperature.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN02",
+      "family": "discourse-control-02",
+      "split": "held-out",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The samples were collected last week. On that day, we had recorded the temperature.",
+      "target": "",
+      "accepted": [
+        "The samples were collected last week. On that day, we had recorded the temperature."
+      ],
+      "referenceRewrite": "The samples were collected last week. On that day, we had recorded the temperature.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.140028000000257,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The samples were collected last week. On that day, we had recorded the temperature.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D03",
+      "family": "discourse-03",
+      "split": "development",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "We analyzed the cultures yesterday. During that experiment, we have observed cell division.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "We analyzed the cultures yesterday. During that experiment, we had observed cell division.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.257278999999926,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "We analyzed the cultures yesterday. During that experiment, we have observed cell division.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN03",
+      "family": "discourse-control-03",
+      "split": "development",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "We analyzed the cultures yesterday. During that experiment, we had observed cell division.",
+      "target": "",
+      "accepted": [
+        "We analyzed the cultures yesterday. During that experiment, we had observed cell division."
+      ],
+      "referenceRewrite": "We analyzed the cultures yesterday. During that experiment, we had observed cell division.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 3.8400339999998323,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "We analyzed the cultures yesterday. During that experiment, we had observed cell division.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D04",
+      "family": "discourse-04",
+      "split": "held-out",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The team completed the assay last week. At that point, we have already stored the extracts.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "The team completed the assay last week. At that point, we had already stored the extracts.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.692348000000038,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The team completed the assay last week. At that point, we have already stored the extracts.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN04",
+      "family": "discourse-control-04",
+      "split": "held-out",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The team completed the assay last week. At that point, we had already stored the extracts.",
+      "target": "",
+      "accepted": [
+        "The team completed the assay last week. At that point, we had already stored the extracts."
+      ],
+      "referenceRewrite": "The team completed the assay last week. At that point, we had already stored the extracts.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.19661300000007,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The team completed the assay last week. At that point, we had already stored the extracts.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D05",
+      "family": "discourse-05",
+      "split": "development",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The response was measured yesterday. In that experiment, the team has assessed toxicity.",
+      "target": "has",
+      "accepted": [],
+      "referenceRewrite": "The response was measured yesterday. In that experiment, the team had assessed toxicity.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 5.253542999999809,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The response was measured yesterday. In that experiment, the team has assessed toxicity.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN05",
+      "family": "discourse-control-05",
+      "split": "development",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The response was measured yesterday. In that experiment, the team had assessed toxicity.",
+      "target": "",
+      "accepted": [
+        "The response was measured yesterday. In that experiment, the team had assessed toxicity."
+      ],
+      "referenceRewrite": "The response was measured yesterday. In that experiment, the team had assessed toxicity.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.202803000000131,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The response was measured yesterday. In that experiment, the team had assessed toxicity.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D06",
+      "family": "discourse-06",
+      "split": "held-out",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The samples were treated yesterday. At that time, we have been monitoring the cultures.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "The samples were treated yesterday. At that time, we had been monitoring the cultures.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.869151999999758,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The samples were treated yesterday. At that time, we have been monitoring the cultures.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN06",
+      "family": "discourse-control-06",
+      "split": "held-out",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The samples were treated yesterday. At that time, we had been monitoring the cultures.",
+      "target": "",
+      "accepted": [
+        "The samples were treated yesterday. At that time, we had been monitoring the cultures."
+      ],
+      "referenceRewrite": "The samples were treated yesterday. At that time, we had been monitoring the cultures.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [],
+      "latencyMs": 4.040527000000111,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The samples were treated yesterday. At that time, we had been monitoring the cultures.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D07",
+      "family": "discourse-07",
+      "split": "development",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The potential was −3.2 mV yesterday. On that day, the cells have been analyzed by ELISA.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 23,
+          "end": 25,
+          "problemText": "mV",
+          "sourceSlice": "mV",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ma"
+            },
+            {
+              "kind": 0,
+              "replacement": "me"
+            },
+            {
+              "kind": 0,
+              "replacement": "mi"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 23,
+                "end": 25
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "e"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `mV` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 23,
+              "end": 25
+            },
+            "problem_text": "mV",
+            "language": "Plain"
+          }
+        },
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 82,
+          "end": 87,
+          "problemText": "ELISA",
+          "sourceSlice": "ELISA",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ELIZA"
+            },
+            {
+              "kind": 0,
+              "replacement": "Elisa"
+            },
+            {
+              "kind": 0,
+              "replacement": "Elite"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 82,
+                "end": 87
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "L",
+                    "I",
+                    "Z",
+                    "A"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "l",
+                    "i",
+                    "s",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "l",
+                    "i",
+                    "t",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `ELISA` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 82,
+              "end": 87
+            },
+            "problem_text": "ELISA",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 7.9067399999999,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The potential was −3.2 mV yesterday. On that day, the cells have been analyzed by ELISA.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN07",
+      "family": "discourse-control-07",
+      "split": "development",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA.",
+      "target": "",
+      "accepted": [
+        "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA."
+      ],
+      "referenceRewrite": "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 23,
+          "end": 25,
+          "problemText": "mV",
+          "sourceSlice": "mV",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ma"
+            },
+            {
+              "kind": 0,
+              "replacement": "me"
+            },
+            {
+              "kind": 0,
+              "replacement": "mi"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 23,
+                "end": 25
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "e"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "m",
+                    "i"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `mV` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 23,
+              "end": 25
+            },
+            "problem_text": "mV",
+            "language": "Plain"
+          }
+        },
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 81,
+          "end": 86,
+          "problemText": "ELISA",
+          "sourceSlice": "ELISA",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "ELIZA"
+            },
+            {
+              "kind": 0,
+              "replacement": "Elisa"
+            },
+            {
+              "kind": 0,
+              "replacement": "Elite"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 81,
+                "end": 86
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "L",
+                    "I",
+                    "Z",
+                    "A"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "l",
+                    "i",
+                    "s",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "E",
+                    "l",
+                    "i",
+                    "t",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `ELISA` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 81,
+              "end": 86
+            },
+            "problem_text": "ELISA",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 4.34266499999967,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D08",
+      "family": "discourse-08",
+      "split": "held-out",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The temperature was 37 °C last week. During that experiment, we have already measured TNF-α.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 86,
+          "end": 89,
+          "problemText": "TNF",
+          "sourceSlice": "TNF",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "Thu"
+            },
+            {
+              "kind": 0,
+              "replacement": "Inf"
+            },
+            {
+              "kind": 0,
+              "replacement": "Tn"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 86,
+                "end": 89
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "T",
+                    "h",
+                    "u"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "I",
+                    "n",
+                    "f"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "T",
+                    "n"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `TNF` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 86,
+              "end": 89
+            },
+            "problem_text": "TNF",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 6.659410999999636,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The temperature was 37 °C last week. During that experiment, we have already measured TNF-α.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN08",
+      "family": "discourse-control-08",
+      "split": "held-out",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α.",
+      "target": "",
+      "accepted": [
+        "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α."
+      ],
+      "referenceRewrite": "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 85,
+          "end": 88,
+          "problemText": "TNF",
+          "sourceSlice": "TNF",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "Thu"
+            },
+            {
+              "kind": 0,
+              "replacement": "Inf"
+            },
+            {
+              "kind": 0,
+              "replacement": "Tn"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 85,
+                "end": 88
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "T",
+                    "h",
+                    "u"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "I",
+                    "n",
+                    "f"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "T",
+                    "n"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `TNF` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 85,
+              "end": 88
+            },
+            "problem_text": "TNF",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 4.226949999999761,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D09",
+      "family": "discourse-09",
+      "split": "development",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The incubation lasted 30 min yesterday. At that point, we have collected the supernatant.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 77,
+          "end": 88,
+          "problemText": "supernatant",
+          "sourceSlice": "supernatant",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "supernova's"
+            },
+            {
+              "kind": 0,
+              "replacement": "superhuman"
+            },
+            {
+              "kind": 0,
+              "replacement": "superlative"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 77,
+                "end": 88
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "n",
+                    "o",
+                    "v",
+                    "a",
+                    "'",
+                    "s"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "h",
+                    "u",
+                    "m",
+                    "a",
+                    "n"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "l",
+                    "a",
+                    "t",
+                    "i",
+                    "v",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `supernatant` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 77,
+              "end": 88
+            },
+            "problem_text": "supernatant",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 1271.6080410000004,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The incubation lasted 30 min yesterday. At that point, we have collected the supernatant.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN09",
+      "family": "discourse-control-09",
+      "split": "development",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant.",
+      "target": "",
+      "accepted": [
+        "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant."
+      ],
+      "referenceRewrite": "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 76,
+          "end": 87,
+          "problemText": "supernatant",
+          "sourceSlice": "supernatant",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "supernova's"
+            },
+            {
+              "kind": 0,
+              "replacement": "superhuman"
+            },
+            {
+              "kind": 0,
+              "replacement": "superlative"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 76,
+                "end": 87
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "n",
+                    "o",
+                    "v",
+                    "a",
+                    "'",
+                    "s"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "h",
+                    "u",
+                    "m",
+                    "a",
+                    "n"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "s",
+                    "u",
+                    "p",
+                    "e",
+                    "r",
+                    "l",
+                    "a",
+                    "t",
+                    "i",
+                    "v",
+                    "e"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `supernatant` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 76,
+              "end": 87
+            },
+            "problem_text": "supernatant",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 7.278499000000011,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "D10",
+      "family": "discourse-10",
+      "split": "held-out",
+      "category": "discourse",
+      "behavior": "warning",
+      "text": "The results were recorded last week. In that experiment, we have measured CYP3A4 expression. These findings may reflect adaptation.",
+      "target": "have",
+      "accepted": [],
+      "referenceRewrite": "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation.",
+      "forbidden": [],
+      "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 74,
+          "end": 80,
+          "problemText": "CYP3A4",
+          "sourceSlice": "CYP3A4",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "Cuppa"
+            },
+            {
+              "kind": 0,
+              "replacement": "Cyan"
+            },
+            {
+              "kind": 0,
+              "replacement": "CPA"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 74,
+                "end": 80
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "u",
+                    "p",
+                    "p",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "y",
+                    "a",
+                    "n"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "P",
+                    "A"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `CYP3A4` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 74,
+              "end": 80
+            },
+            "problem_text": "CYP3A4",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 12.081842000000051,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The results were recorded last week. In that experiment, we have measured CYP3A4 expression. These findings may reflect adaptation.",
+      "proposals": [],
+      "grammarFalsePositive": false,
+      "anyFalsePositive": false,
+      "extraneous": 0,
+      "duplicateCards": 0
+    },
+    {
+      "id": "DN10",
+      "family": "discourse-control-10",
+      "split": "held-out",
+      "category": "control",
+      "behavior": "no issue",
+      "text": "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation.",
+      "target": "",
+      "accepted": [
+        "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation."
+      ],
+      "referenceRewrite": "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation.",
+      "forbidden": [],
+      "explanation": "Past-perfect reference preserves the explicit past temporal relationship.",
+      "issues": [],
+      "raw": [
+        {
+          "rule": "SpellCheck",
+          "kind": "Spelling",
+          "start": 73,
+          "end": 79,
+          "problemText": "CYP3A4",
+          "sourceSlice": "CYP3A4",
+          "suggestions": [
+            {
+              "kind": 0,
+              "replacement": "Cuppa"
+            },
+            {
+              "kind": 0,
+              "replacement": "Cyan"
+            },
+            {
+              "kind": 0,
+              "replacement": "CPA"
+            }
+          ],
+          "serialized": {
+            "inner": {
+              "span": {
+                "start": 73,
+                "end": 79
+              },
+              "lint_kind": "Spelling",
+              "suggestions": [
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "u",
+                    "p",
+                    "p",
+                    "a"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "y",
+                    "a",
+                    "n"
+                  ]
+                },
+                {
+                  "ReplaceWith": [
+                    "C",
+                    "P",
+                    "A"
+                  ]
+                }
+              ],
+              "message": "Did you mean to spell `CYP3A4` this way?",
+              "priority": 63
+            },
+            "span": {
+              "start": 73,
+              "end": 79
+            },
+            "problem_text": "CYP3A4",
+            "language": "Plain"
+          }
+        }
+      ],
+      "latencyMs": 4.943504000000303,
+      "detected": false,
+      "complete": null,
+      "firstComplete": null,
+      "firstOutput": "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation.",
       "proposals": [],
       "grammarFalsePositive": false,
       "anyFalsePositive": false,
