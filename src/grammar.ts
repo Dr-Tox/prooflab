@@ -1,3 +1,5 @@
+import { temporalAnalysis } from "./linguistics/temporal";
+import { temporalIntroducers } from "./linguistics/temporalFrames";
 import { analyzeClauses } from "./linguistics/analyze";
 import {
   enabled,
@@ -7,6 +9,16 @@ import {
   type TextEdit,
 } from "./model";
 export const grammarRules: Record<string, string> = {
+  "Temporal clause review":
+    "Review explicit temporal clauses independently of manuscript-wide tense preferences.",
+  "Temporal reference review":
+    "Review an explicit past reference across linked clauses or immediately adjacent sentences; never infer event order.",
+  "Temporal interval review":
+    "Review starting points, durations, and explicitly continuing actions.",
+  "Temporal auxiliary review":
+    "Review ambiguous aspect-chain repairs without choosing completion or continuation for the author.",
+  "Aspect context review":
+    "Conservative stative-progressive guidance; preserve intentional dynamic uses.",
   "Verb forms":
     "Auxiliary-selected base, participle, and continuous forms, including coordinated agreement repairs.",
   "Tense context review":
@@ -90,7 +102,10 @@ function sentenceTokens(text: string) {
     }));
 }
 export function grammar(text: string, s: Settings): Issue[] {
-  const out: Issue[] = analyzeClauses(text, s);
+  const out: Issue[] = [
+    ...analyzeClauses(text, s),
+    ...temporalAnalysis(text, s).issues,
+  ];
   const add = (
     rule: string,
     start: number,
@@ -225,6 +240,7 @@ export function grammar(text: string, s: Settings): Issue[] {
           "has",
         ].includes(t[i + 1].lower)
       ) {
+        if (temporalIntroducers.has(t[i - 1].lower)) continue;
         const prefix = t.slice(0, i);
         if (
           !prefix.some((x) =>

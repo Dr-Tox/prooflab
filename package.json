@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "benchmark": "vite-node benchmark/run.ts",
-    "benchmark:v2": "vite-node benchmark/v2/run.ts"
+    "benchmark:v2": "vite-node benchmark/v2/run.ts",
+    "benchmark:tense": "vite-node benchmark/tense/run.ts"
   },
   "dependencies": {
     "harper.js": "3.0.0",

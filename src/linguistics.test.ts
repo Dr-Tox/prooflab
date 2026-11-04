@@ -1,3 +1,4 @@
+import { temporalAnalysis } from "./linguistics/temporal";
 import { it, expect, beforeAll, afterAll } from "vitest";
 import { LocalLinter } from "harper.js";
 import { binary } from "harper.js/binary";
@@ -119,10 +120,10 @@ it("keeps rule overrides independent inside coordinated transactions", () => {
   expect(analyzeClauses(text, s)).toEqual([]);
 });
 it("reviews dated perfect without rewriting scientific tense or certainty", () => {
-  const [i] = analyzeClauses(
+  const [i] = temporalAnalysis(
     "We have measured the response yesterday.",
     defaults(),
-  );
+  ).issues;
   expect(i.rule).toBe("Tense context review");
   expect(i.replacements).toEqual([]);
 });

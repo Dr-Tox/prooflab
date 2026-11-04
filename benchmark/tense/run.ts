@@ -15,7 +15,7 @@ const frozen = JSON.parse(readFileSync("benchmark/tense/FROZEN.json", "utf8"));
 if (createHash("sha256").update(bytes).digest("hex") !== frozen.sha256)
   throw Error("Frozen references changed");
 const label = process.argv.includes("--baseline") ? "baseline" : "improved";
-const path = `benchmark/tense/reports/${label}.json`;
+const path = `benchmark/tense/reports/${process.env.TENSE_SPLITS ? "development-iteration" : label}.json`;
 const linter = new LocalLinter({ binary });
 const engine = new Proofreader(linter, { diagnostics: true });
 const at = performance.now();
@@ -46,10 +46,11 @@ if (
   discourseFrozen.sha256
 )
   throw Error("Frozen discourse references changed");
+const requestedSplits = process.env.TENSE_SPLITS?.split(",");
 for (const c of [
   ...JSON.parse(bytes.toString()),
   ...JSON.parse(discourseBytes.toString()),
-]) {
+].filter((c) => !requestedSplits || requestedSplits.includes(c.split))) {
   const start = performance.now();
   const issues = await engine.analyze(c.text, defaults(), seedWords, 1);
   const latencyMs = performance.now() - start;

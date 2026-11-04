@@ -500,3 +500,46 @@ test("v2 atomic verb corrections preserve Unicode, rich formatting, dismissal an
     paragraph.repeat(30) + "The signals depend on time.",
   );
 });
+
+test("temporal analysis accepts mixed scientific tenses and never rewrites chronology", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  const valid =
+    "Methods\nThe samples were centrifuged at 3,000 × g for 30 min.\nResults\nTreatment increased IL-6 expression.\nDiscussion\nThese findings suggest that exposure may affect metabolism. Previous studies have reported similar findings.";
+  await write(page, valid);
+  await expect(
+    page.getByText("No issues detected by the enabled rules", { exact: true }),
+  ).toBeVisible();
+  const problematic =
+    "Methods\nYesterday, we have measured the response by microscopy.\nDiscussion\nThese findings may reflect adaptation.";
+  await write(page, problematic);
+  await page.locator(".mark").filter({ hasText: "have measured" }).click();
+  await expect(page.locator(".issue-selected")).toContainText("bounded time");
+  await expect(page.locator(".issue-selected .replacement")).toHaveCount(0);
+  await expect(editor).toHaveText(problematic);
+  await page
+    .locator(".issue-selected")
+    .getByRole("button", { name: "Dismiss once", exact: true })
+    .click();
+  await expect(editor).toHaveText(problematic);
+  await write(
+    page,
+    "We analyzed the cultures yesterday. During that experiment, we have observed cell division.",
+  );
+  await page.locator(".mark").filter({ hasText: "have observed" }).click();
+  await expect(page.locator(".issue-selected")).toContainText(
+    "explicit backward time reference",
+  );
+  await expect(page.locator(".issue-selected .replacement")).toHaveCount(0);
+  await write(page, "We have monitoring the cultures.");
+  await expect(page.locator(".issue")).toHaveCount(1);
+  await expect(page.locator(".issue")).toContainText("intended aspect");
+  await expect(page.locator(".replacement")).toHaveCount(0);
+  await write(page, "We did not observed toxicity.");
+  await page.getByRole("button", { name: "observe ↵", exact: true }).click();
+  await expect(editor).toHaveText("We did not observe toxicity.");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor).toHaveText("We did not observed toxicity.");
+});

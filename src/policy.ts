@@ -1,3 +1,4 @@
+import { tokenize } from "./linguistics/morphology";
 import { overlaps, type Issue } from "./model";
 import {
   scientificTermSpans,
@@ -67,6 +68,16 @@ export function createScientificPolicy(
     i.start >= r.start && i.end <= r.end;
   return (input: Issue): { issue?: Issue; reason?: string } => {
     const i = { ...input };
+    if (i.rule === "SinceDuration") {
+      const tail = tokenize(text.slice(i.end));
+      if (
+        tail[0]?.lower === "ago" ||
+        (["before", "after"].includes(tail[0]?.lower) &&
+          tail[1] &&
+          /^\p{L}/u.test(tail[1].word))
+      )
+        return { reason: "temporal-point" };
+    }
     if (
       lexicalRules.has(i.rule) &&
       mass[i.original.toLowerCase()] &&
@@ -186,29 +197,52 @@ export function createScientificPolicy(
   };
 }
 function priority(i: Issue) {
-  return i.edits
-    ? 1000
-    : i.notationOnly
-      ? i.rule === "Unit consistency"
-        ? 910
-        : 900
-      : i.rule === "Bounded agreement" || i.rule === "Mass noun agreement"
-        ? 850
-        : i.rule === "Repeated words"
-          ? 800
-          : i.terminologyStatus === "suspected-misspelling"
-            ? 750
-            : i.category === "Spelling"
-              ? 600
-              : i.category === "Grammar"
-                ? 550
-                : 300;
+  return ["Temporal interval review", "Temporal auxiliary review"].includes(
+    i.rule,
+  )
+    ? 1100
+    : i.edits
+      ? 1000
+      : i.notationOnly
+        ? i.rule === "Unit consistency"
+          ? 910
+          : 900
+        : i.rule === "Bounded agreement" || i.rule === "Mass noun agreement"
+          ? 850
+          : i.rule === "Repeated words"
+            ? 800
+            : i.terminologyStatus === "suspected-misspelling"
+              ? 750
+              : i.category === "Spelling"
+                ? 600
+                : i.category === "Grammar"
+                  ? 550
+                  : 300;
 }
 /** Only merge a shared defect, not every intersecting span. Independent overlapping issues survive. */
 export function aggregateIssues(issues: Issue[]): Issue[] {
   const ordered = [...issues].sort((a, b) => priority(b) - priority(a));
   const out: Issue[] = [];
   for (const candidate of ordered) {
+    const temporalOwner = out.find(
+      (i) =>
+        ((i.rule === "Temporal interval review" &&
+          candidate.rule === "SinceDuration") ||
+          (i.rule === "Temporal auxiliary review" &&
+            ["ProgressiveNeedsBe", "SimplePastToPastParticiple"].includes(
+              candidate.rule,
+            ))) &&
+        overlaps(i.start, i.end, candidate.start, candidate.end),
+    );
+    if (temporalOwner) {
+      temporalOwner.sources = [
+        ...new Set([
+          ...(temporalOwner.sources ?? [temporalOwner.rule]),
+          candidate.rule,
+        ]),
+      ];
+      continue;
+    }
     const conventionOwner = out.find(
       (i) =>
         ((i.notationOnly &&

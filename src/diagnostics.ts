@@ -2,6 +2,7 @@
 export type InitializationStatus =
   "not-started" | "initializing" | "ready" | "failed";
 export type DiscardReason =
+  | "temporal-point"
   | "legitimate-repetition"
   | "scientific-vocabulary"
   | "measurement-token"

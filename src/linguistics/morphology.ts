@@ -54,7 +54,7 @@ export interface Verb {
 }
 export const verbs: Verb[] = [];
 const regular =
-  "show indicate suggest depend require contain provide yield remain appear demonstrate affect increase reduce conduct analyze measure assess evaluate test repeat perform complete replicate store preserve incubate identify treat wash stain image count accept agree dispute confirm report examine monitor study observe record persist aggregate accumulate degrade reveal detect predict underestimate explain describe elucidate investigate collect exclude include prepare calibrate produce express regulate modulate promote bind separate centrifuge freeze control use discuss improve damage determine compare vary carry apply quantify expose recover obtain process consider cause support reflect associate divide work".split(
+  "belong consist resemble show indicate suggest depend require contain provide yield remain appear demonstrate affect increase reduce conduct analyze measure assess evaluate test repeat perform complete replicate store preserve incubate identify treat wash stain image count accept agree dispute confirm report examine monitor study observe record persist aggregate accumulate degrade reveal detect predict underestimate explain describe elucidate investigate collect exclude include prepare calibrate produce express regulate modulate promote bind separate centrifuge freeze control use discuss improve damage determine compare vary carry apply quantify expose recover obtain process consider cause support reflect associate divide work".split(
     " ",
   );
 function regularForms(base: string): Verb {
@@ -76,6 +76,7 @@ function regularForms(base: string): Verb {
 }
 for (const base of regular) verbs.push(regularForms(base));
 for (const row of [
+  "know,knows,knew,known,knowing",
   "control,controls,controlled,controlled,controlling",
   "be,is,was,been,being",
   "have,has,had,had,having",
@@ -113,7 +114,7 @@ export const modals = new Set(
   "may might can could shall should will would must".split(" "),
 );
 export const adverbs = new Set(
-  "not never already recently previously independently carefully repeatedly always often sometimes usually also still just now significantly".split(
+  "not never already recently previously continuously continually independently carefully repeatedly always often sometimes usually also still just now significantly".split(
     " ",
   ),
 );

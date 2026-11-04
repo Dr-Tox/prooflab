@@ -1,3 +1,4 @@
+import { verbChain } from "./verbChain";
 import {
   enabled,
   issue,
@@ -93,7 +94,9 @@ export function analyzeClauses(text: string, settings: Settings): Issue[] {
           `The subject headed by “${s.head.word}” takes ${s.number} agreement here. ${s.reason} Use “${want}” instead of “${v.word}”.`,
         );
     }
-    for (const finding of verbFindings(t, s))
+    for (const finding of verbChain(t, s.verbIndex)?.ambiguousAuxiliary
+      ? []
+      : verbFindings(t, s))
       add("Verb forms", finding.edit, finding.explanation);
     // Merge a governed preposition with agreement without a partially corrected card.
     for (let i = s.verbIndex; i < t.length - 2; i++)
@@ -139,30 +142,6 @@ export function analyzeClauses(text: string, settings: Settings): Issue[] {
         sources: [...new Set(sources)],
         confidence: "high",
       });
-    }
-    if (
-      enabled("Tense context review", settings) &&
-      ["has", "have"].includes(v.lower)
-    ) {
-      const tail = text.slice(v.start, t.at(-1)!.end);
-      if (
-        /\b(?:yesterday|last (?:week|month|year|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)|in (?:19|20)\d{2}|(?:\d+|one|two|three|four|five|six|seven) days? ago)\b/i.test(
-          tail,
-        ) &&
-        !/\b(?:since|until|by|before|after)\b/i.test(tail)
-      )
-        out.push({
-          ...issue(
-            "Tense context review",
-            "Grammar",
-            v.start,
-            t.at(-1)!.end,
-            text,
-            [],
-            "A completed event tied to a specific past time usually takes the simple past. Review the intended time reference; no tense rewrite is inferred.",
-          ),
-          confidence: "low",
-        });
     }
   }
   return out;
