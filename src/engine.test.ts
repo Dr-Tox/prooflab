@@ -50,3 +50,48 @@ it("does not resolve an analysis under the wrong document revision", async () =>
     vi.resetModules();
   }
 });
+
+it("bounds queued work to the active request and latest pending revision", async () => {
+  let worker: any;
+  class Transport {
+    onmessage: any;
+    onerror: any;
+    postMessage = vi.fn();
+    constructor() {
+      worker = this;
+    }
+  }
+  vi.stubGlobal("Worker", Transport);
+  try {
+    const { analyze } = await import("./engine");
+    const first = analyze("A", defaults(), [], 1);
+    const middle = analyze("B", defaults(), [], 2);
+    const latest = analyze("C", defaults(), [], 3);
+    expect(worker.postMessage).toHaveBeenCalledTimes(1);
+    await expect(middle).resolves.toMatchObject({
+      revision: 2,
+      superseded: true,
+    });
+    worker.onmessage({
+      data: {
+        id: worker.postMessage.mock.calls[0][0].id,
+        revision: 1,
+        issues: [],
+      },
+    });
+    await first;
+    expect(worker.postMessage).toHaveBeenCalledTimes(2);
+    expect(worker.postMessage.mock.calls[1][0].text).toBe("C");
+    worker.onmessage({
+      data: {
+        id: worker.postMessage.mock.calls[1][0].id,
+        revision: 3,
+        issues: [],
+      },
+    });
+    await expect(latest).resolves.toMatchObject({ revision: 3, issues: [] });
+  } finally {
+    vi.unstubAllGlobals();
+    vi.resetModules();
+  }
+});

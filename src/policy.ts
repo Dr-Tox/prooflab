@@ -167,6 +167,7 @@ export function createScientificPolicy(
         return false;
       if (i.notationOnly) return true;
       // A correction to surrounding grammar is allowed when every protected token remains intact.
+      if (!applicable.length) return true;
       const result = text.slice(0, i.start) + replacement + text.slice(i.end);
       return applicable.every((r) => {
         const count = (source: string) => {

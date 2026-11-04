@@ -169,7 +169,7 @@ export default function App() {
     const timer = setTimeout(() => {
       analyze(text, settings, words, r)
         .then((result) => {
-          if (r !== revision.current) return;
+          if (r !== revision.current || result.superseded) return;
           setIssues(result.issues!);
           setMappingFailureCount(result.mappingFailureCount ?? 0);
           if (import.meta.env.DEV) setDiagnostics(result.diagnostics);
@@ -186,7 +186,9 @@ export default function App() {
     }, 350);
     return () => clearTimeout(timer);
   }, [text, settings, words, loaded, analysisRevision]);
+  const future = useRef<{ text: string; html: string; caret?: Caret }[]>([]);
   function snapshot() {
+    future.current = [];
     history.current.push({
       text,
       html: editor.current?.innerHTML ?? text,
@@ -237,11 +239,31 @@ export default function App() {
   function undo() {
     const old = history.current.pop();
     if (!old) return;
+    future.current.push({
+      text,
+      html: editor.current?.innerHTML ?? text,
+      caret: editor.current ? captureCaret(editor.current) : undefined,
+    });
     if (editor.current) editor.current.innerHTML = old.html;
     setText(old.text);
     if (editor.current) restoreCaret(editor.current, old.caret);
     setIgnored([]);
     setNotice("Change undone.");
+  }
+  function redo() {
+    const next = future.current.pop();
+    if (!next) return;
+    history.current.push({
+      text,
+      html: editor.current?.innerHTML ?? text,
+      caret: editor.current ? captureCaret(editor.current) : undefined,
+    });
+    if (editor.current) editor.current.innerHTML = next.html;
+    setText(next.text);
+    if (editor.current) restoreCaret(editor.current, next.caret);
+    setIgnored([]);
+    setSelected(null);
+    setNotice("Change redone.");
   }
   function accept(i: Issue, replacement: string) {
     try {
@@ -319,7 +341,9 @@ export default function App() {
           </a>
           <span className="privacy-pill">
             <span className="dot" />
-            Private by design
+            {import.meta.env.VITE_RELEASE_CHANNEL === "rc-v3"
+              ? "v3 RC · local only"
+              : "Private by design"}
           </span>
         </div>
       </header>
@@ -421,6 +445,7 @@ export default function App() {
                   </button>
                   <span className="separator" />
                   <button onClick={undo}>↶ Undo</button>
+                  <button onClick={redo}>↷ Redo</button>
                 </div>
                 <div>
                   <button
@@ -484,9 +509,14 @@ export default function App() {
                     snapshot();
                     insertPlainText("\n");
                   }
-                  if ((e.ctrlKey || e.metaKey) && e.key === "z") {
+                  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
                     e.preventDefault();
-                    undo();
+                    if (e.shiftKey) redo();
+                    else undo();
+                  }
+                  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "y") {
+                    e.preventDefault();
+                    redo();
                   }
                 }}
                 onDrop={(e) => {

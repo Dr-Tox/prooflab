@@ -54,7 +54,7 @@ export interface Verb {
 }
 export const verbs: Verb[] = [];
 const regular =
-  "belong consist resemble show indicate suggest depend require contain provide yield remain appear demonstrate affect increase reduce conduct analyze measure assess evaluate test repeat perform complete replicate store preserve incubate identify treat wash stain image count accept agree dispute confirm report examine monitor study observe record persist aggregate accumulate degrade reveal detect predict underestimate explain describe elucidate investigate collect exclude include prepare calibrate produce express regulate modulate promote bind separate centrifuge freeze control use discuss improve damage determine compare vary carry apply quantify expose recover obtain process consider cause support reflect associate divide work".split(
+  "oscillate fluoresce agglomerate translocate migrate isolate lyse dilute homogenize retrieve belong consist resemble show indicate suggest depend require contain provide yield remain appear demonstrate affect increase reduce conduct analyze measure assess evaluate test repeat perform complete replicate store preserve incubate identify treat wash stain image count accept agree dispute confirm report examine monitor study observe record persist aggregate accumulate degrade reveal detect predict underestimate explain describe elucidate investigate collect exclude include prepare calibrate produce express regulate modulate promote bind separate centrifuge freeze control use discuss improve damage determine compare vary carry apply quantify expose recover obtain process consider cause support reflect associate divide work".split(
     " ",
   );
 function regularForms(base: string): Verb {

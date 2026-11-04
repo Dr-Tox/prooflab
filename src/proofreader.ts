@@ -20,9 +20,18 @@ export class Proofreader {
   private report?: EngineDiagnostics;
   private initialized = false;
   mappingFailureCount = 0;
+  statistics = { fullAnalyses: 0, cacheHits: 0, configurationUpdates: 0 };
+  private configuration?: string;
+  private last?: {
+    text: string;
+    key: string;
+    issues: Issue[];
+    report?: EngineDiagnostics;
+  };
+
   constructor(
     private linter: Linter,
-    private options: { diagnostics?: boolean } = {},
+    private options: { diagnostics?: boolean; cache?: boolean } = {},
   ) {}
   getDiagnostics() {
     return this.report;
@@ -66,6 +75,18 @@ export class Proofreader {
   ) {
     if (!this.initialized) throw Error("Proofreader is not initialized.");
     this.mappingFailureCount = 0;
+    const key = JSON.stringify([settings, words]);
+    if (
+      this.options.cache !== false &&
+      !this.options.diagnostics &&
+      this.last?.text === text &&
+      this.last.key === key
+    ) {
+      this.statistics.cacheHits++;
+      this.report = this.last.report;
+      return this.last.issues.map((i) => ({ ...i, revision }));
+    }
+    this.statistics.fullAnalyses++;
     const config = Object.fromEntries(
       Object.entries(this.initial).map(([k, v]) => [
         k,
@@ -82,10 +103,15 @@ export class Proofreader {
         }
       : undefined;
     this.report = report;
-    await this.linter.setDialect(
-      settings.dialect === "UK" ? Dialect.British : Dialect.American,
-    );
-    await this.linter.setLintConfig(config);
+    const configuration = JSON.stringify([settings.dialect, config]);
+    if (this.configuration !== configuration) {
+      await this.linter.setDialect(
+        settings.dialect === "UK" ? Dialect.British : Dialect.American,
+      );
+      await this.linter.setLintConfig(config);
+      this.configuration = configuration;
+      this.statistics.configurationUpdates++;
+    }
     // Inspect actual applied rule states in development; defaults are not the same as unset/null states.
     if (report) {
       const applied = await this.linter.getLintConfig();
@@ -216,6 +242,32 @@ export class Proofreader {
       ).length;
       report.finalIssueCount = combined.length;
     }
+    const resultCharacters =
+      combined.length <= 1000
+        ? combined.reduce(
+            (n, i) =>
+              n +
+              i.original.length +
+              i.explanation.length +
+              i.replacements.reduce((a, r) => a + r.length, 0) +
+              (i.edits?.reduce(
+                (a, e) => a + e.original.length + e.replacement.length,
+                0,
+              ) ?? 0),
+            0,
+          )
+        : Infinity;
+    this.last =
+      this.options.cache !== false &&
+      !this.options.diagnostics &&
+      resultCharacters <= 256000 &&
+      text.length <= 128000 &&
+      key.length <= 64000 &&
+      combined.length <= 1000 &&
+      (report?.rawLintCount ?? 0) <= 1000 &&
+      this.mappingFailureCount === 0
+        ? { text, key, issues: combined, report }
+        : undefined;
     return combined;
   }
 }

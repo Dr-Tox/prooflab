@@ -1,3 +1,4 @@
+import { verbChain } from "./verbChain";
 import {
   type Token,
   type NumberValue,
@@ -39,7 +40,8 @@ const pronouns: Record<string, NumberValue> = {
  * PP objects never replace its head. Subject-relative passive clauses are
  * crossed only after a complete auxiliary + participle chain. Object relatives,
  * disjunction, appositives and unrecognized predicates deliberately abstain. */
-export function subject(t: Token[]): Subject | undefined {
+export function subject(t: Token[], depth = 0): Subject | undefined {
+  if (depth > 2) return;
   if (t.length < 2) return;
   let start = 0;
   while (t[start] && /^\p{Extended_Pictographic}$/u.test(t[start].word))
@@ -107,6 +109,34 @@ export function subject(t: Token[]): Subject | undefined {
       if (!head || i === start) {
         if (i === start) continue;
         return;
+      }
+      // Explicit inner subject + predicate followed by a matrix verb establishes
+      // a bounded object relative, without changing the outer subject head.
+      if (
+        !["was", "were", "is", "are", "has", "have", "had"].includes(
+          t[i + 1]?.lower,
+        )
+      ) {
+        let end: number | undefined;
+        for (let j = i + 2; j < Math.min(t.length, i + 9); j++) {
+          if (!finiteCandidate(t[j])) continue;
+          const inner = subject(t.slice(i + 1, j + 1), depth + 1);
+          if (inner?.verbIndex !== j - i - 1) continue;
+          const chain = verbChain(t, j);
+          if (!chain) break;
+          let next = chain.lastIndex + 1;
+          while (
+            adverbs.has(t[next]?.lower) ||
+            ["yesterday", "today"].includes(t[next]?.lower)
+          )
+            next++;
+          if (t[next] && finiteCandidate(t[next])) end = next - 1;
+          break;
+        }
+        if (end === undefined) return;
+        i = end;
+        inPP = false;
+        continue;
       }
       // Only subject-relative passive/continuous chains, never arbitrary clauses.
       let j = i + 1;

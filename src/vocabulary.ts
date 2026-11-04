@@ -3,7 +3,16 @@
  */
 const methods =
   "centrifugation centrifuged centrifuging supernatant supernatants aliquot aliquots resuspension resuspended pipetting pipetted immunohistochemistry immunoblotting electrophoresis chromatography spectrophotometry fluorometry cytometry microscopy polymerase proteomics metabolomics transcriptomics nanotoxicology immunotoxicity hepatotoxicity hepatomegaly xenobiotic xenobiotics bioaccumulation perfluoroalkyl toxicokinetics pharmacokinetics pharmacodynamics cytotoxicity genotoxicity apoptosis autophagy lysate lysates pellet pellets filtrate filtrates analyte analytes organoid organoids hepatocyte hepatocytes cytokine cytokines phosphoprotein phosphorylation dephosphorylation RNA-seq CYP3A4 RNA DNA cDNA mRNA siRNA ATP ADP PCR qPCR RT-PCR ELISA SDS-PAGE PBS DMSO NaCl H2O CO2 O2 PFAS PFHxA PFBA PFOA PFOS MYB-NFIB TNF TNF-α IL IL-1β IL-6 NF NF-κB";
-export const scientificVocabulary = methods.split(" ").map((term) => ({
+// Original curation: regular scientific reagent/material nouns and their plurals.
+// Approve specific lexemes, never every unfamiliar scientific-looking token.
+const materialNouns =
+  "microbead microsphere microcapsule nanoparticle nanosphere microdroplet hydrogel liposome cryovial immunobead".split(
+    " ",
+  );
+export const scientificVocabulary = [
+  ...methods.split(" "),
+  ...materialNouns.flatMap((n) => [n, n + "s"]),
+].map((term) => ({
   term,
   caseSensitive: /[A-Zαβκ]/u.test(term),
   type: /[A-Z]/.test(term) ? "identifier" : "terminology",

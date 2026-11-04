@@ -8,7 +8,10 @@ const pending = new Map<
   number,
   { resolve: (value: Reply) => void; reject: (reason: Error) => void }
 >();
+let activeAnalysis: number | undefined;
+let queuedAnalysis: { id: number; data: { revision?: number } } | undefined;
 export interface Reply {
+  superseded?: boolean;
   diagnostics?: EngineDiagnostics;
   mappingFailureCount?: number;
   issues?: Issue[];
@@ -24,6 +27,15 @@ worker.onmessage = ({ data }) => {
   pending.delete(data.id);
   if (data.error) p.reject(Error(data.error));
   else p.resolve(data);
+  if (data.id === activeAnalysis) {
+    activeAnalysis = undefined;
+    if (queuedAnalysis) {
+      const q = queuedAnalysis;
+      queuedAnalysis = undefined;
+      activeAnalysis = q.id;
+      worker.postMessage({ ...q.data, id: q.id });
+    }
+  }
 };
 let failure: Error | undefined;
 worker.onerror = () => {
@@ -33,8 +45,10 @@ worker.onerror = () => {
       Error("The local grammar worker could not start. Reload ProofLab."),
     );
   pending.clear();
+  queuedAnalysis = undefined;
+  activeAnalysis = undefined;
 };
-function request(data: object): Promise<Reply> {
+function request(data: object, analysis = false): Promise<Reply> {
   return new Promise((resolve, reject) => {
     if (failure) {
       reject(failure);
@@ -42,7 +56,21 @@ function request(data: object): Promise<Reply> {
     }
     const id = ++next;
     pending.set(id, { resolve, reject });
-    worker.postMessage({ ...data, id });
+    if (analysis && activeAnalysis !== undefined) {
+      if (queuedAnalysis) {
+        pending
+          .get(queuedAnalysis.id)
+          ?.resolve({
+            revision: queuedAnalysis.data.revision,
+            superseded: true,
+          });
+        pending.delete(queuedAnalysis.id);
+      }
+      queuedAnalysis = { id, data };
+    } else {
+      if (analysis) activeAnalysis = id;
+      worker.postMessage({ ...data, id });
+    }
   });
 }
 export const initialize = () => request({ init: true });
@@ -52,7 +80,7 @@ export const analyze = async (
   words: string[],
   revision = 0,
 ) => {
-  const result = await request({ text, settings, words, revision });
+  const result = await request({ text, settings, words, revision }, true);
   if (result.revision !== revision) throw Error("Analysis revision mismatch.");
   return result;
 };

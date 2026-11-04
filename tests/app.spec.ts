@@ -591,3 +591,32 @@ test("native paragraph normalization preserves UTF-16 offsets, inline formatting
   });
   expect(await editor.textContent()).toBe("Methods\nWe measured the response.");
 });
+
+test("v3 scientific safety, object-relative corrections and redo", async ({
+  page,
+}) => {
+  await ready(page);
+  await write(
+    page,
+    "The microbeads that the analyst collected was stored at −80 °C.",
+  );
+  await expect(
+    page.getByRole("button", { name: "were ↵", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.locator(".issue").filter({ hasText: "Spelling" }),
+  ).toHaveCount(0);
+  await page.getByRole("button", { name: "were ↵", exact: true }).click();
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await expect(editor).toHaveText(
+    "The microbeads that the analyst collected were stored at −80 °C.",
+  );
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor).toContainText("was stored");
+  await page.getByRole("button", { name: "↷ Redo", exact: true }).click();
+  await expect(editor).toContainText("were stored");
+  await editor.press("Control+z");
+  await expect(editor).toContainText("was stored");
+  await editor.press("Control+Shift+Z");
+  await expect(editor).toContainText("were stored");
+});
