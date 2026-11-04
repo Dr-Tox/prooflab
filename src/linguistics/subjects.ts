@@ -132,6 +132,18 @@ export function subject(t: Token[]): Subject | undefined {
       inPP = false;
       continue;
     }
+    // An unrecognized adverb/participial modifier must not replace the subject
+    // head (“results unexpectedly/combined show”). Prefer abstention to a
+    // fabricated singular head; recognized finite verbs still reach analysis.
+    if (
+      head &&
+      !inPP &&
+      /(?:ly|ed|ing)$/.test(w) &&
+      !verb(w) &&
+      !adverbs.has(w)
+    )
+      return;
+    if (w === "overall") continue;
     if (finiteCandidate(tok) && head) {
       // Ambiguous noun/verb (e.g. “negative control was”, “records were”):
       // a following finite auxiliary supplies the predicate boundary.

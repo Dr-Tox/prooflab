@@ -211,3 +211,14 @@ it.each([
 ])("abstains on ambiguous scientific grammatical number: %s", (text) => {
   expect(analyzeClauses(text, defaults())).toEqual([]);
 });
+
+it.each([
+  "The measurements unexpectedly show a response.",
+  "The results combined show a trend.",
+  "The samples overall show a trend.",
+])(
+  "does not turn an unsupported modifier into the subject head: %s",
+  (text) => {
+    expect(analyzeClauses(text, defaults())).toEqual([]);
+  },
+);
