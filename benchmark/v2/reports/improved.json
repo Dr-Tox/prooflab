@@ -1,7 +1,7 @@
 {
   "version": 2,
   "label": "improved",
-  "sourceCommit": "06de675",
+  "sourceCommit": "31d2e94",
   "dirty": true,
   "environment": {
     "node": "v24.19.0",
@@ -10,11 +10,11 @@
     "harper": "3.0.0"
   },
   "corpusSha": "e3a6ea89948da099094e1b939db9cc6c8d5cafce12fbacb2528e271b13dfc613",
-  "setupMs": 582.9940099999999,
+  "setupMs": 598.53376,
   "memory": {
-    "rss": 548388864,
-    "heapTotal": 36388864,
-    "heapUsed": 26922992,
+    "rss": 549752832,
+    "heapTotal": 37175296,
+    "heapUsed": 27387208,
     "external": 315115975,
     "arrayBuffers": 668324
   },
@@ -41,8 +41,8 @@
       "duplicates": 0,
       "familyCount": 67,
       "familyMacroRecall": 1,
-      "latencyMedianMs": 3.8956430000000637,
-      "latencyP95Ms": 5.757874000000015
+      "latencyMedianMs": 3.80982599999993,
+      "latencyP95Ms": 5.885463999999956
     },
     "development": {
       "cases": 160,
@@ -66,8 +66,8 @@
       "duplicates": 0,
       "familyCount": 32,
       "familyMacroRecall": 1,
-      "latencyMedianMs": 3.763862999999901,
-      "latencyP95Ms": 5.757874000000015
+      "latencyMedianMs": 3.8901079999998274,
+      "latencyP95Ms": 5.813548999999966
     },
     "held-out": {
       "cases": 91,
@@ -91,8 +91,8 @@
       "duplicates": 0,
       "familyCount": 35,
       "familyMacroRecall": 1,
-      "latencyMedianMs": 3.8918260000000373,
-      "latencyP95Ms": 5.411448999999948
+      "latencyMedianMs": 3.709584000000177,
+      "latencyP95Ms": 5.438856000000214
     },
     "regression": {
       "cases": 82,
@@ -116,8 +116,8 @@
       "duplicates": 0,
       "familyCount": 25,
       "familyMacroRecall": null,
-      "latencyMedianMs": 4.202516999999716,
-      "latencyP95Ms": 6.4602679999998145
+      "latencyMedianMs": 3.7225240000002486,
+      "latencyP95Ms": 6.662131999999929
     },
     "agreement": {
       "cases": 105,
@@ -141,8 +141,8 @@
       "duplicates": 0,
       "familyCount": 21,
       "familyMacroRecall": 1,
-      "latencyMedianMs": 3.9744720000001053,
-      "latencyP95Ms": 5.876443999999992
+      "latencyMedianMs": 4.046474999999873,
+      "latencyP95Ms": 5.35922000000005
     },
     "verb": {
       "cases": 105,
@@ -166,8 +166,8 @@
       "duplicates": 0,
       "familyCount": 21,
       "familyMacroRecall": 1,
-      "latencyMedianMs": 3.6380719999999656,
-      "latencyP95Ms": 4.388619000000062
+      "latencyMedianMs": 3.6557829999999285,
+      "latencyP95Ms": 5.664187999999967
     },
     "control": {
       "cases": 123,
@@ -191,8 +191,8 @@
       "duplicates": 0,
       "familyCount": 25,
       "familyMacroRecall": null,
-      "latencyMedianMs": 4.163438999999926,
-      "latencyP95Ms": 5.8222209999998995
+      "latencyMedianMs": 3.707151000000067,
+      "latencyP95Ms": 6.662131999999929
     },
     "held-out-agreement": {
       "cases": 25,
@@ -216,8 +216,8 @@
       "duplicates": 0,
       "familyCount": 5,
       "familyMacroRecall": 1,
-      "latencyMedianMs": 3.7982459999998355,
-      "latencyP95Ms": 4.553368999999975
+      "latencyMedianMs": 4.050570999999991,
+      "latencyP95Ms": 4.627936999999974
     },
     "held-out-verb": {
       "cases": 25,
@@ -241,8 +241,8 @@
       "duplicates": 0,
       "familyCount": 5,
       "familyMacroRecall": 1,
-      "latencyMedianMs": 3.6378020000001925,
-      "latencyP95Ms": 5.5197729999999865
+      "latencyMedianMs": 3.595741999999973,
+      "latencyP95Ms": 5.210550000000012
     }
   },
   "rows": [
@@ -270,7 +270,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “reagents”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “reagents” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 13,
@@ -287,7 +287,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 34.05442699999992,
+      "latencyMs": 32.074657,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -330,7 +330,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “enzymes”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “enzymes” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 12,
@@ -347,7 +347,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 9.712536,
+      "latencyMs": 17.271799999999985,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -390,7 +390,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “electrodes”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “electrodes” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 15,
@@ -407,7 +407,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.757874000000015,
+      "latencyMs": 5.027927999999974,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -450,7 +450,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “vesicles”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “vesicles” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 13,
@@ -467,7 +467,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.70292100000006,
+      "latencyMs": 4.984953000000019,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -510,7 +510,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “substrates”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “substrates” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 15,
@@ -527,7 +527,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.4694469999999455,
+      "latencyMs": 4.938162000000034,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -570,7 +570,7 @@
           "replacements": [
             "indicate"
           ],
-          "explanation": "The head of the subject is “results”, which is plural. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
+          "explanation": "The subject headed by “results” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
           "edits": [
             {
               "start": 12,
@@ -587,7 +587,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.876443999999992,
+      "latencyMs": 5.813548999999966,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -630,7 +630,7 @@
           "replacements": [
             "indicate"
           ],
-          "explanation": "The head of the subject is “measurements”, which is plural. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
+          "explanation": "The subject headed by “measurements” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
           "edits": [
             {
               "start": 17,
@@ -647,7 +647,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.6596510000000535,
+      "latencyMs": 4.122957000000042,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -690,7 +690,7 @@
           "replacements": [
             "indicate"
           ],
-          "explanation": "The head of the subject is “observations”, which is plural. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
+          "explanation": "The subject headed by “observations” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
           "edits": [
             {
               "start": 17,
@@ -707,7 +707,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.754513000000088,
+      "latencyMs": 4.226733999999965,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -750,7 +750,7 @@
           "replacements": [
             "indicate"
           ],
-          "explanation": "The head of the subject is “findings”, which is plural. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
+          "explanation": "The subject headed by “findings” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
           "edits": [
             {
               "start": 13,
@@ -767,7 +767,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.005092999999988,
+      "latencyMs": 4.4795669999999745,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -810,7 +810,7 @@
           "replacements": [
             "indicate"
           ],
-          "explanation": "The head of the subject is “responses”, which is plural. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
+          "explanation": "The subject headed by “responses” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
           "edits": [
             {
               "start": 14,
@@ -827,7 +827,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.9424980000000005,
+      "latencyMs": 4.438344000000029,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -870,7 +870,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “effect”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “effect” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 30,
@@ -887,7 +887,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.659419999999955,
+      "latencyMs": 4.406216000000086,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -930,7 +930,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “concentration”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “concentration” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 37,
@@ -947,7 +947,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.522958000000017,
+      "latencyMs": 5.008918999999992,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -990,7 +990,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “activity”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “activity” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 32,
@@ -1007,7 +1007,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.425865999999928,
+      "latencyMs": 4.4561820000000125,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1050,7 +1050,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “composition”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “composition” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 35,
@@ -1067,7 +1067,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 22.748918000000003,
+      "latencyMs": 4.577865999999972,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1110,7 +1110,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “expression”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “expression” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 34,
@@ -1127,7 +1127,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.4634829999999965,
+      "latencyMs": 4.285261999999989,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1170,7 +1170,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “concentrations”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “concentrations” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 27,
@@ -1252,7 +1252,7 @@
           }
         }
       ],
-      "latencyMs": 31.125380000000064,
+      "latencyMs": 50.968464999999924,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1295,7 +1295,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “levels”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “levels” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 19,
@@ -1377,7 +1377,7 @@
           }
         }
       ],
-      "latencyMs": 5.4229669999999714,
+      "latencyMs": 5.35922000000005,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1420,7 +1420,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “amounts”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “amounts” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 20,
@@ -1502,7 +1502,7 @@
           }
         }
       ],
-      "latencyMs": 5.064954000000057,
+      "latencyMs": 5.149642999999969,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1545,7 +1545,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “distributions”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “distributions” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 26,
@@ -1627,7 +1627,7 @@
           }
         }
       ],
-      "latencyMs": 4.409279999999853,
+      "latencyMs": 4.963941000000204,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1670,7 +1670,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “fractions”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “fractions” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 22,
@@ -1752,7 +1752,7 @@
           }
         }
       ],
-      "latencyMs": 4.253695000000107,
+      "latencyMs": 4.386506000000054,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1795,7 +1795,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 20,
@@ -1812,7 +1812,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.60554900000011,
+      "latencyMs": 4.622012999999924,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1855,7 +1855,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 21,
@@ -1872,7 +1872,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9254369999998744,
+      "latencyMs": 4.311922999999979,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1915,7 +1915,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 22,
@@ -1932,7 +1932,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.520970000000034,
+      "latencyMs": 4.617625999999973,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1975,7 +1975,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 21,
@@ -2037,7 +2037,7 @@
           }
         }
       ],
-      "latencyMs": 5.131235000000061,
+      "latencyMs": 5.607837000000018,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2080,7 +2080,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 21,
@@ -2097,7 +2097,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7632719999999154,
+      "latencyMs": 3.9040860000000066,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2140,7 +2140,7 @@
           "replacements": [
             "are"
           ],
-          "explanation": "The head of the subject is “explanations”, which is plural. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
+          "explanation": "The subject headed by “explanations” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
           "edits": [
             {
               "start": 6,
@@ -2157,7 +2157,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.5949769999999717,
+      "latencyMs": 3.8798890000000483,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2200,7 +2200,7 @@
           "replacements": [
             "are"
           ],
-          "explanation": "The head of the subject is “reasons”, which is plural. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
+          "explanation": "The subject headed by “reasons” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
           "edits": [
             {
               "start": 6,
@@ -2217,7 +2217,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7138370000000123,
+      "latencyMs": 4.546088000000054,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2260,7 +2260,7 @@
           "replacements": [
             "are"
           ],
-          "explanation": "The head of the subject is “limitations”, which is plural. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
+          "explanation": "The subject headed by “limitations” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
           "edits": [
             {
               "start": 6,
@@ -2277,7 +2277,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.3772169999999733,
+      "latencyMs": 3.491639999999961,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2320,7 +2320,7 @@
           "replacements": [
             "are"
           ],
-          "explanation": "The head of the subject is “hypotheses”, which is plural. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
+          "explanation": "The subject headed by “hypotheses” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
           "edits": [
             {
               "start": 6,
@@ -2337,7 +2337,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.485941000000139,
+      "latencyMs": 3.568175999999994,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2380,7 +2380,7 @@
           "replacements": [
             "are"
           ],
-          "explanation": "The head of the subject is “possibilities”, which is plural. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
+          "explanation": "The subject headed by “possibilities” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
           "edits": [
             {
               "start": 6,
@@ -2397,7 +2397,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4041080000001784,
+      "latencyMs": 3.493844000000081,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2440,7 +2440,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “samples”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “samples” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 32,
@@ -2457,7 +2457,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.438896000000113,
+      "latencyMs": 4.457203000000163,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2500,7 +2500,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “specimens”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “specimens” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 34,
@@ -2517,7 +2517,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9606710000000476,
+      "latencyMs": 3.9232039999999415,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2560,7 +2560,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “tissues”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “tissues” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 32,
@@ -2577,7 +2577,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.786436999999978,
+      "latencyMs": 3.973489999999856,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2620,7 +2620,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “extracts”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “extracts” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 33,
@@ -2637,7 +2637,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.8956430000000637,
+      "latencyMs": 3.8646850000000086,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2680,7 +2680,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “fractions”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “fractions” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 34,
@@ -2697,7 +2697,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.795509999999922,
+      "latencyMs": 4.004367000000002,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2740,7 +2740,7 @@
           "replacements": [
             "have"
           ],
-          "explanation": "The head of the subject is “researchers”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
+          "explanation": "The subject headed by “researchers” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
           "edits": [
             {
               "start": 16,
@@ -2757,7 +2757,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.152761000000055,
+      "latencyMs": 4.312674000000015,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2800,7 +2800,7 @@
           "replacements": [
             "have"
           ],
-          "explanation": "The head of the subject is “investigators”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
+          "explanation": "The subject headed by “investigators” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
           "edits": [
             {
               "start": 18,
@@ -2817,7 +2817,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7095110000000204,
+      "latencyMs": 3.83146499999998,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2860,7 +2860,7 @@
           "replacements": [
             "have"
           ],
-          "explanation": "The head of the subject is “scientists”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
+          "explanation": "The subject headed by “scientists” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
           "edits": [
             {
               "start": 15,
@@ -2877,7 +2877,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.599484000000075,
+      "latencyMs": 3.767357999999831,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2920,7 +2920,7 @@
           "replacements": [
             "have"
           ],
-          "explanation": "The head of the subject is “analysts”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
+          "explanation": "The subject headed by “analysts” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
           "edits": [
             {
               "start": 13,
@@ -2937,7 +2937,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.621898000000101,
+      "latencyMs": 3.8933190000000195,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -2980,7 +2980,7 @@
           "replacements": [
             "have"
           ],
-          "explanation": "The head of the subject is “technicians”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
+          "explanation": "The subject headed by “technicians” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
           "edits": [
             {
               "start": 16,
@@ -2997,7 +2997,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9060380000000805,
+      "latencyMs": 4.054694000000154,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3040,7 +3040,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “cells”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “cells” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 10,
@@ -3057,7 +3057,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.036346000000094,
+      "latencyMs": 4.144359000000122,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3100,7 +3100,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “cultures”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “cultures” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 13,
@@ -3117,7 +3117,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.5904900000000453,
+      "latencyMs": 4.59036500000002,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3160,7 +3160,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “tissues”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “tissues” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 12,
@@ -3177,7 +3177,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.635327999999845,
+      "latencyMs": 3.866888999999901,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3220,7 +3220,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “animals”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “animals” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 12,
@@ -3237,7 +3237,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6209660000001804,
+      "latencyMs": 3.971488000000136,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3280,7 +3280,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “mice”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “mice” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 9,
@@ -3297,7 +3297,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.964106000000129,
+      "latencyMs": 3.9901569999999538,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3340,7 +3340,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “series”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “series” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 24,
@@ -3357,7 +3357,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.108335000000125,
+      "latencyMs": 3.874934999999823,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3400,7 +3400,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “series”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “series” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 19,
@@ -3417,7 +3417,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.8480400000000827,
+      "latencyMs": 3.64931300000012,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3460,7 +3460,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “series”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “series” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 18,
@@ -3477,7 +3477,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6642609999998967,
+      "latencyMs": 3.672899000000143,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3520,7 +3520,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “series”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “series” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 25,
@@ -3537,7 +3537,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.0014830000000075,
+      "latencyMs": 4.290203999999903,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3580,7 +3580,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “series”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “series” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 19,
@@ -3597,7 +3597,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.626645999999937,
+      "latencyMs": 3.8154349999999795,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3640,7 +3640,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “number”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “number” takes plural agreement here. ‘A number of’ refers to multiple items and takes plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 20,
@@ -3657,7 +3657,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.031278000000157,
+      "latencyMs": 4.105644999999868,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3700,7 +3700,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “number”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “number” takes plural agreement here. ‘A number of’ refers to multiple items and takes plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 21,
@@ -3717,7 +3717,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6506910000000516,
+      "latencyMs": 3.8598430000001827,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3760,7 +3760,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “number”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “number” takes plural agreement here. ‘A number of’ refers to multiple items and takes plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 25,
@@ -3777,7 +3777,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.047833000000082,
+      "latencyMs": 4.046474999999873,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3820,7 +3820,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “number”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “number” takes plural agreement here. ‘A number of’ refers to multiple items and takes plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 20,
@@ -3837,7 +3837,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.725774999999885,
+      "latencyMs": 3.8901079999998274,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3880,7 +3880,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “number”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “number” takes plural agreement here. ‘A number of’ refers to multiple items and takes plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 25,
@@ -3897,7 +3897,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.534243999999944,
+      "latencyMs": 3.9111700000000837,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -3940,7 +3940,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “number”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “number” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 20,
@@ -3957,7 +3957,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.570169000000078,
+      "latencyMs": 3.687351000000035,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4000,7 +4000,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “number”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “number” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 23,
@@ -4017,7 +4017,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.706196000000091,
+      "latencyMs": 3.7588799999998628,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4060,7 +4060,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “number”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “number” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 23,
@@ -4077,7 +4077,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.261646999999812,
+      "latencyMs": 4.051373000000012,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4120,7 +4120,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “number”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “number” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 21,
@@ -4137,7 +4137,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.5641709999999875,
+      "latencyMs": 3.80982599999993,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4180,7 +4180,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “number”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “number” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 24,
@@ -4197,7 +4197,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.531791999999996,
+      "latencyMs": 3.5922669999999925,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4240,7 +4240,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “evidence”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “evidence” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 13,
@@ -4257,7 +4257,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9679819999998927,
+      "latencyMs": 3.8636179999998603,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4300,7 +4300,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “information”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “information” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 16,
@@ -4317,7 +4317,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.986889999999903,
+      "latencyMs": 4.028007000000116,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4360,7 +4360,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “equipment”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “equipment” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 14,
@@ -4377,7 +4377,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.775480000000016,
+      "latencyMs": 3.7838469999999234,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4420,7 +4420,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “apparatus”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “apparatus” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 14,
@@ -4437,7 +4437,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.89458599999989,
+      "latencyMs": 3.941675999999916,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4480,7 +4480,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “analysis”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “analysis” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 13,
@@ -4497,7 +4497,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.941155999999864,
+      "latencyMs": 3.9132630000001427,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4540,7 +4540,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “control”, which is plural. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “control” takes plural agreement here. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 32,
@@ -4557,7 +4557,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.64674500000001,
+      "latencyMs": 3.9670149999999467,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4600,7 +4600,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “control”, which is plural. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “control” takes plural agreement here. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 33,
@@ -4617,7 +4617,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.046681000000035,
+      "latencyMs": 4.308914000000186,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4660,7 +4660,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “control”, which is plural. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “control” takes plural agreement here. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 34,
@@ -4677,7 +4677,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.575312000000167,
+      "latencyMs": 4.03754200000003,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4720,7 +4720,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “control”, which is plural. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “control” takes plural agreement here. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 32,
@@ -4737,7 +4737,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.65065699999991,
+      "latencyMs": 4.063431000000037,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4780,7 +4780,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “control”, which is plural. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “control” takes plural agreement here. Subjects joined by “and” take plural agreement. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 34,
@@ -4797,7 +4797,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.1392419999999674,
+      "latencyMs": 3.9225580000002083,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4840,7 +4840,7 @@
           "replacements": [
             "does"
           ],
-          "explanation": "The head of the subject is “investigator”, which is singular. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
+          "explanation": "The subject headed by “investigator” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
           "edits": [
             {
               "start": 17,
@@ -4857,7 +4857,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.147077999999965,
+      "latencyMs": 3.808324000000084,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4900,7 +4900,7 @@
           "replacements": [
             "does"
           ],
-          "explanation": "The head of the subject is “analyst”, which is singular. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
+          "explanation": "The subject headed by “analyst” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
           "edits": [
             {
               "start": 12,
@@ -4917,7 +4917,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4444089999999505,
+      "latencyMs": 3.414066000000048,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -4960,7 +4960,7 @@
           "replacements": [
             "does"
           ],
-          "explanation": "The head of the subject is “reviewer”, which is singular. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
+          "explanation": "The subject headed by “reviewer” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
           "edits": [
             {
               "start": 13,
@@ -4977,7 +4977,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4084139999999934,
+      "latencyMs": 3.80677199999991,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5020,7 +5020,7 @@
           "replacements": [
             "does"
           ],
-          "explanation": "The head of the subject is “technician”, which is singular. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
+          "explanation": "The subject headed by “technician” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
           "edits": [
             {
               "start": 15,
@@ -5037,7 +5037,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4304070000000593,
+      "latencyMs": 3.484814000000142,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5080,7 +5080,7 @@
           "replacements": [
             "does"
           ],
-          "explanation": "The head of the subject is “scientist”, which is singular. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
+          "explanation": "The subject headed by “scientist” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
           "edits": [
             {
               "start": 14,
@@ -5097,7 +5097,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.01558399999999,
+      "latencyMs": 4.072895000000017,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5140,7 +5140,7 @@
           "replacements": [
             "has"
           ],
-          "explanation": "The head of the subject is “Everyone”, which is singular. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
+          "explanation": "The subject headed by “Everyone” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
           "edits": [
             {
               "start": 27,
@@ -5157,7 +5157,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.813038000000006,
+      "latencyMs": 4.059615000000122,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5200,7 +5200,7 @@
           "replacements": [
             "has"
           ],
-          "explanation": "The head of the subject is “Everyone”, which is singular. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
+          "explanation": "The subject headed by “Everyone” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
           "edits": [
             {
               "start": 27,
@@ -5217,7 +5217,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9836159999999836,
+      "latencyMs": 3.823897999999872,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5260,7 +5260,7 @@
           "replacements": [
             "has"
           ],
-          "explanation": "The head of the subject is “Everyone”, which is singular. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
+          "explanation": "The subject headed by “Everyone” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
           "edits": [
             {
               "start": 21,
@@ -5277,7 +5277,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7326559999999063,
+      "latencyMs": 3.8368480000001455,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5320,7 +5320,7 @@
           "replacements": [
             "has"
           ],
-          "explanation": "The head of the subject is “Everyone”, which is singular. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
+          "explanation": "The subject headed by “Everyone” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
           "edits": [
             {
               "start": 22,
@@ -5337,7 +5337,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.548676999999998,
+      "latencyMs": 3.634461000000101,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5380,7 +5380,7 @@
           "replacements": [
             "has"
           ],
-          "explanation": "The head of the subject is “Everyone”, which is singular. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
+          "explanation": "The subject headed by “Everyone” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “has” instead of “have”.",
           "edits": [
             {
               "start": 26,
@@ -5397,7 +5397,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.095064999999977,
+      "latencyMs": 4.0541370000000825,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5440,7 +5440,7 @@
           "replacements": [
             "require"
           ],
-          "explanation": "The head of the subject is “electrodes”, which is plural. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
+          "explanation": "The subject headed by “electrodes” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
           "edits": [
             {
               "start": 40,
@@ -5457,7 +5457,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.79606200000012,
+      "latencyMs": 4.150103000000172,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5500,7 +5500,7 @@
           "replacements": [
             "require"
           ],
-          "explanation": "The head of the subject is “probes”, which is plural. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
+          "explanation": "The subject headed by “probes” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
           "edits": [
             {
               "start": 36,
@@ -5517,7 +5517,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.553368999999975,
+      "latencyMs": 4.050570999999991,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5560,7 +5560,7 @@
           "replacements": [
             "require"
           ],
-          "explanation": "The head of the subject is “sensors”, which is plural. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
+          "explanation": "The subject headed by “sensors” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
           "edits": [
             {
               "start": 37,
@@ -5577,7 +5577,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.923225000000002,
+      "latencyMs": 4.048778000000084,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5620,7 +5620,7 @@
           "replacements": [
             "require"
           ],
-          "explanation": "The head of the subject is “detectors”, which is plural. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
+          "explanation": "The subject headed by “detectors” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
           "edits": [
             {
               "start": 39,
@@ -5637,7 +5637,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 7.8081600000000435,
+      "latencyMs": 4.326029000000062,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5680,7 +5680,7 @@
           "replacements": [
             "require"
           ],
-          "explanation": "The head of the subject is “instruments”, which is plural. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
+          "explanation": "The subject headed by “instruments” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “require” instead of “requires”.",
           "edits": [
             {
               "start": 41,
@@ -5697,7 +5697,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7764119999999366,
+      "latencyMs": 3.8781400000000303,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5740,7 +5740,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “tissues”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “tissues” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 37,
@@ -5757,7 +5757,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9744720000001053,
+      "latencyMs": 4.094667999999956,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5800,7 +5800,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “organs”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “organs” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 36,
@@ -5817,7 +5817,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7982459999998355,
+      "latencyMs": 3.843706999999995,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5860,7 +5860,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “sections”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “sections” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 38,
@@ -5877,7 +5877,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.767428000000109,
+      "latencyMs": 3.9065429999998287,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5920,7 +5920,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “biopsies”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “biopsies” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 38,
@@ -5937,7 +5937,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.069385999999895,
+      "latencyMs": 4.5801749999998265,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -5980,7 +5980,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “cells”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “cells” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 35,
@@ -5997,7 +5997,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.10638199999994,
+      "latencyMs": 4.2567039999999,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6040,7 +6040,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “temperature”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “temperature” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 46,
@@ -6057,7 +6057,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.1390409999999065,
+      "latencyMs": 4.639664999999923,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6100,7 +6100,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “quality”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “quality” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 42,
@@ -6117,7 +6117,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.035763999999972,
+      "latencyMs": 4.390065999999933,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6160,7 +6160,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “integrity”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “integrity” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 44,
@@ -6177,7 +6177,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.425985999999966,
+      "latencyMs": 4.627936999999974,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6220,7 +6220,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “composition”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “composition” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 46,
@@ -6237,7 +6237,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.113822999999911,
+      "latencyMs": 4.244554999999991,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6280,7 +6280,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “appearance”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “appearance” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 45,
@@ -6297,7 +6297,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.319945999999845,
+      "latencyMs": 4.329635000000053,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6340,7 +6340,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “phenomenon”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “phenomenon” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 15,
@@ -6357,7 +6357,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.374994000000015,
+      "latencyMs": 3.394546999999875,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6400,7 +6400,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “criterion”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “criterion” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 14,
@@ -6417,7 +6417,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.238907000000154,
+      "latencyMs": 3.286593000000039,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6460,7 +6460,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “index”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “index” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 10,
@@ -6477,7 +6477,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.8918260000000373,
+      "latencyMs": 4.23424,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6520,7 +6520,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “matrix”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “matrix” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 11,
@@ -6537,7 +6537,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.3026539999998477,
+      "latencyMs": 3.4768420000000333,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6580,7 +6580,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “hypothesis”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “hypothesis” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 15,
@@ -6597,7 +6597,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.2217809999999645,
+      "latencyMs": 3.3773409999998876,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6640,7 +6640,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “bacteria”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “bacteria” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 13,
@@ -6657,7 +6657,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.693076000000019,
+      "latencyMs": 3.631486999999879,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6700,7 +6700,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “nuclei”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “nuclei” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 11,
@@ -6717,7 +6717,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.600635000000011,
+      "latencyMs": 4.056010000000015,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6760,7 +6760,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “criteria”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “criteria” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 13,
@@ -6777,7 +6777,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.314721999999847,
+      "latencyMs": 3.483641999999918,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6820,7 +6820,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “phenomena”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “phenomena” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 14,
@@ -6837,7 +6837,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.3108669999999165,
+      "latencyMs": 3.3867749999999432,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -6880,7 +6880,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “matrices”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “matrices” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 13,
@@ -6897,7 +6897,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.338608999999906,
+      "latencyMs": 3.4844530000000304,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7003,7 +7003,7 @@
           }
         }
       ],
-      "latencyMs": 4.237048999999843,
+      "latencyMs": 5.095305000000053,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7108,7 +7108,7 @@
           }
         }
       ],
-      "latencyMs": 4.046331000000009,
+      "latencyMs": 3.58141999999998,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7214,7 +7214,7 @@
           }
         }
       ],
-      "latencyMs": 3.620134999999891,
+      "latencyMs": 3.659789000000046,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7319,7 +7319,7 @@
           }
         }
       ],
-      "latencyMs": 3.59432599999991,
+      "latencyMs": 3.894615000000158,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7424,7 +7424,7 @@
           }
         }
       ],
-      "latencyMs": 3.7995469999998477,
+      "latencyMs": 3.578126000000111,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7532,7 +7532,7 @@
           }
         }
       ],
-      "latencyMs": 4.2147959999999784,
+      "latencyMs": 3.9277960000001713,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7592,7 +7592,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.460352999999941,
+      "latencyMs": 3.617805999999973,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7652,7 +7652,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4518600000001243,
+      "latencyMs": 3.5766029999999773,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7712,7 +7712,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4547640000000683,
+      "latencyMs": 3.5243840000000546,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7820,7 +7820,7 @@
           }
         }
       ],
-      "latencyMs": 3.1971240000000307,
+      "latencyMs": 3.0398689999999533,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7880,7 +7880,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.5073240000001533,
+      "latencyMs": 3.639838999999938,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -7940,7 +7940,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.554947000000084,
+      "latencyMs": 3.3587330000000293,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8000,7 +8000,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.3500750000000608,
+      "latencyMs": 3.6951630000000932,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8078,7 +8078,7 @@
           }
         }
       ],
-      "latencyMs": 3.58170599999994,
+      "latencyMs": 3.6024019999999837,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -8132,7 +8132,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7112630000001445,
+      "latencyMs": 3.7708970000001045,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8261,7 +8261,7 @@
           }
         }
       ],
-      "latencyMs": 5.866739000000052,
+      "latencyMs": 5.885463999999956,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8390,7 +8390,7 @@
           }
         }
       ],
-      "latencyMs": 3.7914650000000165,
+      "latencyMs": 3.981847000000016,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8519,7 +8519,7 @@
           }
         }
       ],
-      "latencyMs": 3.677300999999943,
+      "latencyMs": 3.702483999999913,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8648,7 +8648,7 @@
           }
         }
       ],
-      "latencyMs": 3.871204999999918,
+      "latencyMs": 3.949448000000075,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8777,7 +8777,7 @@
           }
         }
       ],
-      "latencyMs": 3.652123999999958,
+      "latencyMs": 3.730295999999953,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8837,7 +8837,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6340959999999995,
+      "latencyMs": 4.007866999999806,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8897,7 +8897,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.332628999999997,
+      "latencyMs": 3.6036139999998795,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -8957,7 +8957,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.398059000000103,
+      "latencyMs": 3.556833000000097,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9017,7 +9017,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7883500000000367,
+      "latencyMs": 3.957540999999992,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9077,7 +9077,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4306980000001204,
+      "latencyMs": 3.5600979999999254,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9137,7 +9137,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6700409999998556,
+      "latencyMs": 3.9418769999999768,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9197,7 +9197,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7045029999999315,
+      "latencyMs": 3.923187999999982,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9257,7 +9257,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7133159999998497,
+      "latencyMs": 4.483377000000019,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9292,7 +9292,7 @@
       "referenceAmendment": "REFERENCE_ERRATA.md: valid adjectival complete",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.4586299999998573,
+      "latencyMs": 3.663044000000127,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -9346,7 +9346,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.512482000000091,
+      "latencyMs": 3.536982999999964,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9406,7 +9406,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 6.895187999999962,
+      "latencyMs": 7.311234999999897,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9466,7 +9466,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.092711000000008,
+      "latencyMs": 10.056718000000046,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9526,7 +9526,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.388619000000062,
+      "latencyMs": 4.514405000000124,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9586,7 +9586,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.026450999999952,
+      "latencyMs": 4.268252000000075,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9646,7 +9646,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.185091000000057,
+      "latencyMs": 4.25937799999997,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9689,7 +9689,7 @@
           "replacements": [
             "have been analyzed"
           ],
-          "explanation": "The head of the subject is “reagents”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
+          "explanation": "The subject headed by “reagents” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
           "edits": [
             {
               "start": 13,
@@ -9713,7 +9713,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.576037999999926,
+      "latencyMs": 4.314180999999962,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9756,7 +9756,7 @@
           "replacements": [
             "have been tested"
           ],
-          "explanation": "The head of the subject is “reagents”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
+          "explanation": "The subject headed by “reagents” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
           "edits": [
             {
               "start": 13,
@@ -9780,7 +9780,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9408410000000913,
+      "latencyMs": 4.10694599999988,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9823,7 +9823,7 @@
           "replacements": [
             "have been prepared"
           ],
-          "explanation": "The head of the subject is “reagents”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
+          "explanation": "The subject headed by “reagents” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
           "edits": [
             {
               "start": 13,
@@ -9847,7 +9847,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.3419239999998354,
+      "latencyMs": 3.6557829999999285,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9890,7 +9890,7 @@
           "replacements": [
             "have been stored"
           ],
-          "explanation": "The head of the subject is “reagents”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
+          "explanation": "The subject headed by “reagents” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
           "edits": [
             {
               "start": 13,
@@ -9914,7 +9914,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6225489999999354,
+      "latencyMs": 3.5808289999999943,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -9957,7 +9957,7 @@
           "replacements": [
             "have been evaluated"
           ],
-          "explanation": "The head of the subject is “reagents”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
+          "explanation": "The subject headed by “reagents” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
           "edits": [
             {
               "start": 13,
@@ -9981,7 +9981,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.333800999999994,
+      "latencyMs": 6.051700999999866,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10024,7 +10024,7 @@
           "replacements": [
             "depend on"
           ],
-          "explanation": "The head of the subject is “signals”, which is plural. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
+          "explanation": "The subject headed by “signals” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
           "edits": [
             {
               "start": 12,
@@ -10048,7 +10048,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.192641999999978,
+      "latencyMs": 5.664187999999967,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10091,7 +10091,7 @@
           "replacements": [
             "depend on"
           ],
-          "explanation": "The head of the subject is “signals”, which is plural. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
+          "explanation": "The subject headed by “signals” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
           "edits": [
             {
               "start": 12,
@@ -10115,7 +10115,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.591081000000031,
+      "latencyMs": 4.352198999999928,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10158,7 +10158,7 @@
           "replacements": [
             "depend on"
           ],
-          "explanation": "The head of the subject is “signals”, which is plural. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
+          "explanation": "The subject headed by “signals” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
           "edits": [
             {
               "start": 12,
@@ -10182,7 +10182,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.325849000000062,
+      "latencyMs": 4.029739999999947,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10225,7 +10225,7 @@
           "replacements": [
             "depend on"
           ],
-          "explanation": "The head of the subject is “signals”, which is plural. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
+          "explanation": "The subject headed by “signals” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
           "edits": [
             {
               "start": 12,
@@ -10249,7 +10249,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.3848279999999704,
+      "latencyMs": 3.9671749999999975,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10292,7 +10292,7 @@
           "replacements": [
             "depend on"
           ],
-          "explanation": "The head of the subject is “signals”, which is plural. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
+          "explanation": "The subject headed by “signals” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
           "edits": [
             {
               "start": 12,
@@ -10316,7 +10316,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.332238999999845,
+      "latencyMs": 3.780332000000044,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10376,7 +10376,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.763862999999901,
+      "latencyMs": 4.240219000000025,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10437,7 +10437,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4593720000000303,
+      "latencyMs": 3.7531309999999394,
       "detected": true,
       "classified": true,
       "complete": false,
@@ -10497,7 +10497,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4535730000000058,
+      "latencyMs": 3.713281000000052,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10557,7 +10557,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.455244999999877,
+      "latencyMs": 3.6968950000000405,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10617,7 +10617,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.648828999999978,
+      "latencyMs": 3.9337940000000344,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10677,7 +10677,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.826416999999992,
+      "latencyMs": 3.55815500000017,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10737,7 +10737,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.392940999999837,
+      "latencyMs": 3.4370510000001104,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10797,7 +10797,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.5728730000000724,
+      "latencyMs": 3.3494980000000396,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10857,7 +10857,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.3375069999999596,
+      "latencyMs": 3.4098800000001575,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -10917,7 +10917,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.5593230000001768,
+      "latencyMs": 3.5841239999999743,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11023,7 +11023,7 @@
           }
         }
       ],
-      "latencyMs": 3.663470999999845,
+      "latencyMs": 3.5982159999998657,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11127,7 +11127,7 @@
           }
         }
       ],
-      "latencyMs": 3.581286000000091,
+      "latencyMs": 3.582822999999962,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11230,7 +11230,7 @@
           }
         }
       ],
-      "latencyMs": 3.6008650000001126,
+      "latencyMs": 3.6022620000001098,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11335,7 +11335,7 @@
           }
         }
       ],
-      "latencyMs": 3.6042110000000775,
+      "latencyMs": 3.7807520000001205,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11439,7 +11439,7 @@
           }
         }
       ],
-      "latencyMs": 3.9108550000000832,
+      "latencyMs": 3.5526870000001054,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11570,7 +11570,7 @@
           }
         }
       ],
-      "latencyMs": 3.9224229999999807,
+      "latencyMs": 3.8540029999999206,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11701,7 +11701,7 @@
           }
         }
       ],
-      "latencyMs": 3.6867460000000847,
+      "latencyMs": 3.5963329999999587,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11832,7 +11832,7 @@
           }
         }
       ],
-      "latencyMs": 3.852247000000034,
+      "latencyMs": 3.814001999999846,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -11963,7 +11963,7 @@
           }
         }
       ],
-      "latencyMs": 4.381427999999914,
+      "latencyMs": 3.5374030000000403,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12094,7 +12094,7 @@
           }
         }
       ],
-      "latencyMs": 3.6991850000001705,
+      "latencyMs": 3.516841999999997,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12154,7 +12154,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7436219999999594,
+      "latencyMs": 3.544024000000036,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12214,7 +12214,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7238420000001042,
+      "latencyMs": 3.514850000000024,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12274,7 +12274,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9634950000001936,
+      "latencyMs": 3.805520000000115,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12334,7 +12334,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.640325999999959,
+      "latencyMs": 3.458474000000024,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12394,7 +12394,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.625933000000032,
+      "latencyMs": 3.5222400000000107,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12454,7 +12454,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.483949000000166,
+      "latencyMs": 3.45986599999992,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12514,7 +12514,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.8402280000000246,
+      "latencyMs": 3.7056179999999586,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12574,7 +12574,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.8616609999999127,
+      "latencyMs": 3.5307630000002064,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12634,7 +12634,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.541435999999976,
+      "latencyMs": 3.5153300000001764,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12694,7 +12694,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.50940700000001,
+      "latencyMs": 3.4888189999999213,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -12742,7 +12742,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6380719999999656,
+      "latencyMs": 3.6115960000001905,
       "detected": true,
       "classified": true,
       "complete": null,
@@ -12784,7 +12784,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.668136999999888,
+      "latencyMs": 3.9072040000000925,
       "detected": true,
       "classified": true,
       "complete": null,
@@ -12826,7 +12826,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.8804999999999836,
+      "latencyMs": 3.6627829999999904,
       "detected": true,
       "classified": true,
       "complete": null,
@@ -12868,7 +12868,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.775579999999991,
+      "latencyMs": 3.6834550000000945,
       "detected": true,
       "classified": true,
       "complete": null,
@@ -12910,7 +12910,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.619954999999891,
+      "latencyMs": 3.5690720000000056,
       "detected": true,
       "classified": true,
       "complete": null,
@@ -12964,7 +12964,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4043380000000525,
+      "latencyMs": 3.580989000000045,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13024,7 +13024,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6378020000001925,
+      "latencyMs": 3.3524629999999433,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13084,7 +13084,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.384257999999818,
+      "latencyMs": 3.3822479999998905,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13144,7 +13144,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.4255600000001323,
+      "latencyMs": 3.335698000000093,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13204,7 +13204,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.423136999999997,
+      "latencyMs": 3.3391129999999976,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13306,7 +13306,7 @@
           }
         }
       ],
-      "latencyMs": 3.576528999999937,
+      "latencyMs": 3.902415999999903,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13411,7 +13411,7 @@
           }
         }
       ],
-      "latencyMs": 4.008152999999993,
+      "latencyMs": 3.6228830000000016,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13514,7 +13514,7 @@
           }
         }
       ],
-      "latencyMs": 3.545041000000083,
+      "latencyMs": 3.5527170000000297,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13617,7 +13617,7 @@
           }
         }
       ],
-      "latencyMs": 3.584761999999955,
+      "latencyMs": 3.595741999999973,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13721,7 +13721,7 @@
           }
         }
       ],
-      "latencyMs": 3.6700399999999718,
+      "latencyMs": 3.865982000000031,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13781,7 +13781,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.7673279999999068,
+      "latencyMs": 4.405569000000014,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13841,7 +13841,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.572161999999935,
+      "latencyMs": 5.210550000000012,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13901,7 +13901,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6474470000000565,
+      "latencyMs": 7.421252999999979,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -13961,7 +13961,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 4.325023999999985,
+      "latencyMs": 3.790817000000061,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14021,7 +14021,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.105555999999979,
+      "latencyMs": 3.5472990000000664,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14081,7 +14081,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 5.5197729999999865,
+      "latencyMs": 3.5647549999998773,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14141,7 +14141,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 7.908633000000009,
+      "latencyMs": 3.5877000000000407,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14201,7 +14201,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.5313300000000254,
+      "latencyMs": 3.7265500000000884,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14261,7 +14261,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.6505409999999756,
+      "latencyMs": 3.5126960000000054,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14321,7 +14321,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.8805899999999838,
+      "latencyMs": 3.5129870000000665,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14381,7 +14381,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9240859999999884,
+      "latencyMs": 3.589543000000049,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14484,7 +14484,7 @@
           }
         }
       ],
-      "latencyMs": 3.531361000000061,
+      "latencyMs": 4.215040999999928,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14544,7 +14544,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.484830000000102,
+      "latencyMs": 4.190683999999919,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14647,7 +14647,7 @@
           }
         }
       ],
-      "latencyMs": 3.5258920000001126,
+      "latencyMs": 3.624704999999949,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14707,7 +14707,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 3.9911469999999554,
+      "latencyMs": 3.5992369999999028,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -14741,7 +14741,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.411448999999948,
+      "latencyMs": 3.230207999999948,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -14769,7 +14769,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.4618749999999636,
+      "latencyMs": 3.555930999999873,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -14797,7 +14797,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.997981999999865,
+      "latencyMs": 3.2631670000000668,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -14825,7 +14825,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.345879999999852,
+      "latencyMs": 3.3442109999998593,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -14853,7 +14853,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.387878000000001,
+      "latencyMs": 4.863833999999997,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -14881,7 +14881,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6601049999999304,
+      "latencyMs": 3.743835999999874,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -14909,7 +14909,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.569338000000016,
+      "latencyMs": 4.711663999999928,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -14937,7 +14937,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5813960000000407,
+      "latencyMs": 6.873761999999942,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15030,7 +15030,7 @@
           }
         }
       ],
-      "latencyMs": 3.848590999999942,
+      "latencyMs": 4.534525000000031,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15123,7 +15123,7 @@
           }
         }
       ],
-      "latencyMs": 4.087993999999981,
+      "latencyMs": 3.773580999999922,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15151,7 +15151,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5933350000000246,
+      "latencyMs": 3.9290269999999055,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15179,7 +15179,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.491639999999961,
+      "latencyMs": 3.7471610000000055,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15207,7 +15207,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.419389999999794,
+      "latencyMs": 3.4499899999998433,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15235,7 +15235,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5211550000001353,
+      "latencyMs": 3.3204749999999876,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15263,7 +15263,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.248781999999892,
+      "latencyMs": 3.1895559999998113,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15291,7 +15291,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.682589999999891,
+      "latencyMs": 3.9023369999999886,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15319,7 +15319,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6942979999998897,
+      "latencyMs": 3.573808999999983,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15347,7 +15347,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.679465000000164,
+      "latencyMs": 3.6012000000000626,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15375,7 +15375,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8422120000000177,
+      "latencyMs": 3.433475999999928,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15403,7 +15403,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.4945450000000164,
+      "latencyMs": 3.691396000000168,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15431,7 +15431,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.4957460000000538,
+      "latencyMs": 3.449098999999933,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15459,7 +15459,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.7411679999997887,
+      "latencyMs": 3.435538999999835,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15487,7 +15487,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8419209999999566,
+      "latencyMs": 3.383790999999974,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15515,7 +15515,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.7652949999999237,
+      "latencyMs": 3.4296699999999873,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15543,7 +15543,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.4580100000000584,
+      "latencyMs": 3.689523999999892,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15571,7 +15571,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5918320000000676,
+      "latencyMs": 3.472214000000122,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15599,7 +15599,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5214359999999942,
+      "latencyMs": 3.4263340000002245,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15627,7 +15627,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.059099999999944,
+      "latencyMs": 3.4410669999999755,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15655,7 +15655,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.5211249999999836,
+      "latencyMs": 3.739230000000134,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15683,7 +15683,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.522607999999991,
+      "latencyMs": 3.4651040000001103,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15711,7 +15711,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6833910000000287,
+      "latencyMs": 3.5096920000000864,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15739,7 +15739,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.184891000000107,
+      "latencyMs": 3.506896999999981,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15767,7 +15767,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.737773000000061,
+      "latencyMs": 3.503161999999975,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15795,7 +15795,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.773007000000007,
+      "latencyMs": 4.034147000000075,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15823,7 +15823,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.83475999999996,
+      "latencyMs": 3.6942509999998947,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15851,7 +15851,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.6770410000001448,
+      "latencyMs": 3.3988930000000437,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15879,7 +15879,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.214096000000154,
+      "latencyMs": 3.3942360000000917,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15907,7 +15907,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.744574000000057,
+      "latencyMs": 3.788635000000113,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15935,7 +15935,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.345514000000094,
+      "latencyMs": 3.521348999999873,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15963,7 +15963,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.616269000000102,
+      "latencyMs": 3.5018290000000434,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -15991,7 +15991,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.098255000000108,
+      "latencyMs": 3.8726019999999153,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16019,7 +16019,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.325223000000051,
+      "latencyMs": 3.707151000000067,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16047,7 +16047,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8987170000000333,
+      "latencyMs": 3.9524719999999434,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16075,7 +16075,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.0476629999998295,
+      "latencyMs": 3.697646999999961,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16103,7 +16103,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.026456000000053,
+      "latencyMs": 5.3672579999999925,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16131,7 +16131,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.449110999999903,
+      "latencyMs": 5.7325519999999415,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16159,7 +16159,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.41964599999983,
+      "latencyMs": 6.195694000000003,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16187,7 +16187,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.226364000000103,
+      "latencyMs": 5.885993999999982,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16215,7 +16215,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.4028460000001814,
+      "latencyMs": 4.710301000000072,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16243,7 +16243,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 7.6379729999998744,
+      "latencyMs": 4.708949999999959,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16271,7 +16271,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.935451999999941,
+      "latencyMs": 4.237554000000046,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16299,7 +16299,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.812076000000161,
+      "latencyMs": 3.717626999999993,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16327,7 +16327,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.292644000000109,
+      "latencyMs": 3.3403639999999086,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16355,7 +16355,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.02559999999994,
+      "latencyMs": 3.4049830000001293,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16383,7 +16383,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.459597000000031,
+      "latencyMs": 3.466305999999804,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16411,7 +16411,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.615193999999974,
+      "latencyMs": 3.5003179999998792,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16439,7 +16439,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.964011000000028,
+      "latencyMs": 3.7915190000001076,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16467,7 +16467,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9075910000001386,
+      "latencyMs": 3.3366790000000037,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16564,7 +16564,7 @@
           }
         }
       ],
-      "latencyMs": 4.181475000000091,
+      "latencyMs": 3.5924270000000433,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16661,7 +16661,7 @@
           }
         }
       ],
-      "latencyMs": 4.756485999999995,
+      "latencyMs": 3.5812499999999545,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16758,7 +16758,7 @@
           }
         }
       ],
-      "latencyMs": 4.043856999999889,
+      "latencyMs": 4.377907999999707,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16786,7 +16786,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9912469999999303,
+      "latencyMs": 3.5007470000000467,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16814,7 +16814,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.359496000000036,
+      "latencyMs": 3.3457720000001245,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16842,7 +16842,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.343480999999883,
+      "latencyMs": 3.517804000000069,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16870,7 +16870,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9783370000000104,
+      "latencyMs": 3.8055200000003424,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16898,7 +16898,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.088504999999941,
+      "latencyMs": 3.9956280000001243,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16926,7 +16926,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.081950000000006,
+      "latencyMs": 4.181910000000244,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16954,7 +16954,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.821766000000025,
+      "latencyMs": 4.42893499999991,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -16982,7 +16982,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.093922999999904,
+      "latencyMs": 3.519726000000446,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17010,7 +17010,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.196889000000283,
+      "latencyMs": 3.70560899999964,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17038,7 +17038,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.699661000000106,
+      "latencyMs": 3.4204859999999826,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17066,7 +17066,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.458550000000287,
+      "latencyMs": 3.4757999999997082,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17094,7 +17094,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.057062000000315,
+      "latencyMs": 3.709584000000177,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17122,7 +17122,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.596774000000096,
+      "latencyMs": 3.668051000000105,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17150,7 +17150,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.283360000000357,
+      "latencyMs": 3.893963999999869,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17178,7 +17178,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.119682000000012,
+      "latencyMs": 3.4943889999999556,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17206,7 +17206,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.291212000000087,
+      "latencyMs": 4.1888709999998355,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17234,7 +17234,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.067662999999811,
+      "latencyMs": 3.6589170000002014,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17262,7 +17262,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.058269000000109,
+      "latencyMs": 3.8308680000000095,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17290,7 +17290,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.279062999999951,
+      "latencyMs": 3.483191000000261,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17318,7 +17318,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.881355999999869,
+      "latencyMs": 3.4486689999998816,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17346,7 +17346,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.3913729999999305,
+      "latencyMs": 3.52455400000008,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17374,7 +17374,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.007697000000007,
+      "latencyMs": 3.505576000000019,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17402,7 +17402,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.295904000000064,
+      "latencyMs": 3.971440999999686,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17430,7 +17430,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.0249290000001565,
+      "latencyMs": 3.584194000000025,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17458,7 +17458,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.143047000000024,
+      "latencyMs": 3.5576850000002196,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17486,7 +17486,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.104679000000033,
+      "latencyMs": 3.7891749999998865,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17514,7 +17514,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.163438999999926,
+      "latencyMs": 6.701415999999881,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17542,7 +17542,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.202516999999716,
+      "latencyMs": 4.146667999999863,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17570,7 +17570,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.476112000000285,
+      "latencyMs": 3.7225240000002486,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17598,7 +17598,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.869383000000198,
+      "latencyMs": 3.6171730000000935,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17626,7 +17626,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.195356000000174,
+      "latencyMs": 3.844409000000269,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17654,7 +17654,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.946288999999979,
+      "latencyMs": 4.179656999999679,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17682,7 +17682,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9231439999998656,
+      "latencyMs": 3.5713949999999386,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17710,7 +17710,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.170858999999837,
+      "latencyMs": 3.5902139999998326,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17738,7 +17738,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.9021419999999125,
+      "latencyMs": 3.54978200000005,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17766,7 +17766,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.282118000000082,
+      "latencyMs": 3.8994520000001103,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17794,7 +17794,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.21188200000006,
+      "latencyMs": 3.497312999999849,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17822,7 +17822,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.852136999999857,
+      "latencyMs": 3.9160069999998086,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17850,7 +17850,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.120372999999745,
+      "latencyMs": 3.6128669999998237,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17878,7 +17878,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.153362999999899,
+      "latencyMs": 3.4650339999998323,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17906,7 +17906,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.271072000000004,
+      "latencyMs": 4.0340470000001005,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17934,7 +17934,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.342579999999998,
+      "latencyMs": 3.5967329999998583,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17962,7 +17962,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.8222209999998995,
+      "latencyMs": 4.774347999999918,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -17990,7 +17990,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.347757999999885,
+      "latencyMs": 3.511725000000297,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18083,7 +18083,7 @@
           }
         }
       ],
-      "latencyMs": 4.713561999999911,
+      "latencyMs": 5.438856000000214,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18111,7 +18111,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.182972999999947,
+      "latencyMs": 4.346349999999802,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18269,7 +18269,7 @@
           }
         }
       ],
-      "latencyMs": 9.68994100000009,
+      "latencyMs": 6.662131999999929,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18297,7 +18297,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.248061000000234,
+      "latencyMs": 4.184795000000122,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18462,7 +18462,7 @@
           }
         }
       ],
-      "latencyMs": 1216.9596189999997,
+      "latencyMs": 1246.2901819999997,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18490,7 +18490,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 6.4602679999998145,
+      "latencyMs": 7.325445999999829,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18578,7 +18578,7 @@
           }
         }
       ],
-      "latencyMs": 9.79167600000028,
+      "latencyMs": 9.427864000000227,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18606,7 +18606,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.852701999999681,
+      "latencyMs": 4.5968299999999545,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18700,7 +18700,7 @@
           }
         }
       ],
-      "latencyMs": 7.897566000000097,
+      "latencyMs": 7.2943890000001375,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18858,7 +18858,7 @@
           }
         }
       ],
-      "latencyMs": 4.5682520000000295,
+      "latencyMs": 4.687536999999793,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18960,7 +18960,7 @@
           }
         }
       ],
-      "latencyMs": 4.392745999999988,
+      "latencyMs": 4.4620850000001155,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -18988,7 +18988,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.864495000000261,
+      "latencyMs": 3.9642610000000786,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -19016,7 +19016,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.968438000000333,
+      "latencyMs": 5.145442000000003,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -19044,7 +19044,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.558886999999686,
+      "latencyMs": 4.814800000000105,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -19072,7 +19072,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.237365999999838,
+      "latencyMs": 5.233765999999832,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -19100,7 +19100,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 3.8589059999999336,
+      "latencyMs": 3.81259,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -19188,7 +19188,7 @@
           }
         }
       ],
-      "latencyMs": 4.563593999999739,
+      "latencyMs": 4.613135000000057,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -19216,7 +19216,7 @@
       "explanation": "Valid grammar and scientific notation; editorial preferences evaluated separately.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.628743000000213,
+      "latencyMs": 4.8097429999997985,
       "detected": false,
       "classified": false,
       "complete": true,

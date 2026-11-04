@@ -45,7 +45,7 @@ This is substantial measured improvement on a small engineer-authored corpus, **
 
 ## V2: agreement and auxiliary analysis (2026-11-04)
 
-The v2 baseline is the prior benchmark branch **0c3b269**, not the older deployed main. Final engine **06de675** replaces the subject-head noun whitelist with productive noun morphology and shallow clause analysis; Harper 3.0.0 remains unchanged. See [v2 methodology and raw results](benchmark/v2/README.md), including frozen hashes, reference errata and restrictions on generalization. All historical results above remain preserved.
+The v2 baseline is the prior benchmark branch **0c3b269**, not the older deployed main. Final engine **31d2e94** replaces the subject-head noun whitelist with productive noun morphology and shallow clause analysis; Harper 3.0.0 remains unchanged. See [v2 methodology and raw results](benchmark/v2/README.md), including frozen hashes, reference errata and restrictions on generalization. All historical results above remain preserved.
 
 | Main challenge metric                                                  | Baseline | Final audit |
 | ---------------------------------------------------------------------- | -------: | ----------: |
@@ -78,7 +78,7 @@ The final challenge audit detects/classifies **208/208** positive groups. Comple
 | Aligned first-suggestion correctness       |    14.3% |               81.8% |
 | All-category control false positives       |    16.7% |                5.6% |
 
-This set was frozen after engine 19b93c7 and **not tuned to its failures**. Its first output is preserved; the later code-review safeguards for ambiguous scientific noun number and inline formatting do not change these scores. Detection rises from **1/12 to 9/12**; exact offered paragraph corrections from **1/12 to 9/12**; first-choice completion is only **8/12**. The higher score on lexical templates must not obscure this result. Failures remain:
+This set was frozen after engine 19b93c7 and **not tuned to its failures**. Its first output is preserved; the later code-review safeguards for ambiguous scientific noun number, unsupported modifiers and inline formatting do not change these scores. Detection rises from **1/12 to 9/12**; exact offered paragraph corrections from **1/12 to 9/12**; first-choice completion is only **8/12**. The higher score on lexical templates must not obscure this result. Failures remain:
 
 - Object relatives: “The samples that the technician collected was analyzed” is missed.
 - Unknown verb paradigms: “droplets oscillates” and “nuclei were isolate” are missed.
@@ -93,9 +93,9 @@ The original development and regression audit remains 20/20 and 11/11 complete c
 
 ### Environment and checks
 
-Node v24.19.0, Linux, AMD EPYC 9V45 96-Core Processor; Harper 3.0.0, Vite 7.3.7, TypeScript 5.9.3, Vitest 3.2.7, Playwright 1.64.1. Dependencies were not upgraded. Main-challenge latency median: **3.92 → 3.90 ms**; p95 **19.65 → 5.76 ms**. Setup **812 → 583 ms**. End-of-run harness RSS **559.3 → 523.0 MiB**, heap used **25.2 → 25.7 MiB**. These noisy whole-harness samples include WASM/report retention, not browser peaks or evidence of a memory optimization.
+Node v24.19.0, Linux, AMD EPYC 9V45 96-Core Processor; Harper 3.0.0, Vite 7.3.7, TypeScript 5.9.3, Vitest 3.2.7, Playwright 1.64.1. Dependencies were not upgraded. Main-challenge latency median: **3.92 → 3.81 ms**; p95 **19.65 → 5.89 ms**. Setup **812 → 599 ms**. End-of-run harness RSS **559.3 → 524.3 MiB**, heap used **25.2 → 26.1 MiB**. These noisy whole-harness samples include WASM/report retention, not browser peaks or evidence of a memory optimization.
 
-`npm test`: **177 passed**. Production build, original benchmark, v2 benchmark and formatting checks pass. **15/15 browser scenarios passed locally at `/` and `/prooflab/`**, including live edits, individual accept/dismiss, coordinated edits/Undo, rapid revisions, long paragraphs, formatting, Unicode, mobile, offline and network checks; existing appearance, local-only processing, optional persistence and static hosting remain intact.
+`npm test`: **180 passed**. Production build, original benchmark, v2 benchmark and formatting checks pass. **15/15 browser scenarios passed locally at `/` and `/prooflab/`**, including live edits, individual accept/dismiss, coordinated edits/Undo, rapid revisions, long paragraphs, formatting, Unicode, mobile, offline and network checks; existing appearance, local-only processing, optional persistence and static hosting remain intact.
 
 ### Modified implementation
 

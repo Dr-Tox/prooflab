@@ -1,16 +1,16 @@
 {
   "scoringVersion": 1,
-  "implementationSha256": "35b14e2c443d5954bb2c3e2859375d80544c0c4c2c30dcf9e7cda7396c62e303",
+  "implementationSha256": "6bba55475da14c1a814e8a30cfa6e9c8d2375c867d1ab8e802ed6cf818e614e8",
   "stress": [
     {
       "characters": 570,
       "runs": 3,
-      "medianMs": 4.0100179999999455
+      "medianMs": 4.171483999999964
     },
     {
       "characters": 5700,
       "runs": 3,
-      "medianMs": 21.602012000000286
+      "medianMs": 18.935238000000027
     }
   ],
   "corpusVersion": 1,
@@ -21,14 +21,14 @@
   },
   "label": "v2-legacy-audit",
   "environment": {
-    "commit": "06de675d32cb4c65f0c91923e8d912a84835f92a",
+    "commit": "31d2e94f724a660081a1e0e5553115884aaab20c",
     "node": "v24.19.0",
     "platform": "linux",
     "arch": "x64",
     "cpu": "AMD EPYC 9V45 96-Core Processor",
     "harper": "3.0.0",
     "lockSha256": "08f4fe0eff69424d9771c2069d50b0cd9e4ef752811d65566ee09933a61f7cbe",
-    "setupMs": 583.809895
+    "setupMs": 557.046574
   },
   "corpusHashes": {
     "development": "f55433c96fea65a3a418ef4bd8a70f5cfdec23f9a342bbed1311c2512b83cda7",
@@ -50,8 +50,8 @@
       "unmatchedDiagnostics": 0,
       "duplicateDiagnostics": 0,
       "harmfulSuggestionsProxy": 0,
-      "medianMs": 4.388171000000057,
-      "p95Ms": 8.595098000000235
+      "medianMs": 4.440786999999773,
+      "p95Ms": 9.950986000000285
     },
     "regression": {
       "cases": 21,
@@ -67,8 +67,8 @@
       "unmatchedDiagnostics": 0,
       "duplicateDiagnostics": 0,
       "harmfulSuggestionsProxy": 0,
-      "medianMs": 4.247087000000192,
-      "p95Ms": 12.95893100000012
+      "medianMs": 4.075567999999748,
+      "p95Ms": 12.753013999999894
     },
     "held-out": {
       "cases": 31,
@@ -84,8 +84,8 @@
       "unmatchedDiagnostics": 0,
       "duplicateDiagnostics": 0,
       "harmfulSuggestionsProxy": 0,
-      "medianMs": 3.818116999999802,
-      "p95Ms": 11.079823999999917
+      "medianMs": 3.754591999999775,
+      "p95Ms": 11.099237999999787
     }
   },
   "cases": [
@@ -257,7 +257,7 @@
             "reason": "scientific-vocabulary"
           }
         ],
-        "latencyMs": 1251.586475
+        "latencyMs": 1262.0422539999997
       },
       "split": "development",
       "metrics": {
@@ -293,7 +293,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 7.967295999999806
+        "latencyMs": 9.950986000000285
       },
       "split": "development",
       "metrics": {
@@ -477,7 +477,7 @@
             "reason": "legitimate-repetition"
           }
         ],
-        "latencyMs": 6.832275000000209
+        "latencyMs": 8.264639999999872
       },
       "split": "development",
       "metrics": {
@@ -599,7 +599,7 @@
             "reason": "legitimate-repetition"
           }
         ],
-        "latencyMs": 6.0221379999998135
+        "latencyMs": 9.040835999999672
       },
       "split": "development",
       "metrics": {
@@ -682,7 +682,7 @@
             "reason": "legitimate-repetition"
           }
         ],
-        "latencyMs": 6.529618000000028
+        "latencyMs": 9.641758000000209
       },
       "split": "development",
       "metrics": {
@@ -715,7 +715,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.993428999999651
+        "latencyMs": 5.138940999999704
       },
       "split": "development",
       "metrics": {
@@ -817,7 +817,7 @@
             "reason": "scientific-vocabulary"
           }
         ],
-        "latencyMs": 11.29283600000008
+        "latencyMs": 12.285134999999627
       },
       "split": "development",
       "metrics": {
@@ -850,7 +850,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 5.2162459999999555
+        "latencyMs": 8.841683999999987
       },
       "split": "development",
       "metrics": {
@@ -976,7 +976,7 @@
             "reason": "scientific-vocabulary"
           }
         ],
-        "latencyMs": 5.078677999999854
+        "latencyMs": 9.530397999999877
       },
       "split": "development",
       "metrics": {
@@ -1009,7 +1009,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 6.34886299999971
+        "latencyMs": 4.943956000000071
       },
       "split": "development",
       "metrics": {
@@ -1071,7 +1071,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.9763370000000577
+        "latencyMs": 3.9518419999999423
       },
       "split": "development",
       "metrics": {
@@ -1133,7 +1133,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.37389899999971
+        "latencyMs": 4.353209999999763
       },
       "split": "development",
       "metrics": {
@@ -1242,7 +1242,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 4.428613000000041
+        "latencyMs": 4.263003000000026
       },
       "split": "development",
       "metrics": {
@@ -1294,7 +1294,7 @@
             "replacements": [
               "show"
             ],
-            "explanation": "The head of the subject is “results”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+            "explanation": "The subject headed by “results” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
             "edits": [
               {
                 "start": 12,
@@ -1312,7 +1312,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 5.696363999999903
+        "latencyMs": 8.573779000000286
       },
       "split": "development",
       "metrics": {
@@ -1364,7 +1364,7 @@
             "replacements": [
               "was"
             ],
-            "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “was” instead of “were”.",
+            "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “was” instead of “were”.",
             "edits": [
               {
                 "start": 20,
@@ -1382,7 +1382,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.276792999999998
+        "latencyMs": 4.528937000000042
       },
       "split": "development",
       "metrics": {
@@ -1434,7 +1434,7 @@
             "replacements": [
               "is"
             ],
-            "explanation": "The head of the subject is “effect”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+            "explanation": "The subject headed by “effect” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
             "edits": [
               {
                 "start": 30,
@@ -1452,7 +1452,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.2660359999999855
+        "latencyMs": 4.183712999999898
       },
       "split": "development",
       "metrics": {
@@ -1504,7 +1504,7 @@
             "replacements": [
               "are"
             ],
-            "explanation": "The head of the subject is “reasons”, which is plural. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
+            "explanation": "The subject headed by “reasons” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
             "edits": [
               {
                 "start": 6,
@@ -1522,7 +1522,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.37906699999985
+        "latencyMs": 4.212616000000253
       },
       "split": "development",
       "metrics": {
@@ -1592,7 +1592,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.366048000000319
+        "latencyMs": 4.289553999999953
       },
       "split": "development",
       "metrics": {
@@ -1654,7 +1654,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.284062999999605
+        "latencyMs": 4.89608300000009
       },
       "split": "development",
       "metrics": {
@@ -2001,7 +2001,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 6.588626000000204
+        "latencyMs": 7.161417000000256
       },
       "split": "development",
       "metrics": {
@@ -2053,7 +2053,7 @@
             "replacements": [
               "show"
             ],
-            "explanation": "The head of the subject is “controls”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+            "explanation": "The subject headed by “controls” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
             "edits": [
               {
                 "start": 13,
@@ -2071,7 +2071,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.7477600000001985
+        "latencyMs": 4.270204000000376
       },
       "split": "development",
       "metrics": {
@@ -2123,7 +2123,7 @@
             "replacements": [
               "is"
             ],
-            "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “is” instead of “are”.",
+            "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “is” instead of “are”.",
             "edits": [
               {
                 "start": 25,
@@ -2141,7 +2141,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.232636000000184
+        "latencyMs": 4.405217999999877
       },
       "split": "development",
       "metrics": {
@@ -2193,7 +2193,7 @@
             "replacements": [
               "is"
             ],
-            "explanation": "The head of the subject is “concentration”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+            "explanation": "The subject headed by “concentration” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
             "edits": [
               {
                 "start": 37,
@@ -2211,7 +2211,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.999923000000308
+        "latencyMs": 6.836223999999675
       },
       "split": "development",
       "metrics": {
@@ -2263,7 +2263,7 @@
             "replacements": [
               "were"
             ],
-            "explanation": "The head of the subject is “explanations”, which is plural. The noun phrase introduced by “there” controls agreement. Use “were” instead of “was”.",
+            "explanation": "The subject headed by “explanations” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “were” instead of “was”.",
             "edits": [
               {
                 "start": 6,
@@ -2281,7 +2281,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.499894999999924
+        "latencyMs": 3.739328999999998
       },
       "split": "development",
       "metrics": {
@@ -2351,7 +2351,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.960323000000244
+        "latencyMs": 3.924779999999828
       },
       "split": "development",
       "metrics": {
@@ -2560,7 +2560,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 5.511402999999973
+        "latencyMs": 5.4178139999999075
       },
       "split": "development",
       "metrics": {
@@ -2620,7 +2620,7 @@
             "replacements": [
               "show"
             ],
-            "explanation": "The head of the subject is “results”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+            "explanation": "The subject headed by “results” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
             "edits": [
               {
                 "start": 15,
@@ -2655,7 +2655,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 5.492734999999811
+        "latencyMs": 5.703937999999653
       },
       "split": "development",
       "metrics": {
@@ -2766,7 +2766,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 4.931333999999879
+        "latencyMs": 4.805106000000251
       },
       "split": "development",
       "metrics": {
@@ -2899,7 +2899,7 @@
           }
         ],
         "discardedLints": [],
-        "latencyMs": 8.595098000000235
+        "latencyMs": 7.696778999999879
       },
       "split": "development",
       "metrics": {
@@ -3010,7 +3010,7 @@
           }
         ],
         "discardedLints": [],
-        "latencyMs": 7.113871999999901
+        "latencyMs": 6.592254000000139
       },
       "split": "development",
       "metrics": {
@@ -3066,7 +3066,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.817651999999725
+        "latencyMs": 4.39081699999997
       },
       "split": "development",
       "metrics": {
@@ -3122,7 +3122,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 5.113219999999728
+        "latencyMs": 4.9508459999997285
       },
       "split": "development",
       "metrics": {
@@ -3178,7 +3178,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.75832599999967
+        "latencyMs": 3.546175999999832
       },
       "split": "development",
       "metrics": {
@@ -3234,7 +3234,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.907583000000159
+        "latencyMs": 4.1116540000002715
       },
       "split": "development",
       "metrics": {
@@ -3267,7 +3267,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.394060000000081
+        "latencyMs": 4.395183000000088
       },
       "split": "development",
       "metrics": {
@@ -3300,7 +3300,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.6982550000002448
+        "latencyMs": 4.174938999999995
       },
       "split": "development",
       "metrics": {
@@ -3333,7 +3333,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.127375999999913
+        "latencyMs": 4.3281120000001465
       },
       "split": "development",
       "metrics": {
@@ -3366,7 +3366,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.9803830000000744
+        "latencyMs": 4.14182000000028
       },
       "split": "development",
       "metrics": {
@@ -3399,7 +3399,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.5066360000000714
+        "latencyMs": 3.6697739999999612
       },
       "split": "development",
       "metrics": {
@@ -3432,7 +3432,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.9661019999998643
+        "latencyMs": 4.300189000000046
       },
       "split": "development",
       "metrics": {
@@ -3465,7 +3465,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.367554000000382
+        "latencyMs": 3.3470149999998284
       },
       "split": "development",
       "metrics": {
@@ -3498,7 +3498,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.031590000000051
+        "latencyMs": 3.9380200000000514
       },
       "split": "development",
       "metrics": {
@@ -3531,7 +3531,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.382282000000032
+        "latencyMs": 4.348462999999811
       },
       "split": "development",
       "metrics": {
@@ -3564,7 +3564,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 5.003713999999945
+        "latencyMs": 4.762359999999717
       },
       "split": "development",
       "metrics": {
@@ -3597,7 +3597,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.736088999999993
+        "latencyMs": 4.476355999999669
       },
       "split": "development",
       "metrics": {
@@ -3630,7 +3630,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.581042999999681
+        "latencyMs": 4.526912999999695
       },
       "split": "development",
       "metrics": {
@@ -3663,7 +3663,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.8232249999996384
+        "latencyMs": 3.420705999999882
       },
       "split": "development",
       "metrics": {
@@ -3696,7 +3696,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.7530179999998836
+        "latencyMs": 3.7763960000002044
       },
       "split": "development",
       "metrics": {
@@ -3777,7 +3777,7 @@
             "reason": "legitimate-repetition"
           }
         ],
-        "latencyMs": 4.0128420000000915
+        "latencyMs": 3.896027000000231
       },
       "split": "development",
       "metrics": {
@@ -3810,7 +3810,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 5.336107999999967
+        "latencyMs": 4.974712000000181
       },
       "split": "development",
       "metrics": {
@@ -3862,7 +3862,7 @@
             "replacements": [
               "does"
             ],
-            "explanation": "The head of the subject is “She”, which is singular. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
+            "explanation": "The subject headed by “She” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “does” instead of “do”.",
             "edits": [
               {
                 "start": 4,
@@ -3930,7 +3930,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 3.680729000000156
+        "latencyMs": 3.6317760000001726
       },
       "split": "regression",
       "metrics": {
@@ -4053,7 +4053,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 3.8248469999998633
+        "latencyMs": 3.7620529999999235
       },
       "split": "regression",
       "metrics": {
@@ -4178,7 +4178,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 4.247087000000192
+        "latencyMs": 4.350075000000288
       },
       "split": "regression",
       "metrics": {
@@ -4279,7 +4279,7 @@
           }
         ],
         "discardedLints": [],
-        "latencyMs": 3.5135959999997795
+        "latencyMs": 3.914694999999938
       },
       "split": "regression",
       "metrics": {
@@ -4436,7 +4436,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 4.186856999999691
+        "latencyMs": 4.5892979999998715
       },
       "split": "regression",
       "metrics": {
@@ -4544,7 +4544,7 @@
           }
         ],
         "discardedLints": [],
-        "latencyMs": 4.024229999999989
+        "latencyMs": 4.075567999999748
       },
       "split": "regression",
       "metrics": {
@@ -4667,7 +4667,7 @@
           }
         ],
         "discardedLints": [],
-        "latencyMs": 5.144799000000148
+        "latencyMs": 5.248057000000244
       },
       "split": "regression",
       "metrics": {
@@ -4805,7 +4805,7 @@
           }
         ],
         "discardedLints": [],
-        "latencyMs": 4.722737999999936
+        "latencyMs": 5.124689999999646
       },
       "split": "regression",
       "metrics": {
@@ -4982,7 +4982,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 4.492208000000119
+        "latencyMs": 4.913788999999724
       },
       "split": "regression",
       "metrics": {
@@ -5034,7 +5034,7 @@
             "replacements": [
               "is"
             ],
-            "explanation": "The head of the subject is “She”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+            "explanation": "The subject headed by “She” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
             "edits": [
               {
                 "start": 4,
@@ -5135,7 +5135,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 10.401957000000039
+        "latencyMs": 3.6674400000001697
       },
       "split": "regression",
       "metrics": {
@@ -5299,7 +5299,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 3.6257559999999103
+        "latencyMs": 3.717224999999871
       },
       "split": "regression",
       "metrics": {
@@ -5435,7 +5435,7 @@
             "reason": "dictionary-term"
           }
         ],
-        "latencyMs": 12.95893100000012
+        "latencyMs": 12.753013999999894
       },
       "split": "regression",
       "metrics": {
@@ -5673,7 +5673,7 @@
             "reason": "dictionary-term"
           }
         ],
-        "latencyMs": 7.34443199999987
+        "latencyMs": 7.100704999999834
       },
       "split": "regression",
       "metrics": {
@@ -5754,7 +5754,7 @@
             "reason": "dictionary-term"
           }
         ],
-        "latencyMs": 4.04619300000013
+        "latencyMs": 3.847013000000061
       },
       "split": "regression",
       "metrics": {
@@ -5787,7 +5787,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 13.849171000000297
+        "latencyMs": 13.72579900000028
       },
       "dialect": "UK",
       "split": "regression",
@@ -5821,7 +5821,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 10.772989000000052
+        "latencyMs": 9.723071000000346
       },
       "split": "regression",
       "metrics": {
@@ -5854,7 +5854,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.54696100000001
+        "latencyMs": 4.669659000000138
       },
       "split": "regression",
       "metrics": {
@@ -5887,7 +5887,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.565783999999894
+        "latencyMs": 3.4381130000001576
       },
       "split": "regression",
       "metrics": {
@@ -5920,7 +5920,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.439423000000261
+        "latencyMs": 3.5504430000000866
       },
       "split": "regression",
       "metrics": {
@@ -5953,7 +5953,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.6827619999999115
+        "latencyMs": 3.636533000000327
       },
       "split": "regression",
       "metrics": {
@@ -5986,7 +5986,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.24718699999994
+        "latencyMs": 3.753551000000243
       },
       "split": "regression",
       "metrics": {
@@ -6038,7 +6038,7 @@
             "replacements": [
               "indicate"
             ],
-            "explanation": "The head of the subject is “findings”, which is plural. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
+            "explanation": "The subject headed by “findings” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
             "edits": [
               {
                 "start": 13,
@@ -6056,7 +6056,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.6093009999999595
+        "latencyMs": 3.497472000000016
       },
       "split": "held-out",
       "metrics": {
@@ -6108,7 +6108,7 @@
             "replacements": [
               "was"
             ],
-            "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “was” instead of “were”.",
+            "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “was” instead of “were”.",
             "edits": [
               {
                 "start": 21,
@@ -6126,7 +6126,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.798826999999619
+        "latencyMs": 3.601709999999912
       },
       "split": "held-out",
       "metrics": {
@@ -6178,7 +6178,7 @@
             "replacements": [
               "is"
             ],
-            "explanation": "The head of the subject is “size”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+            "explanation": "The subject headed by “size” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
             "edits": [
               {
                 "start": 28,
@@ -6196,7 +6196,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.818116999999802
+        "latencyMs": 3.7354629999999815
       },
       "split": "held-out",
       "metrics": {
@@ -6248,7 +6248,7 @@
             "replacements": [
               "are"
             ],
-            "explanation": "The head of the subject is “limitations”, which is plural. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
+            "explanation": "The subject headed by “limitations” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
             "edits": [
               {
                 "start": 6,
@@ -6266,7 +6266,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.881814000000304
+        "latencyMs": 3.380023999999594
       },
       "split": "held-out",
       "metrics": {
@@ -6336,7 +6336,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.4932050000002164
+        "latencyMs": 3.8160649999999805
       },
       "split": "held-out",
       "metrics": {
@@ -6398,7 +6398,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.5995560000001205
+        "latencyMs": 3.5694210000001476
       },
       "split": "held-out",
       "metrics": {
@@ -6480,7 +6480,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.392841999999746
+        "latencyMs": 3.355917999999747
       },
       "split": "held-out",
       "metrics": {
@@ -6542,7 +6542,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.832249000000047
+        "latencyMs": 3.7888840000000528
       },
       "split": "held-out",
       "metrics": {
@@ -6604,7 +6604,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.6971840000001066
+        "latencyMs": 3.754591999999775
       },
       "split": "held-out",
       "metrics": {
@@ -6713,7 +6713,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 3.911728999999923
+        "latencyMs": 3.7263889999999265
       },
       "split": "held-out",
       "metrics": {
@@ -6824,7 +6824,7 @@
             "reason": "custom-rule-overlap"
           }
         ],
-        "latencyMs": 3.526275000000169
+        "latencyMs": 3.669623000000229
       },
       "split": "held-out",
       "metrics": {
@@ -6914,7 +6914,7 @@
           }
         ],
         "discardedLints": [],
-        "latencyMs": 11.079823999999917
+        "latencyMs": 11.099237999999787
       },
       "split": "held-out",
       "metrics": {
@@ -6947,7 +6947,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.876043999999638
+        "latencyMs": 3.4281270000001314
       },
       "split": "held-out",
       "metrics": {
@@ -6980,7 +6980,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.6997769999998127
+        "latencyMs": 4.020696000000044
       },
       "split": "held-out",
       "metrics": {
@@ -7013,7 +7013,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.478001999999833
+        "latencyMs": 3.221965000000182
       },
       "split": "held-out",
       "metrics": {
@@ -7195,7 +7195,7 @@
             "reason": "legitimate-repetition"
           }
         ],
-        "latencyMs": 3.838147999999819
+        "latencyMs": 3.800550999999814
       },
       "split": "held-out",
       "metrics": {
@@ -7276,7 +7276,7 @@
             "reason": "legitimate-repetition"
           }
         ],
-        "latencyMs": 3.486684999999852
+        "latencyMs": 3.4894509999999173
       },
       "split": "held-out",
       "metrics": {
@@ -7363,7 +7363,7 @@
             "reason": "scientific-vocabulary"
           }
         ],
-        "latencyMs": 6.3338699999999335
+        "latencyMs": 5.603595000000041
       },
       "split": "held-out",
       "metrics": {
@@ -7396,7 +7396,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.030028000000129
+        "latencyMs": 3.9456820000000334
       },
       "split": "held-out",
       "metrics": {
@@ -7429,7 +7429,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.3736290000001645
+        "latencyMs": 4.290735000000041
       },
       "split": "held-out",
       "metrics": {
@@ -7462,7 +7462,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.604583000000275
+        "latencyMs": 3.5619000000001506
       },
       "split": "held-out",
       "metrics": {
@@ -7565,7 +7565,7 @@
             "reason": "measurement-token"
           }
         ],
-        "latencyMs": 5.764247999999952
+        "latencyMs": 5.3240020000002914
       },
       "split": "held-out",
       "metrics": {
@@ -7598,7 +7598,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 5.2616149999998925
+        "latencyMs": 5.302088000000367
       },
       "split": "held-out",
       "metrics": {
@@ -7631,7 +7631,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.5983439999999973
+        "latencyMs": 3.5777740000003178
       },
       "split": "held-out",
       "metrics": {
@@ -7814,7 +7814,7 @@
             "reason": "scientific-vocabulary"
           }
         ],
-        "latencyMs": 14.464523999999983
+        "latencyMs": 13.741473000000042
       },
       "split": "held-out",
       "metrics": {
@@ -7847,7 +7847,7 @@
         "issues": [],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.4609559999998964
+        "latencyMs": 3.447877999999946
       },
       "split": "held-out",
       "metrics": {
@@ -7903,7 +7903,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 4.37730399999964
+        "latencyMs": 7.366067999999814
       },
       "split": "held-out",
       "metrics": {
@@ -7959,7 +7959,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.3966479999999137
+        "latencyMs": 3.795223000000078
       },
       "split": "held-out",
       "metrics": {
@@ -8015,7 +8015,7 @@
         ],
         "rawLints": [],
         "discardedLints": [],
-        "latencyMs": 3.6388159999996788
+        "latencyMs": 3.670144000000164
       },
       "split": "held-out",
       "metrics": {
@@ -8067,7 +8067,7 @@
             "replacements": [
               "suggest"
             ],
-            "explanation": "The head of the subject is “findings”, which is plural. Nouns in intervening phrases do not control this verb. Use “suggest” instead of “suggests”.",
+            "explanation": "The subject headed by “findings” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “suggest” instead of “suggests”.",
             "edits": [
               {
                 "start": 59,
@@ -8152,7 +8152,7 @@
             "reason": "measurement-token"
           }
         ],
-        "latencyMs": 7.904562000000169
+        "latencyMs": 8.489469999999983
       },
       "split": "held-out",
       "metrics": {
@@ -8363,7 +8363,7 @@
             "reason": "scientific-vocabulary"
           }
         ],
-        "latencyMs": 8.565401999999722
+        "latencyMs": 8.122894999999971
       },
       "split": "held-out",
       "metrics": {

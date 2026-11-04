@@ -1,7 +1,7 @@
 {
   "version": 2,
   "label": "improved-paragraph-audit",
-  "sourceCommit": "06de675",
+  "sourceCommit": "31d2e94",
   "dirty": true,
   "environment": {
     "node": "v24.19.0",
@@ -10,11 +10,11 @@
     "harper": "3.0.0"
   },
   "corpusSha": "5f0fed3a20bc67083d209c82b649f0117dcfd05c989994aab8de57fe1486bcc4",
-  "setupMs": 584.6662429999999,
+  "setupMs": 570.288129,
   "memory": {
-    "rss": 501817344,
-    "heapTotal": 62865408,
-    "heapUsed": 33902872,
+    "rss": 505069568,
+    "heapTotal": 64176128,
+    "heapUsed": 43756528,
     "external": 299122779,
     "arrayBuffers": 529571
   },
@@ -41,8 +41,8 @@
       "duplicates": 0,
       "familyCount": 30,
       "familyMacroRecall": 0.75,
-      "latencyMedianMs": 6.471526000000267,
-      "latencyP95Ms": 13.1799689999998
+      "latencyMedianMs": 5.7464560000003075,
+      "latencyP95Ms": 18.82893899999999
     },
     "development": {
       "cases": 0,
@@ -135,8 +135,8 @@
       "duplicates": 0,
       "familyCount": 6,
       "familyMacroRecall": 0.6666666666666666,
-      "latencyMedianMs": 8.645629000000099,
-      "latencyP95Ms": 1246.450773
+      "latencyMedianMs": 14.664052999999967,
+      "latencyP95Ms": 1273.225962
     },
     "verb": {
       "cases": 6,
@@ -160,8 +160,8 @@
       "duplicates": 0,
       "familyCount": 6,
       "familyMacroRecall": 0.8333333333333334,
-      "latencyMedianMs": 9.469086999999945,
-      "latencyP95Ms": 12.361058999999841
+      "latencyMedianMs": 9.602141000000302,
+      "latencyP95Ms": 11.06548500000008
     },
     "control": {
       "cases": 18,
@@ -185,8 +185,8 @@
       "duplicates": 0,
       "familyCount": 18,
       "familyMacroRecall": null,
-      "latencyMedianMs": 5.078944999999749,
-      "latencyP95Ms": 9.175392000000102
+      "latencyMedianMs": 4.400288999999702,
+      "latencyP95Ms": 8.593744999999672
     },
     "held-out-agreement": {
       "cases": 0,
@@ -260,7 +260,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “erythrocytes”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “erythrocytes” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 43,
@@ -363,7 +363,7 @@
           }
         }
       ],
-      "latencyMs": 1246.450773,
+      "latencyMs": 1273.225962,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -426,7 +426,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “distribution”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “distribution” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 60,
@@ -554,7 +554,7 @@
           }
         }
       ],
-      "latencyMs": 13.1799689999998,
+      "latencyMs": 18.82893899999999,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -598,7 +598,7 @@
       "explanation": "Correct the grammatical defect without changing any scientific finding.",
       "issues": [],
       "raw": [],
-      "latencyMs": 8.645629000000099,
+      "latencyMs": 13.338474000000133,
       "detected": false,
       "classified": false,
       "complete": false,
@@ -635,7 +635,7 @@
           "replacements": [
             "suggest"
           ],
-          "explanation": "The head of the subject is “irregularities”, which is plural. Nouns in intervening phrases do not control this verb. Use “suggest” instead of “suggests”.",
+          "explanation": "The subject headed by “irregularities” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “suggest” instead of “suggests”.",
           "edits": [
             {
               "start": 36,
@@ -652,7 +652,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 7.428875999999946,
+      "latencyMs": 14.664052999999967,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -695,7 +695,7 @@
           "replacements": [
             "have"
           ],
-          "explanation": "The head of the subject is “investigators”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
+          "explanation": "The subject headed by “investigators” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
           "edits": [
             {
               "start": 20,
@@ -712,7 +712,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 7.739745999999741,
+      "latencyMs": 9.109141000000363,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -746,7 +746,7 @@
       "explanation": "Correct the grammatical defect without changing any scientific finding.",
       "issues": [],
       "raw": [],
-      "latencyMs": 8.192163000000164,
+      "latencyMs": 6.130364999999983,
       "detected": false,
       "classified": false,
       "complete": false,
@@ -902,7 +902,7 @@
           }
         }
       ],
-      "latencyMs": 12.361058999999841,
+      "latencyMs": 11.06548500000008,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1092,7 +1092,7 @@
           }
         }
       ],
-      "latencyMs": 11.79174600000033,
+      "latencyMs": 10.002717000000303,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1178,7 +1178,7 @@
           }
         }
       ],
-      "latencyMs": 9.469086999999945,
+      "latencyMs": 9.602141000000302,
       "detected": false,
       "classified": false,
       "complete": false,
@@ -1278,7 +1278,7 @@
           }
         }
       ],
-      "latencyMs": 8.342801000000236,
+      "latencyMs": 6.726219000000128,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1321,7 +1321,7 @@
           "replacements": [
             "have been prepared"
           ],
-          "explanation": "The head of the subject is “vesicles”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
+          "explanation": "The subject headed by “vesicles” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
           "edits": [
             {
               "start": 13,
@@ -1345,7 +1345,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 6.4163220000000365,
+      "latencyMs": 5.3479630000001634,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1405,7 +1405,7 @@
         }
       ],
       "raw": [],
-      "latencyMs": 7.691522999999961,
+      "latencyMs": 5.967440999999781,
       "detected": true,
       "classified": true,
       "complete": true,
@@ -1525,7 +1525,7 @@
           }
         }
       ],
-      "latencyMs": 5.335272999999688,
+      "latencyMs": 4.562042999999903,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -1685,7 +1685,7 @@
           }
         }
       ],
-      "latencyMs": 6.2017470000000685,
+      "latencyMs": 5.7464560000003075,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -1724,7 +1724,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.430762999999843,
+      "latencyMs": 4.274508999999853,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -1752,7 +1752,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.899503000000095,
+      "latencyMs": 4.297463000000334,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -1780,7 +1780,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.697407000000112,
+      "latencyMs": 4.058501999999862,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -1808,7 +1808,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.077667999999903,
+      "latencyMs": 4.506919999999809,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -1896,7 +1896,7 @@
           }
         }
       ],
-      "latencyMs": 4.405975000000126,
+      "latencyMs": 4.102147999999943,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2054,7 +2054,7 @@
           }
         }
       ],
-      "latencyMs": 5.078944999999749,
+      "latencyMs": 4.342129999999997,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2134,7 +2134,7 @@
           }
         }
       ],
-      "latencyMs": 4.9013059999997495,
+      "latencyMs": 4.1011060000000725,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2162,7 +2162,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.066391000000294,
+      "latencyMs": 4.400288999999702,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2190,7 +2190,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.171045000000049,
+      "latencyMs": 3.8889250000001994,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2218,7 +2218,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.684918999999809,
+      "latencyMs": 3.8831060000002253,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2246,7 +2246,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 4.471234000000095,
+      "latencyMs": 4.271393999999873,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2360,7 +2360,7 @@
           }
         }
       ],
-      "latencyMs": 6.471526000000267,
+      "latencyMs": 6.523742000000311,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2388,7 +2388,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 5.641948000000411,
+      "latencyMs": 5.453262999999879,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2541,7 +2541,7 @@
           }
         }
       ],
-      "latencyMs": 9.175392000000102,
+      "latencyMs": 8.593744999999672,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2569,7 +2569,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 8.019750999999815,
+      "latencyMs": 5.530068999999912,
       "detected": false,
       "classified": false,
       "complete": true,
@@ -2597,7 +2597,7 @@
       "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements.",
       "issues": [],
       "raw": [],
-      "latencyMs": 7.699094999999943,
+      "latencyMs": 5.765976000000137,
       "detected": false,
       "classified": false,
       "complete": true,

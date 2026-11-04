@@ -1,5 +1,5 @@
 {
-  "commit": "06de675",
+  "commit": "31d2e94",
   "harper": "3.0.0",
   "rows": [
     {
@@ -2771,7 +2771,7 @@
           "replacements": [
             "show"
           ],
-          "explanation": "The head of the subject is “reagents”, which is plural. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
+          "explanation": "The subject headed by “reagents” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “show” instead of “shows”.",
           "edits": [
             {
               "start": 13,
@@ -3707,7 +3707,7 @@
           "replacements": [
             "indicate"
           ],
-          "explanation": "The head of the subject is “results”, which is plural. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
+          "explanation": "The subject headed by “results” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “indicate” instead of “indicates”.",
           "edits": [
             {
               "start": 12,
@@ -4643,7 +4643,7 @@
           "replacements": [
             "is"
           ],
-          "explanation": "The head of the subject is “effect”, which is singular. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
+          "explanation": "The subject headed by “effect” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “is” instead of “are”.",
           "edits": [
             {
               "start": 30,
@@ -5579,7 +5579,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “concentrations”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “concentrations” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 27,
@@ -6587,7 +6587,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “Each”, which is singular. “Each/every” controls singular agreement. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “Each” takes singular agreement here. “Each/every” controls singular agreement. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 20,
@@ -7523,7 +7523,7 @@
           "replacements": [
             "are"
           ],
-          "explanation": "The head of the subject is “explanations”, which is plural. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
+          "explanation": "The subject headed by “explanations” takes plural agreement here. The noun phrase introduced by “there” controls agreement. Use “are” instead of “is”.",
           "edits": [
             {
               "start": 6,
@@ -8459,7 +8459,7 @@
           "replacements": [
             "was"
           ],
-          "explanation": "The head of the subject is “expression”, which is singular. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
+          "explanation": "The subject headed by “expression” takes singular agreement here. Nouns in intervening phrases do not control this verb. Use “was” instead of “were”.",
           "edits": [
             {
               "start": 30,
@@ -9395,7 +9395,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “samples”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “samples” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 32,
@@ -14259,7 +14259,7 @@
           "replacements": [
             "have"
           ],
-          "explanation": "The head of the subject is “researchers”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
+          "explanation": "The subject headed by “researchers” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”.",
           "edits": [
             {
               "start": 16,
@@ -17067,7 +17067,7 @@
           "replacements": [
             "were"
           ],
-          "explanation": "The head of the subject is “cells”, which is plural. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "explanation": "The subject headed by “cells” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
           "edits": [
             {
               "start": 10,
@@ -18939,7 +18939,7 @@
           "replacements": [
             "have been analyzed"
           ],
-          "explanation": "The head of the subject is “reagents”, which is plural. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
+          "explanation": "The subject headed by “reagents” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “have” instead of “has”. This passive auxiliary chain requires the past participle.",
           "edits": [
             {
               "start": 13,
@@ -19882,7 +19882,7 @@
           "replacements": [
             "depend on"
           ],
-          "explanation": "The head of the subject is “signals”, which is plural. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
+          "explanation": "The subject headed by “signals” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “depend” instead of “depends”. Forms of “depend” normally take “on”.",
           "edits": [
             {
               "start": 12,
