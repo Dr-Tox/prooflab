@@ -97,6 +97,8 @@ it("matches fresh full-document results through edits, Unicode, rules, dictionar
     "😀 The samples that we collected was analyzed.",
     "😀 The samples that we collected was analyzed.",
     "😀 The samples that we collected were analyzed.",
+    "The reagents has been analyze.",
+    "The reagents has been analyze.",
     "We have monitored the cultures since two hours.",
     "The potential was −3.2 mV.",
   ]) {

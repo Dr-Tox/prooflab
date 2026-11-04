@@ -77,3 +77,9 @@ Edit-start DOM positions use forward affinity at text-node boundaries; edit ends
 Native block-based editor input is canonicalized by `normalizeEditorLines` before the text reaches the worker: structural DIV/P/BR boundaries become LF text nodes, inline wrappers survive, and temporary selection bookmarks are removed synchronously. Plain-text offsets, rich correction ranges and benchmark paragraph strings therefore use the same representation. No document or temporal graph is persisted by this layer.
 
 `benchmark/tense/` is the first-class temporal evaluation and CI regression contract. Auxiliary-form scores, temporal warnings, complete corrections, valid mixed-tense controls and surface meaning invariants have independent denominators. Historical first-pass results and the old v2 safety tradeoff remain visible.
+
+## V3 scheduling decision
+
+Full-document analysis remains authoritative. The transport holds one active analysis and only the latest queued request, resolving displaced requests as superseded without publishing an empty result. The worker and Harper instance are reused. Exact text/settings/dictionary matches may reuse one bounded result with the current revision; any changed input, mapping uncertainty or limit overflow uses full analysis. Development raw diagnostics deliberately bypass result reuse. Native configuration setters run only when configuration/dialect changes. Cached/uncached real-engine equivalence tests cover Unicode, scientific notation, atomic edits, review warnings and configuration changes. No segmentation-independence assumption is made.
+
+Undo and redo share bounded snapshots of text, HTML and caret; a new edit clears redo. Candidate hosting uses a separate origin, isolating local storage and service workers from the stable GitHub Pages origin.

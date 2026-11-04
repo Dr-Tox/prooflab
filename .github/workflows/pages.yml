@@ -27,6 +27,8 @@ jobs:
         run: npm run benchmark:v2
       - name: Measure dedicated temporal-context and tense-aspect corpus
         run: npm run benchmark:tense -- --check
+      - name: Check v3 scientific paragraphs
+        run: npm run benchmark:v3
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e

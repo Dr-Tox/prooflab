@@ -151,3 +151,47 @@ Temporal audit: median **3.96 ms**, p95 **7.27 ms**, maximum **1200 ms**; setup 
 These are Node/WASM/harness observations, including cold outliers and retained diagnostics, not isolated browser memory, a speedup guarantee or a Word comparison. The section/temporal graph is a bounded deterministic analyzer, not a general dependency parser or scientific chronology validator.
 
 Modified implementation: `linguistics/verbChain.ts`, `temporalFrames.ts`, `temporal.ts`; form/grammar orchestration and native conflict policy; editor normalization; dedicated unit/browser tests; frozen temporal corpora, raw reports, scorer/CI gate and documentation. All document processing remains local and optional persistence remains opt-in.
+
+## V3 release candidate: focused safety and full-document efficiency
+
+Option B was selected: optimized full-document scheduling with a bounded exact-input cache. Incremental segmentation was not justified: Harper, scientific consistency and temporal references have unresolved cross-segment dependencies. There is no partial diagnostic reuse; changed text/settings/dictionaries always use full analysis.
+
+The known harmful `microbeads` replacements are blocked by original curated material vocabulary with regular plurals. Scientific spelling detection remains active. Bounded object-relative parsing and audited laboratory verb paradigms address previously recorded misses without guessing arbitrary unknown verbs. Context-dependent tense changes remain review-only. Undo/redo preserve formatting and revisions.
+
+### Measured performance
+
+Three repetitions per size/mode; milliseconds are median (min–max). Synthetic load fixtures reuse existing scientific prose and are not a new linguistic corpus.
+
+| Approx. words |          Previous full |  V3 full, changed text | Previous repeated text |  V3 exact repeat |
+| ------------- | ---------------------: | ---------------------: | ---------------------: | ---------------: |
+| 1,000         |    32.19 (29.85–35.43) |    34.61 (33.32–40.32) |    28.51 (26.51–30.02) | 0.02 (0.02–0.04) |
+| 5,000         | 167.94 (166.15–169.49) | 174.32 (172.78–174.82) | 163.83 (163.19–166.28) | 0.02 (0.02–0.03) |
+| 10,000        | 431.95 (428.79–434.69) | 440.88 (439.96–442.55) | 425.25 (421.19–435.37) | 0.02 (0.02–0.04) |
+
+Full-document work is **not materially faster**; the useful saving is skipping identical text/configuration requests such as formatting-only changes. The probe has 50% exact repeats by construction, not a predicted hit rate for normal typing. Native configuration updates drop from every analysis to one in the measured v3 session. The bounded queue posts two requests in a three-request stress case, explicitly superseding the middle request.
+
+| Browser measurement                 |               Previous |                     V3 |
+| ----------------------------------- | ---------------------: | ---------------------: |
+| 1,000 words: changed worker reply   |  42.80 (33.90–1634.10) |  29.90 (29.60–1303.90) |
+| 1,000 words: main-thread task time  |    11.55 (10.79–32.74) |     10.99 (9.18–23.30) |
+| 1,000 words: whole-browser CPU      | 100.00 (80.00–1530.00) |  70.00 (60.00–1400.00) |
+| 5,000 words: changed worker reply   | 160.70 (159.70–176.70) | 167.60 (164.30–169.80) |
+| 5,000 words: main-thread task time  |    29.26 (22.19–31.41) |    31.47 (29.23–32.22) |
+| 5,000 words: whole-browser CPU      | 210.00 (210.00–260.00) | 230.00 (230.00–230.00) |
+| 10,000 words: changed worker reply  | 423.60 (417.40–425.00) | 407.10 (404.20–409.50) |
+| 10,000 words: main-thread task time |    38.98 (38.27–40.53) |    37.44 (35.59–45.50) |
+| 10,000 words: whole-browser CPU     | 510.00 (500.00–530.00) | 480.00 (470.00–500.00) |
+
+Previous Node retained-process RSS range: 461.2–526.8 MiB. Browser main-frame heap range: 4.1–17.3 MiB.
+
+V3 Node retained-process RSS range: 459.1–483.3 MiB. Browser main-frame heap range: 4.1–30.1 MiB.
+
+Browser maximum observed animation-frame gaps: baseline 33.3 ms, v3 16.8 ms. These are small-sample observations, not mobile hardware guarantees. Main-frame heap excludes WASM; Node RSS includes the harness/WASM and GC variation. No memory reduction is claimed.
+
+Startup (one cold load followed by two warm reloads): baseline 965 ms, 839 ms, 823 ms; v3 935 ms, 833 ms, 821 ms.
+
+The one-entry cache caps text at 128k characters, key at 64k, findings at 1,000 and result text at 256k characters; development diagnostics and mapping failures bypass it. Undo/redo retain a combined bounded history. No worker restarts, manuscript persistence or telemetry were added. Raw CPU, memory, startup, frame gaps and timing samples are in `benchmark/v3/reports/`.
+
+### Quality and release validation
+
+The four new, post-development scientific paragraphs detect and fully correct both annotated errors (2/2), with zero findings on the two correct controls. Review-only warnings do not count as corrections. The original benchmark reports remain historical; current corpus evaluations are regression audits. Unknown predicates, deeper relative clauses, arbitrary temporal interpretation and scientific truth remain limitations. No Word comparison was performed.
