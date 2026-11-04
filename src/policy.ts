@@ -117,7 +117,13 @@ export function createScientificPolicy(
     }
     if (
       !i.notationOnly &&
-      measurements.some((r) => contained(i, r)) &&
+      measurements.some(
+        (r) =>
+          contained(i, r) ||
+          (i.start >= r.start &&
+            i.end === r.end + 1 &&
+            text.slice(r.end, i.end) === "."),
+      ) &&
       (i.category === "Spelling" || i.rule.startsWith("Expand"))
     )
       return { reason: "measurement-token" };
@@ -224,6 +230,29 @@ export function aggregateIssues(issues: Issue[]): Issue[] {
           candidate.rule,
         ]),
       ];
+      continue;
+    }
+    // A modal/base-verb diagnosis owns its auxiliary construction. Native
+    // adjective/passive interpretations are mutually exclusive alternatives,
+    // even when their smaller spans do not touch the lexical-verb edit.
+    const modalOwner = out.find(
+      (i) =>
+        i.sources?.includes("Verb forms") &&
+        candidate.start >= i.start &&
+        candidate.end <= i.end &&
+        (candidate.rule === "ModalBeAdjective" ||
+          /^(?:Will|Would|Can|Could|May|Might|Must|Shall|Should)NonLemma$/.test(
+            candidate.rule,
+          )),
+    );
+    if (modalOwner) {
+      modalOwner.sources = [
+        ...new Set([
+          ...(modalOwner.sources ?? [modalOwner.rule]),
+          candidate.rule,
+        ]),
+      ];
+      modalOwner.alternativesConflict ||= candidate.replacements.length > 0;
       continue;
     }
     const owner = out.find(

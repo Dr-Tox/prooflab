@@ -23,6 +23,8 @@ jobs:
       - run: npm test
       - name: Measure development and regression corpus
         run: npm run benchmark -- --label ci --splits development,regression
+      - name: Measure frozen v2 agreement and tense corpus
+        run: npm run benchmark:v2
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e

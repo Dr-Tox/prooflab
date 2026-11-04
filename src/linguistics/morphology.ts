@@ -72,6 +72,7 @@ function regularForms(base: string): Verb {
 }
 for (const base of regular) verbs.push(regularForms(base));
 for (const row of [
+  "control,controls,controlled,controlled,controlling",
   "be,is,was,been,being",
   "have,has,had,had,having",
   "do,does,did,done,doing",

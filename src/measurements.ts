@@ -5,7 +5,7 @@ const numberExpression =
   "[−-]?\\d+(?:\\.\\d+)?(?:[eE][−+-]?\\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+)?(?:[ \\u00a0]*[×·][ \\u00a0]*10(?:\\^[−+-]?\\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+))?";
 export function measurementSpans(text: string) {
   const exponent = "(?:\\^[−-]?\\d+|[⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]+)?";
-  return [
+  const ordinary = [
     ...text.matchAll(
       new RegExp(
         `${numberExpression}[ \\u00a0]*${units}${exponent}(?:(?:[/*·]|[ \\u00a0]+)${units}${exponent})*(?![\\p{L}\\p{N}_])`,
@@ -13,10 +13,23 @@ export function measurementSpans(text: string) {
       ),
     ),
   ].map((m) => ({ start: m.index!, end: m.index! + m[0].length, text: m[0] }));
+  const relativeForce = [
+    ...text.matchAll(/[−-]?\d+(?:,\d{3})*(?:\.\d+)?[ \u00a0]*×[ \u00a0]*g\b/gu),
+  ].map((m) => ({
+    start: m.index!,
+    end: m.index! + m[0].length,
+    text: m[0],
+    relativeForce: true,
+  }));
+  return [
+    ...ordinary.map((m) => ({ ...m, relativeForce: false })),
+    ...relativeForce,
+  ];
 }
 export function measurementIssues(text: string, s: Settings) {
   const out = [];
   for (const m of measurementSpans(text)) {
+    if (m.relativeForce) continue; // Relative centrifugal force is a protected lab convention.
     const value = new RegExp(
       `^(${numberExpression})([ \\u00a0]*)(.*)$`,
       "u",

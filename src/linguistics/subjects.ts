@@ -88,7 +88,19 @@ export function subject(t: Token[]): Subject | undefined {
   for (let i = start + (head ? 1 : 0); i < t.length; i++) {
     const tok = t[i],
       w = tok.lower;
-    if (w === "to" || w === "its") return;
+    if (
+      [
+        "to",
+        "its",
+        "as",
+        "along",
+        "together",
+        "except",
+        "including",
+        "excluding",
+      ].includes(w)
+    )
+      return;
     if (/[.!?;,:]/.test(tok.word)) return;
     if (["or", "nor", "whose", "whom", "which"].includes(w)) return;
     if (w === "that" || w === "who") {
@@ -121,6 +133,19 @@ export function subject(t: Token[]): Subject | undefined {
       continue;
     }
     if (finiteCandidate(tok) && head) {
+      // Ambiguous noun/verb (e.g. “negative control was”, “records were”):
+      // a following finite auxiliary supplies the predicate boundary.
+      if (
+        verb(w) &&
+        !["be", "have", "do"].includes(verb(w)!.base) &&
+        ["is", "are", "was", "were", "has", "have", "had"].includes(
+          t[i + 1]?.lower,
+        )
+      ) {
+        if (!inPP && !quantified && (!pronouns[initial] || coordinated))
+          head = tok;
+        continue;
+      }
       if (
         inPP &&
         (prepositions.has(t[i - 1]?.lower) ||

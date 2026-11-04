@@ -5,7 +5,7 @@ import {
   type Issue,
   type TextEdit,
 } from "../model";
-import { tokenize, verb, type Token } from "./morphology";
+import { tokenize, verb, modals, type Token } from "./morphology";
 import { subject } from "./subjects";
 import { verbFindings } from "./verbs";
 function clauses(text: string): Token[][] {
@@ -113,9 +113,10 @@ export function analyzeClauses(text: string, settings: Settings): Issue[] {
         );
     if (edits.length) {
       const sorted = edits.sort((a, b) => a.start - b.start);
-      const start = sources.includes("Dependent preposition")
-          ? Math.min(v.start, sorted[0].start)
-          : sorted[0].start,
+      const start =
+          sources.includes("Dependent preposition") || modals.has(v.lower)
+            ? Math.min(v.start, sorted[0].start)
+            : sorted[0].start,
         end = sorted.at(-1)!.end;
       let replacement = text.slice(start, end);
       for (const e of [...sorted].reverse())

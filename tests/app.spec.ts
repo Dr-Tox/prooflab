@@ -481,6 +481,7 @@ test("v2 atomic verb corrections preserve Unicode, rich formatting, dismissal an
   const paragraph =
     "The samples were centrifuged at 3,000 × g. The supernatant was collected after centrifugation. Previous studies have reported similar findings. These findings suggest that exposure may affect metabolism. ";
   await write(page, paragraph.repeat(30) + "The signals depends of time.");
+  await page.locator(".mark").filter({ hasText: "depends of" }).click();
   await page.getByRole("button", { name: "depend on ↵", exact: true }).click();
   await expect(editor).toHaveText(
     paragraph.repeat(30) + "The signals depend on time.",

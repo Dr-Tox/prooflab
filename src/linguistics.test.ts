@@ -12,6 +12,10 @@ const engine = new Proofreader(linter, { diagnostics: true });
 beforeAll(() => engine.initialize(), 30000);
 afterAll(() => linter.dispose());
 const pairs = [
+  [
+    "The researchers will analyzed the samples.",
+    "The researchers will analyze the samples.",
+  ],
   ["The reagents shows instability.", "The reagents show instability."],
   [
     "The concentrations of PFAS was measured.",
@@ -79,6 +83,11 @@ it.each(pairs)(
   },
 );
 it.each([
+  "The negative control was measured.",
+  "The results as well as the effect are unknown.",
+  "The results along with the effect are unknown.",
+  "The treated control was analyzed.",
+  "The quality control was completed.",
   "A series of experiments was conducted.",
   "A number of samples were excluded.",
   "The data are consistent with the hypothesis.",
@@ -153,4 +162,40 @@ it("keeps v2 references frozen", () => {
   expect(frozen.counts.agreement).toBeGreaterThanOrEqual(100);
   expect(frozen.counts.verb).toBeGreaterThanOrEqual(100);
   expect(frozen.counts.control).toBeGreaterThanOrEqual(100);
+});
+
+it("keeps independent lexical findings inside a modal span", async () => {
+  const text = "The researchers will usefull collected the samples.";
+  const findings = await engine.analyze(text, defaults(), seedWords, 1);
+  expect(
+    findings.some((i) => i.category === "Spelling" && i.original === "usefull"),
+  ).toBe(true);
+});
+
+it("protects relative centrifugal force and sentence-final measurement punctuation narrowly", async () => {
+  for (const text of [
+    "The samples were centrifuged at 3,000 × g.",
+    "The potential was −3.2 mV.",
+    "The solution was held at 37 °C.",
+  ]) {
+    expect(await engine.analyze(text, defaults(), seedWords, 1)).toEqual([]);
+  }
+  expect(
+    (
+      await engine.analyze(
+        "We recieved the samples after 30 min.",
+        defaults(),
+        seedWords,
+        1,
+      )
+    ).some((i) => i.category === "Spelling"),
+  ).toBe(true);
+});
+
+it("uses doubled-consonant forms from explicit irregular orthography", () => {
+  const text = "The samples have control the response.";
+  const [i] = analyzeClauses(text, defaults());
+  expect(applyCorrection(text, i, i.replacements[0])).toBe(
+    "The samples have controlled the response.",
+  );
 });
