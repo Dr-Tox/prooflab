@@ -620,3 +620,86 @@ test("v3 scientific safety, object-relative corrections and redo", async ({
   await editor.press("Control+Shift+Z");
   await expect(editor).toContainText("were stored");
 });
+
+test("v3.1 focus mode and keyboard controls preserve editor and review-only safety", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await write(
+    page,
+    "The microbeads that the analyst collected was stored at −80 °C.",
+  );
+  const toggle = page.locator(".focus-toggle");
+  await toggle.focus();
+  await page.keyboard.press("Enter");
+  await expect(toggle).toHaveAttribute("aria-pressed", "true");
+  await expect(
+    page.getByRole("complementary", { name: "Proofreading suggestions" }),
+  ).toBeHidden();
+  await expect(editor).toBeVisible();
+  await page
+    .getByRole("button", { name: "Show suggestions", exact: true })
+    .click();
+  await page.getByRole("button", { name: "were ↵", exact: true }).click();
+  await expect(editor).toContainText("were stored at −80 °C");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await page.getByRole("button", { name: "↷ Redo", exact: true }).click();
+  await expect(editor).toContainText("were stored");
+  await write(page, "Yesterday, we have measured the response by microscopy.");
+  await expect(page.locator(".issue-review .finding-kind")).toHaveText(
+    "Review only",
+  );
+  await expect(page.locator(".replacement")).toHaveCount(0);
+  await page
+    .locator(".issue-review")
+    .getByRole("button", { name: "Dismiss once" })
+    .click();
+  await expect(page.locator(".issue")).toHaveCount(0);
+});
+
+test("v3.1 mobile review tabs preserve formatting, revisions and Undo/Redo", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await editor.evaluate((el) => {
+    el.innerHTML = "🧪 The samples had been <b>store</b> at −80 °C.";
+    el.dispatchEvent(new InputEvent("input", { bubbles: true }));
+  });
+  await expect(
+    page.locator(".mark").filter({ hasText: "store" }),
+  ).toBeVisible();
+  const manuscript = page.getByRole("button", {
+    name: "Manuscript",
+    exact: true,
+  });
+  const suggestions = page
+    .locator(".mobile-switch")
+    .getByRole("button", { name: /Suggestions/ });
+  await suggestions.click();
+  await expect(suggestions).toHaveAttribute("aria-pressed", "true");
+  await expect(editor).toBeHidden();
+  await page.getByRole("button", { name: "stored ↵", exact: true }).click();
+  await manuscript.click();
+  await expect(editor.locator("b")).toHaveText("stored");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor.locator("b")).toHaveText("store");
+  await page.getByRole("button", { name: "↷ Redo", exact: true }).click();
+  await expect(editor.locator("b")).toHaveText("stored");
+  await editor.fill("The results shows instability.");
+  await page.locator(".mark").filter({ hasText: "shows" }).click();
+  await expect(suggestions).toHaveAttribute("aria-pressed", "true");
+  await page.getByRole("button", { name: "show ↵", exact: true }).click();
+  await manuscript.click();
+  await expect(editor).toHaveText("The results show instability.");
+  for (const width of [320, 375, 768, 1280]) {
+    await page.setViewportSize({ width, height: 812 });
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  }
+});

@@ -24,10 +24,18 @@ npm run format:check
 
 Browser tests use the built production application on port 4173. Rebuild after source changes. If using a custom Playwright browser location, set `PLAYWRIGHT_BROWSERS_PATH` consistently for installation and testing.
 
+## v3.1 workspace
+
+Desktop uses a two-column manuscript/review layout; **Focus mode** collapses suggestions. On mobile, use **Manuscript** and **Suggestions** to switch views without replacing the editor or clearing its history. Highlighted findings open the review view. Category filters show counts; review-only cards have no automatic replacement. Expand Rule details for engine identifiers.
+
+Undo: Ctrl/⌘+Z. Redo: Ctrl/⌘+Shift+Z or Ctrl+Y. Bold/italic and correction transactions preserve supported inline formatting. All controls remain keyboard reachable. Local document saving remains opt-in; manuscript content is not part of release metadata or the offline asset cache.
+
+Production builds emit `release.json` with version, Harper version and the GitHub Actions commit SHA, for checking the actual Pages release. Local builds identify their commit as `local` unless `GITHUB_SHA` is supplied.
+
 ## Features
 
 - Real Harper grammar, spelling, punctuation, common word confusion and selected agreement/style rules; all available rule switches are discovered at runtime.
-- Rich editing with bold/italic, plain-text paste, live counts, highlighted review, issue filters, accept/dismiss/undo, and copy text.
+- Rich editing with bold/italic, plain-text paste, live counts, highlighted review, issue filters, accept/dismiss/Undo/Redo, and copy text.
 - Three writing profiles, per-rule overrides, separate ignored words/rules, and manual preferred terminology reviews.
 - Case-sensitive scientific dictionary, TXT/JSON import/export, local IndexedDB persistence.
 - Conservative scientific checks; no automatic correction or scientific validity claims.

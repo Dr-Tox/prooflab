@@ -63,6 +63,8 @@ export default function App() {
     [selected, setSelected] = useState<string | null>(null),
     [filter, setFilter] = useState("All"),
     [tab, setTab] = useState("Editor"),
+    [focusMode, setFocusMode] = useState(false),
+    [mobileReview, setMobileReview] = useState(false),
     [status, setStatus] = useState("Loading local engine…"),
     [notice, setNotice] = useState(""),
     [query, setQuery] = useState(""),
@@ -316,6 +318,8 @@ export default function App() {
         onClick={() => {
           setFilter("All");
           setSelected(i.id);
+          setFocusMode(false);
+          setMobileReview(true);
         }}
       >
         {text.slice(i.start, i.end) || "▏"}
@@ -337,7 +341,7 @@ export default function App() {
             }}
           >
             <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" />
-            ProofLab<span>SCIENTIFIC WRITING</span>
+            ProofLab<span>Scientific writing assistant · v3.1</span>
           </a>
           <span className="privacy-pill">
             <span className="dot" />
@@ -350,12 +354,11 @@ export default function App() {
       <main spellCheck={false}>
         <div className="intro">
           <div>
-            <p className="eyebrow">YOUR WORDS. YOUR DEVICE.</p>
-            <h1>Clarity for your next discovery.</h1>
-            <p>Thoughtful proofreading for precise scientific writing.</p>
+            <h1>Your manuscript, refined.</h1>
+            <p>Scientific proofreading. Entirely on your device.</p>
           </div>
           <button className="quiet" onClick={() => setTab("Privacy")}>
-            ◈ How your text stays private
+            ◈ Privacy &amp; offline use
           </button>
         </div>
         <nav aria-label="Main navigation">
@@ -363,6 +366,7 @@ export default function App() {
             <button
               key={t}
               className={tab === t ? "nav-active" : ""}
+              aria-current={tab === t ? "page" : undefined}
               onClick={() => setTab(t)}
             >
               {t === "Editor"
@@ -410,12 +414,48 @@ export default function App() {
               </select>
             </label>
           </div>
-          <div className="workspace">
-            <section className="card editor-card">
+          <div className="workspace-controls">
+            <p className="proofreading-status" role="status">
+              <span className="dot" />
+              {enginePhase === "ready" && busy ? "Checking locally…" : status}
+            </p>
+            <button
+              className="focus-toggle"
+              aria-pressed={focusMode}
+              aria-controls="proofreading-panel"
+              onClick={() => setFocusMode((value) => !value)}
+            >
+              {focusMode ? "Show suggestions" : "Focus mode"}
+            </button>
+            <div className="mobile-switch" aria-label="Workspace view">
+              <button
+                aria-pressed={!mobileReview}
+                aria-controls="manuscript-panel"
+                onClick={() => setMobileReview(false)}
+              >
+                Manuscript
+              </button>
+              <button
+                aria-pressed={mobileReview}
+                aria-controls="proofreading-panel"
+                onClick={() => setMobileReview(true)}
+              >
+                Suggestions <span className="count">{active.length}</span>
+              </button>
+            </div>
+          </div>
+          <div
+            className={`workspace ${focusMode ? "focus-mode" : ""} ${mobileReview ? "mobile-review" : ""}`}
+          >
+            <section
+              className="card editor-card"
+              id="manuscript-panel"
+              aria-label="Manuscript editor"
+            >
               <div className="card-heading">
                 <div>
                   <h2>Document editor</h2>
-                  <p>Make room for your ideas.</p>
+                  <p>Write, paste, or format your manuscript.</p>
                 </div>
                 <button className="quiet" onClick={() => changeText(example)}>
                   Try an example
@@ -553,7 +593,11 @@ export default function App() {
                 </div>
               )}
             </section>
-            <aside className="card analysis">
+            <aside
+              className="card analysis"
+              id="proofreading-panel"
+              aria-label="Proofreading suggestions"
+            >
               <div className="card-heading">
                 <div>
                   <h2>
@@ -562,8 +606,8 @@ export default function App() {
                   </h2>
                   <p>
                     {busy
-                      ? "Checking locally…"
-                      : "A little precision goes a long way."}
+                      ? "Analysis in progress"
+                      : `${active.filter((i) => i.replacements.length > 0).length} with suggestions · ${active.filter((i) => !i.replacements.length).length} review-only`}
                   </p>
                 </div>
               </div>
@@ -572,6 +616,7 @@ export default function App() {
                   <button
                     key={c}
                     className={filter === c ? "filter-active" : ""}
+                    aria-pressed={filter === c}
                     onClick={() => setFilter(c)}
                   >
                     {c}
@@ -639,10 +684,11 @@ export default function App() {
                   visible.map((i) => (
                     <article
                       key={i.id}
-                      className={`issue ${chosen?.id === i.id ? "issue-selected" : ""}`}
+                      className={`issue issue-${i.replacements.length ? i.category.toLowerCase() : "review"} ${chosen?.id === i.id ? "issue-selected" : ""}`}
                     >
                       <button
                         className="issue-title"
+                        aria-expanded={selected === i.id || visible.length < 4}
                         onClick={() =>
                           setSelected(selected === i.id ? null : i.id)
                         }
@@ -653,15 +699,20 @@ export default function App() {
                           {i.category}
                         </span>
                         <strong>{i.original || "Missing punctuation"}</strong>
-                        <span>⌄</span>
+                        <span className="finding-kind">
+                          {i.replacements.length ? "Correction" : "Review only"}
+                        </span>
                       </button>
                       {(selected === i.id || visible.length < 4) && (
                         <div className="issue-detail">
                           <p>{i.explanation}</p>
-                          <small>{i.rule}</small>
-                          {i.sources && i.sources.length > 1 && (
-                            <small> · {i.sources.join(", ")}</small>
-                          )}
+                          <details className="rule-details">
+                            <summary>Rule details</summary>
+                            <small>{i.rule}</small>
+                            {i.sources && i.sources.length > 1 && (
+                              <small> · {i.sources.join(", ")}</small>
+                            )}
+                          </details>
                           {i.alternativesConflict && (
                             <p className="manual">
                               Overlapping rules proposed different alternatives.
@@ -677,6 +728,12 @@ export default function App() {
                                 onClick={() => accept(i, r)}
                               >
                                 {r || "Remove"} <span>↵</span>
+                                <span
+                                  className="accept-label"
+                                  aria-hidden="true"
+                                >
+                                  Accept
+                                </span>
                               </button>
                             ))}
                           </div>
@@ -728,10 +785,6 @@ export default function App() {
                     </article>
                   ))
                 )}
-              </div>
-              <div className="engine-status">
-                <span className="dot" />
-                {status}
               </div>
             </aside>
           </div>
