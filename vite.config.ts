@@ -9,6 +9,21 @@ export default defineConfig({
   optimizeDeps: { exclude: ["harper.js"] },
   plugins: [
     {
+      name: "prooflab-release-metadata",
+      generateBundle() {
+        this.emitFile({
+          type: "asset",
+          fileName: "release.json",
+          source:
+            JSON.stringify({
+              version: "3.1.0",
+              commit: process.env.GITHUB_SHA || "local",
+              harper: "3.0.0",
+            }) + "\n",
+        });
+      },
+    },
+    {
       name: "prooflab-local-development-csp",
       apply: "serve",
       transformIndexHtml(html, context) {
