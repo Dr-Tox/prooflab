@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "baseline": "0c3b2690e7d29a4f040a87d2c08144baf8dab388",
+  "sha256": "e3a6ea89948da099094e1b939db9cc6c8d5cafce12fbacb2528e271b13dfc613",
+  "counts": {
+    "agreement": 105,
+    "verb": 105,
+    "control": 123
+  },
+  "methodology": "Engineer-authored controlled challenge set; five lexical variants per construction family. Held-out positive families 17\u201321 reserved before implementation. Controls include development-derived corrected variants and explicitly curated scientific paragraphs; not independently blinded. Report family dependence and no external-system comparison."
+}

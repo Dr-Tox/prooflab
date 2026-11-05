@@ -1,6 +1,6 @@
 {
   "name": "prooflab",
-  "version": "1.0.0",
+  "version": "3.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,11 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "benchmark": "vite-node benchmark/run.ts",
+    "benchmark:v2": "vite-node benchmark/v2/run.ts",
+    "benchmark:tense": "vite-node benchmark/tense/run.ts",
+    "benchmark:v3": "vite-node benchmark/v3/quality.ts"
   },
   "dependencies": {
     "harper.js": "3.0.0",

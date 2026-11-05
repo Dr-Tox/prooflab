@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open the local Vite URL. The strict production CSP may prevent Vite's development WebSocket or injected styles; use `npm run build && npm run preview` to inspect the production application. Do not weaken the production CSP for development. The offline service worker is enabled only in production builds. Development tooling communicates with the local development server, so use the production preview or deployed build for privacy checks.
+Open the local Vite URL. Development mode includes a local engine diagnostics panel and logs raw lint excerpts to the browser/worker console. Use synthetic text when debugging. Diagnostics are session-only and are neither remotely logged nor persisted. The dev server permits Vite’s inline preamble/styles and loopback HMR; the production build and preview retain the restrictive production CSP and have no diagnostics panel or raw-lint logging. Harper is excluded from Vite dependency prebundling so its relative WASM URL remains valid in development. The offline service worker is enabled only in production builds. Use `npm run build && npm run preview` for production/privacy checks.
 
 ```sh
 npm run build
@@ -24,10 +24,18 @@ npm run format:check
 
 Browser tests use the built production application on port 4173. Rebuild after source changes. If using a custom Playwright browser location, set `PLAYWRIGHT_BROWSERS_PATH` consistently for installation and testing.
 
+## v3.1 workspace
+
+Desktop uses a two-column manuscript/review layout; **Focus mode** collapses suggestions. On mobile, use **Manuscript** and **Suggestions** to switch views without replacing the editor or clearing its history. Highlighted findings open the review view. Category filters show counts; review-only cards have no automatic replacement. Expand Rule details for engine identifiers.
+
+Undo: Ctrl/⌘+Z. Redo: Ctrl/⌘+Shift+Z or Ctrl+Y. Bold/italic and correction transactions preserve supported inline formatting. All controls remain keyboard reachable. Local document saving remains opt-in; manuscript content is not part of release metadata or the offline asset cache.
+
+Production builds emit `release.json` with version, Harper version and the GitHub Actions commit SHA, for checking the actual Pages release. Local builds identify their commit as `local` unless `GITHUB_SHA` is supplied.
+
 ## Features
 
 - Real Harper grammar, spelling, punctuation, common word confusion and selected agreement/style rules; all available rule switches are discovered at runtime.
-- Rich editing with bold/italic, plain-text paste, live counts, highlighted review, issue filters, accept/dismiss/undo, and copy text.
+- Rich editing with bold/italic, plain-text paste, live counts, highlighted review, issue filters, accept/dismiss/Undo/Redo, and copy text.
 - Three writing profiles, per-rule overrides, separate ignored words/rules, and manual preferred terminology reviews.
 - Case-sensitive scientific dictionary, TXT/JSON import/export, local IndexedDB persistence.
 - Conservative scientific checks; no automatic correction or scientific validity claims.
@@ -58,4 +66,20 @@ The shipped declarations confirm `LocalLinter`, `harper.js/binary`, `setup`, `or
 
 English proofreading is heuristic and incomplete. Harper supports selected agreement constructions; ProofLab makes no claim of comprehensive subject–verb agreement or scientific understanding. Scientific rules cover explicit patterns, not an ontology. Gene/formula protection is conservative and cannot recognize every identifier. Every correction requires an explicit click; review the context yourself. There is no “accept all”. Offline availability depends on a complete cache, browser support, and storage retention.
 
-Read [PRIVACY.md](PRIVACY.md), [RULES.md](RULES.md), and [CONTRIBUTING.md](CONTRIBUTING.md).
+Read [PRIVACY.md](PRIVACY.md), [RULES.md](RULES.md), [SCIENTIFIC_VOCABULARY.md](SCIENTIFIC_VOCABULARY.md), [BENCHMARK_RESULTS.md](BENCHMARK_RESULTS.md), and [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Detection limits and diagnostics
+
+Harper 3.0.0 produces **zero raw lints** for `I wanted to visit mi uncles last nigh`. Its dictionary accepts `mi` and `nigh`; it does not infer the intended pronoun, time expression, or possessive. This is not a promise of complete contextual grammar correction. ProofLab adds a narrow **manual-review-only** warning for `last nigh`, without replacing `mi`, changing `uncles`, or choosing an apostrophe. Individual rules can still be disabled in Settings.
+
+In `npm run dev`, the Editor’s **Engine diagnostics** panel shows initialization, the actual active Harper rules, raw/accepted/custom/final counts, discarded lint reasons, and raw lint snapshots before filtering. For the reported sentence, expect raw **0**, accepted Harper **0**, custom **1**. For `recieve`, `usefull`, and `teh`, expect real Harper spelling findings. A zero raw count indicates an engine coverage gap; a nonzero raw count with discarded findings points to dictionary/protection/deduplication or span validation. Rule overrides, category filters, and dismissed occurrences can also affect the visible count. See [RULES.md](RULES.md).
+
+## Scientific quality and reproducible evaluation
+
+ProofLab adds conservative term-aware conflict resolution, morphology-aware subject-head and auxiliary analysis, coordinated mass-noun edits, SI formatting, and contextual sentence-structure warnings. Valid scientific terminology is distinct from the personal dictionary and unknown terms. Numerical values and epistemic caution are protected; there is no automatic accept-all. Corrections carry a document revision, and coordinated edits/Undo preserve text, unrelated inline formatting and selection context.
+
+`npm run benchmark` evaluates the versioned corpus with real Harper. The baseline, frozen references, full actual results, scoring definitions, performance details and limitations are committed under `benchmark/`. Held-out first-pass results are preserved separately from post-evaluation audits. Historical second-round failures are retained. `npm run benchmark:v2` evaluates the new 333-case agreement/verb/control challenge set; see [benchmark/v2/README.md](benchmark/v2/README.md) for frozen references, source commits, reference errata and evaluation limits. See **BENCHMARK_RESULTS.md**; this small engineering benchmark does not establish superiority over Microsoft Word or complete scientific/grammatical correctness.
+
+### Dedicated tense/aspect evaluation
+
+`npm run benchmark:tense -- --check` evaluates 315 frozen tense/aspect and control cases independently of agreement. Context-dependent temporal findings are manual review; correcting an auxiliary is not a claim to resolve chronology. The [temporal benchmark](benchmark/tense/README.md) records before/after outputs, scientific mixed-tense controls, the held-out split, safety tradeoffs and remaining limitations. Scientific paragraph boundaries are preserved through native block-based editor input.

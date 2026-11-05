@@ -10,11 +10,30 @@ export default defineConfig({
     baseURL: `http://127.0.0.1:4173${process.env.PROOFLAB_BASE_PATH || "/"}`,
     trace: "retain-on-failure",
   },
-  webServer: {
-    command: "npm run preview -- --port 4173",
-    url: `http://127.0.0.1:4173${process.env.PROOFLAB_BASE_PATH || "/"}`,
-    env: { BASE_PATH: process.env.PROOFLAB_BASE_PATH || "/" },
-    reuseExistingServer: !process.env.CI,
-  },
-  projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
+  webServer: [
+    {
+      command: "npm run preview -- --port 4173",
+      url: `http://127.0.0.1:4173${process.env.PROOFLAB_BASE_PATH || "/"}`,
+      env: { BASE_PATH: process.env.PROOFLAB_BASE_PATH || "/" },
+      reuseExistingServer: !process.env.CI,
+    },
+    {
+      command: "npm run dev -- --port 4175 --strictPort",
+      url: "http://127.0.0.1:4175/",
+      env: { BASE_PATH: "/" },
+      reuseExistingServer: !process.env.CI,
+    },
+  ],
+  projects: [
+    {
+      name: "chromium",
+      testMatch: "app.spec.ts",
+      use: { ...devices["Desktop Chrome"] },
+    },
+    {
+      name: "development",
+      testMatch: "diagnostics.spec.ts",
+      use: { ...devices["Desktop Chrome"], baseURL: "http://127.0.0.1:4175/" },
+    },
+  ],
 });

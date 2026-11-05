@@ -1,0 +1,982 @@
+{
+  "version": 1,
+  "split": "development",
+  "cases": [
+    {
+      "id": "D01",
+      "text": "After centrifugation, the supernatant was collected.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": ["gentrification", "supernova's"],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D01",
+        "current": "../reports/current.json#D01"
+      }
+    },
+    {
+      "id": "D02",
+      "text": "The incubation lasted 30 min.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": ["minimum", "minutes"],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D02",
+        "current": "../reports/current.json#D02"
+      }
+    },
+    {
+      "id": "D03",
+      "text": "We found that that interpretation was incorrect.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": ["We found that interpretation was incorrect."],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D03",
+        "current": "../reports/current.json#D03"
+      }
+    },
+    {
+      "id": "D04",
+      "text": "What is is not necessarily what should be.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": ["What is not necessarily what should be."],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D04",
+        "current": "../reports/current.json#D04"
+      }
+    },
+    {
+      "id": "D05",
+      "text": "The distinction between had and had had is grammatical.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [
+        "The distinction between had and had is grammatical."
+      ],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D05",
+        "current": "../reports/current.json#D05"
+      }
+    },
+    {
+      "id": "D06",
+      "text": "The dose was 5 mg/kg/day.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D06",
+        "current": "../reports/current.json#D06"
+      }
+    },
+    {
+      "id": "D07",
+      "text": "TNF-α and IL-1β may be associated with toxicity (p = 0.08).",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D07",
+        "current": "../reports/current.json#D07"
+      }
+    },
+    {
+      "id": "D08",
+      "text": "The 95% confidence interval was wide.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D08",
+        "current": "../reports/current.json#D08"
+      }
+    },
+    {
+      "id": "D09",
+      "text": "After centrifuging the samples, the supernatant was collected.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D09",
+        "current": "../reports/current.json#D09"
+      }
+    },
+    {
+      "id": "D10",
+      "text": "The difference was statistically significant (p = 0.01).",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D10",
+        "current": "../reports/current.json#D10"
+      }
+    },
+    {
+      "id": "D11",
+      "text": "10mg",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "10mg",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["10 mg"]
+        }
+      ],
+      "acceptedCorrections": ["10 mg"],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D11",
+        "current": "../reports/current.json#D11"
+      }
+    },
+    {
+      "id": "D12",
+      "text": "37°C",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "37°C",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["37 °C"]
+        }
+      ],
+      "acceptedCorrections": ["37 °C"],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D12",
+        "current": "../reports/current.json#D12"
+      }
+    },
+    {
+      "id": "D13",
+      "text": "300 °K.",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "°K",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["K"]
+        }
+      ],
+      "acceptedCorrections": ["300 K."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D13",
+        "current": "../reports/current.json#D13"
+      }
+    },
+    {
+      "id": "D14",
+      "text": "The results shows a clear trend.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "shows",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["show"]
+        }
+      ],
+      "acceptedCorrections": ["The results show a clear trend."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D14",
+        "current": "../reports/current.json#D14"
+      }
+    },
+    {
+      "id": "D15",
+      "text": "Each of the samples were analyzed.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "were",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["was"]
+        }
+      ],
+      "acceptedCorrections": ["Each of the samples was analyzed."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D15",
+        "current": "../reports/current.json#D15"
+      }
+    },
+    {
+      "id": "D16",
+      "text": "The effect of these compounds are unknown.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["is"]
+        }
+      ],
+      "acceptedCorrections": ["The effect of these compounds is unknown."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D16",
+        "current": "../reports/current.json#D16"
+      }
+    },
+    {
+      "id": "D17",
+      "text": "There is many reasons for this result.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "is",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["are"]
+        }
+      ],
+      "acceptedCorrections": ["There are many reasons for this result."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D17",
+        "current": "../reports/current.json#D17"
+      }
+    },
+    {
+      "id": "D18",
+      "text": "The assay depends of temperature.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "depends of",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["depends on"]
+        }
+      ],
+      "acceptedCorrections": ["The assay depends on temperature."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D18",
+        "current": "../reports/current.json#D18"
+      }
+    },
+    {
+      "id": "D19",
+      "text": "Its important to repeat the experiment.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "Its",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["It’s"]
+        }
+      ],
+      "acceptedCorrections": ["It’s important to repeat the experiment."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D19",
+        "current": "../reports/current.json#D19"
+      }
+    },
+    {
+      "id": "D20",
+      "text": "These informations are useful.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "These informations are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["This information is"]
+        }
+      ],
+      "acceptedCorrections": ["This information is useful."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D20",
+        "current": "../reports/current.json#D20"
+      }
+    },
+    {
+      "id": "D21",
+      "text": "The controls shows similar behavior.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "shows",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["show"]
+        }
+      ],
+      "acceptedCorrections": ["The controls show similar behavior."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D21",
+        "current": "../reports/current.json#D21"
+      }
+    },
+    {
+      "id": "D22",
+      "text": "Each of the measurements are recorded.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["is"]
+        }
+      ],
+      "acceptedCorrections": ["Each of the measurements is recorded."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D22",
+        "current": "../reports/current.json#D22"
+      }
+    },
+    {
+      "id": "D23",
+      "text": "The concentration of these solutions are high.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["is"]
+        }
+      ],
+      "acceptedCorrections": ["The concentration of these solutions is high."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D23",
+        "current": "../reports/current.json#D23"
+      }
+    },
+    {
+      "id": "D24",
+      "text": "There was several explanations.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "was",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["were"]
+        }
+      ],
+      "acceptedCorrections": ["There were several explanations."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D24",
+        "current": "../reports/current.json#D24"
+      }
+    },
+    {
+      "id": "D25",
+      "text": "The outcome depended of dose.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "depended of",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["depended on"]
+        }
+      ],
+      "acceptedCorrections": ["The outcome depended on dose."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D25",
+        "current": "../reports/current.json#D25"
+      }
+    },
+    {
+      "id": "D26",
+      "text": "These equipments were calibrated.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "These equipments were",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["This equipment was"]
+        }
+      ],
+      "acceptedCorrections": ["This equipment was calibrated."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D26",
+        "current": "../reports/current.json#D26"
+      }
+    },
+    {
+      "id": "D27",
+      "text": "🧪 The results shows a trend at −20°C.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "shows",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["show"]
+        },
+        {
+          "target": "−20°C",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["−20 °C"]
+        }
+      ],
+      "acceptedCorrections": ["🧪 The results show a trend at −20 °C."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D27",
+        "current": "../reports/current.json#D27"
+      }
+    },
+    {
+      "id": "D28",
+      "text": "The the sample was analyzed.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "The the",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["The"]
+        }
+      ],
+      "acceptedCorrections": ["The sample was analyzed."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D28",
+        "current": "../reports/current.json#D28"
+      }
+    },
+    {
+      "id": "D29",
+      "text": "We observed centifugation.",
+      "category": "Spelling",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "centifugation",
+          "category": "Spelling",
+          "behavior": "correction",
+          "acceptedReplacements": ["centrifugation"]
+        }
+      ],
+      "acceptedCorrections": ["We observed centrifugation."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Spelling",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D29",
+        "current": "../reports/current.json#D29"
+      }
+    },
+    {
+      "id": "D30",
+      "text": "The supernatent was removed.",
+      "category": "Spelling",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "supernatent",
+          "category": "Spelling",
+          "behavior": "correction",
+          "acceptedReplacements": ["supernatant"]
+        }
+      ],
+      "acceptedCorrections": ["The supernatant was removed."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Spelling",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D30",
+        "current": "../reports/current.json#D30"
+      }
+    },
+    {
+      "id": "D31",
+      "text": "The samples were frozen they were analyzed later.",
+      "category": "Grammar",
+      "expectedBehavior": "warning",
+      "severity": "review",
+      "expected": [
+        {
+          "target": "frozen they",
+          "category": "Grammar",
+          "behavior": "warning",
+          "acceptedReplacements": []
+        }
+      ],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Potential structural problem; warn conservatively without assigning agency or rewriting conclusions.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D31",
+        "current": "../reports/current.json#D31"
+      }
+    },
+    {
+      "id": "D32",
+      "text": "The treatment reduced inflammation, it did not improve survival.",
+      "category": "Grammar",
+      "expectedBehavior": "warning",
+      "severity": "review",
+      "expected": [
+        {
+          "target": ", it",
+          "category": "Grammar",
+          "behavior": "warning",
+          "acceptedReplacements": []
+        }
+      ],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Potential structural problem; warn conservatively without assigning agency or rewriting conclusions.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D32",
+        "current": "../reports/current.json#D32"
+      }
+    },
+    {
+      "id": "D33",
+      "text": "Although the treatment was effective.",
+      "category": "Grammar",
+      "expectedBehavior": "warning",
+      "severity": "review",
+      "expected": [
+        {
+          "target": "Although",
+          "category": "Grammar",
+          "behavior": "warning",
+          "acceptedReplacements": []
+        }
+      ],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Potential structural problem; warn conservatively without assigning agency or rewriting conclusions.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D33",
+        "current": "../reports/current.json#D33"
+      }
+    },
+    {
+      "id": "D34",
+      "text": "After centrifuging the samples, the microscope was cleaned.",
+      "category": "Grammar",
+      "expectedBehavior": "warning",
+      "severity": "review",
+      "expected": [
+        {
+          "target": "After centrifuging the samples, the microscope",
+          "category": "Grammar",
+          "behavior": "warning",
+          "acceptedReplacements": []
+        }
+      ],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Potential structural problem; warn conservatively without assigning agency or rewriting conclusions.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D34",
+        "current": "../reports/current.json#D34"
+      }
+    },
+    {
+      "id": "D35",
+      "text": "The results show a clear trend.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D35",
+        "current": "../reports/current.json#D35"
+      }
+    },
+    {
+      "id": "D36",
+      "text": "Each of the samples was analyzed.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D36",
+        "current": "../reports/current.json#D36"
+      }
+    },
+    {
+      "id": "D37",
+      "text": "The effect of these compounds is unknown.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D37",
+        "current": "../reports/current.json#D37"
+      }
+    },
+    {
+      "id": "D38",
+      "text": "There are many reasons for this result.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D38",
+        "current": "../reports/current.json#D38"
+      }
+    },
+    {
+      "id": "D39",
+      "text": "The assay depends on temperature.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D39",
+        "current": "../reports/current.json#D39"
+      }
+    },
+    {
+      "id": "D40",
+      "text": "Its importance is clear.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D40",
+        "current": "../reports/current.json#D40"
+      }
+    },
+    {
+      "id": "D41",
+      "text": "This information is useful.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D41",
+        "current": "../reports/current.json#D41"
+      }
+    },
+    {
+      "id": "D42",
+      "text": "The signal may suggest an association with toxicity.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D42",
+        "current": "../reports/current.json#D42"
+      }
+    },
+    {
+      "id": "D43",
+      "text": "The measurements were recorded at 37 °C and 300 K.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D43",
+        "current": "../reports/current.json#D43"
+      }
+    },
+    {
+      "id": "D44",
+      "text": "The dose was 5 μg mL⁻¹ at −20 °C.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D44",
+        "current": "../reports/current.json#D44"
+      }
+    },
+    {
+      "id": "D45",
+      "text": "Although the treatment was effective, survival did not improve.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D45",
+        "current": "../reports/current.json#D45"
+      }
+    },
+    {
+      "id": "D46",
+      "text": "The results show that the treatment shows promise.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D46",
+        "current": "../reports/current.json#D46"
+      }
+    },
+    {
+      "id": "D47",
+      "text": "The assay shows the results.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D47",
+        "current": "../reports/current.json#D47"
+      }
+    },
+    {
+      "id": "D48",
+      "text": "What is important is not necessarily obvious.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D48",
+        "current": "../reports/current.json#D48"
+      }
+    },
+    {
+      "id": "D49",
+      "text": "She had had enough material.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D49",
+        "current": "../reports/current.json#D49"
+      }
+    },
+    {
+      "id": "D50",
+      "text": "Results\nSamples and controls\n1. Frozen samples\n2. Warm samples",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#D50",
+        "current": "../reports/current.json#D50"
+      }
+    }
+  ]
+}

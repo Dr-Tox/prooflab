@@ -1,12 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { analyze, initialize } from "./engine";
 import {
+  captureCaret,
+  restoreCaret,
+  applyDomTransaction,
+  normalizeEditorLines,
+  type Caret,
+} from "./editorTransactions";
+import { grammarRules } from "./grammar";
+import { EngineDiagnosticsPanel } from "./EngineDiagnosticsPanel";
+import type { EngineDiagnostics, InitializationStatus } from "./diagnostics";
+import {
   applyCorrection,
+  correctionEdits,
   defaults,
   enabled,
   exportDictionary,
   parseDictionary,
   scientificRules,
+  contextualRules,
   seedWords,
   type Category,
   type Issue,
@@ -34,17 +46,25 @@ function download(name: string, content: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 export default function App() {
-  const [text, setText] = useState(""),
+  const [text, setTextState] = useState(""),
     [settings, setSettingsState] = useState<Settings>(defaults),
     [words, setWordsState] = useState<string[]>(seedWords),
     [loaded, setLoaded] = useState(false),
     [rules, setRules] = useState<Record<string, string>>({}),
     [config, setConfig] = useState<Record<string, boolean | null>>({}),
     [issues, setIssues] = useState<Issue[]>([]),
+    [analysisRevision, setAnalysisRevision] = useState(0),
+    [diagnostics, setDiagnostics] = useState<EngineDiagnostics>(),
+    [enginePhase, setEnginePhase] =
+      useState<InitializationStatus>("initializing"),
+    [analysisError, setAnalysisError] = useState(""),
+    [mappingFailureCount, setMappingFailureCount] = useState(0),
     [ignored, setIgnored] = useState<string[]>([]),
     [selected, setSelected] = useState<string | null>(null),
     [filter, setFilter] = useState("All"),
     [tab, setTab] = useState("Editor"),
+    [focusMode, setFocusMode] = useState(false),
+    [mobileReview, setMobileReview] = useState(false),
     [status, setStatus] = useState("Loading local engine…"),
     [notice, setNotice] = useState(""),
     [query, setQuery] = useState(""),
@@ -56,20 +76,33 @@ export default function App() {
     [offlineReady, setOfflineReady] = useState(false),
     [storageStatus, setStorageStatus] = useState("Loading local preferences…");
   const editor = useRef<HTMLDivElement>(null),
-    history = useRef<{ text: string; html: string }[]>([]),
+    history = useRef<{ text: string; html: string; caret?: Caret }[]>([]),
     revision = useRef(0),
     storageQueue = useRef(Promise.resolve()),
     storageRevision = useRef(0);
+  function invalidate() {
+    ++revision.current;
+    setAnalysisRevision(revision.current);
+    setIssues([]);
+    setIgnored([]);
+    setSelected(null);
+  }
+  function setText(value: string) {
+    invalidate();
+    setTextState(value);
+  }
   function markStoragePending() {
     // Invalidate an old completion before scheduling the state/effect update.
     ++storageRevision.current;
     setStorageStatus("Saving locally…");
   }
   function setSettings(action: Settings | ((s: Settings) => Settings)) {
+    invalidate();
     markStoragePending();
     setSettingsState(action);
   }
   function setWords(action: string[] | ((words: string[]) => string[])) {
+    invalidate();
     markStoragePending();
     setWordsState(action);
   }
@@ -114,8 +147,13 @@ export default function App() {
       .then((r) => {
         setRules(r.metadata!.rules);
         setConfig(r.metadata!.config);
+        setEnginePhase("ready");
+        if (import.meta.env.DEV) setDiagnostics(r.diagnostics);
       })
-      .catch(() => setStatus("Harper could not load. Reload to retry."));
+      .catch(() => {
+        setEnginePhase("failed");
+        setStatus("Harper could not load. Reload to retry.");
+      });
   }, []);
   const documentToSave = settings.saveDocument ? text : null;
   useEffect(() => {
@@ -124,28 +162,40 @@ export default function App() {
   }, [settings, words, documentToSave, loaded]);
   useEffect(() => {
     if (!loaded) return;
-    const r = ++revision.current;
+    const r = revision.current;
     setBusy(true);
     setIssues([]);
+    setAnalysisError("");
+    setMappingFailureCount(0);
+    if (import.meta.env.DEV) setDiagnostics(undefined);
     const timer = setTimeout(() => {
-      analyze(text, settings, words)
+      analyze(text, settings, words, r)
         .then((result) => {
-          if (r !== revision.current) return;
+          if (r !== revision.current || result.superseded) return;
           setIssues(result.issues!);
+          setMappingFailureCount(result.mappingFailureCount ?? 0);
+          if (import.meta.env.DEV) setDiagnostics(result.diagnostics);
           setBusy(false);
           setStatus("Harper · running on your device");
         })
         .catch(() => {
           if (r === revision.current) {
             setBusy(false);
+            setAnalysisError("Proofreading failed. Reload to retry.");
             setStatus("Proofreading failed. Reload to retry.");
           }
         });
     }, 350);
     return () => clearTimeout(timer);
-  }, [text, settings, words, loaded]);
+  }, [text, settings, words, loaded, analysisRevision]);
+  const future = useRef<{ text: string; html: string; caret?: Caret }[]>([]);
   function snapshot() {
-    history.current.push({ text, html: editor.current?.innerHTML ?? text });
+    future.current = [];
+    history.current.push({
+      text,
+      html: editor.current?.innerHTML ?? text,
+      caret: editor.current ? captureCaret(editor.current) : undefined,
+    });
     if (history.current.length > 100) history.current.shift();
   }
   function changeText(value: string) {
@@ -191,43 +241,48 @@ export default function App() {
   function undo() {
     const old = history.current.pop();
     if (!old) return;
+    future.current.push({
+      text,
+      html: editor.current?.innerHTML ?? text,
+      caret: editor.current ? captureCaret(editor.current) : undefined,
+    });
     if (editor.current) editor.current.innerHTML = old.html;
     setText(old.text);
+    if (editor.current) restoreCaret(editor.current, old.caret);
     setIgnored([]);
     setNotice("Change undone.");
   }
+  function redo() {
+    const next = future.current.pop();
+    if (!next) return;
+    history.current.push({
+      text,
+      html: editor.current?.innerHTML ?? text,
+      caret: editor.current ? captureCaret(editor.current) : undefined,
+    });
+    if (editor.current) editor.current.innerHTML = next.html;
+    setText(next.text);
+    if (editor.current) restoreCaret(editor.current, next.caret);
+    setIgnored([]);
+    setSelected(null);
+    setNotice("Change redone.");
+  }
   function accept(i: Issue, replacement: string) {
     try {
-      const value = applyCorrection(text, i, replacement);
-      snapshot();
       const el = editor.current!;
-      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-      let n: Node | null;
-      let pos = 0;
-      let start: Node | null = null,
-        end: Node | null = null,
-        so = 0,
-        eo = 0;
-      while ((n = walker.nextNode())) {
-        const length = n.textContent?.length ?? 0;
-        if (start === null && i.start <= pos + length) {
-          start = n;
-          so = i.start - pos;
-        }
-        if (i.end <= pos + length) {
-          end = n;
-          eo = i.end - pos;
-          break;
-        }
-        pos += length;
+      if (el.textContent !== text)
+        throw Error("Editor changed. Recheck before applying a correction.");
+      const edits = correctionEdits(text, i, replacement, revision.current);
+      const value = applyCorrection(text, i, replacement, revision.current);
+      const oldHtml = el.innerHTML;
+      snapshot();
+      try {
+        applyDomTransaction(el, edits);
+      } catch (error) {
+        el.innerHTML = oldHtml;
+        history.current.pop();
+        throw error;
       }
-      if (start && end) {
-        const range = document.createRange();
-        range.setStart(start, so);
-        range.setEnd(end, eo);
-        range.deleteContents();
-        range.insertNode(document.createTextNode(replacement));
-      } else el.textContent = value;
       setText(value);
       setIgnored([]);
       setSelected(null);
@@ -263,6 +318,8 @@ export default function App() {
         onClick={() => {
           setFilter("All");
           setSelected(i.id);
+          setFocusMode(false);
+          setMobileReview(true);
         }}
       >
         {text.slice(i.start, i.end) || "▏"}
@@ -284,23 +341,24 @@ export default function App() {
             }}
           >
             <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" />
-            ProofLab<span>SCIENTIFIC WRITING</span>
+            ProofLab<span>Scientific writing assistant · v3.1</span>
           </a>
           <span className="privacy-pill">
             <span className="dot" />
-            Private by design
+            {import.meta.env.VITE_RELEASE_CHANNEL === "rc-v3"
+              ? "v3 RC · local only"
+              : "Private by design"}
           </span>
         </div>
       </header>
       <main spellCheck={false}>
         <div className="intro">
           <div>
-            <p className="eyebrow">YOUR WORDS. YOUR DEVICE.</p>
-            <h1>Clarity for your next discovery.</h1>
-            <p>Thoughtful proofreading for precise scientific writing.</p>
+            <h1>Your manuscript, refined.</h1>
+            <p>Scientific proofreading. Entirely on your device.</p>
           </div>
           <button className="quiet" onClick={() => setTab("Privacy")}>
-            ◈ How your text stays private
+            ◈ Privacy &amp; offline use
           </button>
         </div>
         <nav aria-label="Main navigation">
@@ -308,6 +366,7 @@ export default function App() {
             <button
               key={t}
               className={tab === t ? "nav-active" : ""}
+              aria-current={tab === t ? "page" : undefined}
               onClick={() => setTab(t)}
             >
               {t === "Editor"
@@ -355,12 +414,48 @@ export default function App() {
               </select>
             </label>
           </div>
-          <div className="workspace">
-            <section className="card editor-card">
+          <div className="workspace-controls">
+            <p className="proofreading-status" role="status">
+              <span className="dot" />
+              {enginePhase === "ready" && busy ? "Checking locally…" : status}
+            </p>
+            <button
+              className="focus-toggle"
+              aria-pressed={focusMode}
+              aria-controls="proofreading-panel"
+              onClick={() => setFocusMode((value) => !value)}
+            >
+              {focusMode ? "Show suggestions" : "Focus mode"}
+            </button>
+            <div className="mobile-switch" aria-label="Workspace view">
+              <button
+                aria-pressed={!mobileReview}
+                aria-controls="manuscript-panel"
+                onClick={() => setMobileReview(false)}
+              >
+                Manuscript
+              </button>
+              <button
+                aria-pressed={mobileReview}
+                aria-controls="proofreading-panel"
+                onClick={() => setMobileReview(true)}
+              >
+                Suggestions <span className="count">{active.length}</span>
+              </button>
+            </div>
+          </div>
+          <div
+            className={`workspace ${focusMode ? "focus-mode" : ""} ${mobileReview ? "mobile-review" : ""}`}
+          >
+            <section
+              className="card editor-card"
+              id="manuscript-panel"
+              aria-label="Manuscript editor"
+            >
               <div className="card-heading">
                 <div>
                   <h2>Document editor</h2>
-                  <p>Make room for your ideas.</p>
+                  <p>Write, paste, or format your manuscript.</p>
                 </div>
                 <button className="quiet" onClick={() => changeText(example)}>
                   Try an example
@@ -390,6 +485,7 @@ export default function App() {
                   </button>
                   <span className="separator" />
                   <button onClick={undo}>↶ Undo</button>
+                  <button onClick={redo}>↷ Redo</button>
                 </div>
                 <div>
                   <button
@@ -443,6 +539,7 @@ export default function App() {
                   }
                 }}
                 onInput={(e) => {
+                  normalizeEditorLines(e.currentTarget);
                   setText(e.currentTarget.textContent ?? "");
                   setIgnored([]);
                 }}
@@ -452,9 +549,14 @@ export default function App() {
                     snapshot();
                     insertPlainText("\n");
                   }
-                  if ((e.ctrlKey || e.metaKey) && e.key === "z") {
+                  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
                     e.preventDefault();
-                    undo();
+                    if (e.shiftKey) redo();
+                    else undo();
+                  }
+                  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "y") {
+                    e.preventDefault();
+                    redo();
                   }
                 }}
                 onDrop={(e) => {
@@ -491,7 +593,11 @@ export default function App() {
                 </div>
               )}
             </section>
-            <aside className="card analysis">
+            <aside
+              className="card analysis"
+              id="proofreading-panel"
+              aria-label="Proofreading suggestions"
+            >
               <div className="card-heading">
                 <div>
                   <h2>
@@ -500,8 +606,8 @@ export default function App() {
                   </h2>
                   <p>
                     {busy
-                      ? "Checking locally…"
-                      : "A little precision goes a long way."}
+                      ? "Analysis in progress"
+                      : `${active.filter((i) => i.replacements.length > 0).length} with suggestions · ${active.filter((i) => !i.replacements.length).length} review-only`}
                   </p>
                 </div>
               </div>
@@ -510,6 +616,7 @@ export default function App() {
                   <button
                     key={c}
                     className={filter === c ? "filter-active" : ""}
+                    aria-pressed={filter === c}
                     onClick={() => setFilter(c)}
                   >
                     {c}
@@ -519,8 +626,28 @@ export default function App() {
                   </button>
                 ))}
               </div>
+              {!enabled(
+                "SpellCheck",
+                settings,
+                config.SpellCheck !== false,
+              ) && (
+                <p className="engine-warning">
+                  Spelling checking is disabled in Settings.
+                </p>
+              )}
+              {mappingFailureCount > 0 && (
+                <p className="engine-warning" role="alert">
+                  Some engine findings could not be mapped safely. Review the
+                  text manually.
+                </p>
+              )}
               <div className="issue-list">
-                {!text ? (
+                {analysisError ? (
+                  <div className="empty" role="alert">
+                    <h3>Proofreading unavailable</h3>
+                    <p>{analysisError}</p>
+                  </div>
+                ) : !text ? (
                   <div className="empty">
                     <div className="empty-symbol">✓</div>
                     <h3>Your next draft starts here</h3>
@@ -539,10 +666,14 @@ export default function App() {
                   <p className="empty">Analyzing on your device…</p>
                 ) : !visible.length ? (
                   <div className="empty">
-                    <div className="empty-symbol">✓</div>
                     <h3>
-                      No {filter === "All" ? "visible" : filter.toLowerCase()}{" "}
-                      suggestions
+                      {mappingFailureCount > 0
+                        ? "Some suggestions could not be displayed safely"
+                        : active.length > 0
+                          ? `No ${filter.toLowerCase()} issues in this filter`
+                          : issues.length > 0
+                            ? "All detected issues are dismissed for this document revision"
+                            : "No issues detected by the enabled rules"}
                     </h3>
                     <p>
                       ProofLab cannot guarantee error-free or scientifically
@@ -553,10 +684,11 @@ export default function App() {
                   visible.map((i) => (
                     <article
                       key={i.id}
-                      className={`issue ${chosen?.id === i.id ? "issue-selected" : ""}`}
+                      className={`issue issue-${i.replacements.length ? i.category.toLowerCase() : "review"} ${chosen?.id === i.id ? "issue-selected" : ""}`}
                     >
                       <button
                         className="issue-title"
+                        aria-expanded={selected === i.id || visible.length < 4}
                         onClick={() =>
                           setSelected(selected === i.id ? null : i.id)
                         }
@@ -567,12 +699,27 @@ export default function App() {
                           {i.category}
                         </span>
                         <strong>{i.original || "Missing punctuation"}</strong>
-                        <span>⌄</span>
+                        <span className="finding-kind">
+                          {i.replacements.length ? "Correction" : "Review only"}
+                        </span>
                       </button>
                       {(selected === i.id || visible.length < 4) && (
                         <div className="issue-detail">
                           <p>{i.explanation}</p>
-                          <small>{i.rule}</small>
+                          <details className="rule-details">
+                            <summary>Rule details</summary>
+                            <small>{i.rule}</small>
+                            {i.sources && i.sources.length > 1 && (
+                              <small> · {i.sources.join(", ")}</small>
+                            )}
+                          </details>
+                          {i.alternativesConflict && (
+                            <p className="manual">
+                              Overlapping rules proposed different alternatives.
+                              The higher-priority suggestion is shown; review in
+                              context.
+                            </p>
+                          )}
                           <div className="replacements">
                             {i.replacements.map((r, j) => (
                               <button
@@ -581,6 +728,12 @@ export default function App() {
                                 onClick={() => accept(i, r)}
                               >
                                 {r || "Remove"} <span>↵</span>
+                                <span
+                                  className="accept-label"
+                                  aria-hidden="true"
+                                >
+                                  Accept
+                                </span>
                               </button>
                             ))}
                           </div>
@@ -633,12 +786,17 @@ export default function App() {
                   ))
                 )}
               </div>
-              <div className="engine-status">
-                <span className="dot" />
-                {status}
-              </div>
             </aside>
           </div>
+          {import.meta.env.DEV && (
+            <EngineDiagnosticsPanel
+              report={diagnostics}
+              initializationStatus={enginePhase}
+              busy={busy}
+              error={analysisError}
+              visibleCount={visible.length}
+            />
+          )}
           <div className="footnote">
             <span>◈ Your research never leaves this browser.</span>
             <span>
@@ -824,6 +982,42 @@ export default function App() {
                 <p role="status" aria-live="polite">
                   {storageStatus}
                 </p>
+                <label className="setting">
+                  SI separator
+                  <select
+                    aria-label="SI separator"
+                    value={settings.siSpaceCharacter}
+                    onChange={(e) =>
+                      update({
+                        siSpaceCharacter: e.target.value as "space" | "nbsp",
+                      })
+                    }
+                  >
+                    <option value="space">Ordinary space</option>
+                    <option value="nbsp">Nonbreaking space</option>
+                  </select>
+                </label>
+                <label className="setting">
+                  Volume notation
+                  <select
+                    aria-label="Volume notation"
+                    value={settings.unitNotation}
+                    onChange={(e) =>
+                      update({
+                        unitNotation: e.target.value as "preserve" | "mL",
+                        overrides: {
+                          ...settings.overrides,
+                          "Unit consistency": e.target.value === "mL",
+                        },
+                      })
+                    }
+                  >
+                    <option value="preserve">
+                      Preserve journal convention
+                    </option>
+                    <option value="mL">Prefer mL</option>
+                  </select>
+                </label>
                 <h3>Preferred terminology</h3>
                 <p className="muted">
                   Literal, case-sensitive matches; suggestions require manual
@@ -918,7 +1112,12 @@ export default function App() {
                   onChange={(e) => setRuleQuery(e.target.value)}
                 />
                 <div className="rules-list">
-                  {Object.entries({ ...scientificRules, ...rules })
+                  {Object.entries({
+                    ...grammarRules,
+                    ...contextualRules,
+                    ...scientificRules,
+                    ...rules,
+                  })
                     .filter(([r]) =>
                       r.toLowerCase().includes(ruleQuery.toLowerCase()),
                     )

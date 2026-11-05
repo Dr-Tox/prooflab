@@ -7,3 +7,17 @@ test-results
 *.tsbuildinfo
 
 public/licenses
+
+benchmark/reports
+
+benchmark/v2/reports
+
+# Frozen reference bytes are hash-verified; do not reformat.
+benchmark/v2/corpus.json
+benchmark/v2/paragraph-audit.json
+
+benchmark/tense/corpus.json
+benchmark/tense/reports
+benchmark/tense/discourse.json
+
+benchmark/v3/reports

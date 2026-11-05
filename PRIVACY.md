@@ -30,6 +30,12 @@ We cannot defend against malicious browser extensions, enhanced OS/browser writi
 
 ProofLab is a writing aid, not a security enclave or a scientific validity checker. It cannot certify that a paper is correct, confidential against a compromised device, or compliant with an institution's policies.
 
+## Development diagnostics
+
+`npm run dev` captures raw Harper lint excerpts/serialized data and discard reasons in browser memory and the local browser/worker console. Initialization and applied-rule state are visible in a development-only panel. No diagnostic snapshots are written to IndexedDB, put in URLs, remotely logged, or transmitted to the development server. Production builds neither render the panel nor capture/log/return raw diagnostics from the worker. Use synthetic text; browser consoles, screen sharing, extensions, and debugging traces can expose diagnostic excerpts. Clear/close the development session to remove session state; browser DevTools controls its own retained console history.
+
+Vite development mode permits its inline preamble/styles and loopback HMR WebSockets. Production CSP remains unchanged. A dedicated browser test verifies real development-worker diagnostics, local-only requests without a unique input marker, and default non-persistence. Production tests separately verify diagnostics absence, strict CSP, and network restrictions.
+
 ## Automated network tests and limits
 
 Playwright tests the production build with its actual CSP and service worker. It records browser-context request URLs, methods, and bodies while entering a unique document marker, checking suggestions, reloading, and using the engine offline. It verifies static same-origin GET-only traffic without the document marker and verifies that an external fetch is rejected by CSP. Tests check that default saving is absent, consent persists content, and revocation deletes it.

@@ -1,0 +1,287 @@
+{
+  "mode": "v3",
+  "source": "working-tree",
+  "environment": {
+    "node": "v24.19.0",
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "harper": "3.0.0"
+  },
+  "startupMs": 583.395681,
+  "statistics": {
+    "fullAnalyses": 10,
+    "cacheHits": 9,
+    "configurationUpdates": 1
+  },
+  "rows": [
+    {
+      "words": 1000,
+      "trial": 0,
+      "kind": "changed",
+      "ms": 40.3223210000001,
+      "cpuMs": 62.312,
+      "issues": 0,
+      "memory": {
+        "rss": 481452032,
+        "heapTotal": 59457536,
+        "heapUsed": 30743312,
+        "external": 299113521,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 1000,
+      "trial": 0,
+      "kind": "unchanged",
+      "ms": 0.02261399999997593,
+      "cpuMs": 0.021,
+      "issues": 0,
+      "memory": {
+        "rss": 481452032,
+        "heapTotal": 59457536,
+        "heapUsed": 30749216,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 1000,
+      "trial": 1,
+      "kind": "changed",
+      "ms": 33.32027599999992,
+      "cpuMs": 40.036,
+      "issues": 0,
+      "memory": {
+        "rss": 488529920,
+        "heapTotal": 59719680,
+        "heapUsed": 37968424,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 1000,
+      "trial": 1,
+      "kind": "unchanged",
+      "ms": 0.015424000000166416,
+      "cpuMs": 0.292,
+      "issues": 0,
+      "memory": {
+        "rss": 488529920,
+        "heapTotal": 59719680,
+        "heapUsed": 37972192,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 1000,
+      "trial": 2,
+      "kind": "changed",
+      "ms": 34.609328000000005,
+      "cpuMs": 53.299,
+      "issues": 0,
+      "memory": {
+        "rss": 490102784,
+        "heapTotal": 59719680,
+        "heapUsed": 28899624,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 1000,
+      "trial": 2,
+      "kind": "unchanged",
+      "ms": 0.0354139999999461,
+      "cpuMs": 0.03,
+      "issues": 0,
+      "memory": {
+        "rss": 490102784,
+        "heapTotal": 59719680,
+        "heapUsed": 28902528,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 5000,
+      "trial": 0,
+      "kind": "changed",
+      "ms": 174.8231649999998,
+      "cpuMs": 203.072,
+      "issues": 1,
+      "memory": {
+        "rss": 501243904,
+        "heapTotal": 60506112,
+        "heapUsed": 38438904,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 5000,
+      "trial": 0,
+      "kind": "unchanged",
+      "ms": 0.029985000000124273,
+      "cpuMs": 0.028,
+      "issues": 1,
+      "memory": {
+        "rss": 501243904,
+        "heapTotal": 60506112,
+        "heapUsed": 38442320,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 5000,
+      "trial": 1,
+      "kind": "changed",
+      "ms": 174.32311200000004,
+      "cpuMs": 185.071,
+      "issues": 1,
+      "memory": {
+        "rss": 501899264,
+        "heapTotal": 61030400,
+        "heapUsed": 30449064,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 5000,
+      "trial": 1,
+      "kind": "unchanged",
+      "ms": 0.018227999999908207,
+      "cpuMs": 0.017,
+      "issues": 1,
+      "memory": {
+        "rss": 501899264,
+        "heapTotal": 61030400,
+        "heapUsed": 30452360,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 5000,
+      "trial": 2,
+      "kind": "changed",
+      "ms": 172.77822400000014,
+      "cpuMs": 185.224,
+      "issues": 1,
+      "memory": {
+        "rss": 501469184,
+        "heapTotal": 61554688,
+        "heapUsed": 39675184,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 5000,
+      "trial": 2,
+      "kind": "unchanged",
+      "ms": 0.019510000000082073,
+      "cpuMs": 0.035,
+      "issues": 1,
+      "memory": {
+        "rss": 501469184,
+        "heapTotal": 61554688,
+        "heapUsed": 39365448,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 10000,
+      "trial": 0,
+      "kind": "changed",
+      "ms": 442.55151000000023,
+      "cpuMs": 461.725,
+      "issues": 0,
+      "memory": {
+        "rss": 503697408,
+        "heapTotal": 63008768,
+        "heapUsed": 37641440,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 10000,
+      "trial": 0,
+      "kind": "unchanged",
+      "ms": 0.03691600000001927,
+      "cpuMs": 0.035,
+      "issues": 0,
+      "memory": {
+        "rss": 503697408,
+        "heapTotal": 63008768,
+        "heapUsed": 37644448,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 10000,
+      "trial": 1,
+      "kind": "changed",
+      "ms": 440.87961799999994,
+      "cpuMs": 458.318,
+      "issues": 0,
+      "memory": {
+        "rss": 504954880,
+        "heapTotal": 64192512,
+        "heapUsed": 35988488,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 10000,
+      "trial": 1,
+      "kind": "unchanged",
+      "ms": 0.01960000000008222,
+      "cpuMs": 0.019,
+      "issues": 0,
+      "memory": {
+        "rss": 504954880,
+        "heapTotal": 64192512,
+        "heapUsed": 35991400,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 10000,
+      "trial": 2,
+      "kind": "changed",
+      "ms": 439.96490900000026,
+      "cpuMs": 450.607,
+      "issues": 0,
+      "memory": {
+        "rss": 506748928,
+        "heapTotal": 65900544,
+        "heapUsed": 33213240,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    },
+    {
+      "words": 10000,
+      "trial": 2,
+      "kind": "unchanged",
+      "ms": 0.019739999999728752,
+      "cpuMs": 0.019,
+      "issues": 0,
+      "memory": {
+        "rss": 506748928,
+        "heapTotal": 65900544,
+        "heapUsed": 33216152,
+        "external": 299113561,
+        "arrayBuffers": 520313
+      }
+    }
+  ]
+}

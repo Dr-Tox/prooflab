@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "implementationBaseline": "8a32c18c7fb8a7392696101dea82b1d9c45f783e",
+  "deployedReferenceCommit": "cf71cc7724812eea097606cde3768b62e6191149",
+  "heldOutSha256": "bc45fc9be86799c2dd2f3b1f13bced403778da3acb7a47edd3ef66c1d2f6d25a",
+  "policy": "Held-out labels frozen before rule implementation. Do not tune rules or change labels based on these results. Corpus contains synthetic, manually authored examples; no Word comparison."
+}

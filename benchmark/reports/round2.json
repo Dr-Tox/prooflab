@@ -1,0 +1,1461 @@
+{
+  "scoringVersion": 1,
+  "implementationSha256": "181bb8828b8293cabfde77e768f2f72fecd3c25da04231b1e384057b78d6ae1b",
+  "stress": [
+    {
+      "characters": 570,
+      "runs": 3,
+      "medianMs": 4.963015000000041
+    },
+    {
+      "characters": 5700,
+      "runs": 3,
+      "medianMs": 29.947132999999894
+    }
+  ],
+  "corpusVersion": 1,
+  "corpusVersions": {
+    "held-out-round2": 2
+  },
+  "label": "round2",
+  "environment": {
+    "commit": "2bed66ec9778d51be1d07e1ed76842b6002c2b97",
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "harper": "3.0.0",
+    "lockSha256": "08f4fe0eff69424d9771c2069d50b0cd9e4ef752811d65566ee09933a61f7cbe",
+    "setupMs": 597.772206
+  },
+  "corpusHashes": {
+    "held-out-round2": "3a2ef54885fa2e09c40225cc53c12cf401b395cb955b4068aa09f7f423fe0b22"
+  },
+  "summary": {
+    "held-out-round2": {
+      "cases": 20,
+      "positiveGroups": 9,
+      "detected": 8,
+      "classified": 8,
+      "acceptedReplacementGroups": 7,
+      "correctionCases": 9,
+      "offeredCompleteCorrections": 7,
+      "firstSuggestionCompleteCorrections": 7,
+      "negativeCases": 11,
+      "negativeFalsePositiveCases": 1,
+      "unmatchedDiagnostics": 1,
+      "duplicateDiagnostics": 0,
+      "harmfulSuggestionsProxy": 0,
+      "medianMs": 6.0368705000000205,
+      "p95Ms": 29.711324999999988
+    }
+  },
+  "cases": [
+    {
+      "id": "V01",
+      "text": "The reports shows a change.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "shows",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "show"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "The reports show a change."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "Bounded agreement:12:17:shows",
+            "rule": "Bounded agreement",
+            "category": "Grammar",
+            "start": 12,
+            "end": 17,
+            "original": "shows",
+            "replacements": [
+              "show"
+            ],
+            "explanation": "The subject head “reports” takes plural agreement here. Intervening nouns do not determine this verb's number.",
+            "confidence": "high",
+            "sources": [
+              "Bounded agreement"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 29.711324999999988
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 1,
+        "classified": 1,
+        "suggestionQuality": 1,
+        "offeredComplete": true,
+        "firstSuggestionComplete": true,
+        "firstSuggestionOutput": "The reports show a change.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V02",
+      "text": "Each of the patients were monitored.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "were",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "was"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "Each of the patients was monitored."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "Bounded agreement:21:25:were",
+            "rule": "Bounded agreement",
+            "category": "Grammar",
+            "start": 21,
+            "end": 25,
+            "original": "were",
+            "replacements": [
+              "was"
+            ],
+            "explanation": "The subject head “patients” takes singular agreement here. Intervening nouns do not determine this verb's number.",
+            "confidence": "high",
+            "sources": [
+              "Bounded agreement"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 9.643752000000063
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 1,
+        "classified": 1,
+        "suggestionQuality": 1,
+        "offeredComplete": true,
+        "firstSuggestionComplete": true,
+        "firstSuggestionOutput": "Each of the patients was monitored.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V03",
+      "text": "The response of the cells are variable.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "is"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "The response of the cells is variable."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "Bounded agreement:26:29:are",
+            "rule": "Bounded agreement",
+            "category": "Grammar",
+            "start": 26,
+            "end": 29,
+            "original": "are",
+            "replacements": [
+              "is"
+            ],
+            "explanation": "The subject head “response” takes singular agreement here. Intervening nouns do not determine this verb's number.",
+            "confidence": "high",
+            "sources": [
+              "Bounded agreement"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 6.049951000000078
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 1,
+        "classified": 1,
+        "suggestionQuality": 1,
+        "offeredComplete": true,
+        "firstSuggestionComplete": true,
+        "firstSuggestionOutput": "The response of the cells is variable.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V04",
+      "text": "There was many limitations.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "was",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "were"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "There were many limitations."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "Existential agreement:6:9:was",
+            "rule": "Existential agreement",
+            "category": "Grammar",
+            "start": 6,
+            "end": 9,
+            "original": "was",
+            "replacements": [
+              "were"
+            ],
+            "explanation": "This existential construction introduces an explicitly plural noun phrase.",
+            "confidence": "high",
+            "sources": [
+              "Existential agreement"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 8.529575000000023
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 1,
+        "classified": 1,
+        "suggestionQuality": 1,
+        "offeredComplete": true,
+        "firstSuggestionComplete": true,
+        "firstSuggestionOutput": "There were many limitations.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V05",
+      "text": "The signals depends of time.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "depends of",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "depend on"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "The signals depend on time."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "Bounded agreement:12:19:depends",
+            "rule": "Bounded agreement",
+            "category": "Grammar",
+            "start": 12,
+            "end": 19,
+            "original": "depends",
+            "replacements": [
+              "depend"
+            ],
+            "explanation": "The subject head “signals” takes plural agreement here. Intervening nouns do not determine this verb's number.",
+            "confidence": "high",
+            "sources": [
+              "Bounded agreement"
+            ],
+            "revision": 0
+          },
+          {
+            "id": "Dependent preposition:12:22:depends of",
+            "rule": "Dependent preposition",
+            "category": "Grammar",
+            "start": 12,
+            "end": 22,
+            "original": "depends of",
+            "replacements": [
+              "depends on"
+            ],
+            "explanation": "Forms of “depend” normally take the preposition “on”.",
+            "confidence": "high",
+            "sources": [
+              "Dependent preposition"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 5.717106000000058
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 1,
+        "classified": 1,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The signals depend of time.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V06",
+      "text": "The solution was cooled to −10°C.",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "−10°C",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "−10 °C"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "The solution was cooled to −10 °C."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "SI spacing:27:32:−10°C",
+            "rule": "SI spacing",
+            "category": "Scientific",
+            "start": 27,
+            "end": 32,
+            "original": "−10°C",
+            "replacements": [
+              "−10 °C"
+            ],
+            "explanation": "Use a space between the numerical value and the unit symbol. The number is unchanged.",
+            "notationOnly": true,
+            "sources": [
+              "SI spacing"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 7.9786300000000665
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 1,
+        "classified": 1,
+        "suggestionQuality": 1,
+        "offeredComplete": true,
+        "firstSuggestionComplete": true,
+        "firstSuggestionOutput": "The solution was cooled to −10 °C.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V07",
+      "text": "We added 6ng.",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "6ng",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "6 ng"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "We added 6 ng."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "SI spacing:9:12:6ng",
+            "rule": "SI spacing",
+            "category": "Scientific",
+            "start": 9,
+            "end": 12,
+            "original": "6ng",
+            "replacements": [
+              "6 ng"
+            ],
+            "explanation": "Use a space between the numerical value and the unit symbol. The number is unchanged.",
+            "notationOnly": true,
+            "sources": [
+              "SI spacing"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [
+          {
+            "rule": "SpellCheck",
+            "kind": "Spelling",
+            "start": 10,
+            "end": 12,
+            "problemText": "ng",
+            "sourceSlice": "ng",
+            "suggestions": [
+              {
+                "kind": 0,
+                "replacement": "nag"
+              },
+              {
+                "kind": 0,
+                "replacement": "no"
+              },
+              {
+                "kind": 0,
+                "replacement": "nu"
+              }
+            ],
+            "serialized": {
+              "inner": {
+                "span": {
+                  "start": 10,
+                  "end": 12
+                },
+                "lint_kind": "Spelling",
+                "suggestions": [
+                  {
+                    "ReplaceWith": [
+                      "n",
+                      "a",
+                      "g"
+                    ]
+                  },
+                  {
+                    "ReplaceWith": [
+                      "n",
+                      "o"
+                    ]
+                  },
+                  {
+                    "ReplaceWith": [
+                      "n",
+                      "u"
+                    ]
+                  }
+                ],
+                "message": "Did you mean to spell `ng` this way?",
+                "priority": 63
+              },
+              "span": {
+                "start": 10,
+                "end": 12
+              },
+              "problem_text": "ng",
+              "language": "Plain"
+            }
+          }
+        ],
+        "discardedLints": [
+          {
+            "rule": "SpellCheck",
+            "start": 10,
+            "end": 12,
+            "reason": "measurement-token"
+          }
+        ],
+        "latencyMs": 30.458737999999926
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 1,
+        "classified": 1,
+        "suggestionQuality": 1,
+        "offeredComplete": true,
+        "firstSuggestionComplete": true,
+        "firstSuggestionOutput": "We added 6 ng.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V08",
+      "text": "The cultures was stained.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "was",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "were"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "The cultures were stained."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "Bounded agreement:13:16:was",
+            "rule": "Bounded agreement",
+            "category": "Grammar",
+            "start": 13,
+            "end": 16,
+            "original": "was",
+            "replacements": [
+              "were"
+            ],
+            "explanation": "The subject head “cultures” takes plural agreement here. Intervening nouns do not determine this verb's number.",
+            "confidence": "high",
+            "sources": [
+              "Bounded agreement"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 5.215507000000002
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 1,
+        "classified": 1,
+        "suggestionQuality": 1,
+        "offeredComplete": true,
+        "firstSuggestionComplete": true,
+        "firstSuggestionOutput": "The cultures were stained.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V09",
+      "text": "The reagents shows instability.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "shows",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": [
+            "show"
+          ]
+        }
+      ],
+      "acceptedCorrections": [
+        "The reagents show instability."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "New-round generalization reference, frozen before safety hardening.",
+      "caseGroup": "round2-positive",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 4.781910000000039
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 1,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The reagents shows instability.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V10",
+      "text": "The patient and the physician are present.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 6.023789999999963
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The patient and the physician are present.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V11",
+      "text": "The response of the cells is variable.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 4.975934000000052
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The response of the cells is variable.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V12",
+      "text": "Its interpretation is uncertain.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 5.280606000000034
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "Its interpretation is uncertain.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V13",
+      "text": "The reports show a change.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 22.04866400000003
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The reports show a change.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V14",
+      "text": "We stored the aliquots for 20 min.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [
+          {
+            "rule": "SpellCheck",
+            "kind": "Spelling",
+            "start": 14,
+            "end": 22,
+            "problemText": "aliquots",
+            "sourceSlice": "aliquots",
+            "suggestions": [
+              {
+                "kind": 0,
+                "replacement": "liquors"
+              }
+            ],
+            "serialized": {
+              "inner": {
+                "span": {
+                  "start": 14,
+                  "end": 22
+                },
+                "lint_kind": "Spelling",
+                "suggestions": [
+                  {
+                    "ReplaceWith": [
+                      "l",
+                      "i",
+                      "q",
+                      "u",
+                      "o",
+                      "r",
+                      "s"
+                    ]
+                  }
+                ],
+                "message": "Did you mean `liquors`?",
+                "priority": 63
+              },
+              "span": {
+                "start": 14,
+                "end": 22
+              },
+              "problem_text": "aliquots",
+              "language": "Plain"
+            }
+          }
+        ],
+        "discardedLints": [
+          {
+            "rule": "SpellCheck",
+            "start": 14,
+            "end": 22,
+            "reason": "scientific-vocabulary"
+          }
+        ],
+        "latencyMs": 8.135527999999908
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "We stored the aliquots for 20 min.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V15",
+      "text": "The concentration was 1.5 × 10⁻⁴ mol/L.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [
+          {
+            "rule": "SpellCheck",
+            "kind": "Spelling",
+            "start": 33,
+            "end": 36,
+            "problemText": "mol",
+            "sourceSlice": "mol",
+            "suggestions": [
+              {
+                "kind": 0,
+                "replacement": "moll"
+              },
+              {
+                "kind": 0,
+                "replacement": "mil"
+              },
+              {
+                "kind": 0,
+                "replacement": "ml"
+              }
+            ],
+            "serialized": {
+              "inner": {
+                "span": {
+                  "start": 33,
+                  "end": 36
+                },
+                "lint_kind": "Spelling",
+                "suggestions": [
+                  {
+                    "ReplaceWith": [
+                      "m",
+                      "o",
+                      "l",
+                      "l"
+                    ]
+                  },
+                  {
+                    "ReplaceWith": [
+                      "m",
+                      "i",
+                      "l"
+                    ]
+                  },
+                  {
+                    "ReplaceWith": [
+                      "m",
+                      "l"
+                    ]
+                  }
+                ],
+                "message": "Did you mean to spell `mol` this way?",
+                "priority": 63
+              },
+              "span": {
+                "start": 33,
+                "end": 36
+              },
+              "problem_text": "mol",
+              "language": "Plain"
+            }
+          }
+        ],
+        "discardedLints": [
+          {
+            "rule": "SpellCheck",
+            "start": 33,
+            "end": 36,
+            "reason": "measurement-token"
+          }
+        ],
+        "latencyMs": 7.259751999999935
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The concentration was 1.5 × 10⁻⁴ mol/L.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V16",
+      "text": "The sample was held at 18 °C. The cells might respond.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [
+          {
+            "rule": "SpellCheck",
+            "kind": "Spelling",
+            "start": 27,
+            "end": 29,
+            "problemText": "C.",
+            "sourceSlice": "C.",
+            "suggestions": [
+              {
+                "kind": 0,
+                "replacement": "Co"
+              },
+              {
+                "kind": 0,
+                "replacement": "Cu"
+              },
+              {
+                "kind": 0,
+                "replacement": "CA"
+              }
+            ],
+            "serialized": {
+              "inner": {
+                "span": {
+                  "start": 27,
+                  "end": 29
+                },
+                "lint_kind": "Spelling",
+                "suggestions": [
+                  {
+                    "ReplaceWith": [
+                      "C",
+                      "o"
+                    ]
+                  },
+                  {
+                    "ReplaceWith": [
+                      "C",
+                      "u"
+                    ]
+                  },
+                  {
+                    "ReplaceWith": [
+                      "C",
+                      "A"
+                    ]
+                  }
+                ],
+                "message": "Did you mean to spell `C.` this way?",
+                "priority": 63
+              },
+              "span": {
+                "start": 27,
+                "end": 29
+              },
+              "problem_text": "C.",
+              "language": "Plain"
+            }
+          }
+        ],
+        "discardedLints": [
+          {
+            "rule": "SpellCheck",
+            "start": 27,
+            "end": 29,
+            "reason": "protected-expression"
+          }
+        ],
+        "latencyMs": 8.41011299999991
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The sample was held at 18 °C. The cells might respond.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V17",
+      "text": "We found that that hypothesis was consistent with the data.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [
+          {
+            "rule": "RedundantThat",
+            "kind": "Repetition",
+            "start": 9,
+            "end": 18,
+            "problemText": "that that",
+            "sourceSlice": "that that",
+            "suggestions": [
+              {
+                "kind": 0,
+                "replacement": "that"
+              }
+            ],
+            "serialized": {
+              "inner": {
+                "span": {
+                  "start": 9,
+                  "end": 18
+                },
+                "lint_kind": "Repetition",
+                "suggestions": [
+                  {
+                    "ReplaceWith": [
+                      "t",
+                      "h",
+                      "a",
+                      "t"
+                    ]
+                  }
+                ],
+                "message": "Consider whether the second `that` adds meaning in this context.",
+                "priority": 31
+              },
+              "span": {
+                "start": 9,
+                "end": 18
+              },
+              "problem_text": "that that",
+              "language": "Plain"
+            }
+          },
+          {
+            "rule": "RepeatedWords",
+            "kind": "Repetition",
+            "start": 9,
+            "end": 18,
+            "problemText": "that that",
+            "sourceSlice": "that that",
+            "suggestions": [
+              {
+                "kind": 0,
+                "replacement": "that"
+              }
+            ],
+            "serialized": {
+              "inner": {
+                "span": {
+                  "start": 9,
+                  "end": 18
+                },
+                "lint_kind": "Repetition",
+                "suggestions": [
+                  {
+                    "ReplaceWith": [
+                      "t",
+                      "h",
+                      "a",
+                      "t"
+                    ]
+                  }
+                ],
+                "message": "Did you mean to repeat this word?",
+                "priority": 128
+              },
+              "span": {
+                "start": 9,
+                "end": 18
+              },
+              "problem_text": "that that",
+              "language": "Plain"
+            }
+          },
+          {
+            "rule": "ThatWhich",
+            "kind": "Repetition",
+            "start": 9,
+            "end": 18,
+            "problemText": "that that",
+            "sourceSlice": "that that",
+            "suggestions": [
+              {
+                "kind": 0,
+                "replacement": "that which"
+              }
+            ],
+            "serialized": {
+              "inner": {
+                "span": {
+                  "start": 9,
+                  "end": 18
+                },
+                "lint_kind": "Repetition",
+                "suggestions": [
+                  {
+                    "ReplaceWith": [
+                      "t",
+                      "h",
+                      "a",
+                      "t",
+                      " ",
+                      "w",
+                      "h",
+                      "i",
+                      "c",
+                      "h"
+                    ]
+                  }
+                ],
+                "message": "“that that” sometimes means “that which”, which is clearer.",
+                "priority": 126
+              },
+              "span": {
+                "start": 9,
+                "end": 18
+              },
+              "problem_text": "that that",
+              "language": "Plain"
+            }
+          }
+        ],
+        "discardedLints": [
+          {
+            "rule": "RedundantThat",
+            "start": 9,
+            "end": 18,
+            "reason": "legitimate-repetition"
+          },
+          {
+            "rule": "RepeatedWords",
+            "start": 9,
+            "end": 18,
+            "reason": "legitimate-repetition"
+          },
+          {
+            "rule": "ThatWhich",
+            "start": 9,
+            "end": 18,
+            "reason": "legitimate-repetition"
+          }
+        ],
+        "latencyMs": 5.802143999999998
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "We found that that hypothesis was consistent with the data.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V18",
+      "text": "After staining the cells, the pellet was collected.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 5.91919299999995
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "After staining the cells, the pellet was collected.",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V19",
+      "text": "The estimate may be consistent with an association (p = 0.12).",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [],
+        "rawLints": [],
+        "discardedLints": [],
+        "latencyMs": 4.826088000000027
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The estimate may be consistent with an association (p = 0.12).",
+        "negativeFalsePositive": false,
+        "unmatchedDiagnostics": 0,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    },
+    {
+      "id": "V20",
+      "text": "The value was −3.2 mV.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control, frozen before safety hardening.",
+      "caseGroup": "round2-negative",
+      "actualEngineResult": {
+        "issues": [
+          {
+            "id": "SpellCheck:19:21:mV",
+            "rule": "SpellCheck",
+            "category": "Spelling",
+            "start": 19,
+            "end": 21,
+            "original": "mV",
+            "replacements": [
+              "ma",
+              "me",
+              "mi"
+            ],
+            "explanation": "Did you mean to spell `mV` this way?",
+            "terminologyStatus": "unknown",
+            "sources": [
+              "SpellCheck"
+            ],
+            "revision": 0
+          }
+        ],
+        "rawLints": [
+          {
+            "rule": "SpellCheck",
+            "kind": "Spelling",
+            "start": 19,
+            "end": 21,
+            "problemText": "mV",
+            "sourceSlice": "mV",
+            "suggestions": [
+              {
+                "kind": 0,
+                "replacement": "ma"
+              },
+              {
+                "kind": 0,
+                "replacement": "me"
+              },
+              {
+                "kind": 0,
+                "replacement": "mi"
+              }
+            ],
+            "serialized": {
+              "inner": {
+                "span": {
+                  "start": 19,
+                  "end": 21
+                },
+                "lint_kind": "Spelling",
+                "suggestions": [
+                  {
+                    "ReplaceWith": [
+                      "m",
+                      "a"
+                    ]
+                  },
+                  {
+                    "ReplaceWith": [
+                      "m",
+                      "e"
+                    ]
+                  },
+                  {
+                    "ReplaceWith": [
+                      "m",
+                      "i"
+                    ]
+                  }
+                ],
+                "message": "Did you mean to spell `mV` this way?",
+                "priority": 63
+              },
+              "span": {
+                "start": 19,
+                "end": 21
+              },
+              "problem_text": "mV",
+              "language": "Plain"
+            }
+          }
+        ],
+        "discardedLints": [],
+        "latencyMs": 5.889687999999978
+      },
+      "split": "held-out-round2",
+      "metrics": {
+        "expectedCount": 0,
+        "detected": 0,
+        "classified": 0,
+        "suggestionQuality": 0,
+        "offeredComplete": false,
+        "firstSuggestionComplete": false,
+        "firstSuggestionOutput": "The value was −3.2 ma.",
+        "negativeFalsePositive": true,
+        "unmatchedDiagnostics": 1,
+        "duplicateCount": 0,
+        "harmfulSuggestionCount": 0,
+        "meaningPreservationProxy": true
+      }
+    }
+  ]
+}

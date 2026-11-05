@@ -1,0 +1,4227 @@
+[
+  {
+    "id": "T01-1",
+    "family": "finished-past-trailing",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have measured the response yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We measured the response yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N01-1",
+    "family": "finished-past-trailing-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We measured the response yesterday.",
+    "target": "",
+    "accepted": [
+      "We measured the response yesterday."
+    ],
+    "referenceRewrite": "We measured the response yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T01-2",
+    "family": "finished-past-trailing",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have analyzed the concentration yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We analyzed the concentration yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N01-2",
+    "family": "finished-past-trailing-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We analyzed the concentration yesterday.",
+    "target": "",
+    "accepted": [
+      "We analyzed the concentration yesterday."
+    ],
+    "referenceRewrite": "We analyzed the concentration yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T01-3",
+    "family": "finished-past-trailing",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have assessed the samples yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We assessed the samples yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N01-3",
+    "family": "finished-past-trailing-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We assessed the samples yesterday.",
+    "target": "",
+    "accepted": [
+      "We assessed the samples yesterday."
+    ],
+    "referenceRewrite": "We assessed the samples yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T01-4",
+    "family": "finished-past-trailing",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have evaluated the endpoint yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We evaluated the endpoint yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N01-4",
+    "family": "finished-past-trailing-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We evaluated the endpoint yesterday.",
+    "target": "",
+    "accepted": [
+      "We evaluated the endpoint yesterday."
+    ],
+    "referenceRewrite": "We evaluated the endpoint yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T01-5",
+    "family": "finished-past-trailing",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have recorded the signal yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We recorded the signal yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N01-5",
+    "family": "finished-past-trailing-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We recorded the signal yesterday.",
+    "target": "",
+    "accepted": [
+      "We recorded the signal yesterday."
+    ],
+    "referenceRewrite": "We recorded the signal yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T02-1",
+    "family": "finished-past-leading",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Last week, we have measured the response.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Last week, we measured the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N02-1",
+    "family": "finished-past-leading-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Last week, we measured the response.",
+    "target": "",
+    "accepted": [
+      "Last week, we measured the response."
+    ],
+    "referenceRewrite": "Last week, we measured the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T02-2",
+    "family": "finished-past-leading",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Last week, we have analyzed the concentration.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Last week, we analyzed the concentration.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N02-2",
+    "family": "finished-past-leading-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Last week, we analyzed the concentration.",
+    "target": "",
+    "accepted": [
+      "Last week, we analyzed the concentration."
+    ],
+    "referenceRewrite": "Last week, we analyzed the concentration.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T02-3",
+    "family": "finished-past-leading",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Last week, we have assessed the samples.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Last week, we assessed the samples.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N02-3",
+    "family": "finished-past-leading-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Last week, we assessed the samples.",
+    "target": "",
+    "accepted": [
+      "Last week, we assessed the samples."
+    ],
+    "referenceRewrite": "Last week, we assessed the samples.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T02-4",
+    "family": "finished-past-leading",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Last week, we have evaluated the endpoint.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Last week, we evaluated the endpoint.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N02-4",
+    "family": "finished-past-leading-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Last week, we evaluated the endpoint.",
+    "target": "",
+    "accepted": [
+      "Last week, we evaluated the endpoint."
+    ],
+    "referenceRewrite": "Last week, we evaluated the endpoint.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T02-5",
+    "family": "finished-past-leading",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Last week, we have recorded the signal.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Last week, we recorded the signal.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N02-5",
+    "family": "finished-past-leading-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Last week, we recorded the signal.",
+    "target": "",
+    "accepted": [
+      "Last week, we recorded the signal."
+    ],
+    "referenceRewrite": "Last week, we recorded the signal.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T03-1",
+    "family": "instrument-not-time-boundary",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have measured the response by microscopy yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We measured the response by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N03-1",
+    "family": "instrument-not-time-boundary-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We measured the response by microscopy yesterday.",
+    "target": "",
+    "accepted": [
+      "We measured the response by microscopy yesterday."
+    ],
+    "referenceRewrite": "We measured the response by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T03-2",
+    "family": "instrument-not-time-boundary",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have analyzed the concentration by microscopy yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We analyzed the concentration by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N03-2",
+    "family": "instrument-not-time-boundary-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We analyzed the concentration by microscopy yesterday.",
+    "target": "",
+    "accepted": [
+      "We analyzed the concentration by microscopy yesterday."
+    ],
+    "referenceRewrite": "We analyzed the concentration by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T03-3",
+    "family": "instrument-not-time-boundary",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have assessed the samples by microscopy yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We assessed the samples by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N03-3",
+    "family": "instrument-not-time-boundary-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We assessed the samples by microscopy yesterday.",
+    "target": "",
+    "accepted": [
+      "We assessed the samples by microscopy yesterday."
+    ],
+    "referenceRewrite": "We assessed the samples by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T03-4",
+    "family": "instrument-not-time-boundary",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have evaluated the endpoint by microscopy yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We evaluated the endpoint by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N03-4",
+    "family": "instrument-not-time-boundary-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We evaluated the endpoint by microscopy yesterday.",
+    "target": "",
+    "accepted": [
+      "We evaluated the endpoint by microscopy yesterday."
+    ],
+    "referenceRewrite": "We evaluated the endpoint by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T03-5",
+    "family": "instrument-not-time-boundary",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have recorded the signal by microscopy yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We recorded the signal by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N03-5",
+    "family": "instrument-not-time-boundary-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We recorded the signal by microscopy yesterday.",
+    "target": "",
+    "accepted": [
+      "We recorded the signal by microscopy yesterday."
+    ],
+    "referenceRewrite": "We recorded the signal by microscopy yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T04-1",
+    "family": "negative-perfect-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have not measured the response last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We did not measure the response last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N04-1",
+    "family": "negative-perfect-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not measure the response last week.",
+    "target": "",
+    "accepted": [
+      "We did not measure the response last week."
+    ],
+    "referenceRewrite": "We did not measure the response last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T04-2",
+    "family": "negative-perfect-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have not analyzed the concentration last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We did not analyze the concentration last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N04-2",
+    "family": "negative-perfect-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not analyze the concentration last week.",
+    "target": "",
+    "accepted": [
+      "We did not analyze the concentration last week."
+    ],
+    "referenceRewrite": "We did not analyze the concentration last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T04-3",
+    "family": "negative-perfect-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have not assessed the samples last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We did not assess the samples last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N04-3",
+    "family": "negative-perfect-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not assess the samples last week.",
+    "target": "",
+    "accepted": [
+      "We did not assess the samples last week."
+    ],
+    "referenceRewrite": "We did not assess the samples last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T04-4",
+    "family": "negative-perfect-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have not evaluated the endpoint last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We did not evaluate the endpoint last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N04-4",
+    "family": "negative-perfect-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not evaluate the endpoint last week.",
+    "target": "",
+    "accepted": [
+      "We did not evaluate the endpoint last week."
+    ],
+    "referenceRewrite": "We did not evaluate the endpoint last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T04-5",
+    "family": "negative-perfect-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have not recorded the signal last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We did not record the signal last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N04-5",
+    "family": "negative-perfect-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not record the signal last week.",
+    "target": "",
+    "accepted": [
+      "We did not record the signal last week."
+    ],
+    "referenceRewrite": "We did not record the signal last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T05-1",
+    "family": "perfect-progressive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have been measuring the response yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We were measuring the response yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N05-1",
+    "family": "perfect-progressive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We were measuring the response yesterday.",
+    "target": "",
+    "accepted": [
+      "We were measuring the response yesterday."
+    ],
+    "referenceRewrite": "We were measuring the response yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T05-2",
+    "family": "perfect-progressive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have been analyzing the concentration yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We were analyzing the concentration yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N05-2",
+    "family": "perfect-progressive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We were analyzing the concentration yesterday.",
+    "target": "",
+    "accepted": [
+      "We were analyzing the concentration yesterday."
+    ],
+    "referenceRewrite": "We were analyzing the concentration yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T05-3",
+    "family": "perfect-progressive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have been assessing the samples yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We were assessing the samples yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N05-3",
+    "family": "perfect-progressive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We were assessing the samples yesterday.",
+    "target": "",
+    "accepted": [
+      "We were assessing the samples yesterday."
+    ],
+    "referenceRewrite": "We were assessing the samples yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T05-4",
+    "family": "perfect-progressive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have been evaluating the endpoint yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We were evaluating the endpoint yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N05-4",
+    "family": "perfect-progressive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We were evaluating the endpoint yesterday.",
+    "target": "",
+    "accepted": [
+      "We were evaluating the endpoint yesterday."
+    ],
+    "referenceRewrite": "We were evaluating the endpoint yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T05-5",
+    "family": "perfect-progressive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have been recording the signal yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We were recording the signal yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N05-5",
+    "family": "perfect-progressive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We were recording the signal yesterday.",
+    "target": "",
+    "accepted": [
+      "We were recording the signal yesterday."
+    ],
+    "referenceRewrite": "We were recording the signal yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T06-1",
+    "family": "perfect-passive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The samples have been measured yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The samples were measured yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N06-1",
+    "family": "perfect-passive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were measured yesterday.",
+    "target": "",
+    "accepted": [
+      "The samples were measured yesterday."
+    ],
+    "referenceRewrite": "The samples were measured yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T06-2",
+    "family": "perfect-passive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The samples have been analyzed yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The samples were analyzed yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N06-2",
+    "family": "perfect-passive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were analyzed yesterday.",
+    "target": "",
+    "accepted": [
+      "The samples were analyzed yesterday."
+    ],
+    "referenceRewrite": "The samples were analyzed yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T06-3",
+    "family": "perfect-passive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The samples have been assessed yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The samples were assessed yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N06-3",
+    "family": "perfect-passive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were assessed yesterday.",
+    "target": "",
+    "accepted": [
+      "The samples were assessed yesterday."
+    ],
+    "referenceRewrite": "The samples were assessed yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T06-4",
+    "family": "perfect-passive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The samples have been evaluated yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The samples were evaluated yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N06-4",
+    "family": "perfect-passive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were evaluated yesterday.",
+    "target": "",
+    "accepted": [
+      "The samples were evaluated yesterday."
+    ],
+    "referenceRewrite": "The samples were evaluated yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T06-5",
+    "family": "perfect-passive-dated",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The samples have been recorded yesterday.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The samples were recorded yesterday.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N06-5",
+    "family": "perfect-passive-dated-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were recorded yesterday.",
+    "target": "",
+    "accepted": [
+      "The samples were recorded yesterday."
+    ],
+    "referenceRewrite": "The samples were recorded yesterday.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T07-1",
+    "family": "future-with-closed-past",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Yesterday, we will measure the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Yesterday, we measured the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N07-1",
+    "family": "future-with-closed-past-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Yesterday, we measured the response.",
+    "target": "",
+    "accepted": [
+      "Yesterday, we measured the response."
+    ],
+    "referenceRewrite": "Yesterday, we measured the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T07-2",
+    "family": "future-with-closed-past",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Yesterday, we will analyze the concentration.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Yesterday, we analyzed the concentration.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N07-2",
+    "family": "future-with-closed-past-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Yesterday, we analyzed the concentration.",
+    "target": "",
+    "accepted": [
+      "Yesterday, we analyzed the concentration."
+    ],
+    "referenceRewrite": "Yesterday, we analyzed the concentration.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T07-3",
+    "family": "future-with-closed-past",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Yesterday, we will assess the samples.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Yesterday, we assessed the samples.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N07-3",
+    "family": "future-with-closed-past-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Yesterday, we assessed the samples.",
+    "target": "",
+    "accepted": [
+      "Yesterday, we assessed the samples."
+    ],
+    "referenceRewrite": "Yesterday, we assessed the samples.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T07-4",
+    "family": "future-with-closed-past",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Yesterday, we will evaluate the endpoint.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Yesterday, we evaluated the endpoint.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N07-4",
+    "family": "future-with-closed-past-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Yesterday, we evaluated the endpoint.",
+    "target": "",
+    "accepted": [
+      "Yesterday, we evaluated the endpoint."
+    ],
+    "referenceRewrite": "Yesterday, we evaluated the endpoint.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T07-5",
+    "family": "future-with-closed-past",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Yesterday, we will record the signal.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Yesterday, we recorded the signal.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N07-5",
+    "family": "future-with-closed-past-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Yesterday, we recorded the signal.",
+    "target": "",
+    "accepted": [
+      "Yesterday, we recorded the signal."
+    ],
+    "referenceRewrite": "Yesterday, we recorded the signal.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T08-1",
+    "family": "future-temporal-when",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "When the samples will be measured, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "When the samples are measured, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N08-1",
+    "family": "future-temporal-when-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "When the samples are measured, we will record the response.",
+    "target": "",
+    "accepted": [
+      "When the samples are measured, we will record the response."
+    ],
+    "referenceRewrite": "When the samples are measured, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T08-2",
+    "family": "future-temporal-when",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "When the samples will be analyzed, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "When the samples are analyzed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N08-2",
+    "family": "future-temporal-when-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "When the samples are analyzed, we will record the response.",
+    "target": "",
+    "accepted": [
+      "When the samples are analyzed, we will record the response."
+    ],
+    "referenceRewrite": "When the samples are analyzed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T08-3",
+    "family": "future-temporal-when",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "When the samples will be assessed, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "When the samples are assessed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N08-3",
+    "family": "future-temporal-when-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "When the samples are assessed, we will record the response.",
+    "target": "",
+    "accepted": [
+      "When the samples are assessed, we will record the response."
+    ],
+    "referenceRewrite": "When the samples are assessed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T08-4",
+    "family": "future-temporal-when",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "When the samples will be evaluated, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "When the samples are evaluated, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N08-4",
+    "family": "future-temporal-when-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "When the samples are evaluated, we will record the response.",
+    "target": "",
+    "accepted": [
+      "When the samples are evaluated, we will record the response."
+    ],
+    "referenceRewrite": "When the samples are evaluated, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T08-5",
+    "family": "future-temporal-when",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "When the samples will be recorded, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "When the samples are recorded, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N08-5",
+    "family": "future-temporal-when-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "When the samples are recorded, we will record the response.",
+    "target": "",
+    "accepted": [
+      "When the samples are recorded, we will record the response."
+    ],
+    "referenceRewrite": "When the samples are recorded, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T09-1",
+    "family": "future-temporal-after",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "After the samples will be measured, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "After the samples are measured, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N09-1",
+    "family": "future-temporal-after-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "After the samples are measured, we will record the response.",
+    "target": "",
+    "accepted": [
+      "After the samples are measured, we will record the response."
+    ],
+    "referenceRewrite": "After the samples are measured, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T09-2",
+    "family": "future-temporal-after",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "After the samples will be analyzed, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "After the samples are analyzed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N09-2",
+    "family": "future-temporal-after-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "After the samples are analyzed, we will record the response.",
+    "target": "",
+    "accepted": [
+      "After the samples are analyzed, we will record the response."
+    ],
+    "referenceRewrite": "After the samples are analyzed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T09-3",
+    "family": "future-temporal-after",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "After the samples will be assessed, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "After the samples are assessed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N09-3",
+    "family": "future-temporal-after-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "After the samples are assessed, we will record the response.",
+    "target": "",
+    "accepted": [
+      "After the samples are assessed, we will record the response."
+    ],
+    "referenceRewrite": "After the samples are assessed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T09-4",
+    "family": "future-temporal-after",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "After the samples will be evaluated, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "After the samples are evaluated, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N09-4",
+    "family": "future-temporal-after-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "After the samples are evaluated, we will record the response.",
+    "target": "",
+    "accepted": [
+      "After the samples are evaluated, we will record the response."
+    ],
+    "referenceRewrite": "After the samples are evaluated, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T09-5",
+    "family": "future-temporal-after",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "After the samples will be recorded, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "After the samples are recorded, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N09-5",
+    "family": "future-temporal-after-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "After the samples are recorded, we will record the response.",
+    "target": "",
+    "accepted": [
+      "After the samples are recorded, we will record the response."
+    ],
+    "referenceRewrite": "After the samples are recorded, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T10-1",
+    "family": "future-temporal-before",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Before the samples will be measured, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Before the samples are measured, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N10-1",
+    "family": "future-temporal-before-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Before the samples are measured, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Before the samples are measured, we will record the response."
+    ],
+    "referenceRewrite": "Before the samples are measured, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T10-2",
+    "family": "future-temporal-before",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Before the samples will be analyzed, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Before the samples are analyzed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N10-2",
+    "family": "future-temporal-before-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Before the samples are analyzed, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Before the samples are analyzed, we will record the response."
+    ],
+    "referenceRewrite": "Before the samples are analyzed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T10-3",
+    "family": "future-temporal-before",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Before the samples will be assessed, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Before the samples are assessed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N10-3",
+    "family": "future-temporal-before-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Before the samples are assessed, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Before the samples are assessed, we will record the response."
+    ],
+    "referenceRewrite": "Before the samples are assessed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T10-4",
+    "family": "future-temporal-before",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Before the samples will be evaluated, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Before the samples are evaluated, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N10-4",
+    "family": "future-temporal-before-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Before the samples are evaluated, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Before the samples are evaluated, we will record the response."
+    ],
+    "referenceRewrite": "Before the samples are evaluated, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T10-5",
+    "family": "future-temporal-before",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Before the samples will be recorded, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Before the samples are recorded, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N10-5",
+    "family": "future-temporal-before-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Before the samples are recorded, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Before the samples are recorded, we will record the response."
+    ],
+    "referenceRewrite": "Before the samples are recorded, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T11-1",
+    "family": "future-temporal-until",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Until the samples will be measured, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Until the samples are measured, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N11-1",
+    "family": "future-temporal-until-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Until the samples are measured, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Until the samples are measured, we will record the response."
+    ],
+    "referenceRewrite": "Until the samples are measured, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T11-2",
+    "family": "future-temporal-until",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Until the samples will be analyzed, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Until the samples are analyzed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N11-2",
+    "family": "future-temporal-until-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Until the samples are analyzed, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Until the samples are analyzed, we will record the response."
+    ],
+    "referenceRewrite": "Until the samples are analyzed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T11-3",
+    "family": "future-temporal-until",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Until the samples will be assessed, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Until the samples are assessed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N11-3",
+    "family": "future-temporal-until-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Until the samples are assessed, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Until the samples are assessed, we will record the response."
+    ],
+    "referenceRewrite": "Until the samples are assessed, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T11-4",
+    "family": "future-temporal-until",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Until the samples will be evaluated, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Until the samples are evaluated, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N11-4",
+    "family": "future-temporal-until-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Until the samples are evaluated, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Until the samples are evaluated, we will record the response."
+    ],
+    "referenceRewrite": "Until the samples are evaluated, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T11-5",
+    "family": "future-temporal-until",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Until the samples will be recorded, we will record the response.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Until the samples are recorded, we will record the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N11-5",
+    "family": "future-temporal-until-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Until the samples are recorded, we will record the response.",
+    "target": "",
+    "accepted": [
+      "Until the samples are recorded, we will record the response."
+    ],
+    "referenceRewrite": "Until the samples are recorded, we will record the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T12-1",
+    "family": "ongoing-since",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We still measure the response continuously since 2019.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have been measuring the response continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N12-1",
+    "family": "ongoing-since-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been measuring the response continuously since 2019.",
+    "target": "",
+    "accepted": [
+      "We have been measuring the response continuously since 2019."
+    ],
+    "referenceRewrite": "We have been measuring the response continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T12-2",
+    "family": "ongoing-since",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We still analyze the concentration continuously since 2019.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have been analyzing the concentration continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N12-2",
+    "family": "ongoing-since-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been analyzing the concentration continuously since 2019.",
+    "target": "",
+    "accepted": [
+      "We have been analyzing the concentration continuously since 2019."
+    ],
+    "referenceRewrite": "We have been analyzing the concentration continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T12-3",
+    "family": "ongoing-since",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We still assess the samples continuously since 2019.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have been assessing the samples continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N12-3",
+    "family": "ongoing-since-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been assessing the samples continuously since 2019.",
+    "target": "",
+    "accepted": [
+      "We have been assessing the samples continuously since 2019."
+    ],
+    "referenceRewrite": "We have been assessing the samples continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T12-4",
+    "family": "ongoing-since",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We still evaluate the endpoint continuously since 2019.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have been evaluating the endpoint continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N12-4",
+    "family": "ongoing-since-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been evaluating the endpoint continuously since 2019.",
+    "target": "",
+    "accepted": [
+      "We have been evaluating the endpoint continuously since 2019."
+    ],
+    "referenceRewrite": "We have been evaluating the endpoint continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T12-5",
+    "family": "ongoing-since",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We still record the signal continuously since 2019.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have been recording the signal continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N12-5",
+    "family": "ongoing-since-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been recording the signal continuously since 2019.",
+    "target": "",
+    "accepted": [
+      "We have been recording the signal continuously since 2019."
+    ],
+    "referenceRewrite": "We have been recording the signal continuously since 2019.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T13-1",
+    "family": "since-duration",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have monitored the cultures since two hours.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have monitored the cultures for two hours.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N13-1",
+    "family": "since-duration-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have monitored the cultures for two hours.",
+    "target": "",
+    "accepted": [
+      "We have monitored the cultures for two hours."
+    ],
+    "referenceRewrite": "We have monitored the cultures for two hours.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T13-2",
+    "family": "since-duration",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have monitored the cultures since three hours.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have monitored the cultures for three hours.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N13-2",
+    "family": "since-duration-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have monitored the cultures for three hours.",
+    "target": "",
+    "accepted": [
+      "We have monitored the cultures for three hours."
+    ],
+    "referenceRewrite": "We have monitored the cultures for three hours.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T13-3",
+    "family": "since-duration",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have monitored the cultures since four hours.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have monitored the cultures for four hours.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N13-3",
+    "family": "since-duration-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have monitored the cultures for four hours.",
+    "target": "",
+    "accepted": [
+      "We have monitored the cultures for four hours."
+    ],
+    "referenceRewrite": "We have monitored the cultures for four hours.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T13-4",
+    "family": "since-duration",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have monitored the cultures since five hours.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have monitored the cultures for five hours.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N13-4",
+    "family": "since-duration-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have monitored the cultures for five hours.",
+    "target": "",
+    "accepted": [
+      "We have monitored the cultures for five hours."
+    ],
+    "referenceRewrite": "We have monitored the cultures for five hours.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T13-5",
+    "family": "since-duration",
+    "split": "development",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "We have monitored the cultures since six hours.",
+    "target": "since",
+    "accepted": [],
+    "referenceRewrite": "We have monitored the cultures for six hours.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N13-5",
+    "family": "since-duration-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have monitored the cultures for six hours.",
+    "target": "",
+    "accepted": [
+      "We have monitored the cultures for six hours."
+    ],
+    "referenceRewrite": "We have monitored the cultures for six hours.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T14-1",
+    "family": "stative-progressive",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "We are knowing the mechanism.",
+    "target": "are",
+    "accepted": [],
+    "referenceRewrite": "We know the mechanism.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N14-1",
+    "family": "stative-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We know the mechanism.",
+    "target": "",
+    "accepted": [
+      "We know the mechanism."
+    ],
+    "referenceRewrite": "We know the mechanism.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T14-2",
+    "family": "stative-progressive",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The extract is consisting of three fractions.",
+    "target": "is",
+    "accepted": [],
+    "referenceRewrite": "The extract consists of three fractions.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N14-2",
+    "family": "stative-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The extract consists of three fractions.",
+    "target": "",
+    "accepted": [
+      "The extract consists of three fractions."
+    ],
+    "referenceRewrite": "The extract consists of three fractions.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T14-3",
+    "family": "stative-progressive",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The samples are belonging to the control group.",
+    "target": "are",
+    "accepted": [],
+    "referenceRewrite": "The samples belong to the control group.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N14-3",
+    "family": "stative-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples belong to the control group.",
+    "target": "",
+    "accepted": [
+      "The samples belong to the control group."
+    ],
+    "referenceRewrite": "The samples belong to the control group.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T14-4",
+    "family": "stative-progressive",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The cells are resembling the reference culture.",
+    "target": "are",
+    "accepted": [],
+    "referenceRewrite": "The cells resemble the reference culture.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N14-4",
+    "family": "stative-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The cells resemble the reference culture.",
+    "target": "",
+    "accepted": [
+      "The cells resemble the reference culture."
+    ],
+    "referenceRewrite": "The cells resemble the reference culture.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T14-5",
+    "family": "stative-progressive",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The instrument was belonging to the laboratory.",
+    "target": "was",
+    "accepted": [],
+    "referenceRewrite": "The instrument belonged to the laboratory.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N14-5",
+    "family": "stative-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The instrument belonged to the laboratory.",
+    "target": "",
+    "accepted": [
+      "The instrument belonged to the laboratory."
+    ],
+    "referenceRewrite": "The instrument belonged to the laboratory.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T15-1",
+    "family": "irregular-perfect",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team has wrote the records.",
+    "target": "wrote",
+    "accepted": [
+      "The team has written the records."
+    ],
+    "referenceRewrite": "The team has written the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N15-1",
+    "family": "irregular-perfect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team has written the records.",
+    "target": "",
+    "accepted": [
+      "The team has written the records."
+    ],
+    "referenceRewrite": "The team has written the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T15-2",
+    "family": "irregular-perfect",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team has took the records.",
+    "target": "took",
+    "accepted": [
+      "The team has taken the records."
+    ],
+    "referenceRewrite": "The team has taken the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N15-2",
+    "family": "irregular-perfect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team has taken the records.",
+    "target": "",
+    "accepted": [
+      "The team has taken the records."
+    ],
+    "referenceRewrite": "The team has taken the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T15-3",
+    "family": "irregular-perfect",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team has saw the records.",
+    "target": "saw",
+    "accepted": [
+      "The team has seen the records."
+    ],
+    "referenceRewrite": "The team has seen the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N15-3",
+    "family": "irregular-perfect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team has seen the records.",
+    "target": "",
+    "accepted": [
+      "The team has seen the records."
+    ],
+    "referenceRewrite": "The team has seen the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T15-4",
+    "family": "irregular-perfect",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team has chose the records.",
+    "target": "chose",
+    "accepted": [
+      "The team has chosen the records."
+    ],
+    "referenceRewrite": "The team has chosen the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N15-4",
+    "family": "irregular-perfect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team has chosen the records.",
+    "target": "",
+    "accepted": [
+      "The team has chosen the records."
+    ],
+    "referenceRewrite": "The team has chosen the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T15-5",
+    "family": "irregular-perfect",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team has gave the records.",
+    "target": "gave",
+    "accepted": [
+      "The team has given the records."
+    ],
+    "referenceRewrite": "The team has given the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N15-5",
+    "family": "irregular-perfect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team has given the records.",
+    "target": "",
+    "accepted": [
+      "The team has given the records."
+    ],
+    "referenceRewrite": "The team has given the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T16-1",
+    "family": "passive-participle",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The samples were measure by the team.",
+    "target": "measure",
+    "accepted": [
+      "The samples were measured by the team."
+    ],
+    "referenceRewrite": "The samples were measured by the team.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N16-1",
+    "family": "passive-participle-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were measured by the team.",
+    "target": "",
+    "accepted": [
+      "The samples were measured by the team."
+    ],
+    "referenceRewrite": "The samples were measured by the team.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T16-2",
+    "family": "passive-participle",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The samples were analyze by the team.",
+    "target": "analyze",
+    "accepted": [
+      "The samples were analyzed by the team."
+    ],
+    "referenceRewrite": "The samples were analyzed by the team.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N16-2",
+    "family": "passive-participle-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were analyzed by the team.",
+    "target": "",
+    "accepted": [
+      "The samples were analyzed by the team."
+    ],
+    "referenceRewrite": "The samples were analyzed by the team.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T16-3",
+    "family": "passive-participle",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The samples were assess by the team.",
+    "target": "assess",
+    "accepted": [
+      "The samples were assessed by the team."
+    ],
+    "referenceRewrite": "The samples were assessed by the team.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N16-3",
+    "family": "passive-participle-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were assessed by the team.",
+    "target": "",
+    "accepted": [
+      "The samples were assessed by the team."
+    ],
+    "referenceRewrite": "The samples were assessed by the team.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T16-4",
+    "family": "passive-participle",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The samples were evaluate by the team.",
+    "target": "evaluate",
+    "accepted": [
+      "The samples were evaluated by the team."
+    ],
+    "referenceRewrite": "The samples were evaluated by the team.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N16-4",
+    "family": "passive-participle-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were evaluated by the team.",
+    "target": "",
+    "accepted": [
+      "The samples were evaluated by the team."
+    ],
+    "referenceRewrite": "The samples were evaluated by the team.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T16-5",
+    "family": "passive-participle",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The samples were record by the team.",
+    "target": "record",
+    "accepted": [
+      "The samples were recorded by the team."
+    ],
+    "referenceRewrite": "The samples were recorded by the team.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N16-5",
+    "family": "passive-participle-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were recorded by the team.",
+    "target": "",
+    "accepted": [
+      "The samples were recorded by the team."
+    ],
+    "referenceRewrite": "The samples were recorded by the team.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T17-1",
+    "family": "modal-perfect-irregular",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team may have wrote the records.",
+    "target": "wrote",
+    "accepted": [
+      "The team may have written the records."
+    ],
+    "referenceRewrite": "The team may have written the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N17-1",
+    "family": "modal-perfect-irregular-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team may have written the records.",
+    "target": "",
+    "accepted": [
+      "The team may have written the records."
+    ],
+    "referenceRewrite": "The team may have written the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T17-2",
+    "family": "modal-perfect-irregular",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team may have took the records.",
+    "target": "took",
+    "accepted": [
+      "The team may have taken the records."
+    ],
+    "referenceRewrite": "The team may have taken the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N17-2",
+    "family": "modal-perfect-irregular-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team may have taken the records.",
+    "target": "",
+    "accepted": [
+      "The team may have taken the records."
+    ],
+    "referenceRewrite": "The team may have taken the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T17-3",
+    "family": "modal-perfect-irregular",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team may have saw the records.",
+    "target": "saw",
+    "accepted": [
+      "The team may have seen the records."
+    ],
+    "referenceRewrite": "The team may have seen the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N17-3",
+    "family": "modal-perfect-irregular-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team may have seen the records.",
+    "target": "",
+    "accepted": [
+      "The team may have seen the records."
+    ],
+    "referenceRewrite": "The team may have seen the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T17-4",
+    "family": "modal-perfect-irregular",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team may have chose the records.",
+    "target": "chose",
+    "accepted": [
+      "The team may have chosen the records."
+    ],
+    "referenceRewrite": "The team may have chosen the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N17-4",
+    "family": "modal-perfect-irregular-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team may have chosen the records.",
+    "target": "",
+    "accepted": [
+      "The team may have chosen the records."
+    ],
+    "referenceRewrite": "The team may have chosen the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T17-5",
+    "family": "modal-perfect-irregular",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "The team may have gave the records.",
+    "target": "gave",
+    "accepted": [
+      "The team may have given the records."
+    ],
+    "referenceRewrite": "The team may have given the records.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N17-5",
+    "family": "modal-perfect-irregular-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team may have given the records.",
+    "target": "",
+    "accepted": [
+      "The team may have given the records."
+    ],
+    "referenceRewrite": "The team may have given the records.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T18-1",
+    "family": "negative-base",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We did not measured the response.",
+    "target": "measured",
+    "accepted": [
+      "We did not measure the response."
+    ],
+    "referenceRewrite": "We did not measure the response.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N18-1",
+    "family": "negative-base-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not measure the response.",
+    "target": "",
+    "accepted": [
+      "We did not measure the response."
+    ],
+    "referenceRewrite": "We did not measure the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T18-2",
+    "family": "negative-base",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We did not analyzed the concentration.",
+    "target": "analyzed",
+    "accepted": [
+      "We did not analyze the concentration."
+    ],
+    "referenceRewrite": "We did not analyze the concentration.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N18-2",
+    "family": "negative-base-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not analyze the concentration.",
+    "target": "",
+    "accepted": [
+      "We did not analyze the concentration."
+    ],
+    "referenceRewrite": "We did not analyze the concentration.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T18-3",
+    "family": "negative-base",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We did not assessed the samples.",
+    "target": "assessed",
+    "accepted": [
+      "We did not assess the samples."
+    ],
+    "referenceRewrite": "We did not assess the samples.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N18-3",
+    "family": "negative-base-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not assess the samples.",
+    "target": "",
+    "accepted": [
+      "We did not assess the samples."
+    ],
+    "referenceRewrite": "We did not assess the samples.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T18-4",
+    "family": "negative-base",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We did not evaluated the endpoint.",
+    "target": "evaluated",
+    "accepted": [
+      "We did not evaluate the endpoint."
+    ],
+    "referenceRewrite": "We did not evaluate the endpoint.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N18-4",
+    "family": "negative-base-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not evaluate the endpoint.",
+    "target": "",
+    "accepted": [
+      "We did not evaluate the endpoint."
+    ],
+    "referenceRewrite": "We did not evaluate the endpoint.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T18-5",
+    "family": "negative-base",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We did not recorded the signal.",
+    "target": "recorded",
+    "accepted": [
+      "We did not record the signal."
+    ],
+    "referenceRewrite": "We did not record the signal.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N18-5",
+    "family": "negative-base-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We did not record the signal.",
+    "target": "",
+    "accepted": [
+      "We did not record the signal."
+    ],
+    "referenceRewrite": "We did not record the signal.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T19-1",
+    "family": "ambiguous-auxiliary-aspect",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The samples are been measured.",
+    "target": "are",
+    "accepted": [],
+    "referenceRewrite": "The samples are being measured.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N19-1",
+    "family": "ambiguous-auxiliary-aspect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples are being measured.",
+    "target": "",
+    "accepted": [
+      "The samples are being measured."
+    ],
+    "referenceRewrite": "The samples are being measured.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T19-2",
+    "family": "ambiguous-auxiliary-aspect",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The samples are been analyzed.",
+    "target": "are",
+    "accepted": [],
+    "referenceRewrite": "The samples are being analyzed.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N19-2",
+    "family": "ambiguous-auxiliary-aspect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples are being analyzed.",
+    "target": "",
+    "accepted": [
+      "The samples are being analyzed."
+    ],
+    "referenceRewrite": "The samples are being analyzed.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T19-3",
+    "family": "ambiguous-auxiliary-aspect",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The samples are been assessed.",
+    "target": "are",
+    "accepted": [],
+    "referenceRewrite": "The samples are being assessed.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N19-3",
+    "family": "ambiguous-auxiliary-aspect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples are being assessed.",
+    "target": "",
+    "accepted": [
+      "The samples are being assessed."
+    ],
+    "referenceRewrite": "The samples are being assessed.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T19-4",
+    "family": "ambiguous-auxiliary-aspect",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The samples are been evaluated.",
+    "target": "are",
+    "accepted": [],
+    "referenceRewrite": "The samples are being evaluated.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N19-4",
+    "family": "ambiguous-auxiliary-aspect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples are being evaluated.",
+    "target": "",
+    "accepted": [
+      "The samples are being evaluated."
+    ],
+    "referenceRewrite": "The samples are being evaluated.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T19-5",
+    "family": "ambiguous-auxiliary-aspect",
+    "split": "development",
+    "category": "aspect",
+    "behavior": "warning",
+    "text": "The samples are been recorded.",
+    "target": "are",
+    "accepted": [],
+    "referenceRewrite": "The samples are being recorded.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N19-5",
+    "family": "ambiguous-auxiliary-aspect-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples are being recorded.",
+    "target": "",
+    "accepted": [
+      "The samples are being recorded."
+    ],
+    "referenceRewrite": "The samples are being recorded.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T20-1",
+    "family": "perfect-be-progressive",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We have be measuring the response.",
+    "target": "be",
+    "accepted": [
+      "We have been measuring the response."
+    ],
+    "referenceRewrite": "We have been measuring the response.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N20-1",
+    "family": "perfect-be-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been measuring the response.",
+    "target": "",
+    "accepted": [
+      "We have been measuring the response."
+    ],
+    "referenceRewrite": "We have been measuring the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T20-2",
+    "family": "perfect-be-progressive",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We have be analyzing the concentration.",
+    "target": "be",
+    "accepted": [
+      "We have been analyzing the concentration."
+    ],
+    "referenceRewrite": "We have been analyzing the concentration.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N20-2",
+    "family": "perfect-be-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been analyzing the concentration.",
+    "target": "",
+    "accepted": [
+      "We have been analyzing the concentration."
+    ],
+    "referenceRewrite": "We have been analyzing the concentration.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T20-3",
+    "family": "perfect-be-progressive",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We have be assessing the samples.",
+    "target": "be",
+    "accepted": [
+      "We have been assessing the samples."
+    ],
+    "referenceRewrite": "We have been assessing the samples.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N20-3",
+    "family": "perfect-be-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been assessing the samples.",
+    "target": "",
+    "accepted": [
+      "We have been assessing the samples."
+    ],
+    "referenceRewrite": "We have been assessing the samples.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T20-4",
+    "family": "perfect-be-progressive",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We have be evaluating the endpoint.",
+    "target": "be",
+    "accepted": [
+      "We have been evaluating the endpoint."
+    ],
+    "referenceRewrite": "We have been evaluating the endpoint.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N20-4",
+    "family": "perfect-be-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been evaluating the endpoint.",
+    "target": "",
+    "accepted": [
+      "We have been evaluating the endpoint."
+    ],
+    "referenceRewrite": "We have been evaluating the endpoint.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T20-5",
+    "family": "perfect-be-progressive",
+    "split": "development",
+    "category": "form",
+    "behavior": "correction",
+    "text": "We have be recording the signal.",
+    "target": "be",
+    "accepted": [
+      "We have been recording the signal."
+    ],
+    "referenceRewrite": "We have been recording the signal.",
+    "forbidden": [],
+    "explanation": "Auxiliary selection requires this form without changing temporal relationships."
+  },
+  {
+    "id": "N20-5",
+    "family": "perfect-be-progressive-control",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been recording the signal.",
+    "target": "",
+    "accepted": [
+      "We have been recording the signal."
+    ],
+    "referenceRewrite": "We have been recording the signal.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T21-1",
+    "family": "second-clause-temporal",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The response is stable, but we have measured the response last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The response is stable, but we measured the response last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N21-1",
+    "family": "second-clause-temporal-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The response is stable, but we measured the response last week.",
+    "target": "",
+    "accepted": [
+      "The response is stable, but we measured the response last week."
+    ],
+    "referenceRewrite": "The response is stable, but we measured the response last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T21-2",
+    "family": "second-clause-temporal",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The response is stable, but we have analyzed the concentration last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The response is stable, but we analyzed the concentration last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N21-2",
+    "family": "second-clause-temporal-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The response is stable, but we analyzed the concentration last week.",
+    "target": "",
+    "accepted": [
+      "The response is stable, but we analyzed the concentration last week."
+    ],
+    "referenceRewrite": "The response is stable, but we analyzed the concentration last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T21-3",
+    "family": "second-clause-temporal",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The response is stable, but we have assessed the samples last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The response is stable, but we assessed the samples last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N21-3",
+    "family": "second-clause-temporal-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The response is stable, but we assessed the samples last week.",
+    "target": "",
+    "accepted": [
+      "The response is stable, but we assessed the samples last week."
+    ],
+    "referenceRewrite": "The response is stable, but we assessed the samples last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T21-4",
+    "family": "second-clause-temporal",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The response is stable, but we have evaluated the endpoint last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The response is stable, but we evaluated the endpoint last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N21-4",
+    "family": "second-clause-temporal-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The response is stable, but we evaluated the endpoint last week.",
+    "target": "",
+    "accepted": [
+      "The response is stable, but we evaluated the endpoint last week."
+    ],
+    "referenceRewrite": "The response is stable, but we evaluated the endpoint last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T21-5",
+    "family": "second-clause-temporal",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "The response is stable, but we have recorded the signal last week.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The response is stable, but we recorded the signal last week.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N21-5",
+    "family": "second-clause-temporal-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The response is stable, but we recorded the signal last week.",
+    "target": "",
+    "accepted": [
+      "The response is stable, but we recorded the signal last week."
+    ],
+    "referenceRewrite": "The response is stable, but we recorded the signal last week.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T22-1",
+    "family": "once-future-clause",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Once the samples will be measured, we will compare the results.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Once the samples are measured, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N22-1",
+    "family": "once-future-clause-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Once the samples are measured, we will compare the results.",
+    "target": "",
+    "accepted": [
+      "Once the samples are measured, we will compare the results."
+    ],
+    "referenceRewrite": "Once the samples are measured, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T22-2",
+    "family": "once-future-clause",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Once the samples will be analyzed, we will compare the results.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Once the samples are analyzed, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N22-2",
+    "family": "once-future-clause-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Once the samples are analyzed, we will compare the results.",
+    "target": "",
+    "accepted": [
+      "Once the samples are analyzed, we will compare the results."
+    ],
+    "referenceRewrite": "Once the samples are analyzed, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T22-3",
+    "family": "once-future-clause",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Once the samples will be assessed, we will compare the results.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Once the samples are assessed, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N22-3",
+    "family": "once-future-clause-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Once the samples are assessed, we will compare the results.",
+    "target": "",
+    "accepted": [
+      "Once the samples are assessed, we will compare the results."
+    ],
+    "referenceRewrite": "Once the samples are assessed, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T22-4",
+    "family": "once-future-clause",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Once the samples will be evaluated, we will compare the results.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Once the samples are evaluated, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N22-4",
+    "family": "once-future-clause-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Once the samples are evaluated, we will compare the results.",
+    "target": "",
+    "accepted": [
+      "Once the samples are evaluated, we will compare the results."
+    ],
+    "referenceRewrite": "Once the samples are evaluated, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T22-5",
+    "family": "once-future-clause",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Once the samples will be recorded, we will compare the results.",
+    "target": "will",
+    "accepted": [],
+    "referenceRewrite": "Once the samples are recorded, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N22-5",
+    "family": "once-future-clause-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Once the samples are recorded, we will compare the results.",
+    "target": "",
+    "accepted": [
+      "Once the samples are recorded, we will compare the results."
+    ],
+    "referenceRewrite": "Once the samples are recorded, we will compare the results.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T23-1",
+    "family": "past-deadline-perfect",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "By the time the assay was completed, we have already measured the response.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "By the time the assay was completed, we had already measured the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N23-1",
+    "family": "past-deadline-perfect-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "By the time the assay was completed, we had already measured the response.",
+    "target": "",
+    "accepted": [
+      "By the time the assay was completed, we had already measured the response."
+    ],
+    "referenceRewrite": "By the time the assay was completed, we had already measured the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T23-2",
+    "family": "past-deadline-perfect",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "By the time the assay was completed, we have already analyzed the concentration.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "By the time the assay was completed, we had already analyzed the concentration.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N23-2",
+    "family": "past-deadline-perfect-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "By the time the assay was completed, we had already analyzed the concentration.",
+    "target": "",
+    "accepted": [
+      "By the time the assay was completed, we had already analyzed the concentration."
+    ],
+    "referenceRewrite": "By the time the assay was completed, we had already analyzed the concentration.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T23-3",
+    "family": "past-deadline-perfect",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "By the time the assay was completed, we have already assessed the samples.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "By the time the assay was completed, we had already assessed the samples.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N23-3",
+    "family": "past-deadline-perfect-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "By the time the assay was completed, we had already assessed the samples.",
+    "target": "",
+    "accepted": [
+      "By the time the assay was completed, we had already assessed the samples."
+    ],
+    "referenceRewrite": "By the time the assay was completed, we had already assessed the samples.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T23-4",
+    "family": "past-deadline-perfect",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "By the time the assay was completed, we have already evaluated the endpoint.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "By the time the assay was completed, we had already evaluated the endpoint.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N23-4",
+    "family": "past-deadline-perfect-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "By the time the assay was completed, we had already evaluated the endpoint.",
+    "target": "",
+    "accepted": [
+      "By the time the assay was completed, we had already evaluated the endpoint."
+    ],
+    "referenceRewrite": "By the time the assay was completed, we had already evaluated the endpoint.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T23-5",
+    "family": "past-deadline-perfect",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "By the time the assay was completed, we have already recorded the signal.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "By the time the assay was completed, we had already recorded the signal.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N23-5",
+    "family": "past-deadline-perfect-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "By the time the assay was completed, we had already recorded the signal.",
+    "target": "",
+    "accepted": [
+      "By the time the assay was completed, we had already recorded the signal."
+    ],
+    "referenceRewrite": "By the time the assay was completed, we had already recorded the signal.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T24-1",
+    "family": "scientific-section-paragraph",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Methods\nYesterday, we have measured the response.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Methods\nYesterday, we measured the response.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N24-1",
+    "family": "scientific-section-paragraph-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Methods\nYesterday, we measured the response.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "",
+    "accepted": [
+      "Methods\nYesterday, we measured the response.\nDiscussion\nThese findings suggest that exposure may affect metabolism."
+    ],
+    "referenceRewrite": "Methods\nYesterday, we measured the response.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T24-2",
+    "family": "scientific-section-paragraph",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Methods\nYesterday, we have analyzed the concentration.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Methods\nYesterday, we analyzed the concentration.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N24-2",
+    "family": "scientific-section-paragraph-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Methods\nYesterday, we analyzed the concentration.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "",
+    "accepted": [
+      "Methods\nYesterday, we analyzed the concentration.\nDiscussion\nThese findings suggest that exposure may affect metabolism."
+    ],
+    "referenceRewrite": "Methods\nYesterday, we analyzed the concentration.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T24-3",
+    "family": "scientific-section-paragraph",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Methods\nYesterday, we have assessed the samples.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Methods\nYesterday, we assessed the samples.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N24-3",
+    "family": "scientific-section-paragraph-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Methods\nYesterday, we assessed the samples.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "",
+    "accepted": [
+      "Methods\nYesterday, we assessed the samples.\nDiscussion\nThese findings suggest that exposure may affect metabolism."
+    ],
+    "referenceRewrite": "Methods\nYesterday, we assessed the samples.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T24-4",
+    "family": "scientific-section-paragraph",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Methods\nYesterday, we have evaluated the endpoint.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Methods\nYesterday, we evaluated the endpoint.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N24-4",
+    "family": "scientific-section-paragraph-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Methods\nYesterday, we evaluated the endpoint.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "",
+    "accepted": [
+      "Methods\nYesterday, we evaluated the endpoint.\nDiscussion\nThese findings suggest that exposure may affect metabolism."
+    ],
+    "referenceRewrite": "Methods\nYesterday, we evaluated the endpoint.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T24-5",
+    "family": "scientific-section-paragraph",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "Methods\nYesterday, we have recorded the signal.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "Methods\nYesterday, we recorded the signal.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N24-5",
+    "family": "scientific-section-paragraph-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Methods\nYesterday, we recorded the signal.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "target": "",
+    "accepted": [
+      "Methods\nYesterday, we recorded the signal.\nDiscussion\nThese findings suggest that exposure may affect metabolism."
+    ],
+    "referenceRewrite": "Methods\nYesterday, we recorded the signal.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T25-1",
+    "family": "closed-during-interval",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "During last week's assay, we have measured the response.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "During last week's assay, we measured the response.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N25-1",
+    "family": "closed-during-interval-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "During last week's assay, we measured the response.",
+    "target": "",
+    "accepted": [
+      "During last week's assay, we measured the response."
+    ],
+    "referenceRewrite": "During last week's assay, we measured the response.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T25-2",
+    "family": "closed-during-interval",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "During last week's assay, we have analyzed the concentration.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "During last week's assay, we analyzed the concentration.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N25-2",
+    "family": "closed-during-interval-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "During last week's assay, we analyzed the concentration.",
+    "target": "",
+    "accepted": [
+      "During last week's assay, we analyzed the concentration."
+    ],
+    "referenceRewrite": "During last week's assay, we analyzed the concentration.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T25-3",
+    "family": "closed-during-interval",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "During last week's assay, we have assessed the samples.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "During last week's assay, we assessed the samples.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N25-3",
+    "family": "closed-during-interval-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "During last week's assay, we assessed the samples.",
+    "target": "",
+    "accepted": [
+      "During last week's assay, we assessed the samples."
+    ],
+    "referenceRewrite": "During last week's assay, we assessed the samples.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T25-4",
+    "family": "closed-during-interval",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "During last week's assay, we have evaluated the endpoint.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "During last week's assay, we evaluated the endpoint.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N25-4",
+    "family": "closed-during-interval-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "During last week's assay, we evaluated the endpoint.",
+    "target": "",
+    "accepted": [
+      "During last week's assay, we evaluated the endpoint."
+    ],
+    "referenceRewrite": "During last week's assay, we evaluated the endpoint.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "T25-5",
+    "family": "closed-during-interval",
+    "split": "held-out",
+    "category": "temporal",
+    "behavior": "warning",
+    "text": "During last week's assay, we have recorded the signal.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "During last week's assay, we recorded the signal.",
+    "forbidden": [],
+    "explanation": "Review tense/aspect against an explicit local temporal construction; do not infer a chronological rewrite."
+  },
+  {
+    "id": "N25-5",
+    "family": "closed-during-interval-control",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "During last week's assay, we recorded the signal.",
+    "target": "",
+    "accepted": [
+      "During last week's assay, we recorded the signal."
+    ],
+    "referenceRewrite": "During last week's assay, we recorded the signal.",
+    "forbidden": [],
+    "explanation": "Valid negative control; preserve chronology, voice and epistemic force."
+  },
+  {
+    "id": "X01",
+    "family": "mixed-context-1",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have measured the response since yesterday.",
+    "target": "",
+    "accepted": [
+      "We have measured the response since yesterday."
+    ],
+    "referenceRewrite": "We have measured the response since yesterday.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X02",
+    "family": "mixed-context-2",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have been monitoring the cultures since last week.",
+    "target": "",
+    "accepted": [
+      "We have been monitoring the cultures since last week."
+    ],
+    "referenceRewrite": "We have been monitoring the cultures since last week.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X03",
+    "family": "mixed-context-3",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We measured the response previously. The findings may reflect adaptation.",
+    "target": "",
+    "accepted": [
+      "We measured the response previously. The findings may reflect adaptation."
+    ],
+    "referenceRewrite": "We measured the response previously. The findings may reflect adaptation.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X04",
+    "family": "mixed-context-4",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were analyzed before the assay ended.",
+    "target": "",
+    "accepted": [
+      "The samples were analyzed before the assay ended."
+    ],
+    "referenceRewrite": "The samples were analyzed before the assay ended.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X05",
+    "family": "mixed-context-5",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "After the samples had been collected, we analyzed them.",
+    "target": "",
+    "accepted": [
+      "After the samples had been collected, we analyzed them."
+    ],
+    "referenceRewrite": "After the samples had been collected, we analyzed them.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X06",
+    "family": "mixed-context-6",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We analyzed the samples after they were collected.",
+    "target": "",
+    "accepted": [
+      "We analyzed the samples after they were collected."
+    ],
+    "referenceRewrite": "We analyzed the samples after they were collected.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X07",
+    "family": "mixed-context-7",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We had stored the samples before we measured the response.",
+    "target": "",
+    "accepted": [
+      "We had stored the samples before we measured the response."
+    ],
+    "referenceRewrite": "We had stored the samples before we measured the response.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X08",
+    "family": "mixed-context-8",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We collected the samples during the assay. We have since analyzed them.",
+    "target": "",
+    "accepted": [
+      "We collected the samples during the assay. We have since analyzed them."
+    ],
+    "referenceRewrite": "We collected the samples during the assay. We have since analyzed them.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X09",
+    "family": "mixed-context-9",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We will analyze the samples collected yesterday.",
+    "target": "",
+    "accepted": [
+      "We will analyze the samples collected yesterday."
+    ],
+    "referenceRewrite": "We will analyze the samples collected yesterday.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X10",
+    "family": "mixed-context-10",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have analyzed the samples collected last week.",
+    "target": "",
+    "accepted": [
+      "We have analyzed the samples collected last week."
+    ],
+    "referenceRewrite": "We have analyzed the samples collected last week.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X11",
+    "family": "mixed-context-11",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have measured yesterday's samples.",
+    "target": "",
+    "accepted": [
+      "We have measured yesterday's samples."
+    ],
+    "referenceRewrite": "We have measured yesterday's samples.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X12",
+    "family": "mixed-context-12",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have analyzed the samples that were collected yesterday.",
+    "target": "",
+    "accepted": [
+      "We have analyzed the samples that were collected yesterday."
+    ],
+    "referenceRewrite": "We have analyzed the samples that were collected yesterday.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X13",
+    "family": "mixed-context-13",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We do not know when the samples will arrive.",
+    "target": "",
+    "accepted": [
+      "We do not know when the samples will arrive."
+    ],
+    "referenceRewrite": "We do not know when the samples will arrive.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X14",
+    "family": "mixed-context-14",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The question is when the samples will be analyzed.",
+    "target": "",
+    "accepted": [
+      "The question is when the samples will be analyzed."
+    ],
+    "referenceRewrite": "The question is when the samples will be analyzed.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X15",
+    "family": "mixed-context-15",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "When will the samples be analyzed?",
+    "target": "",
+    "accepted": [
+      "When will the samples be analyzed?"
+    ],
+    "referenceRewrite": "When will the samples be analyzed?",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X16",
+    "family": "mixed-context-16",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We will know after the assay whether the treatment may affect metabolism.",
+    "target": "",
+    "accepted": [
+      "We will know after the assay whether the treatment may affect metabolism."
+    ],
+    "referenceRewrite": "We will know after the assay whether the treatment may affect metabolism.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X17",
+    "family": "mixed-context-17",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have previously reported similar findings.",
+    "target": "",
+    "accepted": [
+      "We have previously reported similar findings."
+    ],
+    "referenceRewrite": "We have previously reported similar findings.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X18",
+    "family": "mixed-context-18",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Previous studies have reported similar findings.",
+    "target": "",
+    "accepted": [
+      "Previous studies have reported similar findings."
+    ],
+    "referenceRewrite": "Previous studies have reported similar findings.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X19",
+    "family": "mixed-context-19",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We are seeing a transient response during treatment.",
+    "target": "",
+    "accepted": [
+      "We are seeing a transient response during treatment."
+    ],
+    "referenceRewrite": "We are seeing a transient response during treatment.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X20",
+    "family": "mixed-context-20",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The cells are having an unexpected response.",
+    "target": "",
+    "accepted": [
+      "The cells are having an unexpected response."
+    ],
+    "referenceRewrite": "The cells are having an unexpected response.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X21",
+    "family": "mixed-context-21",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We are thinking about an alternative mechanism.",
+    "target": "",
+    "accepted": [
+      "We are thinking about an alternative mechanism."
+    ],
+    "referenceRewrite": "We are thinking about an alternative mechanism.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X22",
+    "family": "mixed-context-22",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The investigator is understanding the mechanism better each day.",
+    "target": "",
+    "accepted": [
+      "The investigator is understanding the mechanism better each day."
+    ],
+    "referenceRewrite": "The investigator is understanding the mechanism better each day.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X23",
+    "family": "mixed-context-23",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The cultures have been growing since 2019.",
+    "target": "",
+    "accepted": [
+      "The cultures have been growing since 2019."
+    ],
+    "referenceRewrite": "The cultures have been growing since 2019.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X24",
+    "family": "mixed-context-24",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples had been stored at −80 °C before the assay began.",
+    "target": "",
+    "accepted": [
+      "The samples had been stored at −80 °C before the assay began."
+    ],
+    "referenceRewrite": "The samples had been stored at −80 °C before the assay began.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X25",
+    "family": "mixed-context-25",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The effect may have been associated with exposure before sampling.",
+    "target": "",
+    "accepted": [
+      "The effect may have been associated with exposure before sampling."
+    ],
+    "referenceRewrite": "The effect may have been associated with exposure before sampling.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X26",
+    "family": "mixed-context-26",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "By the time the samples are collected, we will have prepared the reagents.",
+    "target": "",
+    "accepted": [
+      "By the time the samples are collected, we will have prepared the reagents."
+    ],
+    "referenceRewrite": "By the time the samples are collected, we will have prepared the reagents.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X27",
+    "family": "mixed-context-27",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "By the time the assay was completed, we had already measured the response.",
+    "target": "",
+    "accepted": [
+      "By the time the assay was completed, we had already measured the response."
+    ],
+    "referenceRewrite": "By the time the assay was completed, we had already measured the response.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X28",
+    "family": "mixed-context-28",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have monitored the cultures since two hours ago.",
+    "target": "",
+    "accepted": [
+      "We have monitored the cultures since two hours ago."
+    ],
+    "referenceRewrite": "We have monitored the cultures since two hours ago.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X29",
+    "family": "mixed-context-29",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Since the assay was unreliable, we repeated it.",
+    "target": "",
+    "accepted": [
+      "Since the assay was unreliable, we repeated it."
+    ],
+    "referenceRewrite": "Since the assay was unreliable, we repeated it.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X30",
+    "family": "mixed-context-30",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Since the signal is unstable, we will repeat the assay.",
+    "target": "",
+    "accepted": [
+      "Since the signal is unstable, we will repeat the assay."
+    ],
+    "referenceRewrite": "Since the signal is unstable, we will repeat the assay.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X31",
+    "family": "mixed-context-31",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Methods\nThe samples were centrifuged at 3,000 × g for 30 min.\nResults\nTreatment increased IL-6 expression.\nDiscussion\nThese findings suggest that exposure may affect metabolism. PFAS are persistent environmental contaminants.",
+    "target": "",
+    "accepted": [
+      "Methods\nThe samples were centrifuged at 3,000 × g for 30 min.\nResults\nTreatment increased IL-6 expression.\nDiscussion\nThese findings suggest that exposure may affect metabolism. PFAS are persistent environmental contaminants."
+    ],
+    "referenceRewrite": "Methods\nThe samples were centrifuged at 3,000 × g for 30 min.\nResults\nTreatment increased IL-6 expression.\nDiscussion\nThese findings suggest that exposure may affect metabolism. PFAS are persistent environmental contaminants.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X32",
+    "family": "mixed-context-32",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "Results\nThe potential was −3.2 mV. The temperature was 37 °C.\nDiscussion\nThe result may be associated with exposure. Previous studies have reported similar findings.",
+    "target": "",
+    "accepted": [
+      "Results\nThe potential was −3.2 mV. The temperature was 37 °C.\nDiscussion\nThe result may be associated with exposure. Previous studies have reported similar findings."
+    ],
+    "referenceRewrite": "Results\nThe potential was −3.2 mV. The temperature was 37 °C.\nDiscussion\nThe result may be associated with exposure. Previous studies have reported similar findings.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X33",
+    "family": "mixed-context-33",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We measured the response last week. We are now analyzing the data. We will report the results after the review.",
+    "target": "",
+    "accepted": [
+      "We measured the response last week. We are now analyzing the data. We will report the results after the review."
+    ],
+    "referenceRewrite": "We measured the response last week. We are now analyzing the data. We will report the results after the review.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X34",
+    "family": "mixed-context-34",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We had been studying the cultures before the assay began. The cells were dividing when we observed them.",
+    "target": "",
+    "accepted": [
+      "We had been studying the cultures before the assay began. The cells were dividing when we observed them."
+    ],
+    "referenceRewrite": "We had been studying the cultures before the assay began. The cells were dividing when we observed them.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X35",
+    "family": "mixed-context-35",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The report says, “We have measured the response yesterday.” This wording is quoted for discussion.",
+    "target": "",
+    "accepted": [
+      "The report says, “We have measured the response yesterday.” This wording is quoted for discussion."
+    ],
+    "referenceRewrite": "The report says, “We have measured the response yesterday.” This wording is quoted for discussion.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X36",
+    "family": "mixed-context-36",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "In a historical present narrative, yesterday we collect the samples and today we analyze them.",
+    "target": "",
+    "accepted": [
+      "In a historical present narrative, yesterday we collect the samples and today we analyze them."
+    ],
+    "referenceRewrite": "In a historical present narrative, yesterday we collect the samples and today we analyze them.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X37",
+    "family": "mixed-context-37",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have observed the response during the last week.",
+    "target": "",
+    "accepted": [
+      "We have observed the response during the last week."
+    ],
+    "referenceRewrite": "We have observed the response during the last week.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X38",
+    "family": "mixed-context-38",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have measured the response in the past week.",
+    "target": "",
+    "accepted": [
+      "We have measured the response in the past week."
+    ],
+    "referenceRewrite": "We have measured the response in the past week.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X39",
+    "family": "mixed-context-39",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have measured the response over the last week.",
+    "target": "",
+    "accepted": [
+      "We have measured the response over the last week."
+    ],
+    "referenceRewrite": "We have measured the response over the last week.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X40",
+    "family": "mixed-context-40",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have not yet analyzed the samples from last week.",
+    "target": "",
+    "accepted": [
+      "We have not yet analyzed the samples from last week."
+    ],
+    "referenceRewrite": "We have not yet analyzed the samples from last week.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X41",
+    "family": "mixed-context-41",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We may have measured the response yesterday, but the notebook is unclear.",
+    "target": "",
+    "accepted": [
+      "We may have measured the response yesterday, but the notebook is unclear."
+    ],
+    "referenceRewrite": "We may have measured the response yesterday, but the notebook is unclear.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X42",
+    "family": "mixed-context-42",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We will have completed the assay before the samples arrive.",
+    "target": "",
+    "accepted": [
+      "We will have completed the assay before the samples arrive."
+    ],
+    "referenceRewrite": "We will have completed the assay before the samples arrive.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X43",
+    "family": "mixed-context-43",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We have measured the response since before the assay began.",
+    "target": "",
+    "accepted": [
+      "We have measured the response since before the assay began."
+    ],
+    "referenceRewrite": "We have measured the response since before the assay began.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X44",
+    "family": "mixed-context-44",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The protocol states that samples are stored at −80 °C. We followed this protocol yesterday.",
+    "target": "",
+    "accepted": [
+      "The protocol states that samples are stored at −80 °C. We followed this protocol yesterday."
+    ],
+    "referenceRewrite": "The protocol states that samples are stored at −80 °C. We followed this protocol yesterday.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  },
+  {
+    "id": "X45",
+    "family": "mixed-context-45",
+    "split": "regression",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The instrument was calibrated yesterday, and it is operating normally today.",
+    "target": "",
+    "accepted": [
+      "The instrument was calibrated yesterday, and it is operating normally today."
+    ],
+    "referenceRewrite": "The instrument was calibrated yesterday, and it is operating normally today.",
+    "forbidden": [],
+    "explanation": "Valid mixed-tense, scoped temporal attachment, modal, quoted, or continuing-interval use."
+  }
+]

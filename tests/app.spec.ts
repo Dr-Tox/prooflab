@@ -302,3 +302,404 @@ test("ignore rule globally, restore it, and keep terminology separate from dicti
   ).toBeVisible();
   await expect(page.locator(".issue-selected .replacement")).toHaveCount(0);
 });
+
+test("reported sentence gets a review-only warning; unsupported contextual errors get an honest empty state", async ({
+  page,
+}) => {
+  const logs: string[] = [];
+  page.on("console", (m) => logs.push(m.text()));
+  await ready(page);
+  await write(page, "I wanted to visit mi uncles last nigh");
+  await expect(page.locator(".issue-title")).toHaveCount(1);
+  await page.locator(".mark").filter({ hasText: "last nigh" }).click();
+  await expect(page.locator(".issue-selected")).toContainText(
+    "check whether you meant “last night”",
+  );
+  await expect(page.locator(".replacement")).toHaveCount(0);
+  await expect(page.getByRole("textbox", { name: "Document text" })).toHaveText(
+    "I wanted to visit mi uncles last nigh",
+  );
+  await expect(page.getByLabel("Engine diagnostics")).toHaveCount(0);
+  expect(
+    await page
+      .locator('meta[http-equiv="Content-Security-Policy"]')
+      .getAttribute("content"),
+  ).not.toContain("'unsafe-inline'");
+  expect(logs.some((l) => l.includes("[ProofLab diagnostics]"))).toBe(false);
+  await write(page, "I wanted to visit mi uncles last night.");
+  await expect(
+    page.getByRole("heading", {
+      name: "No issues detected by the enabled rules",
+      exact: true,
+    }),
+  ).toBeVisible();
+});
+
+test("editor updates reach the real engine in every profile and filters never imply all rules found nothing", async ({
+  page,
+}) => {
+  await ready(page);
+  for (const profile of [
+    "General English",
+    "Academic English",
+    "Scientific Writing",
+  ]) {
+    await page.getByLabel("Writing profile").selectOption(profile);
+    await write(
+      page,
+      "I recieve teh usefull sample. She are happy. The the sample.",
+    );
+    for (const word of ["recieve", "teh", "usefull", "are", "The the"])
+      await expect(
+        page.locator(".issue-title").filter({ hasText: word }).first(),
+      ).toBeVisible();
+  }
+  await page
+    .getByRole("button", { name: "Punctuation 0", exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "No punctuation issues in this filter",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("No issues detected by the enabled rules", { exact: true }),
+  ).toHaveCount(0);
+});
+
+test("a worker load failure is an error, never a clean bill of health", async ({
+  page,
+}) => {
+  await page.route("**/engine.worker-*.js", (route) => route.abort());
+  await page.goto("./");
+  await expect(
+    page.getByText("Proofreading failed. Reload to retry.").first(),
+  ).toBeVisible();
+  await page
+    .getByRole("textbox", { name: "Document text" })
+    .fill("A usefull sample.");
+  await expect(
+    page.getByRole("heading", { name: "Proofreading unavailable" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("No issues detected by the enabled rules", { exact: true }),
+  ).toHaveCount(0);
+});
+
+test("coordinated mass-noun correction is atomic, preserves inline formatting, and Undo restores text and caret", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await write(page, "These informations are useful.");
+  await editor.evaluate((el) => {
+    const r = document.createRange();
+    r.setStart(el.firstChild!, 23);
+    r.setEnd(el.firstChild!, 30);
+    getSelection()!.removeAllRanges();
+    getSelection()!.addRange(r);
+  });
+  await page.getByRole("button", { name: "Bold", exact: true }).click();
+  await expect(page.locator(".document b")).toHaveText("useful.");
+  await page
+    .locator(".mark")
+    .filter({ hasText: "These informations are" })
+    .click();
+  await page
+    .getByRole("button", { name: "This information is ↵", exact: true })
+    .click();
+  await expect(editor).toHaveText("This information is useful.");
+  await expect(page.locator(".document b")).toHaveText("useful.");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor).toHaveText("These informations are useful.");
+  await expect(page.locator(".document b")).toHaveText("useful.");
+  expect(
+    await editor.evaluate((el) => {
+      const s = getSelection()!;
+      return el.contains(s.anchorNode) && el.contains(s.focusNode);
+    }),
+  ).toBe(true);
+});
+
+test("legitimate scientific repetition and notation remain untouched; SI changes preserve values", async ({
+  page,
+}) => {
+  await ready(page);
+  await write(
+    page,
+    "After centrifugation, the supernatant was collected after 30 min. We found that that interpretation was incorrect. TNF-α and IL-1β may be associated with toxicity (p = 0.08).",
+  );
+  await expect(page.locator(".issue-title")).toHaveCount(0);
+  await write(page, "The sample was heated to 37°C and then to 300 °K.");
+  await page.locator(".mark").filter({ hasText: "37°C" }).click();
+  await page.getByRole("button", { name: "37 °C ↵", exact: true }).click();
+  await expect(
+    page.getByRole("textbox", { name: "Document text" }),
+  ).toContainText("37 °C");
+  await page.locator(".mark").filter({ hasText: "°K" }).click();
+  await page.getByRole("button", { name: "K ↵", exact: true }).click();
+  await expect(page.getByRole("textbox", { name: "Document text" })).toHaveText(
+    "The sample was heated to 37 °C and then to 300 K.",
+  );
+});
+
+test("v2 atomic verb corrections preserve Unicode, rich formatting, dismissal and rapid revisions", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await write(page, "😀 The reagents has been analyze at −80 °C.");
+  await editor.evaluate((el) => {
+    const node = el.firstChild!;
+    const at = node.textContent!.indexOf("analyze");
+    const range = document.createRange();
+    range.setStart(node, at);
+    range.setEnd(node, at + 7);
+    getSelection()!.removeAllRanges();
+    getSelection()!.addRange(range);
+  });
+  await page.getByRole("button", { name: "Bold", exact: true }).click();
+  await expect(page.locator(".document b")).toHaveText("analyze");
+  await expect(
+    page.getByRole("button", { name: "have been analyzed ↵", exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "have been analyzed ↵", exact: true })
+    .click();
+  await expect(editor).toHaveText(
+    "😀 The reagents have been analyzed at −80 °C.",
+  );
+  await expect(page.locator(".document b")).toHaveText("analyzed");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor).toHaveText(
+    "😀 The reagents has been analyze at −80 °C.",
+  );
+  await expect(page.locator(".document b")).toHaveText("analyze");
+  await page
+    .locator(".issue")
+    .filter({ hasText: "have been analyzed" })
+    .getByRole("button", { name: "Dismiss once", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "have been analyzed ↵", exact: true }),
+  ).toHaveCount(0);
+  await editor.fill("The reagents shows instability.");
+  await editor.fill("The expression of these genes were increased.");
+  await editor.fill("The samples that were collected were analyzed.");
+  await expect(
+    page.getByText("No issues detected by the enabled rules"),
+  ).toBeVisible();
+  await expect(page.locator(".issue")).toHaveCount(0);
+  const paragraph =
+    "The samples were centrifuged at 3,000 × g. The supernatant was collected after centrifugation. Previous studies have reported similar findings. These findings suggest that exposure may affect metabolism. ";
+  await write(page, paragraph.repeat(30) + "The signals depends of time.");
+  await page.locator(".mark").filter({ hasText: "depends of" }).click();
+  await page.getByRole("button", { name: "depend on ↵", exact: true }).click();
+  await expect(editor).toHaveText(
+    paragraph.repeat(30) + "The signals depend on time.",
+  );
+});
+
+test("temporal analysis accepts mixed scientific tenses and never rewrites chronology", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  const valid =
+    "Methods\nThe samples were centrifuged at 3,000 × g for 30 min.\nResults\nTreatment increased IL-6 expression.\nDiscussion\nThese findings suggest that exposure may affect metabolism. Previous studies have reported similar findings.";
+  await write(page, valid);
+  await expect(
+    page.getByText("No issues detected by the enabled rules", { exact: true }),
+  ).toBeVisible();
+  const problematic =
+    "Methods\nYesterday, we have measured the response by microscopy.\nDiscussion\nThese findings may reflect adaptation.";
+  await write(page, problematic);
+  await page.locator(".mark").filter({ hasText: "have measured" }).click();
+  await expect(page.locator(".issue-selected")).toContainText("bounded time");
+  await expect(page.locator(".issue-selected .replacement")).toHaveCount(0);
+  await expect(editor).toHaveText(problematic);
+  await page
+    .locator(".issue-selected")
+    .getByRole("button", { name: "Dismiss once", exact: true })
+    .click();
+  await expect(editor).toHaveText(problematic);
+  await write(
+    page,
+    "We analyzed the cultures yesterday. During that experiment, we have observed cell division.",
+  );
+  await page.locator(".mark").filter({ hasText: "have observed" }).click();
+  await expect(page.locator(".issue-selected")).toContainText(
+    "explicit backward time reference",
+  );
+  await expect(page.locator(".issue-selected .replacement")).toHaveCount(0);
+  await write(page, "We have monitoring the cultures.");
+  await expect(page.locator(".issue")).toHaveCount(1);
+  await expect(page.locator(".issue")).toContainText("intended aspect");
+  await expect(page.locator(".replacement")).toHaveCount(0);
+  await write(page, "We did not observed toxicity.");
+  await page.getByRole("button", { name: "observe ↵", exact: true }).click();
+  await expect(editor).toHaveText("We did not observe toxicity.");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor).toHaveText("We did not observed toxicity.");
+});
+
+test("native paragraph normalization preserves UTF-16 offsets, inline formatting and caret", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await editor.evaluate((el) => {
+    el.innerHTML =
+      "<div>Methods</div><div>😀 The samples had been <b>store</b> at −80 °C.</div><div><br></div><div>Discussion</div><div>The findings may reflect adaptation.</div>";
+    const word = el.querySelector("b")!.firstChild!;
+    const range = document.createRange();
+    range.setStart(word, 5);
+    range.collapse(true);
+    getSelection()!.removeAllRanges();
+    getSelection()!.addRange(range);
+    el.dispatchEvent(
+      new InputEvent("input", { bubbles: true, inputType: "insertText" }),
+    );
+  });
+  const original =
+    "Methods\n😀 The samples had been store at −80 °C.\n\nDiscussion\nThe findings may reflect adaptation.";
+  expect(await editor.textContent()).toBe(original);
+  expect(
+    await editor.evaluate((el) => el.querySelectorAll("div,p").length),
+  ).toBe(0);
+  await expect(page.locator(".document b")).toHaveText("store");
+  expect(
+    await editor.evaluate((el) => el.contains(getSelection()!.anchorNode)),
+  ).toBe(true);
+  await page.getByRole("button", { name: "stored ↵", exact: true }).click();
+  expect(await editor.textContent()).toBe(original.replace("store", "stored"));
+  await expect(page.locator(".document b")).toHaveText("stored");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  expect(await editor.textContent()).toBe(original);
+  await expect(page.locator(".document b")).toHaveText("store");
+  await editor.evaluate((el) => {
+    el.innerHTML = "<p>Methods</p><p>We measured the response.</p>";
+    const r = document.createRange();
+    r.selectNodeContents(el);
+    r.collapse(false);
+    getSelection()!.removeAllRanges();
+    getSelection()!.addRange(r);
+    el.dispatchEvent(
+      new InputEvent("input", { bubbles: true, inputType: "insertText" }),
+    );
+  });
+  expect(await editor.textContent()).toBe("Methods\nWe measured the response.");
+});
+
+test("v3 scientific safety, object-relative corrections and redo", async ({
+  page,
+}) => {
+  await ready(page);
+  await write(
+    page,
+    "The microbeads that the analyst collected was stored at −80 °C.",
+  );
+  await expect(
+    page.getByRole("button", { name: "were ↵", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.locator(".issue").filter({ hasText: "Spelling" }),
+  ).toHaveCount(0);
+  await page.getByRole("button", { name: "were ↵", exact: true }).click();
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await expect(editor).toHaveText(
+    "The microbeads that the analyst collected were stored at −80 °C.",
+  );
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor).toContainText("was stored");
+  await page.getByRole("button", { name: "↷ Redo", exact: true }).click();
+  await expect(editor).toContainText("were stored");
+  await editor.press("Control+z");
+  await expect(editor).toContainText("was stored");
+  await editor.press("Control+Shift+Z");
+  await expect(editor).toContainText("were stored");
+});
+
+test("v3.1 focus mode and keyboard controls preserve editor and review-only safety", async ({
+  page,
+}) => {
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await write(
+    page,
+    "The microbeads that the analyst collected was stored at −80 °C.",
+  );
+  const toggle = page.locator(".focus-toggle");
+  await toggle.focus();
+  await page.keyboard.press("Enter");
+  await expect(toggle).toHaveAttribute("aria-pressed", "true");
+  await expect(
+    page.getByRole("complementary", { name: "Proofreading suggestions" }),
+  ).toBeHidden();
+  await expect(editor).toBeVisible();
+  await page
+    .getByRole("button", { name: "Show suggestions", exact: true })
+    .click();
+  await page.getByRole("button", { name: "were ↵", exact: true }).click();
+  await expect(editor).toContainText("were stored at −80 °C");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await page.getByRole("button", { name: "↷ Redo", exact: true }).click();
+  await expect(editor).toContainText("were stored");
+  await write(page, "Yesterday, we have measured the response by microscopy.");
+  await expect(page.locator(".issue-review .finding-kind")).toHaveText(
+    "Review only",
+  );
+  await expect(page.locator(".replacement")).toHaveCount(0);
+  await page
+    .locator(".issue-review")
+    .getByRole("button", { name: "Dismiss once" })
+    .click();
+  await expect(page.locator(".issue")).toHaveCount(0);
+});
+
+test("v3.1 mobile review tabs preserve formatting, revisions and Undo/Redo", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await ready(page);
+  const editor = page.getByRole("textbox", { name: "Document text" });
+  await editor.evaluate((el) => {
+    el.innerHTML = "🧪 The samples had been <b>store</b> at −80 °C.";
+    el.dispatchEvent(new InputEvent("input", { bubbles: true }));
+  });
+  await expect(
+    page.locator(".mark").filter({ hasText: "store" }),
+  ).toBeVisible();
+  const manuscript = page.getByRole("button", {
+    name: "Manuscript",
+    exact: true,
+  });
+  const suggestions = page
+    .locator(".mobile-switch")
+    .getByRole("button", { name: /Suggestions/ });
+  await suggestions.click();
+  await expect(suggestions).toHaveAttribute("aria-pressed", "true");
+  await expect(editor).toBeHidden();
+  await page.getByRole("button", { name: "stored ↵", exact: true }).click();
+  await manuscript.click();
+  await expect(editor.locator("b")).toHaveText("stored");
+  await page.getByRole("button", { name: "↶ Undo", exact: true }).click();
+  await expect(editor.locator("b")).toHaveText("store");
+  await page.getByRole("button", { name: "↷ Redo", exact: true }).click();
+  await expect(editor.locator("b")).toHaveText("stored");
+  await editor.fill("The results shows instability.");
+  await page.locator(".mark").filter({ hasText: "shows" }).click();
+  await expect(suggestions).toHaveAttribute("aria-pressed", "true");
+  await page.getByRole("button", { name: "show ↵", exact: true }).click();
+  await manuscript.click();
+  await expect(editor).toHaveText("The results show instability.");
+  for (const width of [320, 375, 768, 1280]) {
+    await page.setViewportSize({ width, height: 812 });
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  }
+});

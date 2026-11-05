@@ -1,0 +1,616 @@
+{
+  "version": 1,
+  "split": "held-out",
+  "cases": [
+    {
+      "id": "H01",
+      "text": "The findings indicates a difference.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "indicates",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["indicate"]
+        }
+      ],
+      "acceptedCorrections": ["The findings indicate a difference."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H01",
+        "current": "../reports/current.json#H01"
+      }
+    },
+    {
+      "id": "H02",
+      "text": "Each of the cultures were stained.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "were",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["was"]
+        }
+      ],
+      "acceptedCorrections": ["Each of the cultures was stained."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H02",
+        "current": "../reports/current.json#H02"
+      }
+    },
+    {
+      "id": "H03",
+      "text": "The size of these particles are variable.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["is"]
+        }
+      ],
+      "acceptedCorrections": ["The size of these particles is variable."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H03",
+        "current": "../reports/current.json#H03"
+      }
+    },
+    {
+      "id": "H04",
+      "text": "There is several limitations.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "is",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["are"]
+        }
+      ],
+      "acceptedCorrections": ["There are several limitations."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H04",
+        "current": "../reports/current.json#H04"
+      }
+    },
+    {
+      "id": "H05",
+      "text": "The response depends of concentration.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "depends of",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["depends on"]
+        }
+      ],
+      "acceptedCorrections": ["The response depends on concentration."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H05",
+        "current": "../reports/current.json#H05"
+      }
+    },
+    {
+      "id": "H06",
+      "text": "Its necessary to randomize the order.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "Its",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["It’s"]
+        }
+      ],
+      "acceptedCorrections": ["It’s necessary to randomize the order."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H06",
+        "current": "../reports/current.json#H06"
+      }
+    },
+    {
+      "id": "H07",
+      "text": "Those evidences are preliminary.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "Those evidences are",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["That evidence is"]
+        }
+      ],
+      "acceptedCorrections": ["That evidence is preliminary."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H07",
+        "current": "../reports/current.json#H07"
+      }
+    },
+    {
+      "id": "H08",
+      "text": "The solution was kept at 4°C.",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "4°C",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["4 °C"]
+        }
+      ],
+      "acceptedCorrections": ["The solution was kept at 4 °C."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H08",
+        "current": "../reports/current.json#H08"
+      }
+    },
+    {
+      "id": "H09",
+      "text": "We added 12µg.",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "12µg",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["12 µg"]
+        }
+      ],
+      "acceptedCorrections": ["We added 12 µg."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H09",
+        "current": "../reports/current.json#H09"
+      }
+    },
+    {
+      "id": "H10",
+      "text": "The sample reached 250 °K.",
+      "category": "Scientific",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "°K",
+          "category": "Scientific",
+          "behavior": "correction",
+          "acceptedReplacements": ["K"]
+        }
+      ],
+      "acceptedCorrections": ["The sample reached 250 K."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H10",
+        "current": "../reports/current.json#H10"
+      }
+    },
+    {
+      "id": "H11",
+      "text": "The the instrument was calibrated.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "The the",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["The"]
+        }
+      ],
+      "acceptedCorrections": ["The instrument was calibrated."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H11",
+        "current": "../reports/current.json#H11"
+      }
+    },
+    {
+      "id": "H12",
+      "text": "The immunotoxcity assay was repeated.",
+      "category": "Spelling",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "immunotoxcity",
+          "category": "Spelling",
+          "behavior": "correction",
+          "acceptedReplacements": ["immunotoxicity"]
+        }
+      ],
+      "acceptedCorrections": ["The immunotoxicity assay was repeated."],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Spelling",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H12",
+        "current": "../reports/current.json#H12"
+      }
+    },
+    {
+      "id": "H13",
+      "text": "The findings indicate a difference.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H13",
+        "current": "../reports/current.json#H13"
+      }
+    },
+    {
+      "id": "H14",
+      "text": "The size of these particles is variable.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H14",
+        "current": "../reports/current.json#H14"
+      }
+    },
+    {
+      "id": "H15",
+      "text": "Its necessity is debated.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H15",
+        "current": "../reports/current.json#H15"
+      }
+    },
+    {
+      "id": "H16",
+      "text": "We confirmed that that assumption was reasonable.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H16",
+        "current": "../reports/current.json#H16"
+      }
+    },
+    {
+      "id": "H17",
+      "text": "They had had sufficient time.",
+      "category": "Grammar",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H17",
+        "current": "../reports/current.json#H17"
+      }
+    },
+    {
+      "id": "H18",
+      "text": "After washing the cells, the pellet was resuspended.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H18",
+        "current": "../reports/current.json#H18"
+      }
+    },
+    {
+      "id": "H19",
+      "text": "The incubation lasted 45 min at 4 °C.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H19",
+        "current": "../reports/current.json#H19"
+      }
+    },
+    {
+      "id": "H20",
+      "text": "NF-κB and IL-6 might be associated with inflammation.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H20",
+        "current": "../reports/current.json#H20"
+      }
+    },
+    {
+      "id": "H21",
+      "text": "The conductivity was 3 mS/cm.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H21",
+        "current": "../reports/current.json#H21"
+      }
+    },
+    {
+      "id": "H22",
+      "text": "The value was 2 × 10⁻³ mol/L.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H22",
+        "current": "../reports/current.json#H22"
+      }
+    },
+    {
+      "id": "H23",
+      "text": "The result suggests an association (p = 0.08; 95% confidence interval).",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H23",
+        "current": "../reports/current.json#H23"
+      }
+    },
+    {
+      "id": "H24",
+      "text": "The response did not establish causation.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H24",
+        "current": "../reports/current.json#H24"
+      }
+    },
+    {
+      "id": "H25",
+      "text": "We isolated the supernatant after centrifugation.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H25",
+        "current": "../reports/current.json#H25"
+      }
+    },
+    {
+      "id": "H26",
+      "text": "The treatment might improve survival.",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H26",
+        "current": "../reports/current.json#H26"
+      }
+    },
+    {
+      "id": "H27",
+      "text": "The cultures were washed they were stained later.",
+      "category": "Grammar",
+      "expectedBehavior": "warning",
+      "severity": "review",
+      "expected": [
+        {
+          "target": "washed they",
+          "category": "Grammar",
+          "behavior": "warning",
+          "acceptedReplacements": []
+        }
+      ],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H27",
+        "current": "../reports/current.json#H27"
+      }
+    },
+    {
+      "id": "H28",
+      "text": "Although the signal was stable.",
+      "category": "Grammar",
+      "expectedBehavior": "warning",
+      "severity": "review",
+      "expected": [
+        {
+          "target": "Although",
+          "category": "Grammar",
+          "behavior": "warning",
+          "acceptedReplacements": []
+        }
+      ],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H28",
+        "current": "../reports/current.json#H28"
+      }
+    },
+    {
+      "id": "H29",
+      "text": "After washing the cells, the microscope was repaired.",
+      "category": "Grammar",
+      "expectedBehavior": "warning",
+      "severity": "review",
+      "expected": [
+        {
+          "target": "After washing the cells, the microscope",
+          "category": "Grammar",
+          "behavior": "warning",
+          "acceptedReplacements": []
+        }
+      ],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H29",
+        "current": "../reports/current.json#H29"
+      }
+    },
+    {
+      "id": "H30",
+      "text": "The cells were incubated for 45 min at 37 °C. The findings suggests an association with IL-6, but did not establish causation.",
+      "category": "Grammar",
+      "expectedBehavior": "correction",
+      "severity": "error",
+      "expected": [
+        {
+          "target": "suggests",
+          "category": "Grammar",
+          "behavior": "correction",
+          "acceptedReplacements": ["suggest"]
+        }
+      ],
+      "acceptedCorrections": [
+        "The cells were incubated for 45 min at 37 °C. The findings suggest an association with IL-6, but did not establish causation."
+      ],
+      "forbiddenCorrections": [],
+      "explanation": "Detect the annotated defect without changing other content.",
+      "caseGroup": "Grammar",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H30",
+        "current": "../reports/current.json#H30"
+      }
+    },
+    {
+      "id": "H31",
+      "text": "The pellet was resuspended after centrifugation. TNF-α might be associated with inflammation; the result was not statistically significant (p = 0.08).",
+      "category": "Scientific",
+      "expectedBehavior": "no issue",
+      "severity": "none",
+      "expected": [],
+      "acceptedCorrections": [],
+      "forbiddenCorrections": [],
+      "explanation": "Valid negative control; preserve wording and meaning.",
+      "caseGroup": "Scientific",
+      "actualEngineResult": {
+        "baseline": "../reports/baseline.json#H31",
+        "current": "../reports/current.json#H31"
+      }
+    }
+  ]
+}

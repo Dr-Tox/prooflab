@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "preHardeningCommit": "c7890d28e24d2b47198593cdb1ba4a88c3a26095",
+  "sha256": "3a2ef54885fa2e09c40225cc53c12cf401b395cb955b4068aa09f7f423fe0b22",
+  "policy": "Round 1 findings H22/H30 informed safety hardening. Preserve its first-pass report, original labels and hash. Round 2 references frozen before that hardening and must not guide further tuning."
+}

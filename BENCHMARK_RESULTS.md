@@ -1,0 +1,197 @@
+# ProofLab benchmark results
+
+The complete reproducible corpus, full actual outputs, source/environment hashes, and methodology are in [benchmark/](benchmark/README.md). Harper is pinned to **3.0.0**, Apache-2.0. Its shipped APIs and actual UTF-16/`get_problem_text()` behavior were checked before changes. Baseline implementation: **8a32c18**, while deployed/main was **cf71cc7**. Baseline was recorded before linguistic changes in commit **900030f**. Rule implementation was frozen at **c7890d2** for the first held-out evaluation.
+
+## Measured linguistic outcomes
+
+| Dataset / metric                                                                        |       Baseline | Improved implementation |
+| --------------------------------------------------------------------------------------- | -------------: | ----------------------: |
+| Development: issue groups detected / classified                                         | 7 / 25; 6 / 25 |        25 / 25; 25 / 25 |
+| Development: complete accepted corrections offered                                      |         2 / 20 |                 20 / 20 |
+| Development: negative-control cases falsely flagged                                     |         8 / 26 |                  0 / 26 |
+| Development: exact-span duplicate cards                                                 |              2 |                       0 |
+| Regression: complete corrections offered                                                |        11 / 11 |                 11 / 11 |
+| Regression: negative-control cases falsely flagged                                      |         0 / 10 |                  0 / 10 |
+| Regression: exact-span duplicate cards                                                  |              2 |                       0 |
+| First held-out round, **before** inspecting failures: detection / classification        | 4 / 16; 3 / 16 |        16 / 16; 16 / 16 |
+| First held-out round, before inspecting failures: complete corrections offered          |         2 / 13 |                 13 / 13 |
+| First held-out round, before inspecting failures: first-suggestion complete corrections |         2 / 13 |                 12 / 13 |
+| First held-out round, before inspecting failures: negative false positives              |         7 / 15 |                  1 / 15 |
+| Fresh second held-out round: detection / classification                                 |   Not measured |            8 / 9; 8 / 9 |
+| Fresh second held-out round: complete offered / first-suggestion corrections            |   Not measured |            7 / 9; 7 / 9 |
+| Fresh second held-out round: negative false positives                                   |   Not measured |                  1 / 11 |
+
+A partial correction is never a full-sentence success. Multiple diagnostics on one target never earn multiple detections. “Offered” is a bounded oracle over actual alternatives, not a claim of automatic correction. Coarse classification uses the application's categories. See the benchmark README for search bounds and exact definitions.
+
+## What failed and what remains
+
+The first held-out round exposed `mol` after `2 × 10⁻³` as a false positive and an unsafe `C. → Co` suggestion at a Celsius sentence boundary. Their original outputs are preserved. A subsequent, general protected-token-boundary and exponent fix addresses both, and the original 31 cases now pass a post-evaluation audit. **That later perfect audit is not presented as an untouched held-out result.** Original held-out labels and their hash remain unchanged.
+
+A fresh second-round set was frozen before those safety fixes. It still exposes limitations, deliberately left without score-driven tuning:
+
+- **V05:** `The signals depends of time.` produces separate agreement/preposition findings. It can be corrected through successive fresh analyses, but the static nonoverlapping offered-action metric does not credit the complete correction. A partial output does not pass.
+- **V09:** `The reagents shows instability.` is missed because the bounded subject-head lexicon does not recognize that noun. The implementation does not pretend to have a general syntactic parser.
+- **V20:** `−3.2 mV` receives an inappropriate spelling warning because the selected measurement-symbol coverage lacks that prefix combination. This is a remaining scientific-notation false positive; authors must review suggestions.
+
+The numerical/hedge/forbidden-string safety proxy reports no violations for the final recorded corpora, but it did **not** detect every scientifically harmful lexical proposal in the first pass. The `C. → Co` case and remaining mV warning demonstrate why this proxy cannot establish full meaning preservation. No chemical identity, causal interpretation, agency, or scientific correctness is certified.
+
+## Performance and reproducibility
+
+Recorded environment: Node **v24.19.0**, Linux x64, AMD EPYC 9V45; exact lockfile hash is stored in every report. These are single-process Node/real-WASM measurements, not browser rendering/network timings or a randomized speed comparison. Across these short cases, typical per-case medians are around **4–6 ms**. A synthetic 5,700-character stress sample took about **35 ms** median over three runs. Initialization is reported separately. Cache/JIT/order/host effects apply; do not infer a speed improvement from small timing differences.
+
+Run `npm test`, `npm run build`, `npm run test:e2e`, and `npm run benchmark`. Production browser tests also run at `/prooflab/`, with privacy/network/offline coverage, coordinated-edit formatting/Undo, and real development diagnostics. References include sentences, paragraphs, positive/negative variants, Greek, emoji, combining marks, Unicode minus and superscripts. Frozen held-out labels are hash-checked.
+
+This is substantial measured improvement on a small engineer-authored corpus, **not evidence of superiority over Microsoft Word**. No controlled Word comparison was performed. A larger independently annotated corpus, broader SI prefix coverage, deeper parsing, browser diversity, and human semantic review remain necessary before such a claim.
+
+## V2: agreement and auxiliary analysis (2026-11-04)
+
+The v2 baseline is the prior benchmark branch **0c3b269**, not the older deployed main. Final engine **31d2e94** replaces the subject-head noun whitelist with productive noun morphology and shallow clause analysis; Harper 3.0.0 remains unchanged. See [v2 methodology and raw results](benchmark/v2/README.md), including frozen hashes, reference errata and restrictions on generalization. All historical results above remain preserved.
+
+| Main challenge metric                                                  | Baseline | Final audit |
+| ---------------------------------------------------------------------- | -------: | ----------: |
+| Agreement detection recall (105 cases)                                 |    14.3% |      100.0% |
+| Agreement precision (105 cases)                                        |   100.0% |      100.0% |
+| Agreement F1 (105 cases)                                               |    25.0% |      100.0% |
+| Agreement complete/first-choice sentence correction (105 cases)        |    14.3% |      100.0% |
+| Verb detection recall                                                  |    26.2% |      100.0% |
+| Verb precision                                                         |    77.1% |       99.0% |
+| Verb F1                                                                |    39.1% |       99.5% |
+| Verb complete correction                                               |    17.3% |       99.0% |
+| Verb first-choice complete correction                                  |    17.3% |       99.0% |
+| Verb replacement quality (aligned alternatives only)                   |    64.7% |      100.0% |
+| Verb first-suggestion correctness (aligned cards)                      |    64.7% |      100.0% |
+| All-category false-positive controls (125 including 2 errata controls) |     3.2% |        0.8% |
+| Exact duplicate cards                                                  |        0 |           0 |
+
+The final challenge audit detects/classifies **208/208** positive groups. Complete outcomes are **202/203** correction cases (105/105 agreement; 97/98 verb); five dated-perfect cases are warning-only. One of 125 valid controls still receives a Harper Grammar warning on “The experiment was complete yesterday.” The dedicated 123-control set has zero false positives. Final reserved-family audits detect 25/25 agreement and 25/25 verb cases, but these are **post-evaluation audits**, not a new untouched held-out claim. The preserved first evaluation had verb first-choice completeness 91/98 under its original reference labels; consult the reports and errata for exact denominators.
+
+### Fresh paragraph audit: stronger remaining limits
+
+| Metric (12 error paragraphs, 18 controls)  | Baseline | V2 first evaluation |
+| ------------------------------------------ | -------: | ------------------: |
+| Detection precision                        |    50.0% |              100.0% |
+| Detection recall                           |     8.3% |               75.0% |
+| F1                                         |    14.3% |               85.7% |
+| Complete paragraph correction offered      |     8.3% |               75.0% |
+| First-choice complete paragraph correction |     8.3% |               66.7% |
+| Aligned replacement quality                |     6.7% |               69.2% |
+| Aligned first-suggestion correctness       |    14.3% |               81.8% |
+| All-category control false positives       |    16.7% |                5.6% |
+
+This set was frozen after engine 19b93c7 and **not tuned to its failures**. Its first output is preserved; the later code-review safeguards for ambiguous scientific noun number, unsupported modifiers and inline formatting do not change these scores. Detection rises from **1/12 to 9/12**; exact offered paragraph corrections from **1/12 to 9/12**; first-choice completion is only **8/12**. The higher score on lexical templates must not obscure this result. Failures remain:
+
+- Object relatives: “The samples that the technician collected was analyzed” is missed.
+- Unknown verb paradigms: “droplets oscillates” and “nuclei were isolate” are missed.
+- Coordinated correction outside supported grammar: “does not agrees the result” leaves the missing “with”; the corrected reference now counts it incomplete.
+- Scientific false positive: **microbeads → microbe’s / microbes** remains harmful and can corrupt a correct scientific term. It appears in both a positive paragraph and its correct control. There is no automatic replacement or accept-all, but users must reject these alternatives or add the term locally. The numeric/hedge harm proxy misses this semantic problem; its zero value is not a safety certification.
+
+### Scientific safety and regression
+
+The supplied safeguards retain centrifugation, supernatant, min, °C, K, micro symbols, exponents, Unicode minus, compound doses, PFAS, TNF-α/IL-1β, RNA-seq and CYP3A4. V2 fixes the previously recorded mV warning using finite SI-prefix recognition and protects relative centrifugal-force notation. Protected tokens do not suppress surrounding agreement corrections. Hedging and numerical values remain unchanged in the evaluated transactions. Unknown technical vocabulary still requires curation; scientific safety is improved but incomplete.
+
+The original development and regression audit remains 20/20 and 11/11 complete corrections, with no negative-control false positives. The original 31 held-out cases also pass as a clearly labeled historical post-evaluation audit. Their initial outputs and old second-round failures have not been rewritten.
+
+### Environment and checks
+
+Node v24.19.0, Linux, AMD EPYC 9V45 96-Core Processor; Harper 3.0.0, Vite 7.3.7, TypeScript 5.9.3, Vitest 3.2.7, Playwright 1.64.1. Dependencies were not upgraded. Main-challenge latency median: **3.92 → 3.81 ms**; p95 **19.65 → 5.89 ms**. Setup **812 → 599 ms**. End-of-run harness RSS **559.3 → 524.3 MiB**, heap used **25.2 → 26.1 MiB**. These noisy whole-harness samples include WASM/report retention, not browser peaks or evidence of a memory optimization.
+
+`npm test`: **180 passed**. Production build, original benchmark, v2 benchmark and formatting checks pass. **15/15 browser scenarios passed locally at `/` and `/prooflab/`**, including live edits, individual accept/dismiss, coordinated edits/Undo, rapid revisions, long paragraphs, formatting, Unicode, mobile, offline and network checks; existing appearance, local-only processing, optional persistence and static hosting remain intact.
+
+### Modified implementation
+
+`src/linguistics/{morphology,subjects,verbs,analyze}.ts` implements the new layers; `grammar.ts` retains other existing rules and settings IDs. `model.ts` enables the two new configurable rule families. `editorTransactions.ts` gives edit starts forward affinity at inline-node boundaries so a whole bold/italic word retains its wrapper. `policy.ts` merges verb duplicates and conflicting modal constructions; `measurements.ts` and `vocabulary.ts` add narrow scientific protections. Unit/browser tests, frozen v2 corpora/scorers/reports, CI measurement, and architecture/rule/vocabulary documentation accompany the changes. No model, runtime dependency, analytics or remote processing was added.
+
+## Dedicated temporal-context and tense/aspect objective (PR #5 continuation)
+
+Agreement and tense/aspect now have separate analysis layers, benchmarks and CI checks. Baseline: **d304819**. First temporal implementation: **e9217db**; final linguistic/editor safety audit: **3f1d87f**. Frozen references, raw Harper/ProofLab results, source/environment details and limitations are in [benchmark/tense/](benchmark/tense/README.md). No dependency/model/service was added.
+
+### Before/after: independent temporal evidence
+
+| Metric                                                         |              Baseline | Temporal implementation |
+| -------------------------------------------------------------- | --------------------: | ----------------------: |
+| Explicit temporal-usage findings                               |                 35/90 |                   90/90 |
+| Aspect-review findings                                         |                  0/10 |                   10/10 |
+| Cross-sentence temporal-reference findings                     |                  0/10 |                    9/10 |
+| Form-only complete / first-choice corrections                  |                 25/25 |                   25/25 |
+| Contextual temporal/aspect findings, excluding form-only cases |                35/110 |                 109/110 |
+| All positive groups detected                                   |                60/135 |                 134/135 |
+| Overall precision / recall / F1                                | 89.6% / 44.4% / 59.4% |    100% / 99.3% / 99.6% |
+| Valid controls falsely flagged                                 |                 7/180 |                   0/180 |
+| Reserved cases: detection / control false positives            |           10/30; 3/45 |             30/30; 0/45 |
+| Unrequested automatic temporal-target repairs                  |                    10 |                       0 |
+| Numerical/epistemic/temporal-marker invariant changes          |                     5 |                       0 |
+| Exact duplicate cards                                          |                     0 |                       0 |
+
+**The 109 contextual findings are manual-review warnings, not 109 complete corrections.** No chronology-dependent rewrite is offered. The unchanged 25/25 auxiliary-form result is deliberately not used as evidence that temporal usage is solved. Five lexical variants per construction are correlated; overall family-macro positive recall is 34/35 (97.1%). Perfect reserved-family scores are bounded engineering evidence, not broad coverage or external validation. The first evaluation is preserved; later safety changes do not alter these outcomes.
+
+### Real behavior and safety
+
+The baseline misses fronted dates and suppresses relevant checks merely because “by” occurs in `by microscopy`. It also misattaches `yesterday` in a relative clause or possessive noun phrase, and flags rolling `over the last week`. The new scoped analysis addresses these observed defects. Explicit past references in `by the time` clauses and backward-linked adjacent sentences receive contextual warnings. No uniform tense is imposed across Methods, Results, Discussion, established knowledge or literature reporting.
+
+Native Harper `SinceDuration` offers competing interval repairs and falsely flags the valid point `since two hours before the assay`; targeted policy handling defers the former and preserves the latter. Ambiguous `have …ing` repairs, lexical `have monitoring data`, and malformed stative chains cannot silently select a completion/continuation or possession/action reading. Clear form corrections remain available and revision checked. Surface-invariant tests are separate from detection scores and do not prove complete scientific meaning preservation.
+
+One new discourse miss remains **D09**, with the unknown predicate `lasted`: “The incubation lasted 30 min yesterday. At that point, we have collected the supernatant.” No sentence-specific rule or label change hides this miss. Implicit chronology, unknown predicates, optional reporting backshift, counterfactuals and arbitrary event-order contradictions remain unsupported.
+
+### Historical regression and deliberate tradeoff
+
+The original development/regression complete scores remain **20/20 and 11/11**, with no negative-control false positives. Historical held-out auditing remains **13/13** complete; all earlier first-pass reports are preserved. In the old v2 corpus, agreement detection stays **105/105**. Complete offered corrections change **202/203 → 201/203** because `have undergoing` is now a review-only ambiguity: both `have undergone` and `have been undergoing` are possible and express different aspects. Its original reference is unchanged and still counts the automatic correction as incomplete. The unrelated missing `with` after `agree` remains unresolved. See `benchmark/v2/reports/temporal-safety-audit.json`. The earlier harmful native `microbeads` alternatives are still a known scientific spelling risk, not hidden by a zero temporal-marker score.
+
+### Actual browser integration
+
+A real browser test exposed native DIV/P contenteditable boundaries collapsing into `MethodsThe…` when read with `textContent`. `normalizeEditorLines` now converts structural boundaries into explicit LF text nodes before analysis, preserving inline formatting and directional selection. This aligns editor input with benchmark paragraph strings and maintains UTF-16 correction offsets. Browser tests cover legitimate mixed scientific tenses, contextual warnings without replacements, accept/dismiss/Undo, native paragraph input, headings, blank lines, emoji, Greek/unit symbols, rich formatting and caret positions. The existing privacy, offline, rapid typing and mobile scenarios remain intact.
+
+Final unit/integration suite: **242 passed**. Browser suite: **17 scenarios**, including the new temporal and paragraph-boundary checks. Both root and GitHub Pages paths are tested; CI repeats all checks. `npm run benchmark`, `npm run benchmark:v2`, `npm run benchmark:tense -- --check`, builds and formatting checks are run.
+
+### Performance and scope
+
+Baseline: median **4.07 ms**, p95 **7.04 ms**, maximum **1272 ms**; setup **571 ms**; retained-report process RSS **516.7 MiB**, heap used **21.6 MiB**.
+
+Temporal audit: median **3.96 ms**, p95 **7.27 ms**, maximum **1200 ms**; setup **604 ms**; retained-report process RSS **473.4 MiB**, heap used **22.3 MiB**.
+
+These are Node/WASM/harness observations, including cold outliers and retained diagnostics, not isolated browser memory, a speedup guarantee or a Word comparison. The section/temporal graph is a bounded deterministic analyzer, not a general dependency parser or scientific chronology validator.
+
+Modified implementation: `linguistics/verbChain.ts`, `temporalFrames.ts`, `temporal.ts`; form/grammar orchestration and native conflict policy; editor normalization; dedicated unit/browser tests; frozen temporal corpora, raw reports, scorer/CI gate and documentation. All document processing remains local and optional persistence remains opt-in.
+
+## V3 release candidate: focused safety and full-document efficiency
+
+Option B was selected: optimized full-document scheduling with a bounded exact-input cache. Incremental segmentation was not justified: Harper, scientific consistency and temporal references have unresolved cross-segment dependencies. There is no partial diagnostic reuse; changed text/settings/dictionaries always use full analysis.
+
+The known harmful `microbeads` replacements are blocked by original curated material vocabulary with regular plurals. Scientific spelling detection remains active. Bounded object-relative parsing and audited laboratory verb paradigms address previously recorded misses without guessing arbitrary unknown verbs. Context-dependent tense changes remain review-only. Undo/redo preserve formatting and revisions.
+
+### Measured performance
+
+Three repetitions per size/mode; milliseconds are median (min–max). Synthetic load fixtures reuse existing scientific prose and are not a new linguistic corpus.
+
+| Approx. words |          Previous full |  V3 full, changed text | Previous repeated text |  V3 exact repeat |
+| ------------- | ---------------------: | ---------------------: | ---------------------: | ---------------: |
+| 1,000         |    32.19 (29.85–35.43) |    34.61 (33.32–40.32) |    28.51 (26.51–30.02) | 0.02 (0.02–0.04) |
+| 5,000         | 167.94 (166.15–169.49) | 174.32 (172.78–174.82) | 163.83 (163.19–166.28) | 0.02 (0.02–0.03) |
+| 10,000        | 431.95 (428.79–434.69) | 440.88 (439.96–442.55) | 425.25 (421.19–435.37) | 0.02 (0.02–0.04) |
+
+Full-document work is **not materially faster**; the useful saving is skipping identical text/configuration requests such as formatting-only changes. The probe has 50% exact repeats by construction, not a predicted hit rate for normal typing. Native configuration updates drop from every analysis to one in the measured v3 session. The bounded queue posts two requests in a three-request stress case, explicitly superseding the middle request.
+
+| Browser measurement                 |               Previous |                     V3 |
+| ----------------------------------- | ---------------------: | ---------------------: |
+| 1,000 words: changed worker reply   |  42.80 (33.90–1634.10) |  29.90 (29.60–1303.90) |
+| 1,000 words: main-thread task time  |    11.55 (10.79–32.74) |     10.99 (9.18–23.30) |
+| 1,000 words: whole-browser CPU      | 100.00 (80.00–1530.00) |  70.00 (60.00–1400.00) |
+| 5,000 words: changed worker reply   | 160.70 (159.70–176.70) | 167.60 (164.30–169.80) |
+| 5,000 words: main-thread task time  |    29.26 (22.19–31.41) |    31.47 (29.23–32.22) |
+| 5,000 words: whole-browser CPU      | 210.00 (210.00–260.00) | 230.00 (230.00–230.00) |
+| 10,000 words: changed worker reply  | 423.60 (417.40–425.00) | 407.10 (404.20–409.50) |
+| 10,000 words: main-thread task time |    38.98 (38.27–40.53) |    37.44 (35.59–45.50) |
+| 10,000 words: whole-browser CPU     | 510.00 (500.00–530.00) | 480.00 (470.00–500.00) |
+
+Previous Node retained-process RSS range: 461.2–526.8 MiB. Browser main-frame heap range: 4.1–17.3 MiB.
+
+V3 Node retained-process RSS range: 459.1–483.3 MiB. Browser main-frame heap range: 4.1–30.1 MiB.
+
+Browser maximum observed animation-frame gaps: baseline 33.3 ms, v3 16.8 ms. These are small-sample observations, not mobile hardware guarantees. Main-frame heap excludes WASM; Node RSS includes the harness/WASM and GC variation. No memory reduction is claimed.
+
+Startup (one cold load followed by two warm reloads): baseline 965 ms, 839 ms, 823 ms; v3 935 ms, 833 ms, 821 ms.
+
+The one-entry cache caps text at 128k characters, key at 64k, findings at 1,000 and result text at 256k characters; development diagnostics and mapping failures bypass it. Undo/redo retain a combined bounded history. No worker restarts, manuscript persistence or telemetry were added. Raw CPU, memory, startup, frame gaps and timing samples are in `benchmark/v3/reports/`.
+
+### Quality and release validation
+
+The four new, post-development scientific paragraphs detect and fully correct both annotated errors (2/2), with zero findings on the two correct controls. Review-only warnings do not count as corrections. The original benchmark reports remain historical; current corpus evaluations are regression audits. Unknown predicates, deeper relative clauses, arbitrary temporal interpretation and scientific truth remain limitations. No Word comparison was performed.

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @theme {
   --font-sans:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 :root {
   font-family: var(--font-sans);
@@ -68,9 +68,9 @@ header {
   border-bottom: 1px solid #e3e7ef;
 }
 .header-inner {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: auto;
-  padding: 20px 0;
+  padding: 16px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,10 +90,10 @@ header {
   height: 35px;
 }
 .brand span {
-  font-size: 9px;
-  letter-spacing: 1.5px;
+  font-size: 12px;
+  letter-spacing: 0;
   font-weight: 600;
-  color: #8592a7;
+  color: #52647f;
   border-left: 1px solid #dce3ef;
   margin-left: 10px;
   padding-left: 18px;
@@ -118,7 +118,7 @@ header {
   margin-right: 5px;
 }
 main {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 0 24px;
 }
@@ -126,7 +126,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 0 30px;
+  padding: 22px 0 18px;
 }
 .eyebrow {
   font-size: 10px;
@@ -136,14 +136,14 @@ main {
   margin: 0 0 10px;
 }
 h1 {
-  font-size: 30px;
+  font-size: 22px;
   letter-spacing: -1px;
   font-weight: 650;
   line-height: 1.3;
   margin: 0 0 8px;
 }
 .intro p:last-child {
-  color: #78859b;
+  color: #52647f;
   margin: 0;
   font-size: 14px;
 }
@@ -169,7 +169,7 @@ nav button {
   background: none;
   font-size: 13px;
   padding: 12px 4px 15px;
-  color: #73829b;
+  color: #52647f;
 }
 nav .nav-active {
   color: #175cd3;
@@ -187,18 +187,18 @@ nav .nav-active {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #6f7d93;
+  color: #52647f;
 }
 .workspace-top select {
   font-size: 12px;
   min-width: 172px;
 }
 .muted {
-  color: #8390a4;
+  color: #52647f;
 }
 .workspace {
   display: grid;
-  grid-template-columns: minmax(0, 1.85fr) minmax(320px, 1fr);
+  grid-template-columns: minmax(0, 1.55fr) minmax(360px, 1fr);
   gap: 22px;
   align-items: start;
 }
@@ -214,7 +214,7 @@ nav .nav-active {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 22px 24px;
+  padding: 18px 22px;
   border-bottom: 1px solid #e9edf3;
 }
 h2 {
@@ -225,7 +225,7 @@ h2 {
 }
 .card-heading p {
   font-size: 12px;
-  color: #8b97aa;
+  color: #52647f;
   margin: 5px 0 0;
 }
 .toolbar {
@@ -270,7 +270,7 @@ h2 {
 }
 .document:empty:before {
   content: attr(data-placeholder);
-  color: #a2adbd;
+  color: #64748b;
   pointer-events: none;
 }
 .document-footer {
@@ -280,7 +280,7 @@ h2 {
   padding: 14px 22px;
   border-top: 1px solid #edf0f5;
   font-size: 10px;
-  color: #8a97aa;
+  color: #52647f;
 }
 .review {
   border-top: 1px solid #e9edf3;
@@ -297,7 +297,7 @@ h2 {
 }
 .review h3 span {
   font-weight: 400;
-  color: #93a0b3;
+  color: #52647f;
 }
 .marked-text {
   white-space: pre-wrap;
@@ -353,7 +353,7 @@ h2 {
   font-size: 10px;
   border: 1px solid #e7ebf2;
   padding: 5px 8px;
-  color: #75849a;
+  color: #52647f;
 }
 .filters .filter-active {
   background: #edf4ff;
@@ -368,7 +368,7 @@ h2 {
 .empty {
   text-align: center;
   padding: 58px 30px;
-  color: #95a1b3;
+  color: #52647f;
   font-size: 12px;
   line-height: 1.8;
 }
@@ -433,7 +433,7 @@ h2 {
 }
 .issue-title strong {
   flex: 1;
-  font-size: 12px;
+  font-size: 13px;
   overflow-wrap: anywhere;
 }
 .category {
@@ -459,13 +459,13 @@ h2 {
   padding: 0 14px 14px;
 }
 .issue-detail p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.65;
-  color: #6a7b93;
+  color: #475569;
 }
 .issue-detail small {
   font-size: 9px;
-  color: #9aa5b5;
+  color: #52647f;
   overflow-wrap: anywhere;
 }
 .replacements {
@@ -495,7 +495,7 @@ h2 {
   padding: 2px 0;
   background: none;
   border: 0;
-  color: #8190a6;
+  color: #52647f;
 }
 .issue-detail .manual {
   font-size: 10px;
@@ -686,7 +686,7 @@ footer > span:first-child {
 [hidden] {
   display: none !important;
 }
-@media (max-width: 1260px) {
+@media (max-width: 1380px) {
   main,
   .header-inner {
     margin-left: 28px;
@@ -736,7 +736,7 @@ footer > span:first-child {
     padding: 6px 9px;
   }
   h1 {
-    font-size: 26px;
+    font-size: 20px;
   }
   .intro p:last-child {
     font-size: 12px;
@@ -816,5 +816,245 @@ footer > span:first-child {
   }
   .workspace-top .muted {
     font-size: 11px;
+  }
+}
+
+/* Development diagnostics are intentionally separate from the writing interface. */
+.diagnostics-panel {
+  margin-top: 20px;
+  padding: 18px 22px;
+  font-size: 12px;
+}
+.diagnostics-panel summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.diagnostics-panel p {
+  color: #60728d;
+  line-height: 1.7;
+}
+.diagnostics-panel dl {
+  display: grid;
+  grid-template-columns: minmax(140px, 2fr) 1fr;
+  gap: 7px 14px;
+  margin: 15px 0;
+}
+.diagnostics-panel dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.diagnostics-panel details {
+  margin-top: 12px;
+}
+.diagnostics-panel pre {
+  max-height: 260px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f5f7fb;
+  padding: 12px;
+}
+.engine-warning {
+  padding: 10px 20px;
+  color: #72551e;
+  background: #fff8e9;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* v3.1: both workspace views retain the same editor DOM and revision state. */
+.workspace-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.proofreading-status {
+  margin: 0;
+  color: #475569;
+  font-size: 12px;
+}
+.focus-toggle {
+  font-size: 12px;
+}
+.focus-toggle[aria-pressed="true"] {
+  color: #175cd3;
+  border-color: #175cd3;
+}
+.mobile-switch {
+  display: none;
+}
+.workspace.focus-mode {
+  grid-template-columns: minmax(0, 1fr);
+}
+.workspace.focus-mode .analysis {
+  display: none;
+}
+.workspace.focus-mode .document {
+  min-height: 55vh;
+}
+.issue {
+  border-left: 3px solid #b8c9e1;
+}
+.issue-grammar {
+  border-left-color: #b96348;
+}
+.issue-spelling {
+  border-left-color: #b44c65;
+}
+.issue-review {
+  border-left-color: #ad7a16;
+}
+.issue-title {
+  align-items: flex-start;
+}
+.category {
+  font-size: 11px;
+}
+.finding-kind {
+  color: #52647f;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.issue-review .finding-kind {
+  color: #775412;
+  background: #fff6dc;
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+.rule-details {
+  color: #52647f;
+  font-size: 11px;
+}
+.rule-details summary {
+  cursor: pointer;
+}
+.issue-detail .manual {
+  color: #775412;
+  font-size: 12px;
+}
+.issue-actions button {
+  padding: 7px 0;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.accept-label {
+  color: #175cd3;
+  border-left: 1px solid #c8dcff;
+  padding-left: 10px;
+}
+.replacement span.accept-label {
+  opacity: 1;
+}
+.document {
+  line-height: 1.8;
+}
+.toolbar button {
+  min-height: 36px;
+}
+button,
+a,
+summary {
+  touch-action: manipulation;
+}
+@media (min-width: 851px) {
+  .analysis {
+    position: sticky;
+    top: 16px;
+  }
+  .issue-list {
+    max-height: 70vh;
+  }
+}
+@media (max-width: 850px) {
+  .focus-toggle {
+    display: none;
+  }
+  .workspace-controls {
+    flex-wrap: wrap;
+  }
+  .mobile-switch {
+    display: flex;
+    width: 100%;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid #dce2ed;
+    border-radius: 10px;
+    background: #eef2f7;
+  }
+  .mobile-switch button {
+    flex: 1;
+    min-height: 44px;
+    border-color: transparent;
+    background: transparent;
+  }
+  .mobile-switch button[aria-pressed="true"] {
+    background: white;
+    color: #175cd3;
+    box-shadow: 0 1px 3px #172b4d14;
+  }
+  .workspace:not(.mobile-review) .analysis {
+    display: none;
+  }
+  .workspace.mobile-review .editor-card {
+    display: none;
+  }
+  .workspace.mobile-review .analysis {
+    display: block;
+  }
+  .workspace .issue-list {
+    max-height: none;
+  }
+  .workspace.focus-mode .document {
+    min-height: 350px;
+  }
+  nav button,
+  .toolbar button,
+  .issue-actions button,
+  .replacement,
+  .filters button {
+    min-height: 44px;
+  }
+  .toolbar {
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+  }
+  .editor-card {
+    overflow: visible;
+  }
+  .card-heading {
+    border-radius: 12px 12px 0 0;
+  }
+  .document-footer {
+    flex-wrap: wrap;
+    font-size: 11px;
+  }
+  .document {
+    font-size: 16px;
+    min-height: 45vh;
+  }
+  .intro {
+    padding: 16px 0;
+  }
+  .intro p:last-child {
+    font-size: 12px;
+  }
+  nav {
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  nav button {
+    padding: 10px 2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
   }
 }

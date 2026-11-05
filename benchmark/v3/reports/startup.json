@@ -1,0 +1,40 @@
+{
+  "rows": [
+    {
+      "mode": "baseline",
+      "trial": 0,
+      "cache": "cold",
+      "ms": 965
+    },
+    {
+      "mode": "baseline",
+      "trial": 1,
+      "cache": "warm",
+      "ms": 839
+    },
+    {
+      "mode": "baseline",
+      "trial": 2,
+      "cache": "warm",
+      "ms": 823
+    },
+    {
+      "mode": "v3",
+      "trial": 0,
+      "cache": "cold",
+      "ms": 935
+    },
+    {
+      "mode": "v3",
+      "trial": 1,
+      "cache": "warm",
+      "ms": 833
+    },
+    {
+      "mode": "v3",
+      "trial": 2,
+      "cache": "warm",
+      "ms": 821
+    }
+  ]
+}

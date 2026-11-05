@@ -1,0 +1,98 @@
+{
+  "source": "working-tree",
+  "method": "Four original scientific paragraphs fixed after rule development; small engineering audit, not externally blinded. Review-only warnings never count as automatic correction.",
+  "rows": [
+    {
+      "id": "Q1",
+      "text": "Methods\nThe microbeads were washed with buffer, and the supernatant was retained. The fractions that we have collected was analyzed by ELISA.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+      "expected": "Methods\nThe microbeads were washed with buffer, and the supernatant was retained. The fractions that we have collected were analyzed by ELISA.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+      "issues": [
+        {
+          "id": "Bounded agreement:119:122:was",
+          "rule": "Bounded agreement",
+          "category": "Grammar",
+          "start": 119,
+          "end": 122,
+          "original": "was",
+          "replacements": [
+            "were"
+          ],
+          "explanation": "The subject headed by “fractions” takes plural agreement here. Nouns in intervening phrases do not control this verb. Use “were” instead of “was”.",
+          "edits": [
+            {
+              "start": 119,
+              "end": 122,
+              "original": "was",
+              "replacement": "were"
+            }
+          ],
+          "sources": [
+            "Bounded agreement"
+          ],
+          "confidence": "high",
+          "revision": 1
+        }
+      ],
+      "first": "Methods\nThe microbeads were washed with buffer, and the supernatant was retained. The fractions that we have collected were analyzed by ELISA.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+      "complete": true,
+      "detected": true,
+      "falsePositive": false
+    },
+    {
+      "id": "Q2",
+      "text": "The nuclei were isolate by centrifugation. The temperature was 37 °C, and the potential was −3.2 mV. The response was associated with exposure; it does not establish causation.",
+      "expected": "The nuclei were isolated by centrifugation. The temperature was 37 °C, and the potential was −3.2 mV. The response was associated with exposure; it does not establish causation.",
+      "issues": [
+        {
+          "id": "Verb forms:16:23:isolate",
+          "rule": "Verb forms",
+          "category": "Grammar",
+          "start": 16,
+          "end": 23,
+          "original": "isolate",
+          "replacements": [
+            "isolated"
+          ],
+          "explanation": "This passive auxiliary chain requires the past participle.",
+          "edits": [
+            {
+              "start": 16,
+              "end": 23,
+              "original": "isolate",
+              "replacement": "isolated"
+            }
+          ],
+          "sources": [
+            "Verb forms"
+          ],
+          "confidence": "high",
+          "revision": 1
+        }
+      ],
+      "first": "The nuclei were isolated by centrifugation. The temperature was 37 °C, and the potential was −3.2 mV. The response was associated with exposure; it does not establish causation.",
+      "complete": true,
+      "detected": true,
+      "falsePositive": false
+    },
+    {
+      "id": "Q3",
+      "text": "Previous studies have reported similar findings. We analyzed the samples last week and have since reviewed the results. The samples that the analyst collected were stored at −80 °C. No causal conclusion was drawn.",
+      "expected": "Previous studies have reported similar findings. We analyzed the samples last week and have since reviewed the results. The samples that the analyst collected were stored at −80 °C. No causal conclusion was drawn.",
+      "issues": [],
+      "first": "Previous studies have reported similar findings. We analyzed the samples last week and have since reviewed the results. The samples that the analyst collected were stored at −80 °C. No causal conclusion was drawn.",
+      "complete": true,
+      "detected": null,
+      "falsePositive": false
+    },
+    {
+      "id": "Q4",
+      "text": "We measured IL-1β and TNF-α after centrifugation. The incubation lasted 30 min. These results are consistent with the hypothesis, but the association may reflect an adaptive response.",
+      "expected": "We measured IL-1β and TNF-α after centrifugation. The incubation lasted 30 min. These results are consistent with the hypothesis, but the association may reflect an adaptive response.",
+      "issues": [],
+      "first": "We measured IL-1β and TNF-α after centrifugation. The incubation lasted 30 min. These results are consistent with the hypothesis, but the association may reflect an adaptive response.",
+      "complete": true,
+      "detected": null,
+      "falsePositive": false
+    }
+  ]
+}

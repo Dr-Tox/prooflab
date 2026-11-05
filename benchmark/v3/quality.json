@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Q1",
+    "text": "Methods\nThe microbeads were washed with buffer, and the supernatant was retained. The fractions that we have collected was analyzed by ELISA.\nDiscussion\nThese findings suggest that exposure may affect metabolism.",
+    "expected": "Methods\nThe microbeads were washed with buffer, and the supernatant was retained. The fractions that we have collected were analyzed by ELISA.\nDiscussion\nThese findings suggest that exposure may affect metabolism."
+  },
+  {
+    "id": "Q2",
+    "text": "The nuclei were isolate by centrifugation. The temperature was 37 °C, and the potential was −3.2 mV. The response was associated with exposure; it does not establish causation.",
+    "expected": "The nuclei were isolated by centrifugation. The temperature was 37 °C, and the potential was −3.2 mV. The response was associated with exposure; it does not establish causation."
+  },
+  {
+    "id": "Q3",
+    "text": "Previous studies have reported similar findings. We analyzed the samples last week and have since reviewed the results. The samples that the analyst collected were stored at −80 °C. No causal conclusion was drawn.",
+    "expected": "Previous studies have reported similar findings. We analyzed the samples last week and have since reviewed the results. The samples that the analyst collected were stored at −80 °C. No causal conclusion was drawn."
+  },
+  {
+    "id": "Q4",
+    "text": "We measured IL-1β and TNF-α after centrifugation. The incubation lasted 30 min. These results are consistent with the hypothesis, but the association may reflect an adaptive response.",
+    "expected": "We measured IL-1β and TNF-α after centrifugation. The incubation lasted 30 min. These results are consistent with the hypothesis, but the association may reflect an adaptive response."
+  }
+]

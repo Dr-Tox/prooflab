@@ -1,0 +1,282 @@
+[
+  {
+    "id": "D01",
+    "family": "discourse-01",
+    "split": "development",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The assay was completed yesterday. At that time, we have measured the response.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The assay was completed yesterday. At that time, we had measured the response.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN01",
+    "family": "discourse-control-01",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The assay was completed yesterday. At that time, we had measured the response.",
+    "target": "",
+    "accepted": [
+      "The assay was completed yesterday. At that time, we had measured the response."
+    ],
+    "referenceRewrite": "The assay was completed yesterday. At that time, we had measured the response.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D02",
+    "family": "discourse-02",
+    "split": "held-out",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The samples were collected last week. On that day, we have recorded the temperature.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The samples were collected last week. On that day, we had recorded the temperature.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN02",
+    "family": "discourse-control-02",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were collected last week. On that day, we had recorded the temperature.",
+    "target": "",
+    "accepted": [
+      "The samples were collected last week. On that day, we had recorded the temperature."
+    ],
+    "referenceRewrite": "The samples were collected last week. On that day, we had recorded the temperature.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D03",
+    "family": "discourse-03",
+    "split": "development",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "We analyzed the cultures yesterday. During that experiment, we have observed cell division.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "We analyzed the cultures yesterday. During that experiment, we had observed cell division.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN03",
+    "family": "discourse-control-03",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "We analyzed the cultures yesterday. During that experiment, we had observed cell division.",
+    "target": "",
+    "accepted": [
+      "We analyzed the cultures yesterday. During that experiment, we had observed cell division."
+    ],
+    "referenceRewrite": "We analyzed the cultures yesterday. During that experiment, we had observed cell division.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D04",
+    "family": "discourse-04",
+    "split": "held-out",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The team completed the assay last week. At that point, we have already stored the extracts.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The team completed the assay last week. At that point, we had already stored the extracts.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN04",
+    "family": "discourse-control-04",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The team completed the assay last week. At that point, we had already stored the extracts.",
+    "target": "",
+    "accepted": [
+      "The team completed the assay last week. At that point, we had already stored the extracts."
+    ],
+    "referenceRewrite": "The team completed the assay last week. At that point, we had already stored the extracts.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D05",
+    "family": "discourse-05",
+    "split": "development",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The response was measured yesterday. In that experiment, the team has assessed toxicity.",
+    "target": "has",
+    "accepted": [],
+    "referenceRewrite": "The response was measured yesterday. In that experiment, the team had assessed toxicity.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN05",
+    "family": "discourse-control-05",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The response was measured yesterday. In that experiment, the team had assessed toxicity.",
+    "target": "",
+    "accepted": [
+      "The response was measured yesterday. In that experiment, the team had assessed toxicity."
+    ],
+    "referenceRewrite": "The response was measured yesterday. In that experiment, the team had assessed toxicity.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D06",
+    "family": "discourse-06",
+    "split": "held-out",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The samples were treated yesterday. At that time, we have been monitoring the cultures.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The samples were treated yesterday. At that time, we had been monitoring the cultures.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN06",
+    "family": "discourse-control-06",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The samples were treated yesterday. At that time, we had been monitoring the cultures.",
+    "target": "",
+    "accepted": [
+      "The samples were treated yesterday. At that time, we had been monitoring the cultures."
+    ],
+    "referenceRewrite": "The samples were treated yesterday. At that time, we had been monitoring the cultures.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D07",
+    "family": "discourse-07",
+    "split": "development",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The potential was −3.2 mV yesterday. On that day, the cells have been analyzed by ELISA.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN07",
+    "family": "discourse-control-07",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA.",
+    "target": "",
+    "accepted": [
+      "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA."
+    ],
+    "referenceRewrite": "The potential was −3.2 mV yesterday. On that day, the cells had been analyzed by ELISA.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D08",
+    "family": "discourse-08",
+    "split": "held-out",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The temperature was 37 °C last week. During that experiment, we have already measured TNF-α.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN08",
+    "family": "discourse-control-08",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α.",
+    "target": "",
+    "accepted": [
+      "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α."
+    ],
+    "referenceRewrite": "The temperature was 37 °C last week. During that experiment, we had already measured TNF-α.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D09",
+    "family": "discourse-09",
+    "split": "development",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The incubation lasted 30 min yesterday. At that point, we have collected the supernatant.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN09",
+    "family": "discourse-control-09",
+    "split": "development",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant.",
+    "target": "",
+    "accepted": [
+      "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant."
+    ],
+    "referenceRewrite": "The incubation lasted 30 min yesterday. At that point, we had collected the supernatant.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  },
+  {
+    "id": "D10",
+    "family": "discourse-10",
+    "split": "held-out",
+    "category": "discourse",
+    "behavior": "warning",
+    "text": "The results were recorded last week. In that experiment, we have measured CYP3A4 expression. These findings may reflect adaptation.",
+    "target": "have",
+    "accepted": [],
+    "referenceRewrite": "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation.",
+    "forbidden": [],
+    "explanation": "Explicit backward temporal reference points to a locally bounded past frame. Review the present-perfect construction without inferring event order."
+  },
+  {
+    "id": "DN10",
+    "family": "discourse-control-10",
+    "split": "held-out",
+    "category": "control",
+    "behavior": "no issue",
+    "text": "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation.",
+    "target": "",
+    "accepted": [
+      "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation."
+    ],
+    "referenceRewrite": "The results were recorded last week. In that experiment, we had measured CYP3A4 expression. These findings may reflect adaptation.",
+    "forbidden": [],
+    "explanation": "Past-perfect reference preserves the explicit past temporal relationship."
+  }
+]

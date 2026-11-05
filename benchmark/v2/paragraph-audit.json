@@ -1,0 +1,422 @@
+[
+  {
+    "id": "paragraph-positive-01",
+    "text": "The erythrocytes in the diluted suspension was counted. The supernatant was retained.",
+    "category": "agreement",
+    "family": "paragraph-01",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The erythrocytes in the diluted suspension were counted. The supernatant was retained."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-02",
+    "text": "The distribution of fluorescent microbeads across the wells are uneven. The result may reflect settling.",
+    "category": "agreement",
+    "family": "paragraph-02",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The distribution of fluorescent microbeads across the wells is uneven. The result may reflect settling."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-03",
+    "text": "The samples that the technician collected was analyzed. No causal conclusion was drawn.",
+    "category": "agreement",
+    "family": "paragraph-03",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The samples that the technician collected were analyzed. No causal conclusion was drawn."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-04",
+    "text": "The irregularities in the membranes suggests damage. Previous studies have reported similar findings.",
+    "category": "agreement",
+    "family": "paragraph-04",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The irregularities in the membranes suggest damage. Previous studies have reported similar findings."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-05",
+    "text": "Three investigators has reviewed the records. The criteria were defined in advance.",
+    "category": "agreement",
+    "family": "paragraph-05",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "Three investigators have reviewed the records. The criteria were defined in advance."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-06",
+    "text": "The droplets oscillates near the electrode. This response may depend on temperature.",
+    "category": "agreement",
+    "family": "paragraph-06",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The droplets oscillate near the electrode. This response may depend on temperature."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-07",
+    "text": "The investigators could measured the response. The potential was −3.2 mV.",
+    "category": "verb",
+    "family": "paragraph-07",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The investigators could measure the response. The potential was −3.2 mV."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-08",
+    "text": "The cells had been wash before imaging. TNF-α and IL-1β were measured by ELISA.",
+    "category": "verb",
+    "family": "paragraph-08",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The cells had been washed before imaging. TNF-α and IL-1β were measured by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-09",
+    "text": "The nuclei were isolate by centrifugation. The incubation lasted 30 min.",
+    "category": "verb",
+    "family": "paragraph-09",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The nuclei were isolated by centrifugation. The incubation lasted 30 min."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-10",
+    "text": "The team has wrote the protocol. The samples were stored at −80 °C.",
+    "category": "verb",
+    "family": "paragraph-10",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The team has written the protocol. The samples were stored at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-11",
+    "text": "The vesicles has been prepare. The findings are consistent with aggregation.",
+    "category": "verb",
+    "family": "paragraph-11",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The vesicles have been prepared. The findings are consistent with aggregation."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-positive-12",
+    "text": "The cultures should have been freeze. The effect remains uncertain.",
+    "category": "verb",
+    "family": "paragraph-12",
+    "split": "fresh-paragraph-audit",
+    "behavior": "correction",
+    "accepted": [
+      "The cultures should have been frozen. The effect remains uncertain."
+    ],
+    "forbidden": [],
+    "severity": "error",
+    "explanation": "Correct the grammatical defect without changing any scientific finding."
+  },
+  {
+    "id": "paragraph-control-01",
+    "text": "The erythrocytes in the diluted suspension were counted. The supernatant was retained.",
+    "category": "control",
+    "family": "paragraph-control-01",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The erythrocytes in the diluted suspension were counted. The supernatant was retained."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-02",
+    "text": "The distribution of fluorescent microbeads across the wells is uneven. The result may reflect settling.",
+    "category": "control",
+    "family": "paragraph-control-02",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The distribution of fluorescent microbeads across the wells is uneven. The result may reflect settling."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-03",
+    "text": "The samples that the technician collected were analyzed. No causal conclusion was drawn.",
+    "category": "control",
+    "family": "paragraph-control-03",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The samples that the technician collected were analyzed. No causal conclusion was drawn."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-04",
+    "text": "The irregularities in the membranes suggest damage. Previous studies have reported similar findings.",
+    "category": "control",
+    "family": "paragraph-control-04",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The irregularities in the membranes suggest damage. Previous studies have reported similar findings."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-05",
+    "text": "Three investigators have reviewed the records. The criteria were defined in advance.",
+    "category": "control",
+    "family": "paragraph-control-05",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "Three investigators have reviewed the records. The criteria were defined in advance."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-06",
+    "text": "The droplets oscillate near the electrode. This response may depend on temperature.",
+    "category": "control",
+    "family": "paragraph-control-06",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The droplets oscillate near the electrode. This response may depend on temperature."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-07",
+    "text": "The investigators could measure the response. The potential was −3.2 mV.",
+    "category": "control",
+    "family": "paragraph-control-07",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The investigators could measure the response. The potential was −3.2 mV."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-08",
+    "text": "The cells had been washed before imaging. TNF-α and IL-1β were measured by ELISA.",
+    "category": "control",
+    "family": "paragraph-control-08",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The cells had been washed before imaging. TNF-α and IL-1β were measured by ELISA."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-09",
+    "text": "The nuclei were isolated by centrifugation. The incubation lasted 30 min.",
+    "category": "control",
+    "family": "paragraph-control-09",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The nuclei were isolated by centrifugation. The incubation lasted 30 min."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-10",
+    "text": "The team has written the protocol. The samples were stored at −80 °C.",
+    "category": "control",
+    "family": "paragraph-control-10",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The team has written the protocol. The samples were stored at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-11",
+    "text": "The vesicles have been prepared. The findings are consistent with aggregation.",
+    "category": "control",
+    "family": "paragraph-control-11",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The vesicles have been prepared. The findings are consistent with aggregation."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-12",
+    "text": "The cultures should have been frozen. The effect remains uncertain.",
+    "category": "control",
+    "family": "paragraph-control-12",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The cultures should have been frozen. The effect remains uncertain."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-13",
+    "text": "The treatment may reflect an adaptive response. Previous studies have reported similar findings.",
+    "category": "control",
+    "family": "paragraph-control-13",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The treatment may reflect an adaptive response. Previous studies have reported similar findings."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-14",
+    "text": "After centrifuging the samples, the supernatant was collected. The material was stored at −80 °C.",
+    "category": "control",
+    "family": "paragraph-control-14",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "After centrifuging the samples, the supernatant was collected. The material was stored at −80 °C."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-15",
+    "text": "The results as well as the effect are uncertain. The data are consistent with the hypothesis.",
+    "category": "control",
+    "family": "paragraph-control-15",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The results as well as the effect are uncertain. The data are consistent with the hypothesis."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-16",
+    "text": "The potential was −3.2 mV. CYP3A4 expression was associated with exposure.",
+    "category": "control",
+    "family": "paragraph-control-16",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The potential was −3.2 mV. CYP3A4 expression was associated with exposure."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-17",
+    "text": "The ratio of treated cells to controls was unchanged. A number of samples were excluded.",
+    "category": "control",
+    "family": "paragraph-control-17",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The ratio of treated cells to controls was unchanged. A number of samples were excluded."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  },
+  {
+    "id": "paragraph-control-18",
+    "text": "The criteria that were selected were appropriate. The results suggest that exposure may affect metabolism.",
+    "category": "control",
+    "family": "paragraph-control-18",
+    "split": "fresh-paragraph-audit",
+    "behavior": "no issue",
+    "accepted": [
+      "The criteria that were selected were appropriate. The results suggest that exposure may affect metabolism."
+    ],
+    "forbidden": [],
+    "severity": "none",
+    "explanation": "Preserve valid mixed scientific tenses, identifiers, and measurements."
+  }
+]

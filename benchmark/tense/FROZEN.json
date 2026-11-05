@@ -1,0 +1,8 @@
+{
+  "baseline": "d30481933767d6975add3e412da193f2a77022fc",
+  "sha256": "64e06776b3d997f02746fdf45fb3f73e077e17bd40582cdf413d2f9a8b10ccdb",
+  "positive": 125,
+  "controls": 170,
+  "heldOut": "Construction families 21\u201325 plus every third independently authored contextual control; all reference bytes frozen before engine changes.",
+  "methodology": "Engineer-authored, not externally blinded. Five lexical variants per family are correlated; report by family and distinguish form accuracy from temporal usage. Review cases intentionally offer no automatic chronology rewrite."
+}

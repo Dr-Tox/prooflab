@@ -7,7 +7,6 @@ import {
   exportDictionary,
   issue,
   parseDictionary,
-  protectedRanges,
   seedWords,
 } from "./model";
 import { scientific } from "./scientific";
@@ -39,8 +38,8 @@ describe("correction offsets", () => {
     ).toBe("good excellent");
     expect(() =>
       applyMany(text, [
-        { issue: a, replacement: "" },
-        { issue: a, replacement: "" },
+        { issue: a, replacement: "good" },
+        { issue: a, replacement: "good" },
       ]),
     ).toThrow("Overlapping");
   });
@@ -77,15 +76,13 @@ describe("profiles and conservative science checks", () => {
       "PFAS and pfas were measured at 10mg. The result was statistically significant (p = 0.05). H2O and MYB-NFIB were unchanged.";
     const issues = scientific(text, defaults(), seedWords);
     expect(issues.map((i) => i.rule)).toEqual(
-      expect.arrayContaining([
-        "SI spacing",
-        "Abbreviation consistency",
-        "Terminology convention",
-      ]),
+      expect.arrayContaining(["SI spacing", "Abbreviation consistency"]),
     );
+    expect(issues.some((i) => i.rule === "Terminology convention")).toBe(false);
     for (const i of issues) {
       expect(text.slice(i.start, i.end)).toBe(i.original);
-      expect(i.replacements).toEqual([]);
+      if (i.rule === "SI spacing") expect(i.replacements).toEqual(["10 mg"]);
+      else expect(i.replacements).toEqual([]);
     }
     expect(issues.some((i) => /H2O|MYB-NFIB|0.05/.test(i.original))).toBe(
       false,
@@ -108,16 +105,5 @@ describe("profiles and conservative science checks", () => {
         seedWords,
       ),
     ).toEqual([]);
-  });
-  it("protects gene names, formulae and values", () => {
-    const t = "MYB-NFIB H2O PFHxA 0.05";
-    const ranges = protectedRanges(t);
-    for (const term of ["MYB-NFIB", "H2O", "PFHxA", "0.05"])
-      expect(
-        ranges.some(
-          ([a, b]) =>
-            a <= t.indexOf(term) && b >= t.indexOf(term) + term.length,
-        ),
-      ).toBe(true);
   });
 });
